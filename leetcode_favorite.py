@@ -1069,16 +1069,16 @@ def view_and_operate_public_favorites(client: LeetCodeClient, user_slug: str, op
         else:
             print("无效的选项，请重新输入")
 
-def parse_quick_create_input(input_text: str) -> tuple[str, str, List[str]]:
+def parse_quick_create_input(input_text: str) -> tuple[str, List[str]]:
     """
     解析快速创建题单的输入
-    :param input_text: 输入文本，格式为：标题\n描述\n题目1 题目2 题目3...
-    :return: (标题, 描述, 题目列表)
+    :param input_text: 输入文本，格式为：标题\n题目1 题目2 题目3...
+    :return: (标题, 题目列表)
     """
     lines = [line.strip() for line in input_text.strip().split('\n')]
-    if len(lines) < 3:
-        return "", "", []
-    return lines[0], lines[1], lines[2].split()
+    if len(lines) < 2:
+        return "", []
+    return lines[0], lines[1].split()
 
 def quick_create_favorite(client: LeetCodeClient) -> None:
     """
@@ -1087,11 +1087,9 @@ def quick_create_favorite(client: LeetCodeClient) -> None:
     """
     print("\n请输入题单信息，格式如下（每项用回车分隔）：")
     print("第1行：题单标题")
-    print("第2行：题单描述")
-    print("第3行：题目的 titleslug（多个题目用空格分隔）")
+    print("第2行：题目的 titleslug（多个题目用空格分隔）")
     print("\n示例：")
     print("滑动窗口经典题目")
-    print("包含了各种类型的滑动窗口题目")
     print("longest-substring-without-repeating-characters minimum-window-substring sliding-window-maximum")
     print("\n请输入（输入 q 结束）：")
     
@@ -1106,7 +1104,7 @@ def quick_create_favorite(client: LeetCodeClient) -> None:
         lines.append(line)
     
     input_text = '\n'.join(lines)
-    title, description, slugs = parse_quick_create_input(input_text)
+    title, slugs = parse_quick_create_input(input_text)
     
     if not title:
         print("错误：标题不能为空")
@@ -1116,8 +1114,8 @@ def quick_create_favorite(client: LeetCodeClient) -> None:
         print("错误：至少需要输入一个题目")
         return
         
-    # 创建题单
-    favorite_slug = client.create_favorite_list(title, True, description)
+    # 创建题单（使用空描述）
+    favorite_slug = client.create_favorite_list(title, True, "")
     if not favorite_slug:
         return
         
