@@ -14,35 +14,44 @@
 ## 安装步骤
 
 1. 克隆仓库：
+
 ```bash
 git clone https://github.com/LiLittleCat/leetcode-tools.git
 cd leetcode-tools
 ```
 
 2. 安装依赖：
+
 ```bash
 pip install -r requirements.txt
 ```
 
 3. 配置环境变量：
+
    - 复制 `.env.example` 文件并重命名为 `.env`
+
+   ```bash
+   cp .env.example .env
+   ```
+
    - 从浏览器中获取 LeetCode 的 Cookie 信息
    - 在 `.env` 文件中填入你的 `csrftoken` 和 `LEETCODE_SESSION`
 
 ## 使用说明
 
 1. 运行程序：
+
 ```bash
 python leetcode_favorite.py
 ```
 
 2. 主菜单选项：
-   - 1️ 📝创建题单
-   - 2️ 🗑️删除题单
-   - 3️ 👀查看题单
-   - 4️ ➕新增题目
-   - 5️ ➖删除题目
-   - 6️ ❌退出(q)
+   - 1️ 📝 创建题单
+   - 2️ 🗑️ 删除题单
+   - 3️ 👀 查看题单
+   - 4️ ➕ 新增题目
+   - 5️ ➖ 删除题目
+   - 6️ ❌ 退出(q)
 
 ## 获取 Cookie 信息
 
@@ -66,4 +75,4 @@ python leetcode_favorite.py
 
 ## 许可证
 
-MIT License 
+MIT License
