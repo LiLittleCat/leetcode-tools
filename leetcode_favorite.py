@@ -486,6 +486,54 @@ class LeetCodeClient:
             print(f"删除题单失败: 解析响应时出错 - {str(e)}")
             return False
 
+    def remove_favorite_from_collection(self, favorite_slug: str) -> bool:
+        """
+        取消收藏题单
+        :param favorite_slug: 题单的 slug
+        :return: 是否取消收藏成功
+        """
+        query = """
+        mutation removeFavoriteFromMyCollectionV2($favoriteSlug: String!) {
+            removeFavoriteFromMyCollectionV2(favoriteSlug: $favoriteSlug) {
+                ok
+                error
+            }
+        }
+        """
+
+        variables = {
+            "favoriteSlug": favorite_slug
+        }
+
+        response = requests.post(
+            self.base_url,
+            headers=self.headers,
+            json={
+                "query": query,
+                "variables": variables,
+                "operationName": "removeFavoriteFromMyCollectionV2"
+            }
+        )
+
+        try:
+            data = response.json()
+            
+            if "errors" in data:
+                error_msg = data["errors"][0].get("message", "未知错误")
+                print(f"取消收藏题单失败: {error_msg}")
+                return False
+            
+            result = data.get("data", {}).get("removeFavoriteFromMyCollectionV2", {})
+            if result and result.get("ok"):
+                return True
+            else:
+                error_msg = result.get("error", "未知错误") if result else "响应数据为空"
+                print(f"取消收藏题单失败: {error_msg}")
+                return False
+        except Exception as e:
+            print(f"取消收藏题单失败: 解析响应时出错 - {str(e)}")
+            return False
+
 def format_time(time_str: Optional[str]) -> str:
     """
     格式化时间字符串
@@ -799,10 +847,17 @@ def main():
                             print(f"\n已选择题单: {selected_favorite['name']}")
                             
                             if choice == '2':  # 删除题单
-                                if get_yes_no_input("确认要删除这个题单吗？"):
-                                    if client.delete_favorite(selected_favorite['slug']):
-                                        print(f"成功删除题单: {selected_favorite['name']}")
-                                        break
+                                if not selected_favorite['is_created']:
+                                    print("\n这是一个收藏的题单，将执行取消收藏操作")
+                                    if get_yes_no_input("确认要取消收藏这个题单吗？"):
+                                        if client.remove_favorite_from_collection(selected_favorite['slug']):
+                                            print(f"成功取消收藏题单: {selected_favorite['name']}")
+                                            break
+                                else:
+                                    if get_yes_no_input("确认要删除这个题单吗？"):
+                                        if client.delete_favorite(selected_favorite['slug']):
+                                            print(f"成功删除题单: {selected_favorite['name']}")
+                                            break
                                     
                             elif choice == '3':  # 查看题单
                                 while True:
