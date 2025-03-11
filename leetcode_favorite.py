@@ -754,6 +754,31 @@ def get_question_slugs() -> List[str]:
     slugs = input().strip()
     return [slug.strip() for slug in re.split(r'[,\s]+', slugs) if slug.strip()]
 
+def delete_favorite_list(client: LeetCodeClient, favorite: dict, is_batch: bool = False) -> bool:
+    """
+    删除题单或取消收藏
+    :param client: LeetCode 客户端实例
+    :param favorite: 题单信息
+    :param is_batch: 是否为批量操作
+    :return: 操作是否成功
+    """
+    if not favorite['is_created']:  # 收藏的题单
+        if not is_batch:
+            print("\n这是一个收藏的题单，将执行取消收藏操作")
+            if not get_yes_no_input("确认要取消收藏这个题单吗？"):
+                return False
+        if client.remove_favorite_from_collection(favorite['slug']):
+            print(f"成功取消收藏题单: {favorite['name']}")
+            return True
+    else:  # 自己创建的题单
+        if not is_batch:
+            if not get_yes_no_input("确认要删除这个题单吗？"):
+                return False
+        if client.delete_favorite(favorite['slug']):
+            print(f"成功删除题单: {favorite['name']}")
+            return True
+    return False
+
 def main():
     # 加载 .env 文件中的配置
     env_path = os.path.join(os.path.dirname(__file__), '.env')
@@ -828,8 +853,44 @@ def main():
                             add_questions_to_favorite(client, favorite_slug, favorite_name)
                     break
                 break
-                
-            elif choice in ['2', '3', '4', '5']:  # 需要选择题单的操作
+
+            elif choice == '2':
+                # 显示题单列表
+                all_favorites = get_all_favorites()
+                if all_favorites:
+                    display_favorites(all_favorites)
+
+                while True:
+                    try:
+                        index_input = input("\n请输入要删除的题单编号（输入 q 返回，输入 a 删除所有题单）: ").strip().lower()
+                        if index_input == 'q':
+                            break
+                            
+                        if index_input == 'a':  # 批量删除
+                            if get_yes_no_input("确认要删除/取消收藏所有题单吗？"):
+                                success_count = 0
+                                for fav in all_favorites:
+                                    if delete_favorite_list(client, fav, True):
+                                        success_count += 1
+                                print(f"\n批量删除完成，成功删除 {success_count} 个题单")
+                                break
+                            continue
+                            
+                        # 删除单个题单
+                        index = int(index_input) - 1
+                        if 0 <= index < len(all_favorites):
+                            selected_favorite = all_favorites[index]
+                            print(f"\n已选择题单: {selected_favorite['name']}")
+                            if delete_favorite_list(client, selected_favorite):
+                                break
+                        else:
+                            print("无效的题单编号，请重新输入")
+                    except ValueError:
+                        print("请输入有效的数字")
+                        continue
+                break
+
+            elif choice in ['3', '4', '5']:  # 需要选择题单的操作
                 # 显示题单列表
                 all_favorites = get_all_favorites()
                 if all_favorites:
@@ -845,31 +906,8 @@ def main():
                         if 0 <= index < len(all_favorites):
                             selected_favorite = all_favorites[index]
                             print(f"\n已选择题单: {selected_favorite['name']}")
-                            
-                            if choice == '2':  # 删除题单
-                                if not selected_favorite['is_created']:
-                                    print("\n这是一个收藏的题单，将执行取消收藏操作")
-                                    if get_yes_no_input("确认要取消收藏这个题单吗？"):
-                                        if client.remove_favorite_from_collection(selected_favorite['slug']):
-                                            print(f"成功取消收藏题单: {selected_favorite['name']}")
-                                            break
-                                else:
-                                    if get_yes_no_input("确认要删除这个题单吗？"):
-                                        if index_input.lower() == 'a':
-                                            success_count = 0
-                                            for fav in all_favorites:
-                                                if fav['is_created']:  # 只删除自己创建的题单
-                                                    if client.delete_favorite(fav['slug']):
-                                                        print(f"成功删除题单: {fav['name']}")
-                                                        success_count += 1
-                                            print(f"\n批量删除完成，成功删除 {success_count} 个题单")
-                                            break
-                                        else:
-                                            if client.delete_favorite(selected_favorite['slug']):
-                                                print(f"成功删除题单: {selected_favorite['name']}")
-                                                break
-                                    
-                            elif choice == '3':  # 查看题单
+
+                            if choice == '3':  # 查看题单
                                 while True:
                                     response = client.get_favorite_questions(selected_favorite['slug'])
                                     if not response or not response['questions']:
@@ -904,7 +942,7 @@ def main():
                                         
                                     display_questions(response['questions'], response['totalLength'])
                                     
-                                    q_input = input("\n请输入要删除的题目编号（输入q返回，输入a删除所有题目）: ").strip().lower()
+                                    q_input = input("\n请输入要删除的题目编号（输入 q 返回，输入 a 删除所有题目）: ").strip().lower()
                                     if q_input == 'q':
                                         break
                                         
