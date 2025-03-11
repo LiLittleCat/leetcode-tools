@@ -20,13 +20,26 @@ git clone https://github.com/LiLittleCat/leetcode-tools.git
 cd leetcode-tools
 ```
 
-2. 安装依赖：
+2. (可选) 创建并激活虚拟环境：
+
+```bash
+# 创建虚拟环境
+python -m venv .venv
+
+# 在 Linux/macOS 上激活虚拟环境
+source .venv/bin/activate
+
+# 在 Windows 上激活虚拟环境
+# .venv\Scripts\activate
+```
+
+3. 安装依赖：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. 配置环境变量：
+4. 配置环境变量：
 
    - 复制 `.env.example` 文件并重命名为 `.env`
 

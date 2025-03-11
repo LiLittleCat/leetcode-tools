@@ -230,11 +230,11 @@ class LeetCodeClient:
             print(f"更新题单封面表情失败: {error}")
             return False
 
-    def add_question_to_favorite(self, favorite_slug: str, question_frontend_id: str) -> bool:
+    def add_question_to_favorite(self, favorite_slug: str, question_id: str) -> bool:
         """
-        向题单添加题目
+        向题单添加题目（使用题目的 ID）
         :param favorite_slug: 题单的 slug
-        :param question_frontend_id: 题目的前端 ID（如 "102"）
+        :param question_id: 题目的 ID（如 "1"），注意这不是题目的前端编号
         :return: 是否添加成功
         """
         query = """
@@ -250,7 +250,7 @@ class LeetCodeClient:
 
         variables = {
             "favoriteIdHash": favorite_slug,
-            "questionId": question_frontend_id
+            "questionId": question_id
         }
 
         response = requests.post(
@@ -266,7 +266,50 @@ class LeetCodeClient:
         if data.get("data", {}).get("addQuestionToFavorite", {}).get("ok"):
             return True
         else:
-            print(f"添加题目失败: {data.get('data', {}).get('addQuestionToFavorite', {}).get('error')}")
+            error = data.get("data", {}).get("addQuestionToFavorite", {}).get("error", "未知错误")
+            print(f"添加题目失败: {error}")
+            print(f"请确保输入的是题目的 ID，而不是题目的前端编号 (questionFrontendId) 或 slug")
+            return False
+
+    def batch_add_questions_to_favorite(self, favorite_slug: str, question_slugs: List[str]) -> bool:
+        """
+        批量向题单添加题目（使用题目的 titleSlug）
+        :param favorite_slug: 题单的 slug
+        :param question_slugs: 题目的 titleSlug 列表（如 ["two-sum", "add-two-numbers"]）
+        :return: 是否添加成功
+        """
+        query = """
+        mutation batchAddQuestionsToFavorite($favoriteSlug: String!, $questionSlugs: [String]!) {
+            batchAddQuestionsToFavorite(
+                favoriteSlug: $favoriteSlug
+                questionSlugs: $questionSlugs
+            ) {
+                ok
+                error
+            }
+        }
+        """
+
+        variables = {
+            "favoriteSlug": favorite_slug,
+            "questionSlugs": question_slugs
+        }
+
+        response = requests.post(
+            self.base_url,
+            headers=self.headers,
+            json={
+                "query": query,
+                "variables": variables
+            }
+        )
+
+        data = response.json()
+        if data.get("data", {}).get("batchAddQuestionsToFavorite", {}).get("ok"):
+            return True
+        else:
+            error = data.get("data", {}).get("batchAddQuestionsToFavorite", {}).get("error", "未知错误")
+            print(f"批量添加题目失败: {error}")
             return False
 
     def get_favorite_questions(self, favorite_slug: str, skip: int = 0, limit: int = 100) -> Optional[QuestionListResponse]:
@@ -499,15 +542,18 @@ def display_questions(questions: List[Question], total_length: int) -> None:
     print(f"\n题目列表 (共 {total_length} 题):")
     
     table = PrettyTable()
-    table.field_names = ["编号", "题号", "状态", "难度", "题目", "通过率", "标签"]
+    # 暂时隐藏 通过率 标签
+    # table.field_names = ["编号", "题号", "状态", "难度", "题目", "slug", "通过率", "标签"]
+    table.field_names = ["编号", "题号", "状态", "难度", "题目", "slug"]
     # 设置对齐方式
     table.align["编号"] = "r"  # 右对齐
     table.align["题号"] = "r"  # 右对齐
     table.align["状态"] = "c"  # 居中对齐
     table.align["难度"] = "c"  # 居中对齐
     table.align["题目"] = "l"  # 左对齐
-    table.align["通过率"] = "r"  # 右对齐
-    table.align["标签"] = "l"  # 左对齐
+    table.align["slug"] = "l"  # 左对齐
+    # table.align["通过率"] = "r"  # 右对齐
+    # table.align["标签"] = "l"  # 左对齐
     table.border = True  # 显示边框
     table.hrules = False  # 显示横向分割线
     
@@ -527,6 +573,7 @@ def display_questions(questions: List[Question], total_length: int) -> None:
         status = status_map.get(question.get('status'))
         paid = "🔒" if question['paidOnly'] else ""
         title = f"{paid} {question['translatedTitle']}"
+        slug = question['titleSlug']
         tags = [tag['nameTranslated'] or tag['name'] for tag in question['topicTags']]
         tags_str = ', '.join(tags) if tags else "无"
         ac_rate = f"{question['acRate']:.1%}"
@@ -537,17 +584,20 @@ def display_questions(questions: List[Question], total_length: int) -> None:
             status,
             difficulty,
             title,
-            ac_rate,
-            tags_str
+            slug,
+            # ac_rate,
+            # tags_str
         ])
     
     print(table)
 
 def get_question_ids() -> List[str]:
     """
-    获取要添加的题目ID列表
+    获取要添加的题目 ID 列表
     """
-    print("\n请输入要添加的题目编号（如 102，多个编号用逗号分隔）:")
+    print("\n请输入要添加的题目 ID（如 1，多个 ID 用逗号分隔）:")
+    print("注意：这里需要输入题目的 ID，而不是题目编号。题目 ID 可以从题目页面的 URL 中获取。")
+    print("例如：题目 'Two Sum' 的 URL 是 https://leetcode.cn/problems/two-sum/，其 ID 是 1")
     ids = input().strip()
     return [id.strip() for id in re.split(r'[,\s]+', ids) if id.strip()]
 
@@ -600,17 +650,43 @@ def add_questions_to_favorite(client: LeetCodeClient, favorite_slug: str, favori
         if response:
             display_questions(response['questions'], response['totalLength'])
         
-        question_ids = get_question_ids()
-        if not question_ids:
-            break
-            
-        has_changes = False
-        for qid in question_ids:
-            if client.add_question_to_favorite(favorite_slug, qid):
-                print(f"成功添加题目 {qid} 到题单")
+        print("\n请选择添加题目的方式：")
+        print("1. 使用题目 ID（如 1）")
+        print("2. 使用题目 slug（如 binary-tree-level-order-traversal）")
+        print("3. 返回上级菜单")
+        
+        choice = input("\n请输入选项（1-3）: ").strip()
+        
+        if choice == "1":
+            question_ids = get_question_ids()
+            if not question_ids:
+                break
+                
+            has_changes = False
+            for qid in question_ids:
+                if client.add_question_to_favorite(favorite_slug, qid):
+                    print(f"成功添加题目 {qid} 到题单")
+                    has_changes = True
+                else:
+                    print(f"添加题目 {qid} 失败")
+        
+        elif choice == "2":
+            question_slugs = get_question_slugs()
+            if not question_slugs:
+                break
+                
+            if client.batch_add_questions_to_favorite(favorite_slug, question_slugs):
+                print(f"成功批量添加 {len(question_slugs)} 个题目到题单")
                 has_changes = True
             else:
-                print(f"添加题目 {qid} 失败")
+                print("批量添加题目失败")
+        
+        elif choice == "3":
+            break
+            
+        else:
+            print("无效的选项，请重新选择")
+            continue
         
         # 如果成功添加了题目，重新获取并显示题目列表
         if has_changes:
@@ -621,6 +697,14 @@ def add_questions_to_favorite(client: LeetCodeClient, favorite_slug: str, favori
                 
         if not get_yes_no_input("\n是否继续添加题目？"):
             break
+
+def get_question_slugs() -> List[str]:
+    """
+    获取要添加的题目 slug 列表
+    """
+    print("\n请输入要添加的题目 slug（如 two-sum，多个 slug 用逗号分隔）:")
+    slugs = input().strip()
+    return [slug.strip() for slug in re.split(r'[,\s]+', slugs) if slug.strip()]
 
 def main():
     # 加载 .env 文件中的配置
