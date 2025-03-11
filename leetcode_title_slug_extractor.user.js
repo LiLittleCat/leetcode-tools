@@ -3,8 +3,10 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  在 LeetCode 中国站点显示并提供复制页面中所有题目 title-slug 的功能
-// @author       Your Name
-// @match        https://leetcode.cn/*
+// @author       Yi Liu
+// @homepageURL  https://github.com/LiLittleCat/leetcode-tools
+// @license      MIT
+// @match        https://leetcode.cn/discuss/*
 // @grant        none
 // ==/UserScript==
 
@@ -200,49 +202,46 @@
 
   // 提取并显示链接
   function extractLinks() {
-    // 找到所有目标div
-    const targetDivs = document.querySelectorAll("div.mYe_l.TAIHK");
+    // 直接获取页面中的所有 ul 元素
+    const uls = document.body.querySelectorAll("ul");
     const ulGroups = new Map(); // 用于按ul分组存储titleSlug
+    let validGroupCount = 0; // 用于跟踪有效分组数量
 
-    if (targetDivs.length === 0) {
+    if (uls.length === 0) {
       content.innerHTML =
         '<div class="leetcode-title-slug-extractor-no-links">未找到指定区域的 LeetCode 题目链接</div>';
       return;
     }
 
-    targetDivs.forEach((div) => {
-      // 获取div下的所有ul
-      const uls = div.querySelectorAll("ul");
+    uls.forEach((ul) => {
+      const slugs = []; // 改用数组以保持顺序
+      const links = ul.querySelectorAll("a");
 
-      uls.forEach((ul, ulIndex) => {
-        const slugs = []; // 改用数组以保持顺序
-        const links = ul.querySelectorAll("a");
-
-        links.forEach((link) => {
-          const href = link.getAttribute("href");
-          if (
-            href &&
-            href !== "#" &&
-            !href.startsWith("javascript:") &&
-            link.href.startsWith("https://leetcode.cn/problems")
-          ) {
-            const titleSlug =
-              link.href.split("/problems/")[1]?.split("/")[0] || "";
-            const title = link.textContent.trim();
-            if (titleSlug) {
-              slugs.push({ title, titleSlug });
-            }
+      links.forEach((link) => {
+        const href = link.getAttribute("href");
+        if (
+          href &&
+          href !== "#" &&
+          !href.startsWith("javascript:") &&
+          link.href.startsWith("https://leetcode.cn/problems")
+        ) {
+          const titleSlug =
+            link.href.split("/problems/")[1]?.split("/")[0] || "";
+          const title = link.textContent.trim();
+          if (titleSlug) {
+            slugs.push({ title, titleSlug });
           }
-        });
-
-        if (slugs.length > 0) {
-          // 存储ul元素的引用以便后续定位
-          ulGroups.set(ulIndex, {
-            links: slugs,
-            element: ul,
-          });
         }
       });
+
+      if (slugs.length > 0) {
+        // 使用连续的分组编号
+        ulGroups.set(validGroupCount, {
+          links: slugs,
+          element: ul,
+        });
+        validGroupCount++;
+      }
     });
 
     if (ulGroups.size === 0) {

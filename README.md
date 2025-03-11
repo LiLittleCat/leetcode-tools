@@ -78,6 +78,17 @@ python leetcode_favorite.py
 
 ## 注意事项
 
+- ❗⚠️ 页面上的题号和题目的 id 可能不一致，建议使用 title-slug 来添加题目。
+
+  如果是从讨论里获取的题单，如 [分享丨【题单】滑动窗口与双指针（定长/不定长/单序列/双序列/三指针/分组循环）- 讨论 - 力扣（LeetCode）](https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-bu-rzz7)，推荐使用浏览器脚本 [leetcode_title_slug_extractor.user.js](https://github.com/LiLittleCat/leetcode-tools/blob/main/leetcode_title_slug_extractor.user.js) 来快速获取题目的 title-slug：
+
+  1. 安装 Tampermonkey 浏览器扩展
+  2. 将 `leetcode_title_slug_extractor.user.js` 导入到 Tampermonkey
+  3. 访问 LeetCode 中文站的题单讨论页面
+  4. 页面右上角会出现一个浮动面板，显示当前页面所有题目的 title-slug
+  5. 可以通过面板快速复制单个或整组题目的 title-slug
+  6. 支持定位功能，点击"定位"按钮可以快速找到对应的题目位置
+
 - 请妥善保管你的 Cookie 信息，不要分享给他人
 - Cookie 可能会定期失效，需要重新获取
 - 建议定期备份重要的题单信息
