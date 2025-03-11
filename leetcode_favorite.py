@@ -312,7 +312,7 @@ class LeetCodeClient:
             print(f"批量添加题目失败: {error}")
             return False
 
-    def get_favorite_questions(self, favorite_slug: str, skip: int = 0, limit: int = 100) -> Optional[QuestionListResponse]:
+    def get_favorite_questions(self, favorite_slug: str, skip: int = 0, limit: int = 5000) -> Optional[QuestionListResponse]:
         """
         获取题单中的题目列表
         :param favorite_slug: 题单的 slug
@@ -534,6 +534,164 @@ class LeetCodeClient:
             print(f"取消收藏题单失败: 解析响应时出错 - {str(e)}")
             return False
 
+    def get_public_favorite_lists(self, user_slug: str) -> Optional[List[FavoriteInfo]]:
+        """
+        获取指定用户的公开题单列表
+        :param user_slug: 用户的 slug
+        :return: 题单列表，如果获取失败则返回 None
+        """
+        query = """
+        query createdPublicFavoriteList($userSlug: String!) {
+            createdPublicFavoriteList(userSlug: $userSlug) {
+                hasMore
+                totalLength
+                favorites {
+                    slug
+                    coverUrl
+                    coverEmoji
+                    coverBackgroundColor
+                    name
+                    isPublicFavorite
+                    lastQuestionAddedAt
+                    hasCurrentQuestion
+                    viewCount
+                    description
+                    questionNumber
+                    isDefaultList
+                }
+            }
+        }
+        """
+
+        variables = {
+            "userSlug": user_slug
+        }
+
+        try:
+            response = requests.post(
+                self.base_url,
+                headers=self.headers,
+                json={
+                    "query": query,
+                    "variables": variables,
+                    "operationName": "createdPublicFavoriteList"
+                }
+            )
+            response.raise_for_status()
+            data = response.json()
+            
+            if "errors" in data:
+                error_msg = data["errors"][0].get("message", "未知错误")
+                print(f"获取公开题单列表失败: {error_msg}")
+                return None
+                
+            result = data.get("data", {}).get("createdPublicFavoriteList", {})
+            if result:
+                return result.get("favorites", [])
+            else:
+                print("获取公开题单列表失败: 响应数据为空")
+                return None
+        except Exception as e:
+            print(f"获取公开题单列表失败: {str(e)}")
+            return None
+
+    def add_favorite_to_collection(self, favorite_slug: str) -> bool:
+        """
+        收藏题单
+        :param favorite_slug: 题单的 slug
+        :return: 是否收藏成功
+        """
+        query = """
+        mutation addFavoriteToMyCollectionV2($favoriteSlug: String!) {
+            addFavoriteToMyCollectionV2(favoriteSlug: $favoriteSlug) {
+                ok
+                error
+            }
+        }
+        """
+
+        variables = {
+            "favoriteSlug": favorite_slug
+        }
+
+        try:
+            response = requests.post(
+                self.base_url,
+                headers=self.headers,
+                json={
+                    "query": query,
+                    "variables": variables,
+                    "operationName": "addFavoriteToMyCollectionV2"
+                }
+            )
+            response.raise_for_status()
+            data = response.json()
+            
+            if "errors" in data:
+                error_msg = data["errors"][0].get("message", "未知错误")
+                print(f"收藏题单失败: {error_msg}")
+                return False
+                
+            result = data.get("data", {}).get("addFavoriteToMyCollectionV2", {})
+            if result and result.get("ok"):
+                return True
+            else:
+                error = result.get("error", "未知错误") if result else "响应数据为空"
+                print(f"收藏题单失败: {error}")
+                return False
+        except Exception as e:
+            print(f"收藏题单失败: {str(e)}")
+            return False
+
+    def fork_favorite(self, favorite_slug: str) -> Optional[str]:
+        """
+        复制（fork）题单
+        :param favorite_slug: 题单的 slug
+        :return: 新题单的 slug，如果失败则返回 None
+        """
+        query = """
+        mutation forkFavoriteV2($favoriteSlug: String!) {
+            forkFavoriteV2(favoriteSlug: $favoriteSlug) {
+                ok
+                error
+                slug
+            }
+        }
+        """
+
+        variables = {
+            "favoriteSlug": favorite_slug
+        }
+
+        try:
+            response = requests.post(
+                self.base_url,
+                headers=self.headers,
+                json={
+                    "query": query,
+                    "variables": variables,
+                    "operationName": "forkFavoriteV2"
+                }
+            )
+            response.raise_for_status()
+            data = response.json()
+            
+            if "errors" in data:
+                error_msg = data["errors"][0].get("message", "未知错误")
+                print(f"复制题单失败: {error_msg}")
+                return None
+                
+            result = data.get("data", {}).get("forkFavoriteV2", {})
+            if result and result.get("ok"):
+                return result.get("slug")
+            else:
+                error = result.get("error", "未知错误") if result else "响应数据为空"
+                print(f"复制题单失败: {error}")
+                return None
+        except Exception as e:
+            print(f"复制题单失败: {str(e)}")
+            return None
+
 def format_time(time_str: Optional[str]) -> str:
     """
     格式化时间字符串
@@ -680,9 +838,10 @@ def display_menu() -> None:
     table.add_row(["3", "👀查看题单"])
     table.add_row(["4", "➕新增题目"])
     table.add_row(["5", "➖删除题目"])
-    table.add_row(["6", "❌退出(q)"])
+    table.add_row(["6", "⭐收藏他人题单"])
+    table.add_row(["7", "📋复制他人题单"])
     
-    print("\n请选择操作:")
+    print("\n请选择操作（输入 q 退出）:")
     print(table)
 
 def add_questions_to_favorite(client: LeetCodeClient, favorite_slug: str, favorite_name: str) -> None:
@@ -779,6 +938,122 @@ def delete_favorite_list(client: LeetCodeClient, favorite: dict, is_batch: bool 
             return True
     return False
 
+def display_public_favorites(favorites: List[FavoriteInfo]) -> None:
+    """
+    显示用户的公开题单列表
+    """
+    print("\n公开题单列表:")
+    
+    table = PrettyTable()
+    table.field_names = ["编号", "题单名称", "题目数量", "查看次数", "最后更新", "slug"]
+    # 设置对齐方式
+    table.align["编号"] = "r"  # 右对齐
+    table.align["题单名称"] = "l"  # 左对齐
+    table.align["题目数量"] = "r"  # 右对齐
+    table.align["查看次数"] = "r"  # 右对齐
+    table.align["最后更新"] = "l"  # 左对齐
+    table.align["slug"] = "l"  # 左对齐
+    
+    for i, favorite in enumerate(favorites, 1):
+        emoji = favorite.get('coverEmoji', '📚')
+        name = f"{emoji} {favorite['name']}"
+        last_added = format_time(favorite.get('lastQuestionAddedAt'))
+        question_count = favorite.get('questionNumber', 0)
+        view_count = favorite.get('viewCount', 0)
+        slug = favorite['slug']
+        
+        table.add_row([i, name, question_count, view_count, last_added, slug])
+    
+    print(table)
+
+def view_and_operate_public_favorites(client: LeetCodeClient, user_slug: str, operation_type: str) -> None:
+    """
+    查看并操作用户的公开题单
+    :param client: LeetCode 客户端实例
+    :param user_slug: 用户的 slug
+    :param operation_type: 操作类型，'collect' 表示收藏，'fork' 表示复制
+    """
+    public_favorites = client.get_public_favorite_lists(user_slug)
+    if not public_favorites:
+        return
+        
+    while True:
+        display_public_favorites(public_favorites)
+        print("\n请选择操作：")
+        print("1. 查看题单内容")
+        print(f"2. {'收藏' if operation_type == 'collect' else '复制'}题单")
+        
+        choice = input("\n请输入选项编号（输入 q 返回）: ").strip().lower()
+        
+        if choice == 'q':
+            break
+            
+        if choice == "1":  # 查看题单内容
+            while True:
+                try:
+                    index_input = input("\n请输入要查看的题单编号（输入 q 返回）: ").strip().lower()
+                    if index_input == 'q':
+                        break
+                        
+                    index = int(index_input) - 1
+                    if 0 <= index < len(public_favorites):
+                        selected_favorite = public_favorites[index]
+                        print(f"\n已选择题单: {selected_favorite['name']}")
+                        
+                        response = client.get_favorite_questions(selected_favorite['slug'])
+                        if not response or not response['questions']:
+                            print("题单中没有题目")
+                            continue
+                            
+                        display_questions(response['questions'], response['totalLength'])
+                        
+                        if response['hasMore']:
+                            if get_yes_no_input("\n还有更多题目，是否继续查看？"):
+                                skip = len(response['questions'])
+                                response = client.get_favorite_questions(selected_favorite['slug'], skip=skip)
+                                if not response:
+                                    break
+                        input("\n按回车键返回...")
+                        break
+                    else:
+                        print("无效的题单编号，请重新输入")
+                except ValueError:
+                    print("请输入有效的数字")
+                    continue
+                
+        elif choice == "2":  # 收藏或复制题单
+            while True:
+                try:
+                    index_input = input(f"\n请输入要{'收藏' if operation_type == 'collect' else '复制'}的题单编号（输入 q 返回）: ").strip().lower()
+                    if index_input == 'q':
+                        break
+                        
+                    index = int(index_input) - 1
+                    if 0 <= index < len(public_favorites):
+                        selected_favorite = public_favorites[index]
+                        print(f"\n已选择题单: {selected_favorite['name']}")
+                        
+                        # 添加二次确认
+                        if not get_yes_no_input(f"确认要{'收藏' if operation_type == 'collect' else '复制'}这个题单吗？"):
+                            continue
+                        
+                        if operation_type == 'collect':
+                            if client.add_favorite_to_collection(selected_favorite['slug']):
+                                print("成功收藏题单")
+                                break
+                        else:  # fork
+                            new_slug = client.fork_favorite(selected_favorite['slug'])
+                            if new_slug:
+                                print(f"成功复制题单，新题单的 slug 为: {new_slug}")
+                                break
+                    else:
+                        print("无效的题单编号，请重新输入")
+                except ValueError:
+                    print("请输入有效的数字")
+                    continue
+        else:
+            print("无效的选项，请重新输入")
+
 def main():
     # 加载 .env 文件中的配置
     env_path = os.path.join(os.path.dirname(__file__), '.env')
@@ -820,23 +1095,22 @@ def main():
         display_menu()
         
         while True:
-            choice = input("\n请输入选项编号: ").strip().lower()
-            if choice == 'q' or choice == '6':
-                # print("Bye, see you next time!")
+            choice = input("\n请输入选项编号（输入 q 退出）: ").strip().lower()
+            if choice == 'q':
                 return
             
-            if choice not in ['1', '2', '3', '4', '5']:
+            if choice not in ['1', '2', '3', '4', '5', '6', '7']:
                 print("无效的选项，请重新输入")
                 continue
                 
             # 如果没有题单且选择了需要题单的操作
-            if not all_favorites and choice in ['2', '3', '4', '5']:
+            if not all_favorites and choice in ['2', '3', '4', '5', '6', '7']:
                 print("当前没有任何题单，请先创建题单")
                 continue
                 
             if choice == '1':  # 创建题单
                 while True:
-                    favorite_name = input("\n请输入新题单名称（输入q返回）: ").strip()
+                    favorite_name = input("\n请输入新题单名称（输入 q 返回）: ").strip()
                     if favorite_name.lower() == 'q':
                         break
                         
@@ -901,7 +1175,7 @@ def main():
                 
                 while True:
                     try:
-                        index_input = input("\n请选择题单编号（输入q返回）: ").strip().lower()
+                        index_input = input("\n请选择题单编号（输入 q 返回）: ").strip().lower()
                         if index_input == 'q':
                             break
                             
@@ -998,6 +1272,25 @@ def main():
                         print("请输入有效的数字")
                         continue
                 break
+
+            elif choice == '6':  # 收藏他人题单
+                user_slug = input("\n请输入用户名: ").strip()
+                if not user_slug:
+                    print("用户名不能为空")
+                    continue
+                
+                view_and_operate_public_favorites(client, user_slug, 'collect')
+                break
+
+            elif choice == '7':  # 复制他人题单
+                user_slug = input("\n请输入用户名: ").strip()
+                if not user_slug:
+                    print("用户名不能为空")
+                    continue
+                
+                view_and_operate_public_favorites(client, user_slug, 'fork')
+                break
+
             break
 
 if __name__ == "__main__":
