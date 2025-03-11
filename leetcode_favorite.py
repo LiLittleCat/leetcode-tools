@@ -801,10 +801,12 @@ def get_question_ids() -> List[str]:
     """
     获取要添加的题目 ID 列表
     """
-    print("\n请输入要添加的题目 ID（如 1，多个 ID 用逗号分隔）:")
+    print("\n请输入要添加的题目 ID（如 1，多个 ID 用逗号分隔，输入 q 返回）:")
     print("注意：这里需要输入题目的 ID，而不是题目编号。题目 ID 可以从题目页面的 URL 中获取。")
     print("例如：题目 'Two Sum' 的 URL 是 https://leetcode.cn/problems/two-sum/，其 ID 是 1")
     ids = input().strip()
+    if ids.lower() == 'q':
+        return []
     return [id.strip() for id in re.split(r'[,\s]+', ids) if id.strip()]
 
 def get_yes_no_input(prompt: str, default: bool = True) -> bool:
@@ -860,14 +862,16 @@ def add_questions_to_favorite(client: LeetCodeClient, favorite_slug: str, favori
         print("\n请选择添加题目的方式：")
         print("1. 使用题目 ID（如 1）")
         print("2. 使用题目 slug（如 binary-tree-level-order-traversal）")
-        print("3. 返回上级菜单")
         
-        choice = input("\n请输入选项（1-3）: ").strip()
+        choice = input("\n请输入选项编号（输入 q 返回）: ").strip().lower()
+        
+        if choice == 'q':
+            break
         
         if choice == "1":
             question_ids = get_question_ids()
             if not question_ids:
-                break
+                continue
                 
             has_changes = False
             for qid in question_ids:
@@ -880,16 +884,13 @@ def add_questions_to_favorite(client: LeetCodeClient, favorite_slug: str, favori
         elif choice == "2":
             question_slugs = get_question_slugs()
             if not question_slugs:
-                break
+                continue
                 
             if client.batch_add_questions_to_favorite(favorite_slug, question_slugs):
                 print(f"成功批量添加 {len(question_slugs)} 个题目到题单")
                 has_changes = True
             else:
                 print("批量添加题目失败")
-        
-        elif choice == "3":
-            break
             
         else:
             print("无效的选项，请重新选择")
@@ -909,8 +910,10 @@ def get_question_slugs() -> List[str]:
     """
     获取要添加的题目 slug 列表
     """
-    print("\n请输入要添加的题目 slug（如 two-sum，多个 slug 用逗号分隔）:")
+    print("\n请输入要添加的题目 slug（如 two-sum，多个 slug 用逗号分隔，输入 q 返回）:")
     slugs = input().strip()
+    if slugs.lower() == 'q':
+        return []
     return [slug.strip() for slug in re.split(r'[,\s]+', slugs) if slug.strip()]
 
 def delete_favorite_list(client: LeetCodeClient, favorite: dict, is_batch: bool = False) -> bool:
@@ -1119,8 +1122,12 @@ def main():
                         continue
                         
                     is_public = get_yes_no_input("是否公开？")
+
+                    description = input("\n请输入题单描述（输入 q 返回）: ").strip()    
+                    if description.lower() == 'q':
+                        break
                     
-                    favorite_slug = client.create_favorite_list(favorite_name, is_public)
+                    favorite_slug = client.create_favorite_list(favorite_name, is_public, description)
                     if favorite_slug:
                         print(f"\n成功创建题单: {favorite_name}")
                         if get_yes_no_input("\n是否现在添加题目？"):
