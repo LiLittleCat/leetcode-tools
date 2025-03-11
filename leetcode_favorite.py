@@ -576,12 +576,12 @@ def display_menu() -> None:
     table.border = True  # 显示边框
     table.hrules = False  # 添加每行的分割线
     
-    table.add_row(["1", "创建题单"])
-    table.add_row(["2", "删除题单"])
-    table.add_row(["3", "查看题单"])
-    table.add_row(["4", "新增题目"])
-    table.add_row(["5", "删除题目"])
-    table.add_row(["6", "退出(q)"])
+    table.add_row(["1", "📝创建题单"])
+    table.add_row(["2", "🗑️删除题单"])
+    table.add_row(["3", "👀查看题单"])
+    table.add_row(["4", "➕新增题目"])
+    table.add_row(["5", "➖删除题目"])
+    table.add_row(["6", "❌退出(q)"])
     
     print("\n请选择操作:")
     print(table)
