@@ -855,9 +855,19 @@ def main():
                                             break
                                 else:
                                     if get_yes_no_input("确认要删除这个题单吗？"):
-                                        if client.delete_favorite(selected_favorite['slug']):
-                                            print(f"成功删除题单: {selected_favorite['name']}")
+                                        if index_input.lower() == 'a':
+                                            success_count = 0
+                                            for fav in all_favorites:
+                                                if fav['is_created']:  # 只删除自己创建的题单
+                                                    if client.delete_favorite(fav['slug']):
+                                                        print(f"成功删除题单: {fav['name']}")
+                                                        success_count += 1
+                                            print(f"\n批量删除完成，成功删除 {success_count} 个题单")
                                             break
+                                        else:
+                                            if client.delete_favorite(selected_favorite['slug']):
+                                                print(f"成功删除题单: {selected_favorite['name']}")
+                                                break
                                     
                             elif choice == '3':  # 查看题单
                                 while True:
@@ -894,30 +904,46 @@ def main():
                                         
                                     display_questions(response['questions'], response['totalLength'])
                                     
-                                    q_input = input("\n请输入要移除的题目编号（输入q返回）: ").strip().lower()
+                                    q_input = input("\n请输入要删除的题目编号（输入q返回，输入a删除所有题目）: ").strip().lower()
                                     if q_input == 'q':
                                         break
+                                        
+                                    if q_input == 'a':
+                                        if get_yes_no_input("确认要删除所有题目吗？"):
+                                            success_count = 0
+                                            for question in response['questions']:
+                                                if client.remove_question_from_favorite(selected_favorite['slug'], question['titleSlug']):
+                                                    print(f"成功删除题目: {question['translatedTitle']}")
+                                                    success_count += 1
+                                            print(f"\n批量删除完成，成功删除 {success_count} 个题目")
+                                            # 重新获取并显示题目列表
+                                            print("\n更新后的题目列表:")
+                                            response = client.get_favorite_questions(selected_favorite['slug'])
+                                            if response:
+                                                display_questions(response['questions'], response['totalLength'])
+                                            break
+                                        continue
                                         
                                     try:
                                         q_index = int(q_input) - 1
                                         if 0 <= q_index < len(response['questions']):
                                             question = response['questions'][q_index]
                                             if client.remove_question_from_favorite(selected_favorite['slug'], question['titleSlug']):
-                                                print(f"成功移除题目: {question['translatedTitle']}")
+                                                print(f"成功删除题目: {question['questionFrontendId']} {question['translatedTitle']}")
                                                 # 重新获取并显示题目列表
                                                 print("\n更新后的题目列表:")
                                                 response = client.get_favorite_questions(selected_favorite['slug'])
                                                 if response:
                                                     display_questions(response['questions'], response['totalLength'])
                                             else:
-                                                print("移除题目失败")
+                                                print("删除题目失败")
                                         else:
                                             print("无效的题目编号")
                                     except ValueError:
                                         print("请输入有效的数字")
                                         continue
                                         
-                                    if not get_yes_no_input("\n是否继续移除题目？"):
+                                    if not get_yes_no_input("\n是否继续删除题目？"):
                                         break
                                 break
                         else:
