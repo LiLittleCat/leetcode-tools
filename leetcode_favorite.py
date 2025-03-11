@@ -869,10 +869,13 @@ def main():
                         if index_input == 'a':  # 批量删除
                             if get_yes_no_input("确认要删除/取消收藏所有题单吗？"):
                                 success_count = 0
+                                fail_count = 0
                                 for fav in all_favorites:
                                     if delete_favorite_list(client, fav, True):
                                         success_count += 1
-                                print(f"\n批量删除完成，成功删除 {success_count} 个题单")
+                                    else:
+                                        fail_count += 1
+                                print(f"\n批量删除完成，成功：{success_count} 个，失败：{fail_count} 个")
                                 break
                             continue
                             
@@ -949,11 +952,15 @@ def main():
                                     if q_input == 'a':
                                         if get_yes_no_input("确认要删除所有题目吗？"):
                                             success_count = 0
+                                            fail_count = 0
                                             for question in response['questions']:
                                                 if client.remove_question_from_favorite(selected_favorite['slug'], question['titleSlug']):
                                                     print(f"成功删除题目: {question['translatedTitle']}")
                                                     success_count += 1
-                                            print(f"\n批量删除完成，成功删除 {success_count} 个题目")
+                                                else:
+                                                    print(f"删除题目失败: {question['translatedTitle']}")
+                                                    fail_count += 1
+                                            print(f"\n批量删除完成，成功：{success_count} 个，失败：{fail_count} 个")
                                             # 重新获取并显示题目列表
                                             print("\n更新后的题目列表:")
                                             response = client.get_favorite_questions(selected_favorite['slug'])
