@@ -118,12 +118,11 @@ class LeetCodeClient:
             print("获取题单列表失败")
             return [], []
 
-    def create_favorite_list(self, name: str, is_public: bool = True, cover_emoji: str = "📚", description: str = "") -> Optional[str]:
+    def create_favorite_list(self, name: str, is_public: bool = True, description: str = "") -> Optional[str]:
         """
         创建新的题单
         :param name: 题单名称
         :param is_public: 是否公开
-        :param cover_emoji: 封面表情
         :param description: 题单描述
         :return: 题单的 slug，如果创建失败则返回 None
         """
@@ -177,11 +176,7 @@ class LeetCodeClient:
                 
             create_result = data["data"].get("createEmptyFavorite", {})
             if create_result.get("ok"):
-                slug = create_result.get("favoriteSlug")
-                # 如果提供了封面表情，则更新题单的封面表情
-                if cover_emoji and slug:
-                    self.update_favorite_emoji(slug, cover_emoji)
-                return slug
+                return create_result.get("favoriteSlug")
             else:
                 error = create_result.get("error", "未知错误")
                 print(f"创建题单失败: {error}")
@@ -427,12 +422,25 @@ class LeetCodeClient:
             }
         )
 
-        data = response.json()
-        if data.get("data", {}).get("deleteFavoriteV2", {}).get("ok"):
-            return True
-        else:
-            error = data.get("data", {}).get("deleteFavoriteV2", {}).get("error", "未知错误")
-            print(f"删除题单失败: {error}")
+        try:
+            data = response.json()
+            
+            # 检查是否存在 GraphQL 错误
+            if "errors" in data:
+                error_msg = data["errors"][0].get("message", "未知错误")
+                print(f"删除题单失败: {error_msg}")
+                return False
+            
+            # 检查正常响应
+            result = data.get("data", {}).get("deleteFavoriteV2", {})
+            if result and result.get("ok"):
+                return True
+            else:
+                error_msg = result.get("error", "未知错误") if result else "响应数据为空"
+                print(f"删除题单失败: {error_msg}")
+                return False
+        except Exception as e:
+            print(f"删除题单失败: 解析响应时出错 - {str(e)}")
             return False
 
 def format_time(time_str: Optional[str]) -> str:
@@ -679,9 +687,8 @@ def main():
                         continue
                         
                     is_public = get_yes_no_input("是否公开？")
-                    emoji = input("请输入封面表情（直接回车使用默认 📚）: ").strip() or "📚"
                     
-                    favorite_slug = client.create_favorite_list(favorite_name, is_public, emoji)
+                    favorite_slug = client.create_favorite_list(favorite_name, is_public)
                     if favorite_slug:
                         print(f"\n成功创建题单: {favorite_name}")
                         if get_yes_no_input("\n是否现在添加题目？"):
