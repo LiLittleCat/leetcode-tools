@@ -472,22 +472,23 @@ def display_favorites(favorites: List[FavoriteInfo]) -> None:
     print("\n题单列表:")
     
     table = PrettyTable()
-    table.field_names = ["编号", "题单类型", "题单名称", "状态", "最后更新"]
+    table.field_names = ["编号", "题单类型", "题单名称", "状态", "最后更新", "slug"]
     # 设置对齐方式
     table.align["编号"] = "r"  # 右对齐
     table.align["题单类型"] = "c"  # 居中对齐
     table.align["题单名称"] = "l"  # 左对齐
     table.align["状态"] = "c"  # 居中对齐
     table.align["最后更新"] = "l"  # 左对齐
-    
+    table.align["slug"] = "l"  # 左对齐
     for i, favorite in enumerate(favorites, 1):
         emoji = favorite['coverEmoji'] if favorite.get('coverEmoji') else '📚'
         name = f"{emoji} {favorite['name']}"
         last_added = format_time(favorite.get('lastQuestionAddedAt'))
         status = '🔓 公开' if favorite['isPublicFavorite'] else '🔒 私有'
         favorite_type = "📝 创建" if favorite.get('is_created') else "⭐ 收藏"
+        slug = favorite['slug']
         
-        table.add_row([i, favorite_type, name, status, last_added])
+        table.add_row([i, favorite_type, name, status, last_added, slug])
     
     print(table)
 
