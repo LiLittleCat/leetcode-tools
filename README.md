@@ -48,11 +48,11 @@ python leetcode_favorite.py
 
 1. 登录 [LeetCode 中文站](https://leetcode.cn)
 2. 打开浏览器开发者工具（F12）
-3. 切换到 Network 标签页
-4. 刷新页面
-5. 在请求列表中找到任意请求
-6. 在请求头中找到 Cookie
-7. 从 Cookie 中复制 `csrftoken` 和 `LEETCODE_SESSION` 的值
+3. 切换到 Application 标签页
+4. 在左侧边栏找到 Storage -> Cookies -> https://leetcode.cn
+5. 在右侧列表中找到并复制以下值：
+   - `csrftoken`
+   - `LEETCODE_SESSION`
 
 ## 注意事项
 
