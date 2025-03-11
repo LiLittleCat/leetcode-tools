@@ -825,26 +825,38 @@ def get_yes_no_input(prompt: str, default: bool = True) -> bool:
     else:
         return user_input in ['y', 'yes']
 
-def display_menu() -> None:
-    """
-    显示操作菜单
-    """
+def display_menu():
+    """显示主菜单"""
+    print("\n=== LeetCode 题单管理工具 ===")
+    
+    #     print("1️⃣ 📝 创建题单")
+    # print("2️⃣ ❌ 删除题单")
+    # print("3️⃣ 👀 查看题单")
+    # print("4️⃣ ➕ 新增题目")
+    # print("5️⃣ ➖ 删除题目")
+    # print("6️⃣ ⭐ 收藏他人题单")
+    # print("7️⃣ 📋 复制他人题单")
+    # print("8️⃣ ⚡ 快速创建题单")
+    # print("=" * 30)
+    # print("请选择操作（输入 q 退出）：")
+
     table = PrettyTable()
     table.field_names = ["选项", "功能"]
     table.align = "l"  # 左对齐
     table.border = True  # 显示边框
-    table.hrules = False  # 添加每行的分割线
+    table.hrules = False  # 不显示横向分割线
     
     table.add_row(["1", "📝创建题单"])
-    table.add_row(["2", "🗑️删除题单"])
+    table.add_row(["2", "❌删除题单"])
     table.add_row(["3", "👀查看题单"])
     table.add_row(["4", "➕新增题目"])
     table.add_row(["5", "➖删除题目"])
     table.add_row(["6", "⭐收藏他人题单"])
     table.add_row(["7", "📋复制他人题单"])
+    table.add_row(["8", "⚡快速创建题单"])
     
-    print("\n请选择操作（输入 q 退出）:")
     print(table)
+    print("\n请选择操作（输入 q 退出）：")
 
 def add_questions_to_favorite(client: LeetCodeClient, favorite_slug: str, favorite_name: str) -> None:
     """
@@ -1057,6 +1069,70 @@ def view_and_operate_public_favorites(client: LeetCodeClient, user_slug: str, op
         else:
             print("无效的选项，请重新输入")
 
+def parse_quick_create_input(input_text: str) -> tuple[str, str, List[str]]:
+    """
+    解析快速创建题单的输入
+    :param input_text: 输入文本，格式为：标题\n描述\n题目1 题目2 题目3...
+    :return: (标题, 描述, 题目列表)
+    """
+    lines = [line.strip() for line in input_text.strip().split('\n')]
+    if len(lines) < 3:
+        return "", "", []
+    return lines[0], lines[1], lines[2].split()
+
+def quick_create_favorite(client: LeetCodeClient) -> None:
+    """
+    快速创建题单
+    :param client: LeetCode 客户端实例
+    """
+    print("\n请输入题单信息，格式如下（每项用回车分隔）：")
+    print("第1行：题单标题")
+    print("第2行：题单描述")
+    print("第3行：题目的 titleslug（多个题目用空格分隔）")
+    print("\n示例：")
+    print("滑动窗口经典题目")
+    print("包含了各种类型的滑动窗口题目")
+    print("longest-substring-without-repeating-characters minimum-window-substring sliding-window-maximum")
+    print("\n请输入（输入 q 结束）：")
+    
+    # 收集所有输入行直到遇到单独的 'q'
+    lines = []
+    while True:
+        line = input().strip()
+        if line.lower() == 'q':
+            if not lines:  # 如果还没有输入任何内容就输入 q，则返回
+                return
+            break
+        lines.append(line)
+    
+    input_text = '\n'.join(lines)
+    title, description, slugs = parse_quick_create_input(input_text)
+    
+    if not title:
+        print("错误：标题不能为空")
+        return
+        
+    if not slugs:
+        print("错误：至少需要输入一个题目")
+        return
+        
+    # 创建题单
+    favorite_slug = client.create_favorite_list(title, True, description)
+    if not favorite_slug:
+        return
+        
+    print(f"\n成功创建题单: {title}")
+    
+    # 批量添加题目
+    if client.batch_add_questions_to_favorite(favorite_slug, slugs):
+        print(f"成功批量添加 {len(slugs)} 个题目到题单")
+        # 显示题单内容
+        response = client.get_favorite_questions(favorite_slug)
+        if response:
+            display_questions(response['questions'], response['totalLength'])
+    else:
+        print("批量添加题目失败")
+
 def main():
     # 加载 .env 文件中的配置
     env_path = os.path.join(os.path.dirname(__file__), '.env')
@@ -1102,12 +1178,12 @@ def main():
             if choice == 'q':
                 return
             
-            if choice not in ['1', '2', '3', '4', '5', '6', '7']:
+            if choice not in ['1', '2', '3', '4', '5', '6', '7', '8']:
                 print("无效的选项，请重新输入")
                 continue
                 
             # 如果没有题单且选择了需要题单的操作
-            if not all_favorites and choice in ['2', '3', '4', '5', '6', '7']:
+            if not all_favorites and choice in ['2', '3', '4', '5', '6', '7', '8']:
                 print("当前没有任何题单，请先创建题单")
                 continue
                 
@@ -1296,6 +1372,10 @@ def main():
                     continue
                 
                 view_and_operate_public_favorites(client, user_slug, 'fork')
+                break
+
+            elif choice == '8':  # 快速创建题单
+                quick_create_favorite(client)
                 break
 
             break
