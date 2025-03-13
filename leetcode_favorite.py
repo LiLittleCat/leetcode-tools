@@ -1091,7 +1091,7 @@ def quick_create_favorite(client: LeetCodeClient) -> None:
     print("\n示例：")
     print("滑动窗口经典题目")
     print("longest-substring-without-repeating-characters minimum-window-substring sliding-window-maximum")
-    print("\n请输入（输入 q 结束）：")
+    print("\n请输入（输入 回车 + q 结束）：")
     
     # 收集所有输入行直到遇到单独的 'q'
     lines = []
