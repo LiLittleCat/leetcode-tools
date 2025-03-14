@@ -856,7 +856,6 @@ def display_menu():
     table.add_row(["8", "⚡快速创建题单"])
     
     print(table)
-    print("\n请选择操作（输入 q 退出）：")
 
 def add_questions_to_favorite(client: LeetCodeClient, favorite_slug: str, favorite_name: str) -> None:
     """
@@ -1088,10 +1087,12 @@ def quick_create_favorite(client: LeetCodeClient) -> None:
     print("\n请输入题单信息，格式如下（每项用回车分隔）：")
     print("第1行：题单标题")
     print("第2行：题目的 titleslug（多个题目用空格分隔）")
+    print("第3行：q 结束标志")
     print("\n示例：")
     print("滑动窗口经典题目")
     print("longest-substring-without-repeating-characters minimum-window-substring sliding-window-maximum")
-    print("\n请输入（输入 回车 + q 结束）：")
+    print("q")
+    print("\n请输入（直接输入 q 取消创建）：")
     
     # 收集所有输入行直到遇到单独的 'q'
     lines = []
