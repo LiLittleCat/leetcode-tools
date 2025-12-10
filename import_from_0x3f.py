@@ -131,8 +131,8 @@ def extract_heading_and_list_elements(html_content: str) -> str:
     if not content_area:
         content_area = soup
     
-    # 提取所有 h1, h2, h3, ul, ol, li 元素
-    allowed_tags = ['h1', 'h2', 'h3', 'ul', 'ol', 'li', 'a', 'p']
+    # 提取所有 h1, h2, h3, h4, ul, ol, li 元素
+    allowed_tags = ['h1', 'h2', 'h3', 'h4', 'ul', 'ol', 'li', 'a', 'p']
     
     def clone_element(element, parent):
         """递归克隆元素，只保留允许的标签"""
@@ -163,10 +163,11 @@ def extract_heading_and_list_elements(html_content: str) -> str:
                 parent.append(new_tag)
     
     # 查找所有标题和列表
-    for tag in content_area.find_all(['h1', 'h2', 'h3', 'ul', 'ol']):
+    for tag in content_area.find_all(['h1', 'h2', 'h3', 'h4', 'ul', 'ol']):
         clone_element(tag, body)
     
-    return str(new_soup.prettify())
+    # 使用紧凑格式避免写入时自动换行/缩进
+    return new_soup.decode(formatter="minimal")
 
 
 def fetch_and_save_discussion_html(discuss_id: str, filename: str) -> bool:
@@ -328,15 +329,19 @@ def parse_html_to_categories(html_filepath: str, root_title: str, category_index
     
     results = []
     h2_seq = 0
-    h3_seq_map: Dict[str, int] = defaultdict(int)
+    h3_seq_map: Dict[int, int] = defaultdict(int)  # per h2
+    h4_seq_map: Dict[Tuple[int, int], int] = defaultdict(int)  # per (h2, h3)
     
     # 遍历所有元素，构建层级结构
     current_h2 = ""  # 当前 h2 标题（如 "一、定长滑动窗口"）
-    current_h2_idx = ""
+    current_h2_idx = 0
     current_h2_name = ""
     current_h3 = ""  # 当前 h3 标题（如 "§1.1 基础"）
-    current_h3_idx = ""
+    current_h3_idx = 0
     current_h3_name = ""
+    current_h4 = ""  # 当前 h4 标题
+    current_h4_idx = 0
+    current_h4_name = ""
     
     for element in body.children:
         if not hasattr(element, 'name') or not element.name:
@@ -344,21 +349,34 @@ def parse_html_to_categories(html_filepath: str, root_title: str, category_index
         
         if element.name == 'h2':
             current_h2 = element.get_text(strip=True)
-            current_h2_idx, current_h2_name = parse_section_title(current_h2)
             h2_seq += 1
-            if not current_h2_idx:
-                current_h2_idx = str(h2_seq)
+            _, current_h2_name = parse_section_title(current_h2)
+            current_h2_idx = h2_seq  # 一级内的二级序号使用顺序
             current_h3 = ""  # 重置 h3
-            current_h3_idx = ""
+            current_h3_idx = 0
             current_h3_name = ""
+            current_h4 = ""
+            current_h4_idx = 0
+            current_h4_name = ""
             h3_seq_map[current_h2_idx] = 0
+            h4_seq_map[(current_h2_idx, 0)] = 0
             
         elif element.name == 'h3':
             current_h3 = element.get_text(strip=True)
-            current_h3_idx, current_h3_name = parse_section_title(current_h3)
+            _, current_h3_name = parse_section_title(current_h3)
             h3_seq_map[current_h2_idx] += 1
-            if not current_h3_idx:
-                current_h3_idx = str(h3_seq_map[current_h2_idx])
+            current_h3_idx = h3_seq_map[current_h2_idx]
+            current_h4 = ""
+            current_h4_idx = 0
+            current_h4_name = ""
+            h4_seq_map[(current_h2_idx, current_h3_idx)] = 0
+
+        elif element.name == 'h4':
+            current_h4 = element.get_text(strip=True)
+            _, current_h4_name = parse_section_title(current_h4)
+            key = (current_h2_idx, current_h3_idx)
+            h4_seq_map[key] += 1
+            current_h4_idx = h4_seq_map[key]
             
         elif element.name == 'ul':
             # 收集这个 ul 中的所有题目
@@ -384,17 +402,33 @@ def parse_html_to_categories(html_filepath: str, root_title: str, category_index
                 h2_name = current_h2_name
                 h3_idx = current_h3_idx
                 h3_name = current_h3_name
+                h4_idx = current_h4_idx
+                h4_name = current_h4_name
                 
                 number_parts = [str(category_index)] if category_index else []
                 if h2_idx:
-                    number_parts.append(h2_idx)
+                    number_parts.append(str(h2_idx))
                 if h3_idx:
-                    number_parts.append(h3_idx.split(".")[-1])
+                    number_parts.append(str(h3_idx))
+                if h4_idx:
+                    number_parts.append(str(h4_idx))
                 number_str = ".".join(number_parts) if number_parts else ""
                 
                 name_parts = [number_str] if number_str else []
+                h2_display = None
                 
-                if h3_idx or h3_name:
+                if h4_idx or h4_name:
+                    # 有 h4： 序号-h2-h3-h4（若无 h3 则跳过 h3）
+                    h2_display = h2_name or current_h2
+                    h3_display = h3_name or current_h3
+                    h4_display = h4_name or current_h4
+                    if h2_display:
+                        name_parts.append(h2_display)
+                    if h3_display:
+                        name_parts.append(h3_display)
+                    if h4_display:
+                        name_parts.append(h4_display)
+                elif h3_idx or h3_name:
                     # 有 h3： 序号-h2-h3
                     h2_display = h2_name or current_h2
                     h3_display = h3_name or current_h3
@@ -412,6 +446,11 @@ def parse_html_to_categories(html_filepath: str, root_title: str, category_index
                 
                 # 拼接名称（超长时按各段均匀缩减）
                 full_name = compact_name_parts(name_parts, max_length=30)
+                # 如果仍然超长，优先去掉 h2 以保留更深层的标题
+                if len(full_name) > 30 and h2_display:
+                    name_parts_no_h2 = [p for p in name_parts if p != h2_display]
+                    if name_parts_no_h2:
+                        full_name = compact_name_parts(name_parts_no_h2, max_length=30)
                 
                 # 检查是否已存在相同名称的分类，如果有则合并
                 existing = None
