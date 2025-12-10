@@ -11,6 +11,7 @@ import re
 import argparse
 from typing import Optional, List, Dict, Tuple
 from dataclasses import dataclass
+from collections import defaultdict
 from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 from leetcode_favorite import LeetCodeClient
@@ -252,6 +253,43 @@ def parse_section_title(title: str) -> Tuple[str, str]:
     return "", title
 
 
+def compact_name_parts(name_parts: List[str], max_length: int = 30, min_part_len: int = 4) -> str:
+    """
+    拼接名称，并在超长时按各部分均匀缩减
+    :param name_parts: 组成名称的各段
+    :param max_length: 允许的最大总长度
+    :param min_part_len: 每段的最小保留长度
+    :return: 缩减后的名称
+    """
+    parts = [p.strip() for p in name_parts if p and p.strip()]
+    if not parts:
+        return "未分类"
+
+    total_len = sum(len(p) for p in parts) + (len(parts) - 1)
+    if total_len <= max_length:
+        return "-".join(parts)
+
+    parts = parts[:]  # copy before mutation
+    # 轮询式缩减，每段尽量少砍一点，保持可读性
+    while True:
+        total_len = sum(len(p) for p in parts) + (len(parts) - 1)
+        if total_len <= max_length:
+            break
+
+        reduced = False
+        for i, p in enumerate(parts):
+            if len(p) > min_part_len and total_len > max_length:
+                parts[i] = p[:-1]
+                total_len -= 1
+                reduced = True
+
+        if not reduced:  # 所有段都到达最小长度，最后做硬截断兜底
+            joined = "-".join(parts)
+            return joined[:max_length]
+
+    return "-".join(parts)
+
+
 def extract_slug_from_href(href: str) -> Optional[str]:
     """
     从链接中提取题目 slug
@@ -268,11 +306,12 @@ def extract_slug_from_href(href: str) -> Optional[str]:
     return None
 
 
-def parse_html_to_categories(html_filepath: str, root_title: str) -> List[Tuple[str, List[ProblemInfo]]]:
+def parse_html_to_categories(html_filepath: str, root_title: str, category_index: int) -> List[Tuple[str, List[ProblemInfo]]]:
     """
     解析 HTML 文件，提取分类和题目信息
     :param html_filepath: HTML 文件路径
     :param root_title: 根分类标题（如 "滑动窗口与双指针"）
+    :param category_index: 分类在列表中的序号（一级序号）
     :return: [(分类名称, 题目列表), ...]
     """
     if not os.path.exists(html_filepath):
@@ -288,10 +327,16 @@ def parse_html_to_categories(html_filepath: str, root_title: str) -> List[Tuple[
         return []
     
     results = []
+    h2_seq = 0
+    h3_seq_map: Dict[str, int] = defaultdict(int)
     
     # 遍历所有元素，构建层级结构
     current_h2 = ""  # 当前 h2 标题（如 "一、定长滑动窗口"）
+    current_h2_idx = ""
+    current_h2_name = ""
     current_h3 = ""  # 当前 h3 标题（如 "§1.1 基础"）
+    current_h3_idx = ""
+    current_h3_name = ""
     
     for element in body.children:
         if not hasattr(element, 'name') or not element.name:
@@ -299,10 +344,21 @@ def parse_html_to_categories(html_filepath: str, root_title: str) -> List[Tuple[
         
         if element.name == 'h2':
             current_h2 = element.get_text(strip=True)
+            current_h2_idx, current_h2_name = parse_section_title(current_h2)
+            h2_seq += 1
+            if not current_h2_idx:
+                current_h2_idx = str(h2_seq)
             current_h3 = ""  # 重置 h3
+            current_h3_idx = ""
+            current_h3_name = ""
+            h3_seq_map[current_h2_idx] = 0
             
         elif element.name == 'h3':
             current_h3 = element.get_text(strip=True)
+            current_h3_idx, current_h3_name = parse_section_title(current_h3)
+            h3_seq_map[current_h2_idx] += 1
+            if not current_h3_idx:
+                current_h3_idx = str(h3_seq_map[current_h2_idx])
             
         elif element.name == 'ul':
             # 收集这个 ul 中的所有题目
@@ -324,37 +380,38 @@ def parse_html_to_categories(html_filepath: str, root_title: str) -> List[Tuple[
                         ))
             
             if problems:
-                # 获取序号和名称
-                h2_idx, h2_name = parse_section_title(current_h2)
-                h3_idx, h3_name = parse_section_title(current_h3)
+                h2_idx = current_h2_idx
+                h2_name = current_h2_name
+                h3_idx = current_h3_idx
+                h3_name = current_h3_name
                 
-                name_parts = []
+                number_parts = [str(category_index)] if category_index else []
+                if h2_idx:
+                    number_parts.append(h2_idx)
+                if h3_idx:
+                    number_parts.append(h3_idx.split(".")[-1])
+                number_str = ".".join(number_parts) if number_parts else ""
                 
-                # 1. Root Title (前2字)
-                if root_title:
-                    name_parts.append(root_title[:2] if len(root_title) > 2 else root_title)
+                name_parts = [number_str] if number_str else []
                 
-                # 2. Index + Name
-                # 优先使用 H3 (如 "1.1基础")
-                if current_h3 and h3_idx:
-                     short_h2 = h2_name[:3] if len(h2_name) > 3 else h2_name
-                     name_parts.append(f"{short_h2}-{h3_idx}{h3_name}")
-                # 其次使用 H2 (如 "5三指针")
-                elif h2_idx:
-                     name_parts.append(f"{h2_idx}{h2_name}")
-                # Fallback: 没有序号时，只使用名称
+                if h3_idx or h3_name:
+                    # 有 h3： 0x3f-序号-h2-h3
+                    h2_display = h2_name or current_h2
+                    h3_display = h3_name or current_h3
+                    if h2_display:
+                        name_parts.append(h2_display)
+                    if h3_display:
+                        name_parts.append(h3_display)
                 else:
-                     if current_h3:
-                         name_parts.append(h3_name)
-                     else:
-                         name_parts.append(h2_name)
+                    # 无 h3：0x3f-序号-分类-h2
+                    if root_title:
+                        name_parts.append(root_title)
+                    h2_display = h2_name or current_h2
+                    if h2_display:
+                        name_parts.append(h2_display)
                 
-                # 拼接名称
-                full_name = "-".join(name_parts) if name_parts else "未分类"
-                
-                # 确保不超过30字符 (保留更多内容，因为去掉了冗余文字)
-                if len(full_name) > 30:
-                    full_name = full_name[:30]
+                # 拼接名称（超长时按各段均匀缩减）
+                full_name = compact_name_parts(name_parts, max_length=30)
                 
                 # 检查是否已存在相同名称的分类，如果有则合并
                 existing = None
@@ -375,15 +432,16 @@ def parse_html_to_categories(html_filepath: str, root_title: str) -> List[Tuple[
     return results
 
 
-def load_category_from_html(filename: str, title: str) -> List[Tuple[str, List[ProblemInfo]]]:
+def load_category_from_html(filename: str, title: str, category_index: int) -> List[Tuple[str, List[ProblemInfo]]]:
     """
     从本地 HTML 文件加载分类信息
     :param filename: 文件名（不含扩展名）
     :param title: 分类标题
+    :param category_index: 分类序号
     :return: [(分类名称, 题目列表), ...]
     """
     filepath = os.path.join(LOCAL_HTML_DIR, f"{filename}.html")
-    return parse_html_to_categories(filepath, title)
+    return parse_html_to_categories(filepath, title, category_index)
 
 
 def create_favorite_from_category(
@@ -408,7 +466,7 @@ def create_favorite_from_category(
         return None
     
     # 构建题单名称，前缀 0x3f 便于统一删除
-    favorite_name = f"0x3f{category_name}"
+    favorite_name = f"0x3f-{category_name}"
     
     # 再次确保不超过30字符
     if len(favorite_name) > 30:
@@ -546,7 +604,7 @@ def interactive_mode(client: LeetCodeClient):
                     discuss_id, filename, title = PROBLEM_CATEGORIES[cat_index]
                     
                     # 从 HTML 文件加载分类
-                    categories = load_category_from_html(filename, title)
+                    categories = load_category_from_html(filename, title, cat_index + 1)
                     
                     if not categories:
                         print(f"未找到分类数据，请先使用选项 1 获取 HTML")
@@ -557,7 +615,7 @@ def interactive_mode(client: LeetCodeClient):
                     for i, (name, problems) in enumerate(categories, 1):
                         non_premium = [p for p in problems if not p.is_premium]
                         total_problems += len(non_premium)
-                        display_name = f"0x3f{name}"
+                        display_name = f"0x3f-{name}"
                         print(f"{i:3}. {display_name}")
                     
                     confirm = input(f"\n将创建 {len(categories)} 个题单（共 {total_problems} 道题），确认？(y/n): ").strip().lower()
@@ -574,8 +632,8 @@ def interactive_mode(client: LeetCodeClient):
             print("\n统计所有分类的子题单...")
             
             all_categories = []
-            for discuss_id, filename, title in PROBLEM_CATEGORIES:
-                categories = load_category_from_html(filename, title)
+            for idx, (discuss_id, filename, title) in enumerate(PROBLEM_CATEGORIES):
+                categories = load_category_from_html(filename, title, idx + 1)
                 all_categories.extend(categories)
             
             if not all_categories:
