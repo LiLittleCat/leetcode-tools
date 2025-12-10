@@ -135,7 +135,7 @@ def extract_heading_and_list_elements(html_content: str) -> str:
     allowed_tags = ['h1', 'h2', 'h3', 'h4', 'ul', 'ol', 'li', 'a', 'p']
     
     def clone_element(element, parent):
-        """递归克隆元素，只保留允许的标签"""
+        """递归克隆元素，只保留允许的标签; li 里只保留包含题目链接"""
         if element.name in allowed_tags:
             # 过滤掉不包含题目链接的 li 元素
             if element.name == 'li':
@@ -155,9 +155,13 @@ def extract_heading_and_list_elements(html_content: str) -> str:
             
             for child in element.children:
                 if hasattr(child, 'name') and child.name:
+                    if element.name == 'li' and child.name != 'a':
+                        continue  # li 里只保留 a 标签
                     clone_element(child, new_tag)
                 elif child.string:
-                    new_tag.append(child.string.strip())
+                    if element.name != 'li':
+                        # li 里不保留纯文本
+                        new_tag.append(child.string.strip())
             
             if new_tag.get_text(strip=True):  # 只添加有内容的元素
                 parent.append(new_tag)
@@ -167,7 +171,8 @@ def extract_heading_and_list_elements(html_content: str) -> str:
         clone_element(tag, body)
     
     # 使用紧凑格式避免写入时自动换行/缩进
-    return new_soup.decode(formatter="minimal")
+    # return new_soup.decode(formatter="minimal")
+    return str(new_soup.prettify())
 
 
 def fetch_and_save_discussion_html(discuss_id: str, filename: str) -> bool:
