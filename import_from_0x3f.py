@@ -1,5 +1,5 @@
 """
-从 LeetCode 讨论页面拉取 0x3f 的题单数据并创建 LeetCode 题单
+从 LeetCode 讨论页面拉取题单数据并创建 LeetCode 题单
 
 数据来源: https://leetcode.cn/circle/discuss/
 """
@@ -395,7 +395,7 @@ def parse_html_to_categories(html_filepath: str, root_title: str, category_index
                 name_parts = [number_str] if number_str else []
                 
                 if h3_idx or h3_name:
-                    # 有 h3： 0x3f-序号-h2-h3
+                    # 有 h3： 序号-h2-h3
                     h2_display = h2_name or current_h2
                     h3_display = h3_name or current_h3
                     if h2_display:
@@ -403,7 +403,7 @@ def parse_html_to_categories(html_filepath: str, root_title: str, category_index
                     if h3_display:
                         name_parts.append(h3_display)
                 else:
-                    # 无 h3：0x3f-序号-分类-h2
+                    # 无 h3：序号-分类-h2
                     if root_title:
                         name_parts.append(root_title)
                     h2_display = h2_name or current_h2
@@ -465,8 +465,8 @@ def create_favorite_from_category(
         print(f"分类 [{category_name}] 没有非会员题目，跳过")
         return None
     
-    # 构建题单名称，前缀 0x3f 便于统一删除
-    favorite_name = f"0x3f-{category_name}"
+    # 构建题单名称
+    favorite_name = category_name
     
     # 再次确保不超过30字符
     if len(favorite_name) > 30:
@@ -484,7 +484,7 @@ def create_favorite_from_category(
     # 实际创建题单
     print(f"正在创建题单: {favorite_name}")
     
-    favorite_slug = client.create_favorite_list(favorite_name, is_public=False, description=f"0x3f题单: {category_name}")
+    favorite_slug = client.create_favorite_list(favorite_name, is_public=False, description=f"题单: {category_name}")
     
     if not favorite_slug:
         print(f"创建题单失败: {favorite_name}")
@@ -520,43 +520,6 @@ def display_available_categories():
     print("-" * 50)
 
 
-def delete_all_0x3f_favorites(client: LeetCodeClient) -> None:
-    """
-    删除所有以 0x3f 开头的题单
-    :param client: LeetCode 客户端
-    """
-    print("\n正在获取题单列表...")
-    created_favorites, _ = client.get_favorite_lists()
-    
-    # 筛选出以 0x3f 开头的题单
-    favorites_to_delete = [f for f in created_favorites if f['name'].startswith('0x3f')]
-    
-    if not favorites_to_delete:
-        print("没有找到以 '0x3f' 开头的题单")
-        return
-    
-    print(f"\n找到 {len(favorites_to_delete)} 个以 '0x3f' 开头的题单:")
-    for i, f in enumerate(favorites_to_delete, 1):
-        print(f"  {i}. {f['name']} (slug: {f['slug']})")
-    
-    confirm = input(f"\n确认要删除这 {len(favorites_to_delete)} 个题单吗？(y/n): ").strip().lower()
-    if confirm != 'y':
-        print("取消删除操作")
-        return
-    
-    success_count = 0
-    fail_count = 0
-    
-    for f in favorites_to_delete:
-        if client.delete_favorite(f['slug']):
-            print(f"✓ 已删除: {f['name']}")
-            success_count += 1
-        else:
-            print(f"✗ 删除失败: {f['name']}")
-            fail_count += 1
-    
-    print(f"\n删除完成: 成功 {success_count} 个, 失败 {fail_count} 个")
-
 
 def interactive_mode(client: LeetCodeClient):
     """
@@ -570,7 +533,6 @@ def interactive_mode(client: LeetCodeClient):
         print("2. 获取所有讨论页面 HTML")
         print("3. 创建指定分类的子题单")
         print("4. 创建所有分类的子题单")
-        print("5. 删除所有 0x3f 题单")
         print("q. 退出")
         
         choice = input("\n请选择操作: ").strip().lower()
@@ -615,8 +577,7 @@ def interactive_mode(client: LeetCodeClient):
                     for i, (name, problems) in enumerate(categories, 1):
                         non_premium = [p for p in problems if not p.is_premium]
                         total_problems += len(non_premium)
-                        display_name = f"0x3f-{name}"
-                        print(f"{i:3}. {display_name}")
+                        print(f"{i:3}. {name}")
                     
                     confirm = input(f"\n将创建 {len(categories)} 个题单（共 {total_problems} 道题），确认？(y/n): ").strip().lower()
                     if confirm == 'y':
@@ -648,16 +609,12 @@ def interactive_mode(client: LeetCodeClient):
                 for name, problems in all_categories:
                     create_favorite_from_category(client, name, problems)
                     
-        elif choice == '5':
-            # 删除所有 0x3f 题单
-            delete_all_0x3f_favorites(client)
-            
         else:
             print("无效的选项")
 
 
 def main():
-    parser = argparse.ArgumentParser(description='从 LeetCode 讨论页面导入 0x3f 的题单数据')
+    parser = argparse.ArgumentParser(description='从 LeetCode 讨论页面导入题单数据')
     parser.add_argument('--fetch-all', action='store_true', help='获取所有讨论页面 HTML')
     parser.add_argument('--fetch', type=int, help='获取指定分类的讨论页面 HTML (1-12)')
     args = parser.parse_args()
@@ -679,11 +636,6 @@ def main():
             print(f"无效的分类编号: {args.fetch}")
     else:
         if not csrf_token or not session_id:
-            print("\n提示：如需删除题单功能，请在 .env 文件中配置：")
-            print("csrftoken=你的csrftoken")
-            print("LEETCODE_SESSION=你的LEETCODE_SESSION")
-            print("\n当前仅支持获取讨论页面 HTML")
-            
             # 直接获取 HTML 不需要登录
             print("\n选择要获取的讨论页面:")
             print("a. 获取所有讨论页面")
