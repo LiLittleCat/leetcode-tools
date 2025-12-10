@@ -1,6 +1,6 @@
 [
   {
-    "name": "一、网格图 DFS",
+    "name": "4 网格图 / 一、网格图 DFS",
     "count": 24,
     "problems_title_slugs": "number-of-islands max-area-of-island count-islands-with-total-value-divisible-by-k pond-sizes-lcci YesdPw island-perimeter maximum-number-of-fish-in-a-grid flood-fill coloring-a-border number-of-enclaves maximum-number-of-moves-in-a-grid number-of-closed-islands surrounded-regions count-sub-islands check-if-there-is-a-valid-path-in-a-grid pacific-atlantic-water-flow minesweeper detect-cycles-in-2d-grid making-a-large-island EXvqDp number-of-islands-ii number-of-spaces-cleaning-robot-cleaned sum-of-remoteness-of-all-cells robot-room-cleaner",
     "problems": [
@@ -127,7 +127,7 @@
     ]
   },
   {
-    "name": "二、网格图 BFS",
+    "name": "4 网格图 / 二、网格图 BFS",
     "count": 21,
     "problems_title_slugs": "nearest-exit-from-entrance-in-maze shortest-path-in-binary-matrix as-far-from-land-as-possible 01-matrix rotting-oranges map-of-highest-peak shortest-bridge k-highest-ranked-items-within-a-price-range shortest-path-in-a-grid-with-obstacles-elimination snakes-and-ladders minimum-moves-to-reach-target-with-rotations cut-off-trees-for-golf-event find-the-safest-path-in-a-grid contain-virus shortest-path-to-get-food walls-and-gates the-maze the-maze-ii the-maze-iii shortest-distance-from-all-buildings minimum-time-takes-to-reach-destination-without-drowning",
     "problems": [
@@ -239,7 +239,7 @@
     ]
   },
   {
-    "name": "三、网格图 0-1 BFS",
+    "name": "4 网格图 / 三、网格图 0-1 BFS",
     "count": 6,
     "problems_title_slugs": "find-a-safe-walk-through-a-grid minimum-obstacle-removal-to-reach-corner minimum-cost-to-make-at-least-one-valid-path-in-a-grid grid-teleportation-traversal minimum-sideway-jumps 6UEx57",
     "problems": [
@@ -276,7 +276,7 @@
     ]
   },
   {
-    "name": "五、综合应用",
+    "name": "4 网格图 / 五、综合应用",
     "count": 19,
     "problems_title_slugs": "path-with-minimum-effort swim-in-rising-water longest-increasing-path-in-a-matrix minimum-moves-to-clean-the-classroom escape-a-large-maze shortest-path-to-get-all-keys minimum-moves-to-move-a-box-to-their-target-location escape-the-spreading-fire disconnect-path-in-a-binary-matrix-by-at-most-one-flip minimum-time-to-visit-a-cell-in-a-grid minimum-number-of-visited-cells-in-a-grid xun-bao Db3wC1 kplEvH rdmXM7 shortest-path-in-a-hidden-grid number-of-distinct-islands number-of-distinct-islands-ii path-with-maximum-minimum-value",
     "problems": [

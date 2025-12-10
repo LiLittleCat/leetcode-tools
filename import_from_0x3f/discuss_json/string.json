@@ -1,6 +1,6 @@
 [
   {
-    "name": "一、KMP（前缀的后缀）",
+    "name": "12 字符串 / 一、KMP（前缀的后缀）",
     "count": 16,
     "problems_title_slugs": "find-the-index-of-the-first-occurrence-in-a-string rotate-string longest-happy-prefix number-of-subarrays-that-match-a-pattern-ii form-array-by-concatenating-subarrays-of-another-array maximum-repeating-substring repeated-substring-pattern shortest-string-that-contains-three-strings find-beautiful-indices-in-the-given-array-ii shortest-palindrome count-cells-in-overlapping-horizontal-and-vertical-substrings repeated-string-match shortest-matching-substring find-all-good-strings find-pattern-in-infinite-stream-ii find-the-shortest-superstring-ii",
     "problems": [
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "name": "二、Z 函数（后缀的前缀）",
+    "name": "12 字符串 / 二、Z 函数（后缀的前缀）",
     "count": 9,
     "problems_title_slugs": "sum-of-scores-of-built-strings minimum-time-to-revert-word-to-initial-state-ii count-prefix-and-suffix-pairs-ii find-the-occurrence-of-first-almost-equal-substring minimum-number-of-valid-strings-to-form-target-ii lexicographically-smallest-generated-string maximum-deletions-on-a-string count-beautiful-splits-in-an-array number-of-ways-to-separate-numbers",
     "problems": [
@@ -139,7 +139,7 @@
     ]
   },
   {
-    "name": "三、Manacher 算法（回文串）",
+    "name": "12 字符串 / 三、Manacher 算法（回文串）",
     "count": 12,
     "problems_title_slugs": "longest-palindromic-substring palindromic-substrings shortest-palindrome check-if-dfs-strings-are-palindromes palindrome-partitioning-iv maximum-product-of-the-length-of-two-palindromic-substrings longest-palindrome-after-substring-concatenation-ii longest-palindromic-substring maximum-number-of-non-overlapping-palindrome-substrings longest-palindrome-after-substring-concatenation-ii longest-palindromic-path-in-graph minimum-steps-to-convert-string-with-operations",
     "problems": [
@@ -206,7 +206,7 @@
     ]
   },
   {
-    "name": "四、字符串哈希",
+    "name": "12 字符串 / 四、字符串哈希",
     "count": 15,
     "problems_title_slugs": "find-the-index-of-the-first-occurrence-in-a-string repeated-dna-sequences distinct-echo-substrings maximum-number-of-occurrences-of-a-substring k-divisible-elements-subarrays lexicographically-smallest-string-after-reverse construct-string-with-minimum-cost linked-list-in-binary-tree longest-duplicate-substring maximum-length-of-repeated-subarray longest-common-subpath minimum-number-of-valid-strings-to-form-target-ii unique-substrings-with-equal-digit-frequency strings-differ-by-one-character longest-repeating-substring",
     "problems": [
@@ -288,7 +288,7 @@
     ]
   },
   {
-    "name": "五、最小表示法",
+    "name": "12 字符串 / 五、最小表示法",
     "count": 5,
     "problems_title_slugs": "orderly-queue find-the-lexicographically-largest-string-from-the-box-i lexicographically-smallest-string-after-applying-operations find-the-lexicographically-largest-string-from-the-box-ii largest-subarray-length-k",
     "problems": [
@@ -320,7 +320,7 @@
     ]
   },
   {
-    "name": "七、AC 自动机",
+    "name": "12 字符串 / 七、AC 自动机",
     "count": 6,
     "problems_title_slugs": "stream-of-characters multi-search-lcci string-matching-in-an-array construct-string-with-minimum-cost length-of-the-longest-valid-substring minimum-number-of-valid-strings-to-form-target-ii",
     "problems": [
@@ -357,7 +357,7 @@
     ]
   },
   {
-    "name": "八、后缀数组/后缀自动机",
+    "name": "12 字符串 / 八、后缀数组/后缀自动机",
     "count": 19,
     "problems_title_slugs": "last-substring-in-lexicographical-order largest-merge-of-two-strings shortest-and-lexicographically-smallest-beautiful-string lexicographically-smallest-string-after-reverse construct-string-with-minimum-cost longest-duplicate-substring maximum-length-of-repeated-subarray longest-common-subpath string-matching-in-an-array count-distinct-subarrays-divisible-by-k-in-sorted-array shortest-uncommon-substring-in-an-array longest-palindrome-after-substring-concatenation-ii distinct-echo-substrings count-beautiful-splits-in-an-array substring-xor-queries pattern-matching-lcci number-of-distinct-substrings-in-a-string longest-repeating-substring equalize-strings-by-adding-or-removing-characters-at-ends",
     "problems": [
@@ -459,7 +459,7 @@
     ]
   },
   {
-    "name": "九、子序列自动机",
+    "name": "12 字符串 / 九、子序列自动机",
     "count": 5,
     "problems_title_slugs": "number-of-matching-subsequences freedom-trail longest-subsequence-repeated-k-times shortest-way-to-form-string minimum-window-subsequence",
     "problems": [
@@ -491,7 +491,7 @@
     ]
   },
   {
-    "name": "十、其他",
+    "name": "12 字符串 / 十、其他",
     "count": 3,
     "problems_title_slugs": "longest-common-prefix-of-k-strings-after-removal count-the-repetitions phone-number-prefix",
     "problems": [

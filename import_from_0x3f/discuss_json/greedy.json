@@ -1,6 +1,6 @@
 [
   {
-    "name": "一、贪心策略 / §1.1 从最小/最大开始贪心",
+    "name": "10 贪心与思维 / 一、贪心策略 / §1.1 从最小/最大开始贪心",
     "count": 52,
     "problems_title_slugs": "apple-redistribution-into-boxes minimum-deletions-for-at-most-k-distinct-characters maximum-bags-with-full-capacity-of-rocks maximum-ice-cream-bars maximize-sum-of-array-after-k-negations least-number-of-unique-integers-after-k-removals minimum-subsequence-in-non-increasing-order divide-an-array-into-subarrays-with-minimum-cost-i reduce-array-size-to-the-half maximum-units-on-a-truck maximize-happiness-of-selected-children maximum-number-of-integers-to-choose-from-a-range-i destroying-asteroids rearrange-array-to-maximize-prefix-score largest-perimeter-triangle maximum-number-of-coins-you-can-get maximum-median-sum-of-subsequences-of-size-3 maximum-sum-with-at-most-k-elements find-subsequence-of-length-k-with-the-largest-sum maximize-the-total-height-of-unique-towers minimum-increment-to-make-array-unique maximum-element-after-decreasing-and-rearranging maximum-alternating-sum-of-squares minimum-deletions-to-make-character-frequencies-unique find-polygon-with-the-largest-perimeter maximum-split-of-positive-even-integers minimum-time-to-make-rope-colorful minimum-score-by-changing-two-elements minimum-difference-between-largest-and-smallest-value-in-three-moves maximum-number-of-distinct-elements-after-operations eat-pizzas uOAnQW greatest-sum-divisible-by-three bag-of-tokens equal-sum-arrays-with-minimum-number-of-operations reschedule-meetings-for-maximum-free-time-ii minimum-sum-of-squared-difference maximum-total-from-optimal-activation-order maximum-running-time-of-n-computers how-many-apples-can-you-put-into-the-basket minimum-health-to-beat-game maximum-calories-burnt-from-jumps maximize-profit-from-task-assignment subsequence-of-size-k-with-the-largest-even-sum maximum-price-to-fill-a-bag maximum-number-of-potholes-that-can-be-fixed maximum-number-of-integers-to-choose-from-a-range-ii WqXACV maximum-distance-in-arrays smallest-range-ii minimum-operations-to-form-subsequence-with-target-sum minimum-array-sum",
     "problems": [
@@ -267,7 +267,7 @@
     ]
   },
   {
-    "name": "一、贪心策略 / §1.2 单序列配对",
+    "name": "10 贪心与思维 / 一、贪心策略 / §1.2 单序列配对",
     "count": 6,
     "problems_title_slugs": "minimum-cost-of-buying-candies-with-discount array-partition minimize-maximum-pair-sum-in-array boats-to-save-people maximize-greatness-of-an-array find-the-maximum-number-of-marked-indices",
     "problems": [
@@ -304,7 +304,7 @@
     ]
   },
   {
-    "name": "一、贪心策略 / §1.3 双序列配对",
+    "name": "10 贪心与思维 / 一、贪心策略 / §1.3 双序列配对",
     "count": 11,
     "problems_title_slugs": "minimum-number-of-moves-to-seat-everyone assign-cookies maximum-matching-of-players-with-trainers check-if-a-string-can-break-another-string advantage-shuffle most-profit-assigning-work minimum-number-of-operations-to-make-arrays-similar minimum-space-wasted-from-packaging rearranging-fruits maximum-number-of-tasks-you-can-assign find-minimum-time-to-finish-all-jobs-ii",
     "problems": [
@@ -366,7 +366,7 @@
     ]
   },
   {
-    "name": "一、贪心策略 / §1.4 从最左/最右开始贪心",
+    "name": "10 贪心与思维 / 一、贪心策略 / §1.4 从最左/最右开始贪心",
     "count": 25,
     "problems_title_slugs": "minimum-operations-to-make-columns-strictly-increasing minimum-operations-to-make-binary-array-elements-equal-to-one-i minimum-operations-to-make-the-array-increasing minimum-moves-to-convert-string can-place-flowers minimum-rectangles-to-cover-points remove-adjacent-almost-equal-characters minimum-operations-to-make-binary-array-elements-equal-to-one-ii minimum-suffix-flips largest-element-in-an-array-after-merge-operations transform-array-to-all-equal-elements decrease-elements-to-make-array-zigzag maximum-number-of-operations-to-move-ones-to-the-end minimum-number-of-food-buckets-to-feed-the-hamsters minimum-operations-to-reduce-an-integer-to-0 minimum-division-operations-to-make-array-non-decreasing minimum-swaps-to-arrange-a-binary-grid make-costs-of-paths-equal-in-a-binary-tree avoid-flood-in-the-city score-after-flipping-matrix delete-columns-to-make-sorted-ii minimum-replacements-to-sort-the-array maximize-the-minimum-powered-city maximize-the-minimum-game-score merge-operations-to-turn-array-into-a-palindrome",
     "problems": [
@@ -498,7 +498,7 @@
     ]
   },
   {
-    "name": "一、贪心策略 / §1.5 划分型贪心",
+    "name": "10 贪心与思维 / 一、贪心策略 / §1.5 划分型贪心",
     "count": 9,
     "problems_title_slugs": "split-a-string-in-balanced-strings optimal-partition-of-string partition-array-such-that-maximum-difference-is-k maximum-number-of-groups-entering-a-competition partition-string-into-substrings-with-values-at-most-k find-maximum-number-of-non-intersecting-substrings maximum-number-of-non-overlapping-subarrays-with-sum-equals-target minimum-split-into-subarrays-with-gcd-greater-than-one minimizing-array-after-replacing-pairs-with-their-product",
     "problems": [
@@ -550,7 +550,7 @@
     ]
   },
   {
-    "name": "一、贪心策略 / §1.6 先枚举，再贪心",
+    "name": "10 贪心与思维 / 一、贪心策略 / §1.6 先枚举，再贪心",
     "count": 6,
     "problems_title_slugs": "removing-minimum-number-of-magic-beans minimum-deletions-to-make-string-k-special largest-submatrix-with-rearrangements minimum-operations-to-make-the-integer-zero minimum-number-of-groups-to-create-a-valid-assignment maximum-total-beauty-of-the-gardens",
     "problems": [
@@ -587,7 +587,7 @@
     ]
   },
   {
-    "name": "一、贪心策略 / §1.7 交换论证法",
+    "name": "10 贪心与思维 / 一、贪心策略 / §1.7 交换论证法",
     "count": 9,
     "problems_title_slugs": "minimum-processing-time eat-pizzas minimum-initial-energy-to-finish-tasks minimum-amount-of-damage-dealt-to-bob earliest-possible-day-of-full-bloom rearranging-fruits largest-number maximum-possible-number-by-binary-concatenation minimum-money-required-before-transactions",
     "problems": [
@@ -639,7 +639,7 @@
     ]
   },
   {
-    "name": "一、贪心策略 / §1.8 相邻不同",
+    "name": "10 贪心与思维 / 一、贪心策略 / §1.8 相邻不同",
     "count": 14,
     "problems_title_slugs": "minimum-amount-of-time-to-fill-cups partition-array-into-k-distinct-groups maximum-score-from-removing-stones reorganize-string distant-barcodes minimum-array-length-after-pair-removals maximum-number-of-weeks-for-which-you-can-work two-letter-card-game minimum-operations-to-make-array-elements-zero minimum-cost-to-equalize-array task-scheduler rearrange-string-k-distance-apart string-without-aaa-or-bbb longest-happy-string",
     "problems": [
@@ -716,7 +716,7 @@
     ]
   },
   {
-    "name": "一、贪心策略 / §1.9 反悔贪心",
+    "name": "10 贪心与思维 / 一、贪心策略 / §1.9 反悔贪心",
     "count": 9,
     "problems_title_slugs": "p0NxJO furthest-building-you-can-reach course-schedule-iii minimum-number-of-refueling-stops zero-array-transformation-iii maximum-elegance-of-a-k-length-subsequence earliest-second-to-mark-indices-ii maximum-transactions-without-negative-balance make-the-prefix-sum-non-negative",
     "problems": [
@@ -768,7 +768,7 @@
     ]
   },
   {
-    "name": "二、区间贪心 / §2.1 不相交区间",
+    "name": "10 贪心与思维 / 二、区间贪心 / §2.1 不相交区间",
     "count": 4,
     "problems_title_slugs": "non-overlapping-intervals maximum-length-of-pair-chain maximum-number-of-non-overlapping-substrings select-k-disjoint-special-substrings",
     "problems": [
@@ -795,7 +795,7 @@
     ]
   },
   {
-    "name": "二、区间贪心 / §2.2 区间分组",
+    "name": "10 贪心与思维 / 二、区间贪心 / §2.2 区间分组",
     "count": 2,
     "problems_title_slugs": "divide-intervals-into-minimum-number-of-groups meeting-rooms-ii",
     "problems": [
@@ -812,7 +812,7 @@
     ]
   },
   {
-    "name": "二、区间贪心 / §2.3 区间选点",
+    "name": "10 贪心与思维 / 二、区间贪心 / §2.3 区间选点",
     "count": 4,
     "problems_title_slugs": "minimum-number-of-arrows-to-burst-balloons set-intersection-size-at-least-two minimum-time-to-complete-all-tasks t3fKg1",
     "problems": [
@@ -839,7 +839,7 @@
     ]
   },
   {
-    "name": "二、区间贪心 / §2.4 区间覆盖",
+    "name": "10 贪心与思维 / 二、区间贪心 / §2.4 区间覆盖",
     "count": 3,
     "problems_title_slugs": "jump-game-ii video-stitching minimum-number-of-taps-to-open-to-water-a-garden",
     "problems": [
@@ -861,7 +861,7 @@
     ]
   },
   {
-    "name": "二、区间贪心 / §2.5 合并区间",
+    "name": "10 贪心与思维 / 二、区间贪心 / §2.5 合并区间",
     "count": 14,
     "problems_title_slugs": "merge-intervals insert-interval jump-game partition-labels count-days-without-meetings count-ways-to-group-overlapping-ranges check-if-grid-can-be-cut-into-sections count-the-number-of-good-partitions split-the-array-to-make-coprime-products add-bold-tag-in-string bold-words-in-string minimize-connected-groups-by-inserting-interval employee-free-time find-maximal-uncovered-ranges",
     "problems": [
@@ -938,7 +938,7 @@
     ]
   },
   {
-    "name": "二、区间贪心 / §2.6 其他区间贪心",
+    "name": "10 贪心与思维 / 二、区间贪心 / §2.6 其他区间贪心",
     "count": 4,
     "problems_title_slugs": "remove-covered-intervals two-best-non-overlapping-events maximum-number-of-eaten-apples maximum-number-of-events-that-can-be-attended",
     "problems": [
@@ -965,7 +965,7 @@
     ]
   },
   {
-    "name": "三、字符串贪心 / §3.1 字典序最小/最大",
+    "name": "10 贪心与思维 / 三、字符串贪心 / §3.1 字典序最小/最大",
     "count": 37,
     "problems_title_slugs": "maximum-69-number lexicographically-smallest-string-after-a-swap lexicographically-smallest-palindrome smallest-palindromic-rearrangement-i maximum-value-after-insertion lexicographically-smallest-string-after-substring-operation max-difference-you-can-get-from-changing-an-integer largest-number-after-mutating-substring smallest-string-with-a-given-numeric-value break-a-palindrome remove-digit-from-number-to-maximize-result maximum-difference-by-remapping-a-digit maximum-swap lexicographically-smallest-string-after-operations-with-constraint maximize-sum-of-squares-of-digits previous-permutation-with-one-swap construct-smallest-number-from-di-string construct-string-with-repeat-limit monotone-increasing-digits find-the-lexicographically-largest-string-from-the-box-i lexicographically-minimum-string-after-removing-stars largest-multiple-of-three largest-merge-of-two-strings smallest-string-with-swaps using-a-robot-to-print-the-lexicographically-smallest-string make-lexicographically-smallest-array-by-swapping-elements find-the-closest-palindrome minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits lexicographically-smallest-generated-string split-concatenated-strings make-string-anti-palindrome lexicographically-smallest-permutation-greater-than-target lexicographically-smallest-palindromic-permutation-greater-than-target lexicographically-smallest-beautiful-string next-greater-numerically-balanced-number next-special-palindrome-number smallest-divisible-digit-product-ii",
     "problems": [
@@ -1157,7 +1157,7 @@
     ]
   },
   {
-    "name": "三、字符串贪心 / §3.2 回文串贪心",
+    "name": "10 贪心与思维 / 三、字符串贪心 / §3.2 回文串贪心",
     "count": 19,
     "problems_title_slugs": "longest-palindrome lexicographically-smallest-palindrome smallest-palindromic-rearrangement-i valid-palindrome-ii break-a-palindrome construct-k-palindrome-strings longest-palindrome-by-concatenating-two-letter-words largest-palindromic-number maximum-palindromes-after-operations split-two-strings-to-make-palindrome longest-chunked-palindrome-decomposition minimum-number-of-moves-to-make-palindrome find-the-closest-palindrome lexicographically-smallest-palindromic-permutation-greater-than-target next-special-palindrome-number palindrome-permutation merge-operations-to-turn-array-into-a-palindrome next-palindrome-using-same-digits make-string-anti-palindrome",
     "problems": [
@@ -1259,7 +1259,7 @@
     ]
   },
   {
-    "name": "四、数学贪心 / §4.1 基础",
+    "name": "10 贪心与思维 / 四、数学贪心 / §4.1 基础",
     "count": 8,
     "problems_title_slugs": "minimum-sum-of-four-digit-number-after-splitting-digits split-with-minimum-sum minimum-rounds-to-complete-all-tasks minimum-number-of-operations-to-make-array-empty minimum-cost-to-move-chips-to-the-same-position apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k Ju9Xwi integer-replacement",
     "problems": [
@@ -1306,7 +1306,7 @@
     ]
   },
   {
-    "name": "四、数学贪心 / §4.2 乘积贪心",
+    "name": "10 贪心与思维 / 四、数学贪心 / §4.2 乘积贪心",
     "count": 3,
     "problems_title_slugs": "maximum-product-of-three-numbers maximum-product-of-three-elements-after-one-replacement maximum-length-of-subarray-with-positive-product",
     "problems": [
@@ -1328,7 +1328,7 @@
     ]
   },
   {
-    "name": "四、数学贪心 / §4.3 排序不等式",
+    "name": "10 贪心与思维 / 四、数学贪心 / §4.3 排序不等式",
     "count": 9,
     "problems_title_slugs": "maximum-total-importance-of-roads minimum-number-of-pushes-to-type-word-ii reducing-dishes maximum-spending-after-buying-items maximum-sum-obtained-of-any-permutation minimize-product-sum-of-two-arrays minimum-number-of-keypresses rearranging-fruits maximum-sum-of-edge-values-in-a-graph",
     "problems": [
@@ -1380,7 +1380,7 @@
     ]
   },
   {
-    "name": "四、数学贪心 / §4.4 均值不等式",
+    "name": "10 贪心与思维 / 四、数学贪心 / §4.4 均值不等式",
     "count": 5,
     "problems_title_slugs": "replace-question-marks-in-string-to-minimize-its-value minimum-non-zero-product-of-the-array-elements maximum-xor-product maximize-sum-of-squares-of-digits apply-operations-on-array-to-maximize-sum-of-squares",
     "problems": [
@@ -1412,7 +1412,7 @@
     ]
   },
   {
-    "name": "四、数学贪心 / §4.5 中位数贪心",
+    "name": "10 贪心与思维 / 四、数学贪心 / §4.5 中位数贪心",
     "count": 13,
     "problems_title_slugs": "minimum-moves-to-equal-array-elements-ii minimum-operations-to-make-a-uni-value-grid minimum-cost-to-make-array-equal make-k-subarray-sums-equal minimum-cost-to-make-array-equalindromic allocate-mailboxes apply-operations-to-maximize-frequency-score minimum-adjacent-swaps-for-k-consecutive-ones minimum-moves-to-pick-k-ones 5TxKeK minimum-cost-good-caption 1Hxnb6 best-meeting-point",
     "problems": [
@@ -1484,7 +1484,7 @@
     ]
   },
   {
-    "name": "四、数学贪心 / §4.6 归纳法",
+    "name": "10 贪心与思维 / 四、数学贪心 / §4.6 归纳法",
     "count": 3,
     "problems_title_slugs": "minimum-number-of-coins-to-be-added patching-array maximum-number-of-consecutive-values-you-can-make",
     "problems": [
@@ -1506,7 +1506,7 @@
     ]
   },
   {
-    "name": "四、数学贪心 / §4.7 其他数学贪心",
+    "name": "10 贪心与思维 / 四、数学贪心 / §4.7 其他数学贪心",
     "count": 4,
     "problems_title_slugs": "find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k minimum-operations-to-make-median-of-array-equal-to-k reach-a-number minimize-rounding-error-to-meet-target",
     "problems": [
@@ -1533,7 +1533,7 @@
     ]
   },
   {
-    "name": "五、思维题 / §5.1 从特殊到一般",
+    "name": "10 贪心与思维 / 五、思维题 / §5.1 从特殊到一般",
     "count": 14,
     "problems_title_slugs": "construct-the-longest-new-string mice-and-cheese two-city-scheduling minimum-additions-to-make-valid-string maximize-the-topmost-element-after-k-moves minimum-impossible-or maximum-binary-string-after-change minimize-length-of-array-using-operations shortest-impossible-sequence-of-rolls jump-game-ix super-washing-machines minimum-total-cost-to-make-arrays-unequal minimize-the-maximum-adjacent-element-difference minimum-unlocked-indices-to-sort-nums",
     "problems": [
@@ -1610,7 +1610,7 @@
     ]
   },
   {
-    "name": "五、思维题 / §5.2 脑筋急转弯",
+    "name": "10 贪心与思维 / 五、思维题 / §5.2 脑筋急转弯",
     "count": 46,
     "problems_title_slugs": "neither-minimum-nor-maximum count-partitions-with-even-sum-difference largest-odd-number-in-string count-distinct-numbers-on-board strictly-palindromic-number partitioning-into-minimum-number-of-deci-binary-numbers minimum-operations-to-equalize-array maximum-total-subarray-value-i range-addition-ii longest-uncommon-subsequence-i minimum-operations-to-transform-string vowels-game-in-a-string maximum-balanced-shipments longest-subsequence-with-non-zero-bitwise-xor longest-subarray-with-maximum-bitwise-and minimum-cost-to-make-arrays-identical find-all-groups-of-farmland minimum-domino-rotations-for-equal-row check-if-it-is-possible-to-split-array island-perimeter count-collisions-on-a-road maximum-points-after-enemy-battles find-the-largest-almost-missing-integer apply-bitwise-operations-to-make-strings-equal last-moment-before-all-ants-fall-out-of-a-plank happy-students remove-palindromic-subsequences maximum-matrix-sum binary-tree-coloring-game maximum-number-of-occurrences-of-a-substring count-the-number-of-computer-unlocking-permutations reach-end-of-array-with-max-score maximum-k-to-sort-a-permutation minimum-cost-to-make-all-characters-equal maximum-difference-score-in-a-grid longest-binary-subsequence-less-than-or-equal-to-k the-latest-time-to-catch-a-bus maximum-or movement-of-robots disconnect-path-in-a-binary-matrix-by-at-most-one-flip minimum-total-operations largest-subarray-length-k minimum-cost-path-with-alternating-directions-i maximize-score-after-pair-deletions maximum-number-that-makes-result-of-bitwise-and-zero count-pairs-of-equal-substrings-with-minimum-difference",
     "problems": [
@@ -1847,7 +1847,7 @@
     ]
   },
   {
-    "name": "五、思维题 / §5.3 逆向思维",
+    "name": "10 贪心与思维 / 五、思维题 / §5.3 逆向思维",
     "count": 24,
     "problems_title_slugs": "minimum-moves-to-reach-target-score taking-maximum-energy-from-the-mystic-dungeon reordered-power-of-2 minimum-numbers-of-function-calls-to-make-target-array brick-wall reaching-points pacific-atlantic-water-flow broken-calculator encrypt-and-decrypt-strings construct-target-array-with-multiple-sums check-if-point-is-reachable find-the-k-th-character-in-string-game-ii process-string-with-special-operations-ii minimize-the-maximum-edge-weight-of-graph minimum-one-bit-operations-to-make-integers-zero minimum-moves-to-reach-target-in-grid stamping-the-sequence maximum-hamming-distances power-grid-maintenance sum-of-matrix-after-queries minimum-time-to-activate-string last-day-where-you-can-still-cross maximum-segment-sum-after-removals bricks-falling-when-hit",
     "problems": [
@@ -1974,7 +1974,7 @@
     ]
   },
   {
-    "name": "五、思维题 / §5.4 等价转换",
+    "name": "10 贪心与思维 / 五、思维题 / §5.4 等价转换",
     "count": 11,
     "problems_title_slugs": "minimum-moves-to-equal-array-elements minimum-operations-to-make-array-values-equal-to-k minimum-number-of-changes-to-make-binary-string-beautiful rearrange-k-substrings-to-form-target-string determine-if-two-strings-are-close put-marbles-in-bags check-if-string-is-transformable-with-substring-sort-operations moving-stones-until-consecutive-ii group-shifted-strings group-anagrams maximum-number-of-ones",
     "problems": [
@@ -2036,7 +2036,7 @@
     ]
   },
   {
-    "name": "六、构造题",
+    "name": "10 贪心与思维 / 六、构造题",
     "count": 23,
     "problems_title_slugs": "find-n-unique-integers-sum-up-to-zero di-string-match array-with-elements-not-equal-to-average-of-neighbors reconstruct-a-2-row-binary-matrix convert-integer-to-the-sum-of-two-no-zero-integers number-of-unique-xor-triplets-i construct-string-with-repeat-limit inverse-coin-change pancake-sorting find-valid-matrix-given-row-and-column-sums construct-smallest-number-from-di-string wiggle-sort-ii beautiful-arrangement-ii recover-the-original-array generate-schedule beautiful-array construct-2d-grid-matching-graph-layout find-the-string-with-lcp find-array-given-subset-sums the-earliest-and-latest-rounds-where-players-compete wiggle-sort find-permutation find-unique-binary-string",
     "problems": [
@@ -2158,7 +2158,7 @@
     ]
   },
   {
-    "name": "七、交互题",
+    "name": "10 贪心与思维 / 七、交互题",
     "count": 20,
     "problems_title_slugs": "first-bad-version guess-number-higher-or-lower find-positive-integer-solution-for-a-given-equation find-in-mountain-array guess-the-word count-houses-in-a-circular-street find-the-celebrity number-of-unique-categories guess-the-number-using-bitwise-questions-i guess-the-number-using-bitwise-questions-ii leftmost-column-with-at-least-a-one search-in-a-sorted-array-of-unknown-size find-the-index-of-the-large-integer number-of-equal-numbers-blocks maximum-font-to-fit-a-sentence-in-a-screen guess-the-majority-in-a-hidden-array robot-room-cleaner shortest-path-in-a-hidden-grid minimum-path-cost-in-a-hidden-grid number-of-ships-in-a-rectangle",
     "problems": [
@@ -2265,7 +2265,7 @@
     ]
   },
   {
-    "name": "八、其他",
+    "name": "10 贪心与思维 / 八、其他",
     "count": 24,
     "problems_title_slugs": "find-the-value-of-the-partition moving-stones-until-consecutive make-array-non-decreasing rabbits-in-forest minimum-adjacent-swaps-to-alternate-parity minimum-number-of-swaps-to-make-the-binary-string-alternating merge-triplets-to-form-target-triplet frog-jump-ii minimum-operations-to-transform-array gas-station maximum-manhattan-distance-after-k-changes earliest-finish-time-for-land-and-water-rides-ii maximum-size-of-a-set-after-removals minimum-number-of-people-to-teach split-array-into-consecutive-subsequences find-a-good-subset-of-the-matrix maximum-number-of-groups-with-increasing-length transform-to-chessboard strong-password-checker programmable-robot hSRGyL XxZZjK longest-common-prefix-after-at-most-one-removal count-houses-in-a-circular-street-ii",
     "problems": [

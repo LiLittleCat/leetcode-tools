@@ -1,6 +1,6 @@
 [
   {
-    "name": "一、入门 DP / §1.1 爬楼梯",
+    "name": "7 动态规划 / 一、入门 DP / §1.1 爬楼梯",
     "count": 7,
     "problems_title_slugs": "climbing-stairs min-cost-climbing-stairs climbing-stairs-ii combination-sum-iv count-ways-to-build-good-strings count-number-of-texts number-of-good-binary-strings",
     "problems": [
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "name": "一、入门 DP / §1.2 打家劫舍 / 答疑",
+    "name": "7 动态规划 / 一、入门 DP / §1.2 打家劫舍 / 答疑",
     "count": 6,
     "problems_title_slugs": "house-robber house-robber-ii count-number-of-ways-to-place-houses delete-and-earn maximum-total-damage-with-spell-casting solving-questions-with-brainpower",
     "problems": [
@@ -79,7 +79,7 @@
     ]
   },
   {
-    "name": "一、入门 DP / §1.3 最大子数组和（最大子段和）",
+    "name": "7 动态规划 / 一、入门 DP / §1.3 最大子数组和（最大子段和）",
     "count": 9,
     "problems_title_slugs": "maximum-subarray find-the-substring-with-maximum-cost maximum-absolute-sum-of-any-subarray k-concatenation-maximum-sum maximum-sum-circular-subarray maximum-score-of-spliced-array maximum-product-subarray maximum-subarray-sum-with-one-deletion maximum-subarray-sum-with-length-divisible-by-k",
     "problems": [
@@ -131,7 +131,7 @@
     ]
   },
   {
-    "name": "二、网格图 DP / §2.1 基础",
+    "name": "7 动态规划 / 二、网格图 DP / §2.1 基础",
     "count": 13,
     "problems_title_slugs": "minimum-path-sum unique-paths unique-paths-ii triangle count-paths-with-the-given-xor-value minimum-falling-path-sum maximum-number-of-moves-in-a-grid minimum-cost-path-with-alternating-directions-ii minimum-path-cost-in-a-grid minimum-falling-path-sum-ii maximum-amount-of-money-robot-can-earn maximum-path-score-in-a-grid minimum-sideway-jumps",
     "problems": [
@@ -203,7 +203,7 @@
     ]
   },
   {
-    "name": "二、网格图 DP / §2.2 进阶",
+    "name": "7 动态规划 / 二、网格图 DP / §2.2 进阶",
     "count": 14,
     "problems_title_slugs": "maximum-non-negative-product-in-a-matrix number-of-paths-with-max-score twisted-mirror-path-count paths-in-matrix-whose-sum-is-divisible-by-k dungeon-game longest-increasing-path-in-a-matrix number-of-increasing-paths-in-a-grid check-if-there-is-a-valid-parentheses-string-path maximum-number-of-points-with-cost find-the-maximum-number-of-fruits-collected cherry-pickup-ii cherry-pickup length-of-longest-v-shaped-diagonal-segment check-if-there-is-a-path-with-equal-number-of-0s-and-1s",
     "problems": [
@@ -280,7 +280,7 @@
     ]
   },
   {
-    "name": "三、背包 / §3.1 0-1 背包",
+    "name": "7 动态规划 / 三、背包 / §3.1 0-1 背包",
     "count": 22,
     "problems_title_slugs": "partition-equal-subset-sum target-sum length-of-the-longest-subsequence-that-sums-to-target ways-to-express-an-integer-as-sum-of-powers maximum-total-reward-using-operations-i ones-and-zeroes zero-array-transformation-iv subsequence-sum-after-capping-elements last-stone-weight-ii closest-dessert-cost profitable-schemes find-the-sum-of-the-power-of-all-subsequences tallest-billboard number-of-great-partitions painting-the-walls find-the-maximum-sequence-value-of-array maximum-total-reward-using-operations-ii oPs9Bm maximum-profit-from-trading-stocks maximize-total-tastiness-of-purchased-fruits maximum-weight-in-two-bags number-of-ways-to-build-house-of-cards",
     "problems": [
@@ -397,7 +397,7 @@
     ]
   },
   {
-    "name": "三、背包 / §3.2 完全背包",
+    "name": "7 动态规划 / 三、背包 / §3.2 完全背包",
     "count": 7,
     "problems_title_slugs": "coin-change coin-change-ii perfect-squares minimum-number-of-primes-to-sum-to-target the-number-of-ways-to-make-the-sum inverse-coin-change form-largest-integer-with-digits-that-add-up-to-target",
     "problems": [
@@ -439,7 +439,7 @@
     ]
   },
   {
-    "name": "三、背包 / §3.3 多重背包（选做）",
+    "name": "7 动态规划 / 三、背包 / §3.3 多重背包（选做）",
     "count": 4,
     "problems_title_slugs": "number-of-ways-to-earn-points find-the-original-typed-string-ii count-of-sub-multisets-with-bounded-sum zero-array-transformation-iv",
     "problems": [
@@ -466,7 +466,7 @@
     ]
   },
   {
-    "name": "三、背包 / §3.4 分组背包",
+    "name": "7 动态规划 / 三、背包 / §3.4 分组背包",
     "count": 3,
     "problems_title_slugs": "number-of-dice-rolls-with-target-sum minimize-the-difference-between-target-and-chosen-elements maximum-value-of-k-coins-from-piles",
     "problems": [
@@ -488,7 +488,7 @@
     ]
   },
   {
-    "name": "三、背包 / §3.5 树形背包（选做）",
+    "name": "7 动态规划 / 三、背包 / §3.5 树形背包（选做）",
     "count": 1,
     "problems_title_slugs": "maximum-profit-from-trading-stocks-with-discounts",
     "problems": [
@@ -500,7 +500,7 @@
     ]
   },
   {
-    "name": "四、经典线性 DP / §4.1 最长公共子序列（LCS） / §4.1.1 基础",
+    "name": "7 动态规划 / 四、经典线性 DP / §4.1 最长公共子序列（LCS） / §4.1.1 基础",
     "count": 7,
     "problems_title_slugs": "longest-common-subsequence delete-operation-for-two-strings minimum-ascii-delete-sum-for-two-strings edit-distance uncrossed-lines max-dot-product-of-two-subsequences maximum-length-of-repeated-subarray",
     "problems": [
@@ -542,7 +542,7 @@
     ]
   },
   {
-    "name": "四、经典线性 DP / §4.1 最长公共子序列（LCS） / §4.1.2 进阶",
+    "name": "7 动态规划 / 四、经典线性 DP / §4.1 最长公共子序列（LCS） / §4.1.2 进阶",
     "count": 9,
     "problems_title_slugs": "maximum-multiplication-score distinct-subsequences maximum-number-of-subsequences-after-one-inserting find-maximum-removals-from-source-string number-of-ways-to-form-a-target-string-given-a-dictionary interleaving-string shortest-common-supersequence wildcard-matching regular-expression-matching",
     "problems": [
@@ -594,7 +594,7 @@
     ]
   },
   {
-    "name": "四、经典线性 DP / §4.2 最长递增子序列（LIS） / §4.2.1 基础",
+    "name": "7 动态规划 / 四、经典线性 DP / §4.2 最长递增子序列（LIS） / §4.2.1 基础",
     "count": 6,
     "problems_title_slugs": "longest-increasing-subsequence increasing-triplet-subsequence sorting-three-groups minimum-number-of-removals-to-make-mountain-array find-the-longest-valid-obstacle-course-at-each-position minimum-operations-to-make-the-array-k-increasing",
     "problems": [
@@ -631,7 +631,7 @@
     ]
   },
   {
-    "name": "四、经典线性 DP / §4.2 最长递增子序列（LIS） / §4.2.2 进阶",
+    "name": "7 动态规划 / 四、经典线性 DP / §4.2 最长递增子序列（LIS） / §4.2.2 进阶",
     "count": 11,
     "problems_title_slugs": "russian-doll-envelopes best-team-with-no-conflicts maximum-height-by-stacking-cuboids delete-columns-to-make-sorted-iii longest-increasing-subsequence-ii number-of-longest-increasing-subsequence make-array-strictly-increasing minimum-operations-to-make-a-subsequence length-of-the-longest-increasing-path largest-divisible-subset longest-unequal-adjacent-groups-subsequence-ii",
     "problems": [
@@ -693,7 +693,7 @@
     ]
   },
   {
-    "name": "五、划分型 DP / §5.1 判定能否划分",
+    "name": "7 动态规划 / 五、划分型 DP / §5.1 判定能否划分",
     "count": 2,
     "problems_title_slugs": "check-if-there-is-a-valid-partition-for-the-array word-break",
     "problems": [
@@ -710,7 +710,7 @@
     ]
   },
   {
-    "name": "五、划分型 DP / §5.2 最优划分",
+    "name": "7 动态规划 / 五、划分型 DP / §5.2 最优划分",
     "count": 22,
     "problems_title_slugs": "palindrome-partitioning-ii extra-characters-in-a-string maximize-total-cost-of-alternating-subarrays partition-string-into-minimum-beautiful-substrings decode-ways decode-ways-ii ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof partition-array-for-maximum-sum minimum-substring-partition-of-equal-character-frequency restore-the-array maximum-number-of-non-overlapping-palindrome-substrings filling-bookcase-shelves minimum-cost-to-split-an-array count-partitions-with-max-min-difference-at-most-k maximum-deletions-on-a-string minimum-total-distance-traveled minimum-steps-to-convert-string-with-operations minimum-cost-to-divide-array-into-subarrays minimum-cost-to-convert-string-ii minimum-cost-good-caption minimum-cost-to-separate-sentence-into-rows minimum-subarrays-in-a-valid-split",
     "problems": [
@@ -827,7 +827,7 @@
     ]
   },
   {
-    "name": "五、划分型 DP / §5.3 约束划分个数",
+    "name": "7 动态规划 / 五、划分型 DP / §5.3 约束划分个数",
     "count": 17,
     "problems_title_slugs": "largest-sum-of-averages partition-array-to-minimize-xor split-array-largest-sum palindrome-partitioning-iii palindrome-partitioning-iv minimum-difficulty-of-a-job-schedule paint-house-iii minimum-white-tiles-after-covering-with-carpets allocate-mailboxes sum-of-k-subarrays-with-length-at-least-m minimum-total-space-wasted-with-k-resizing-operations number-of-beautiful-partitions merge-operations-for-minimum-travel-time minimum-operations-to-make-elements-within-k-subarrays-equal maximum-strength-of-k-disjoint-subarrays minimum-changes-to-make-k-semi-palindromes minimum-sum-of-values-by-dividing-array",
     "problems": [
@@ -919,7 +919,7 @@
     ]
   },
   {
-    "name": "六、状态机 DP / §6.1 买卖股票",
+    "name": "7 动态规划 / 六、状态机 DP / §6.1 买卖股票",
     "count": 7,
     "problems_title_slugs": "best-time-to-buy-and-sell-stock best-time-to-buy-and-sell-stock-ii best-time-to-buy-and-sell-stock-iii best-time-to-buy-and-sell-stock-iv best-time-to-buy-and-sell-stock-v best-time-to-buy-and-sell-stock-with-cooldown best-time-to-buy-and-sell-stock-with-transaction-fee",
     "problems": [
@@ -961,7 +961,7 @@
     ]
   },
   {
-    "name": "六、状态机 DP / §6.2 基础",
+    "name": "7 动态规划 / 六、状态机 DP / §6.2 基础",
     "count": 8,
     "problems_title_slugs": "maximum-energy-boost-from-two-drinks number-of-ways-to-select-buildings maximum-strength-of-a-group maximum-length-of-subarray-with-positive-product visit-array-positions-to-maximize-score maximum-alternating-subsequence-sum wiggle-subsequence maximum-coin-collection",
     "problems": [
@@ -1008,7 +1008,7 @@
     ]
   },
   {
-    "name": "六、状态机 DP / §6.3 进阶",
+    "name": "7 动态规划 / 六、状态机 DP / §6.3 进阶",
     "count": 23,
     "problems_title_slugs": "maximum-number-of-subsequences-after-one-inserting longest-non-decreasing-subarray-from-two-arrays maximum-subarray-sum-with-one-deletion maximum-non-negative-product-in-a-matrix longest-non-decreasing-subarray-after-replacing-at-most-one-element maximize-total-cost-of-alternating-subarrays knight-dialer get-the-maximum-score minimum-increment-operations-to-make-array-beautiful minimum-swaps-to-make-sequences-increasing maximum-frequency-after-subarray-operation count-number-of-special-subsequences find-the-maximum-sum-of-node-values trionic-array-ii substring-with-largest-variance maximum-walls-destroyed-by-robots maximize-cyclic-partition-score UlBDOe paint-fence maximum-subarray-sum-after-one-operation maximum-alternating-subarray-sum minimum-costs-using-the-train-line constructing-two-increasing-arrays",
     "problems": [
@@ -1130,7 +1130,7 @@
     ]
   },
   {
-    "name": "七、其他线性 DP / §7.1 一维 DP",
+    "name": "7 动态规划 / 七、其他线性 DP / §7.1 一维 DP",
     "count": 19,
     "problems_title_slugs": "taking-maximum-energy-from-the-mystic-dungeon minimum-number-of-coins-for-fruits solving-questions-with-brainpower minimum-cost-for-tickets largest-divisible-subset longest-unequal-adjacent-groups-subsequence-ii 2-keys-keyboard minimum-number-of-refueling-stops longest-valid-parentheses minimum-time-to-remove-all-cars-containing-illegal-goods minimum-time-to-finish-the-race apply-operations-to-make-two-strings-equal race-car minimum-operations-to-make-character-frequencies-equal maximize-the-distance-between-points-on-a-square maximum-array-hopping-score-i handshakes-that-dont-cross the-number-of-beautiful-subsets count-the-number-of-k-free-subsets",
     "problems": [
@@ -1232,7 +1232,7 @@
     ]
   },
   {
-    "name": "七、其他线性 DP / §7.2 不相交区间",
+    "name": "7 动态规划 / 七、其他线性 DP / §7.2 不相交区间",
     "count": 6,
     "problems_title_slugs": "maximize-the-profit-as-the-salesman maximum-earnings-from-taxi two-best-non-overlapping-events maximum-profit-in-job-scheduling maximum-number-of-events-that-can-be-attended-ii maximum-score-of-non-overlapping-intervals",
     "problems": [
@@ -1269,7 +1269,7 @@
     ]
   },
   {
-    "name": "七、其他线性 DP / §7.3 子数组 DP",
+    "name": "7 动态规划 / 七、其他线性 DP / §7.3 子数组 DP",
     "count": 9,
     "problems_title_slugs": "maximum-subarray maximum-product-subarray maximum-subarray-sum-with-one-deletion longest-non-decreasing-subarray-after-replacing-at-most-one-element find-x-value-of-array-i count-substrings-divisible-by-last-digit total-appeal-of-a-string count-unique-characters-of-all-substrings-of-a-given-string unique-substrings-in-wraparound-string",
     "problems": [
@@ -1321,7 +1321,7 @@
     ]
   },
   {
-    "name": "七、其他线性 DP / §7.4 合法子序列 DP",
+    "name": "7 动态规划 / 七、其他线性 DP / §7.4 合法子序列 DP",
     "count": 19,
     "problems_title_slugs": "longest-square-streak-in-an-array longest-arithmetic-subsequence-of-given-difference sorting-three-groups longest-arithmetic-subsequence longest-ideal-subsequence length-of-longest-fibonacci-subsequence number-of-stable-subsequences find-the-maximum-length-of-valid-subsequence-ii arithmetic-slices-ii-subsequence sum-of-good-subsequences maximize-consecutive-elements-in-an-array-after-modification longest-subsequence-with-decreasing-adjacent-difference find-the-sum-of-subsequence-powers longest-unequal-adjacent-groups-subsequence-ii sum-of-consecutive-subsequences longest-string-chain distinct-subsequences-ii number-of-unique-good-subsequences count-different-palindromic-subsequences",
     "problems": [
@@ -1423,7 +1423,7 @@
     ]
   },
   {
-    "name": "七、其他线性 DP / §7.5 子矩形 DP",
+    "name": "7 动态规划 / 七、其他线性 DP / §7.5 子矩形 DP",
     "count": 5,
     "problems_title_slugs": "maximum-difference-score-in-a-grid maximal-square count-square-submatrices-with-all-ones count-fertile-pyramids-in-a-land find-the-minimum-area-to-cover-all-ones-ii",
     "problems": [
@@ -1455,7 +1455,7 @@
     ]
   },
   {
-    "name": "七、其他线性 DP / §7.6 多维 DP",
+    "name": "7 动态规划 / 七、其他线性 DP / §7.6 多维 DP",
     "count": 64,
     "problems_title_slugs": "number-of-ways-to-select-buildings sorting-three-groups number-of-ways-to-reach-a-position-after-exactly-k-steps greatest-sum-divisible-by-three maximum-points-tourist-can-earn find-the-maximum-length-of-a-good-subsequence-i number-of-ways-to-stay-in-the-same-place-after-some-steps find-the-count-of-monotonic-pairs-i minimum-cost-for-cutting-cake-i minimum-number-of-operations-to-satisfy-conditions out-of-boundary-paths frog-jump count-ways-to-choose-coprime-integers-from-rows dice-roll-simulation minimum-distance-to-type-a-word-using-two-fingers minimum-array-sum count-all-possible-routes find-number-of-ways-to-reach-the-k-th-stair number-of-distinct-roll-sequences find-minimum-cost-to-remove-array-elements decremental-string-concatenation number-of-ways-of-cutting-a-pizza count-the-number-of-winning-sequences paint-house-iv apply-operations-to-make-two-strings-equal build-array-where-you-can-find-the-maximum-exactly-k-comparisons count-the-number-of-inversions letter-tile-possibilities number-of-ways-to-rearrange-sticks-with-k-sticks-visible selling-pieces-of-wood find-the-maximum-length-of-a-good-subsequence-ii egg-drop-with-2-eggs-and-n-floors super-egg-drop number-of-music-playlists freedom-trail find-the-number-of-subsequences-with-equal-gcd pizza-with-3n-slices valid-permutations-for-di-sequence the-earliest-and-latest-rounds-where-players-compete string-compression-ii minimum-skips-to-arrive-at-meeting-on-time least-operators-to-express-number count-number-of-balanced-permutations make-the-xor-of-all-segments-equal-to-zero maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k minimum-cost-good-caption find-sum-of-array-product-of-magical-sequences check-if-an-original-string-exists-given-two-encoded-strings minimum-time-to-make-array-sum-at-most-x maximize-the-number-of-partitions-after-operations maximum-score-from-grid-operations ZbAuEH Y1VbOX 3aqs1c Up5XYM 7rLGCR paint-house paint-house-ii find-the-number-of-k-even-arrays maximum-vacation-days count-ways-to-distribute-candies choose-numbers-from-two-arrays-in-range constructing-two-increasing-arrays shopping-offers",
     "problems": [
@@ -1782,7 +1782,7 @@
     ]
   },
   {
-    "name": "八、区间 DP / §8.1 最长回文子序列",
+    "name": "7 动态规划 / 八、区间 DP / §8.1 最长回文子序列",
     "count": 8,
     "problems_title_slugs": "longest-palindromic-subsequence minimum-insertion-steps-to-make-a-string-palindrome longest-palindromic-subsequence-after-at-most-k-operations maximize-palindrome-length-from-subsequences count-different-palindromic-subsequences longest-palindromic-subsequence-ii valid-palindrome-iii palindrome-removal",
     "problems": [
@@ -1829,7 +1829,7 @@
     ]
   },
   {
-    "name": "八、区间 DP / §8.2 区间 DP",
+    "name": "7 动态规划 / 八、区间 DP / §8.2 区间 DP",
     "count": 20,
     "problems_title_slugs": "longest-palindromic-substring palindromic-substrings maximum-number-of-operations-with-the-same-score-ii guess-number-higher-or-lower-ii minimum-cost-tree-from-leaf-values unique-binary-search-trees maximum-score-from-performing-multiplication-operations minimum-cost-to-cut-a-stick minimum-score-triangulation-of-polygon minimum-cost-to-merge-stones the-score-of-students-solving-math-expression boolean-evaluation-lcci lexicographically-smallest-string-after-adjacent-removals maximum-xor-score-subarray-queries scramble-string burst-balloons strange-printer remove-boxes encode-string-with-shortest-length maximum-number-of-removal-queries-that-can-be-processed-i",
     "problems": [
@@ -1936,7 +1936,7 @@
     ]
   },
   {
-    "name": "九、状态压缩 DP（状压 DP） / §9.1 排列型状压 DP ① 相邻无关",
+    "name": "7 动态规划 / 九、状态压缩 DP（状压 DP） / §9.1 排列型状压 DP ① 相邻无关",
     "count": 13,
     "problems_title_slugs": "beautiful-arrangement beautiful-arrangement minimum-time-to-break-locks-i minimum-xor-sum-of-two-arrays minimum-moves-to-spread-stones-over-grid maximum-compatibility-score-sum maximize-score-after-n-operations concatenated-divisibility maximum-profit-from-valid-topological-order-in-dag maximum-and-sum-of-array number-of-self-divisible-permutations minimum-time-to-kill-all-monsters campus-bikes-ii",
     "problems": [
@@ -2008,7 +2008,7 @@
     ]
   },
   {
-    "name": "九、状态压缩 DP（状压 DP） / §9.2 排列型状压 DP ② 相邻相关",
+    "name": "7 动态规划 / 九、状态压缩 DP（状压 DP） / §9.2 排列型状压 DP ② 相邻相关",
     "count": 6,
     "problems_title_slugs": "special-permutations number-of-squareful-arrays minimum-incompatibility longest-palindromic-path-in-graph maximum-number-of-moves-to-kill-all-pawns find-the-minimum-cost-array-permutation",
     "problems": [
@@ -2045,7 +2045,7 @@
     ]
   },
   {
-    "name": "九、状态压缩 DP（状压 DP） / §9.3 旅行商问题（TSP）",
+    "name": "7 动态规划 / 九、状态压缩 DP（状压 DP） / §9.3 旅行商问题（TSP）",
     "count": 6,
     "problems_title_slugs": "find-the-shortest-superstring shortest-path-visiting-all-nodes xun-bao maximum-cost-of-trip-with-k-highways minimum-moves-to-clean-the-classroom shortest-path-to-get-all-keys",
     "problems": [
@@ -2082,7 +2082,7 @@
     ]
   },
   {
-    "name": "九、状态压缩 DP（状压 DP） / §9.4 子集状压 DP",
+    "name": "7 动态规划 / 九、状态压缩 DP（状压 DP） / §9.4 子集状压 DP",
     "count": 17,
     "problems_title_slugs": "fair-distribution-of-cookies minimum-number-of-work-sessions-to-finish-the-tasks maximum-product-of-two-integers-with-no-common-bits find-minimum-time-to-finish-all-jobs distribute-repeating-integers minimum-increments-for-target-multiples-in-an-array maximum-good-subtree-score maximum-students-taking-exam minimum-incompatibility count-the-number-of-square-free-subsets the-number-of-good-subsets parallel-courses-ii broken-board-dominoes EJvmW4 optimal-account-balancing minimum-number-of-lines-to-cover-points minimum-time-to-transport-all-individuals",
     "problems": [
@@ -2174,7 +2174,7 @@
     ]
   },
   {
-    "name": "九、状态压缩 DP（状压 DP） / §9.5 轮廓线 DP",
+    "name": "7 动态规划 / 九、状态压缩 DP（状压 DP） / §9.5 轮廓线 DP",
     "count": 8,
     "problems_title_slugs": "number-of-ways-to-paint-n-3-grid painting-a-grid-with-three-different-colors maximum-students-taking-exam maximize-grid-happiness unique-paths-iii broken-board-dominoes 1ybDKD number-of-ways-to-build-sturdy-brick-wall",
     "problems": [
@@ -2221,7 +2221,7 @@
     ]
   },
   {
-    "name": "九、状态压缩 DP（状压 DP） / §9.6 SOS DP",
+    "name": "7 动态规划 / 九、状态压缩 DP（状压 DP） / §9.6 SOS DP",
     "count": 4,
     "problems_title_slugs": "maximum-product-of-two-integers-with-no-common-bits count-number-of-maximum-bitwise-or-subsets find-a-good-subset-of-the-matrix number-of-effective-subsequences",
     "problems": [
@@ -2248,7 +2248,7 @@
     ]
   },
   {
-    "name": "九、状态压缩 DP（状压 DP） / §9.7 其他状压 DP",
+    "name": "7 动态规划 / 九、状态压缩 DP（状压 DP） / §9.7 其他状压 DP",
     "count": 13,
     "problems_title_slugs": "matchsticks-to-square partition-to-k-equal-sum-subsets maximum-product-of-the-length-of-two-palindromic-subsequences smallest-sufficient-team number-of-ways-to-wear-different-hats-to-each-other can-i-win stickers-to-spell-word select-cells-in-grid-with-maximum-score minimum-cost-to-connect-two-groups-of-points maximum-number-of-groups-getting-fresh-donuts rMeRt2 cnHoX6 android-unlock-patterns",
     "problems": [
@@ -2320,7 +2320,7 @@
     ]
   },
   {
-    "name": "十、数位 DP / §10.1 统计合法元素的数目",
+    "name": "7 动态规划 / 十、数位 DP / §10.1 统计合法元素的数目",
     "count": 23,
     "problems_title_slugs": "count-distinct-integers-after-removing-zeros count-of-integers count-largest-group maximum-number-of-balls-in-a-box rotated-digits numbers-at-most-n-given-digit-set non-negative-integers-without-consecutive-ones count-special-integers count-numbers-with-unique-digits numbers-with-repeated-digits count-numbers-with-non-decreasing-digits number-of-beautiful-integers-in-the-range count-the-number-of-powerful-integers count-stepping-numbers-in-range count-symmetric-integers count-k-reducible-numbers-less-than-n number-of-integers-with-popcount-depth-equal-to-k-i count-beautiful-numbers find-all-good-strings stepping-numbers digit-count-in-range count-numbers-with-unique-digits-ii count-no-zero-pairs-that-sum-to-n",
     "problems": [
@@ -2442,7 +2442,7 @@
     ]
   },
   {
-    "name": "十、数位 DP / §10.2 统计合法元素的价值总和",
+    "name": "7 动态规划 / 十、数位 DP / §10.2 统计合法元素的价值总和",
     "count": 4,
     "problems_title_slugs": "number-of-digit-one number-of-2s-in-range-lcci maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k total-waviness-of-numbers-in-range-ii",
     "problems": [
@@ -2469,7 +2469,7 @@
     ]
   },
   {
-    "name": "十、数位 DP / §10.3 其他数位 DP",
+    "name": "7 动态规划 / 十、数位 DP / §10.3 其他数位 DP",
     "count": 2,
     "problems_title_slugs": "count-binary-palindromic-numbers smallest-divisible-digit-product-ii",
     "problems": [
@@ -2486,7 +2486,7 @@
     ]
   },
   {
-    "name": "十一、优化 DP / §11.1 前缀和优化 DP",
+    "name": "7 动态规划 / 十一、优化 DP / §11.1 前缀和优化 DP",
     "count": 15,
     "problems_title_slugs": "jump-game-vii number-of-people-aware-of-a-secret number-of-zigzag-arrays-i first-day-where-you-have-been-in-all-the-rooms k-inverse-pairs-array count-the-number-of-inversions sum-of-k-subarrays-with-length-at-least-m find-the-count-of-monotonic-pairs-ii number-of-beautiful-partitions new-21-game maximum-strength-of-k-disjoint-subarrays find-the-original-typed-string-ii count-of-sub-multisets-with-bounded-sum number-of-ways-to-separate-numbers find-all-possible-stable-binary-arrays-ii",
     "problems": [
@@ -2568,7 +2568,7 @@
     ]
   },
   {
-    "name": "十一、优化 DP / §11.2 单调栈优化 DP",
+    "name": "7 动态规划 / 十一、优化 DP / §11.2 单调栈优化 DP",
     "count": 4,
     "problems_title_slugs": "minimum-difficulty-of-a-job-schedule beautiful-towers-ii minimum-number-of-visited-cells-in-a-grid maximum-number-of-books-you-can-take",
     "problems": [
@@ -2595,7 +2595,7 @@
     ]
   },
   {
-    "name": "十一、优化 DP / §11.3 单调队列优化 DP",
+    "name": "7 动态规划 / 十一、优化 DP / §11.3 单调队列优化 DP",
     "count": 10,
     "problems_title_slugs": "minimum-number-of-coins-for-fruits jump-game-vi constrained-subsequence-sum count-partitions-with-max-min-difference-at-most-k guess-number-higher-or-lower-ii delivering-boxes-from-storage-to-ports minimum-total-distance-traveled minimum-sum-of-values-by-dividing-array find-maximum-non-decreasing-array-length minimum-number-of-coins-for-fruits-ii",
     "problems": [
@@ -2652,7 +2652,7 @@
     ]
   },
   {
-    "name": "十一、优化 DP / §11.4 树状数组/线段树优化 DP",
+    "name": "7 动态规划 / 十一、优化 DP / §11.4 树状数组/线段树优化 DP",
     "count": 7,
     "problems_title_slugs": "best-team-with-no-conflicts longest-increasing-subsequence-ii maximum-number-of-jumps-to-reach-the-last-index maximum-balanced-subsequence-sum minimum-cost-to-split-an-array sum-of-beautiful-subsequences subarrays-distinct-element-sum-of-squares-ii",
     "problems": [
@@ -2694,7 +2694,7 @@
     ]
   },
   {
-    "name": "十一、优化 DP / §11.5 字典树优化 DP",
+    "name": "7 动态规划 / 十一、优化 DP / §11.5 字典树优化 DP",
     "count": 5,
     "problems_title_slugs": "word-break extra-characters-in-a-string re-space-lcci concatenated-words minimum-cost-to-convert-string-ii",
     "problems": [
@@ -2726,7 +2726,7 @@
     ]
   },
   {
-    "name": "十一、优化 DP / §11.6 矩阵快速幂优化 DP",
+    "name": "7 动态规划 / 十一、优化 DP / §11.6 矩阵快速幂优化 DP",
     "count": 13,
     "problems_title_slugs": "climbing-stairs fibonacci-number n-th-tribonacci-number count-vowels-permutation student-attendance-record-ii knight-dialer domino-and-tromino-tiling number-of-ways-to-paint-n-3-grid painting-a-grid-with-three-different-colors total-characters-in-string-after-transformations-ii number-of-zigzag-arrays-ii string-transformation number-of-ways-to-reach-destination-in-the-grid",
     "problems": [
@@ -2798,7 +2798,7 @@
     ]
   },
   {
-    "name": "十一、优化 DP / §11.7 斜率优化 DP",
+    "name": "7 动态规划 / 十一、优化 DP / §11.7 斜率优化 DP",
     "count": 3,
     "problems_title_slugs": "find-the-minimum-amount-of-time-to-brew-potions minimum-cost-to-divide-array-into-subarrays climbing-stairs-ii",
     "problems": [
@@ -2820,7 +2820,7 @@
     ]
   },
   {
-    "name": "十一、优化 DP / §11.8 WQS 二分优化 DP",
+    "name": "7 动态规划 / 十一、优化 DP / §11.8 WQS 二分优化 DP",
     "count": 4,
     "problems_title_slugs": "best-time-to-buy-and-sell-stock-iv best-time-to-buy-and-sell-stock-v minimum-white-tiles-after-covering-with-carpets maximize-cyclic-partition-score",
     "problems": [
@@ -2847,7 +2847,7 @@
     ]
   },
   {
-    "name": "十一、优化 DP / §11.9 其他优化 DP",
+    "name": "7 动态规划 / 十一、优化 DP / §11.9 其他优化 DP",
     "count": 13,
     "problems_title_slugs": "minimum-sum-after-divisible-sum-deletions maximum-number-of-points-with-cost maximum-strictly-increasing-cells-in-a-matrix minimum-cost-path-with-teleportations number-of-distinct-roll-sequences maximum-total-reward-using-operations-ii check-if-there-is-a-valid-parentheses-string-path construct-string-with-minimum-cost minimum-number-of-valid-strings-to-form-target-ii maximize-cyclic-partition-score qie-fen-shu-zu NfY1m5 make-array-non-decreasing-or-non-increasing",
     "problems": [
@@ -2919,7 +2919,7 @@
     ]
   },
   {
-    "name": "十二、树形 DP / §12.1 树的直径",
+    "name": "7 动态规划 / 十二、树形 DP / §12.1 树的直径",
     "count": 12,
     "problems_title_slugs": "diameter-of-binary-tree longest-univalue-path binary-tree-maximum-path-sum amount-of-time-for-binary-tree-to-be-infected longest-path-with-different-adjacent-characters find-minimum-diameter-after-merging-two-trees count-subtrees-with-max-distance-between-cities difference-between-maximum-and-minimum-price-sum diameter-of-n-ary-tree tree-diameter binary-tree-longest-consecutive-sequence-ii maximize-the-number-of-target-nodes-after-connecting-trees-i",
     "problems": [
@@ -2986,7 +2986,7 @@
     ]
   },
   {
-    "name": "十二、树形 DP / §12.2 树上最大独立集",
+    "name": "7 动态规划 / 十二、树形 DP / §12.2 树上最大独立集",
     "count": 4,
     "problems_title_slugs": "house-robber-iii minimize-the-total-price-of-the-trips subtree-inversion-sum choose-edges-to-maximize-score-in-a-tree",
     "problems": [
@@ -3013,7 +3013,7 @@
     ]
   },
   {
-    "name": "十二、树形 DP / §12.3 树上最小支配集",
+    "name": "7 动态规划 / 十二、树形 DP / §12.3 树上最小支配集",
     "count": 1,
     "problems_title_slugs": "binary-tree-cameras",
     "problems": [
@@ -3025,7 +3025,7 @@
     ]
   },
   {
-    "name": "十二、树形 DP / §12.4 换根 DP",
+    "name": "7 动态规划 / 十二、树形 DP / §12.4 换根 DP",
     "count": 6,
     "problems_title_slugs": "sum-of-distances-in-tree count-number-of-possible-root-nodes minimum-edge-reversals-so-every-node-is-reachable minimum-height-trees time-taken-to-mark-all-nodes maximize-the-number-of-target-nodes-after-connecting-trees-i",
     "problems": [
@@ -3062,7 +3062,7 @@
     ]
   },
   {
-    "name": "十二、树形 DP / §12.5 其他树形 DP",
+    "name": "7 动态规划 / 十二、树形 DP / §12.5 其他树形 DP",
     "count": 11,
     "problems_title_slugs": "maximum-score-after-applying-operations-on-a-tree find-the-maximum-sum-of-node-values maximum-points-after-collecting-coins-from-all-nodes maximum-good-subtree-score maximum-profit-from-trading-stocks-with-discounts count-ways-to-build-rooms-in-an-ant-colony maximize-sum-of-weights-after-edge-removals er-cha-shu-ren-wu-diao-du er-cha-shu-ran-se-UGC U7WvvU minimum-flips-in-binary-tree-to-get-result",
     "problems": [
@@ -3124,7 +3124,7 @@
     ]
   },
   {
-    "name": "十三、图 DP",
+    "name": "7 动态规划 / 十三、图 DP",
     "count": 13,
     "problems_title_slugs": "shortest-distance-after-road-addition-queries-i cheapest-flights-within-k-stops number-of-restricted-paths-from-first-to-last-node parallel-courses-iii network-recovery-pathways number-of-ways-to-arrive-at-destination maximum-weighted-k-edge-path largest-color-value-in-a-directed-graph minimum-cost-to-reach-destination-in-time cat-and-mouse cat-and-mouse-ii chuan-di-xin-xi the-most-similar-path-in-a-graph",
     "problems": [
@@ -3196,7 +3196,7 @@
     ]
   },
   {
-    "name": "十四、博弈 DP",
+    "name": "7 动态规划 / 十四、博弈 DP",
     "count": 13,
     "problems_title_slugs": "divisor-game stone-game predict-the-winner stone-game-iv stone-game-vii stone-game-iii stone-game-ii stone-game-v can-i-win stone-game-viii cat-and-mouse cat-and-mouse-ii flip-game-ii",
     "problems": [
@@ -3268,7 +3268,7 @@
     ]
   },
   {
-    "name": "十五、概率/期望 DP",
+    "name": "7 动态规划 / 十五、概率/期望 DP",
     "count": 7,
     "problems_title_slugs": "knight-probability-in-chessboard new-21-game probability-of-a-two-boxes-having-the-same-number-of-distinct-balls soup-servings nge-tou-zi-de-dian-shu-lcof I3Gm2h toss-strange-coins",
     "problems": [
@@ -3310,7 +3310,7 @@
     ]
   },
   {
-    "name": "专题：输出具体方案（打印方案）",
+    "name": "7 动态规划 / 专题：输出具体方案（打印方案）",
     "count": 13,
     "problems_title_slugs": "largest-divisible-subset largest-multiple-of-three form-largest-integer-with-digits-that-add-up-to-target shortest-common-supersequence find-the-shortest-superstring smallest-sufficient-team concatenated-divisibility find-the-largest-palindrome-divisible-by-k find-the-minimum-cost-array-permutation minimum-cost-good-caption smallest-divisible-digit-product-ii coin-path encode-string-with-shortest-length",
     "problems": [
@@ -3382,7 +3382,7 @@
     ]
   },
   {
-    "name": "专题：前后缀分解",
+    "name": "7 动态规划 / 专题：前后缀分解",
     "count": 54,
     "problems_title_slugs": "find-pivot-index find-the-middle-index-in-array equal-score-substrings number-of-ways-to-split-array minimum-average-difference maximum-score-after-splitting-a-string product-of-array-except-self longest-subarray-of-1s-after-deleting-one-element longest-mountain-in-array sum-of-beauty-in-the-array minimum-sum-of-mountain-triplets-ii minimum-penalty-for-a-shop number-of-good-ways-to-split-a-string count-special-triplets make-array-elements-equal-to-zero unique-length-3-palindromic-subsequences maximum-value-of-an-ordered-triplet-ii ways-to-make-a-fair-array best-time-to-buy-and-sell-stock-iii split-array-with-minimum-difference longest-common-prefix-between-adjacent-strings-after-removals number-of-ways-to-select-buildings maximum-sum-of-two-non-overlapping-subarrays maximum-sum-of-3-non-overlapping-subarrays find-all-good-indices find-good-days-to-rob-the-bank flip-string-to-monotone-increasing increasing-triplet-subsequence minimum-deletions-to-make-string-balanced maximum-subarray-sum-with-one-deletion longest-non-decreasing-subarray-after-replacing-at-most-one-element trapping-rain-water difference-of-number-of-distinct-values-on-diagonals find-two-non-overlapping-sub-arrays-each-with-target-sum maximum-or minimum-number-of-removals-to-make-mountain-array construct-product-matrix find-the-maximum-factor-score-of-array minimum-time-to-remove-all-cars-containing-illegal-goods count-palindromic-subsequences minimum-difference-in-sums-after-removal-of-elements subsequence-with-the-minimum-score count-special-quadruplets count-increasing-quadruplets find-the-lexicographically-smallest-valid-sequence count-special-subsequences find-the-occurrence-of-first-almost-equal-substring find-the-maximum-sequence-value-of-array maximum-value-sum-by-placing-three-rooks-ii maximize-subarray-sum-after-removing-all-occurrences-of-one-element maximize-the-number-of-partitions-after-operations max-consecutive-ones-ii maximum-subarray-sum-after-one-operation best-time-to-buy-and-sell-stock",
     "problems": [
@@ -3659,7 +3659,7 @@
     ]
   },
   {
-    "name": "专题：把 X 变成 Y",
+    "name": "7 动态规划 / 专题：把 X 变成 Y",
     "count": 6,
     "problems_title_slugs": "integer-replacement minimum-number-of-operations-to-make-x-and-y-equal minimum-operations-to-convert-number broken-calculator minimum-number-of-days-to-eat-n-oranges digit-operations-to-make-two-integers-equal",
     "problems": [
@@ -3696,7 +3696,7 @@
     ]
   },
   {
-    "name": "专题：跳跃游戏",
+    "name": "7 动态规划 / 专题：跳跃游戏",
     "count": 12,
     "problems_title_slugs": "jump-game-iii maximum-number-of-jumps-to-reach-the-last-index frog-jump jump-game-v jump-game-vii jump-game-vi odd-even-jump minimum-jumps-to-reach-home zui-xiao-tiao-yue-ci-shu meChtZ coin-path jump-game-viii",
     "problems": [
@@ -3763,7 +3763,7 @@
     ]
   },
   {
-    "name": "其他",
+    "name": "7 动态规划 / 其他",
     "count": 5,
     "problems_title_slugs": "sort-integers-by-the-power-value binary-trees-with-factors pyramid-transition-matrix number-of-strings-which-can-be-rearranged-to-contain-substring minimum-cost-to-change-the-final-value-of-expression",
     "problems": [

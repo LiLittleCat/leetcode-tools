@@ -1,6 +1,6 @@
 [
   {
-    "name": "一、单调栈 / §1.1 基础",
+    "name": "3 单调栈 / 一、单调栈 / §1.1 基础",
     "count": 6,
     "problems_title_slugs": "daily-temperatures final-prices-with-a-special-discount-in-a-shop next-greater-element-i next-greater-element-ii online-stock-span car-fleet",
     "problems": [
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "name": "一、单调栈 / §1.2 进阶（选做）",
+    "name": "3 单调栈 / 一、单调栈 / §1.2 进阶（选做）",
     "count": 21,
     "problems_title_slugs": "next-greater-node-in-linked-list max-chunks-to-make-sorted-ii maximum-binary-tree 132-pattern find-the-number-of-subarrays-where-boundary-elements-are-maximum beautiful-towers-ii number-of-visible-people-in-a-queue next-greater-element-iv minimum-cost-tree-from-leaf-values steps-to-make-array-non-decreasing car-fleet-ii maximum-sum-queries count-non-decreasing-subarrays-after-k-operations maximum-array-hopping-score-ii binary-searchable-numbers-in-an-unsorted-array maximal-range-that-each-element-is-maximum-in-it number-of-people-that-can-be-seen-in-a-grid smallest-subarray-to-sort-in-every-sliding-window maximum-width-ramp minimum-operations-to-convert-all-elements-to-zero longest-well-performing-interval",
     "problems": [
@@ -149,7 +149,7 @@
     ]
   },
   {
-    "name": "二、矩形",
+    "name": "3 单调栈 / 二、矩形",
     "count": 8,
     "problems_title_slugs": "largest-rectangle-in-histogram maximum-score-of-a-good-subarray maximal-rectangle maximal-square trapping-rain-water count-submatrices-with-all-ones count-square-submatrices-with-all-ones pour-water",
     "problems": [
@@ -196,7 +196,7 @@
     ]
   },
   {
-    "name": "三、贡献法",
+    "name": "3 单调栈 / 三、贡献法",
     "count": 9,
     "problems_title_slugs": "sum-of-subarray-minimums sum-of-subarray-ranges maximum-subarray-min-product apply-operations-to-maximize-score sum-of-total-strength-of-wizards maximum-and-minimum-sums-of-at-most-size-k-subarrays find-sorted-submatrices-with-maximum-element-at-most-k subarray-with-elements-greater-than-varying-threshold count-subarrays-where-max-element-appears-at-least-k-times",
     "problems": [
@@ -248,7 +248,7 @@
     ]
   },
   {
-    "name": "四、最小字典序",
+    "name": "3 单调栈 / 四、最小字典序",
     "count": 7,
     "problems_title_slugs": "remove-k-digits find-the-most-competitive-subsequence remove-duplicate-letters ev2bru smallest-subsequence-of-distinct-characters create-maximum-number smallest-k-length-subsequence-with-occurrences-of-a-letter",
     "problems": [

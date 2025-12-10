@@ -1,6 +1,6 @@
 [
   {
-    "name": "一、二分查找 / §1.1 基础",
+    "name": "2 二分算法 / 一、二分查找 / §1.1 基础",
     "count": 5,
     "problems_title_slugs": "find-first-and-last-position-of-element-in-sorted-array search-insert-position binary-search find-smallest-letter-greater-than-target maximum-count-of-positive-integer-and-negative-integer",
     "problems": [
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "name": "一、二分查找 / §1.2 进阶",
+    "name": "2 二分算法 / 一、二分查找 / §1.2 进阶",
     "count": 20,
     "problems_title_slugs": "successful-pairs-of-spells-and-potions find-the-distance-value-between-two-arrays longest-subsequence-with-limited-sum compare-strings-by-frequency-of-the-smallest-character range-frequency-queries closest-equal-element-queries count-the-number-of-fair-pairs most-beautiful-item-for-each-query snapshot-array time-based-key-value-store implement-router find-k-closest-elements minimum-absolute-sum-difference online-election ju-qing-hong-fa-shi-jian shortest-distance-to-target-color minimum-relative-loss-after-buying-chocolates element-appearing-more-than-25-in-sorted-array closest-nodes-queries-in-a-binary-search-tree check-if-a-number-is-majority-element-in-a-sorted-array",
     "problems": [
@@ -139,7 +139,7 @@
     ]
   },
   {
-    "name": "二、二分答案 / §2.1 求最小 / 答疑",
+    "name": "2 二分算法 / 二、二分答案 / §2.1 求最小 / 答疑",
     "count": 14,
     "problems_title_slugs": "find-the-smallest-divisor-given-a-threshold minimum-time-to-complete-trips capacity-to-ship-packages-within-d-days koko-eating-bananas minimum-number-of-seconds-to-make-mountain-height-zero minimum-time-to-activate-string heaters minimum-time-to-repair-cars minimum-number-of-days-to-make-m-bouquets earliest-second-to-mark-indices-i minimum-time-to-eat-all-grains minimum-operations-to-make-numbers-non-positive minimum-speed-to-arrive-on-time separate-squares-i",
     "problems": [
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "name": "二、二分答案 / §2.2 求最大",
+    "name": "2 二分算法 / 二、二分答案 / §2.2 求最大",
     "count": 18,
     "problems_title_slugs": "h-index-ii maximum-candies-allocated-to-k-children find-longest-special-substring-that-occurs-thrice-ii find-the-maximum-number-of-marked-indices maximum-number-of-removable-characters maximum-value-at-a-given-index-in-a-bounded-array furthest-building-you-can-reach maximum-number-of-alloys maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k maximum-running-time-of-n-computers escape-the-spreading-fire maximum-number-of-tasks-you-can-assign Nsibyl maximum-font-to-fit-a-sentence-in-a-screen cutting-ribbons pour-water-between-buckets-to-make-water-levels-equal maximum-sized-array maximum-average-subarray-ii",
     "problems": [
@@ -313,7 +313,7 @@
     ]
   },
   {
-    "name": "二、二分答案 / §2.3 二分间接值",
+    "name": "2 二分算法 / 二、二分答案 / §2.3 二分间接值",
     "count": 2,
     "problems_title_slugs": "maximum-points-inside-the-square sell-diminishing-valued-colored-balls",
     "problems": [
@@ -330,7 +330,7 @@
     ]
   },
   {
-    "name": "二、二分答案 / §2.4 最小化最大值",
+    "name": "2 二分算法 / 二、二分答案 / §2.4 最小化最大值",
     "count": 16,
     "problems_title_slugs": "split-array-largest-sum minimized-maximum-of-products-distributed-to-any-store minimize-maximum-component-cost minimum-limit-of-balls-in-a-bag path-with-minimum-effort minimize-maximum-of-array house-robber-iv swim-in-rising-water minimize-the-maximum-difference-of-pairs minimize-the-maximum-edge-weight-of-graph minimize-the-maximum-of-two-arrays minimum-time-to-complete-all-deliveries smallest-substring-with-identical-characters-ii minimum-stability-factor-of-array xiao-zhang-shua-ti-ji-hua minimize-max-distance-to-gas-station",
     "problems": [
@@ -417,7 +417,7 @@
     ]
   },
   {
-    "name": "二、二分答案 / §2.5 最大化最小值",
+    "name": "2 二分算法 / 二、二分答案 / §2.5 最大化最小值",
     "count": 12,
     "problems_title_slugs": "maximize-score-of-numbers-in-ranges network-recovery-pathways maximum-tastiness-of-candy-basket magnetic-force-between-two-balls maximum-partition-factor find-the-safest-path-in-a-grid maximize-the-minimum-powered-city maximize-spanning-tree-stability-with-upgrades maximize-the-minimum-game-score maximize-the-distance-between-points-on-a-square path-with-maximum-minimum-value divide-chocolate",
     "problems": [
@@ -484,7 +484,7 @@
     ]
   },
   {
-    "name": "二、二分答案 / §2.6 第 K 小/大",
+    "name": "2 二分算法 / 二、二分答案 / §2.6 第 K 小/大",
     "count": 17,
     "problems_title_slugs": "kth-smallest-number-in-multiplication-table kth-smallest-element-in-a-sorted-matrix find-k-th-smallest-pair-distance nth-magical-number ugly-number-iii preimage-size-of-factorial-zeroes-function find-k-pairs-with-smallest-sums find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows k-th-smallest-prime-fraction kth-smallest-amount-with-single-denomination-combination find-the-median-of-the-uniqueness-array kth-smallest-product-of-two-sorted-arrays find-the-k-sum-of-an-array range-sum-of-sorted-subarray-sums maximum-total-subarray-value-ii minimum-threshold-for-inversion-pairs-count kth-smallest-subarray-sum",
     "problems": [
@@ -576,7 +576,7 @@
     ]
   },
   {
-    "name": "三、三分法",
+    "name": "2 二分算法 / 三、三分法",
     "count": 1,
     "problems_title_slugs": "best-position-for-a-service-centre",
     "problems": [
@@ -588,7 +588,7 @@
     ]
   },
   {
-    "name": "四、其他",
+    "name": "2 二分算法 / 四、其他",
     "count": 25,
     "problems_title_slugs": "sqrtx search-a-2d-matrix first-bad-version guess-number-higher-or-lower find-peak-element find-a-peak-element-ii peak-index-in-a-mountain-array find-in-mountain-array find-minimum-in-rotated-sorted-array find-minimum-in-rotated-sorted-array-ii search-in-rotated-sorted-array search-in-rotated-sorted-array-ii count-complete-tree-nodes kth-missing-positive-number single-element-in-a-sorted-array median-of-two-sorted-arrays fixed-point search-in-a-sorted-array-of-unknown-size number-of-equal-numbers-blocks missing-element-in-sorted-array find-smallest-common-element-in-all-rows leftmost-column-with-at-least-a-one find-the-index-of-the-large-integer median-of-a-row-wise-sorted-matrix smallest-rectangle-enclosing-black-pixels",
     "problems": [

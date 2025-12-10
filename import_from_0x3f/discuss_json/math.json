@@ -1,6 +1,6 @@
 [
   {
-    "name": "一、数论 / §1.1 判断质数",
+    "name": "9 数学算法 / 一、数论 / §1.1 判断质数",
     "count": 6,
     "problems_title_slugs": "maximum-prime-difference prime-in-diagonal prime-number-of-set-bits-in-binary-representation sum-of-largest-prime-substrings most-frequent-prime prime-palindrome",
     "problems": [
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "name": "一、数论 / §1.2 预处理质数（筛质数）",
+    "name": "9 数学算法 / 一、数论 / §1.2 预处理质数（筛质数）",
     "count": 7,
     "problems_title_slugs": "count-primes split-array-by-prime-indices check-if-any-element-has-prime-frequency prime-pairs-with-target-sum find-the-count-of-numbers-which-are-not-special closest-prime-numbers-in-range prime-subtraction-operation",
     "problems": [
@@ -79,7 +79,7 @@
     ]
   },
   {
-    "name": "一、数论 / §1.3 质因数分解",
+    "name": "9 数学算法 / 一、数论 / §1.3 质因数分解",
     "count": 13,
     "problems_title_slugs": "distinct-prime-factors-of-product-of-array smallest-value-after-replacing-with-sum-of-prime-factors minimum-division-operations-to-make-array-non-decreasing minimum-jumps-to-reach-end-via-prime-teleportation split-the-array-to-make-coprime-products greatest-common-divisor-traversal sum-of-perfect-square-ancestors maximum-element-sum-of-a-complete-subset-of-indices apply-operations-to-maximize-score gcd-sort-of-an-array count-ways-to-make-array-with-product count-the-number-of-ideal-arrays qie-fen-shu-zu",
     "problems": [
@@ -151,7 +151,7 @@
     ]
   },
   {
-    "name": "一、数论 / §1.4 阶乘分解",
+    "name": "9 数学算法 / 一、数论 / §1.4 阶乘分解",
     "count": 2,
     "problems_title_slugs": "factorial-trailing-zeroes preimage-size-of-factorial-zeroes-function",
     "problems": [
@@ -168,7 +168,7 @@
     ]
   },
   {
-    "name": "一、数论 / §1.5 因子",
+    "name": "9 数学算法 / 一、数论 / §1.5 因子",
     "count": 16,
     "problems_title_slugs": "number-of-common-factors three-divisors the-kth-factor-of-n perfect-number four-divisors closest-divisors consecutive-numbers-sum assign-elements-to-groups-with-constraints find-the-number-of-good-pairs-ii count-equal-and-divisible-pairs-in-an-array count-array-pairs-divisible-by-k largest-component-size-by-common-factor graph-connectivity-with-threshold number-of-single-divisor-triplets minimum-factorization smallest-number-with-given-digit-product",
     "problems": [
@@ -255,7 +255,7 @@
     ]
   },
   {
-    "name": "一、数论 / §1.6 最大公约数（GCD）",
+    "name": "9 数学算法 / 一、数论 / §1.6 最大公约数（GCD）",
     "count": 23,
     "problems_title_slugs": "find-greatest-common-divisor-of-array gcd-of-odd-and-even-sums count-operations-to-obtain-zero x-of-a-kind-in-a-deck-of-cards greatest-common-divisor-of-strings minimum-deletions-to-make-array-divisible water-and-jug-problem minimum-number-of-operations-to-make-all-array-elements-equal-to-1 check-if-it-is-a-good-array max-points-on-a-line lexicographically-smallest-string-after-applying-operations make-k-subarray-sums-equal number-of-subarrays-with-gcd-equal-to-k check-if-point-is-reachable maximize-subarray-gcd-score sorted-gcd-pair-queries count-ways-to-choose-coprime-integers-from-rows number-of-different-subsequences-gcds sum-of-beautiful-subsequences minimum-split-into-subarrays-with-gcd-greater-than-one minimum-subarrays-in-a-valid-split maximum-gcd-sum-of-a-subarray insert-greatest-common-divisors-in-linked-list",
     "problems": [
@@ -377,7 +377,7 @@
     ]
   },
   {
-    "name": "一、数论 / §1.7 最小公倍数（LCM）",
+    "name": "9 数学算法 / 一、数论 / §1.7 最小公倍数（LCM）",
     "count": 5,
     "problems_title_slugs": "smallest-even-multiple find-the-maximum-factor-score-of-array mirror-reflection replace-non-coprime-numbers-in-array number-of-subarrays-with-lcm-equal-to-k",
     "problems": [
@@ -409,7 +409,7 @@
     ]
   },
   {
-    "name": "一、数论 / §1.8 互质",
+    "name": "9 数学算法 / 一、数论 / §1.8 互质",
     "count": 4,
     "problems_title_slugs": "number-of-beautiful-pairs simplified-fractions tree-of-coprimes maximum-subarray-with-equal-products",
     "problems": [
@@ -436,7 +436,7 @@
     ]
   },
   {
-    "name": "一、数论 / §1.9 同余",
+    "name": "9 数学算法 / 一、数论 / §1.9 同余",
     "count": 3,
     "problems_title_slugs": "destroy-sequential-targets smallest-missing-non-negative-integer-after-operations make-sum-divisible-by-p",
     "problems": [
@@ -458,7 +458,7 @@
     ]
   },
   {
-    "name": "一、数论 / §1.10 数论分块",
+    "name": "9 数学算法 / 一、数论 / §1.10 数论分块",
     "count": 1,
     "problems_title_slugs": "count-square-sum-triples",
     "problems": [
@@ -470,7 +470,7 @@
     ]
   },
   {
-    "name": "一、数论 / §1.11 其他",
+    "name": "9 数学算法 / 一、数论 / §1.11 其他",
     "count": 7,
     "problems_title_slugs": "binary-prefix-divisible-by-5 power-of-three super-pow smallest-integer-divisible-by-k sum-of-square-numbers perfect-squares number-of-ways-to-buy-pens-and-pencils",
     "problems": [
@@ -512,7 +512,7 @@
     ]
   },
   {
-    "name": "二、组合数学 / §2.1 乘法原理",
+    "name": "9 数学算法 / 二、组合数学 / §2.1 乘法原理",
     "count": 13,
     "problems_title_slugs": "right-triangles number-of-ways-to-split-a-string ways-to-split-array-into-good-subarrays count-unreachable-pairs-of-nodes-in-an-undirected-graph count-collisions-of-monkeys-on-a-polygon count-good-numbers count-pairs-of-connectable-servers-in-a-weighted-tree-network number-of-ways-to-divide-a-long-corridor count-the-number-of-good-partitions naming-a-company count-valid-paths-in-a-tree count-subtrees-with-max-distance-between-cities number-of-distinct-binary-strings-after-applying-operations",
     "problems": [
@@ -584,7 +584,7 @@
     ]
   },
   {
-    "name": "二、组合数学 / §2.2 组合计数",
+    "name": "9 数学算法 / 二、组合数学 / §2.2 组合计数",
     "count": 34,
     "problems_title_slugs": "unique-paths count-numbers-with-unique-digits prime-arrangements find-the-n-th-value-after-k-seconds count-all-valid-pickup-and-delivery-options number-of-ways-to-reach-a-position-after-exactly-k-steps number-of-ways-to-assign-edge-weights-i count-anagrams find-number-of-ways-to-reach-the-k-th-stair kth-smallest-instructions count-k-subsequences-of-a-string-with-maximum-beauty find-triangular-sum-of-an-array check-if-digits-are-equal-in-string-after-operations-ii count-numbers-with-non-decreasing-digits number-of-ways-to-reorder-array-to-get-same-bst count-the-number-of-arrays-with-k-matching-adjacent-elements number-of-ways-to-rearrange-sticks-with-k-sticks-visible probability-of-a-two-boxes-having-the-same-number-of-distinct-balls smallest-palindromic-rearrangement-ii find-the-count-of-good-integers find-the-number-of-possible-ways-for-an-event permutations-iv count-ways-to-build-rooms-in-an-ant-colony count-number-of-balanced-permutations minimum-number-of-operations-to-make-string-sorted count-the-number-of-infection-sequences find-sum-of-array-product-of-magical-sequences subsequences-with-a-unique-middle-mode-i count-all-possible-routes find-the-count-of-monotonic-pairs-ii Uh984O count-the-number-of-good-subsequences find-the-derangement-of-an-array count-ways-to-distribute-candies",
     "problems": [
@@ -761,7 +761,7 @@
     ]
   },
   {
-    "name": "二、组合数学 / §2.3 放球问题",
+    "name": "9 数学算法 / 二、组合数学 / §2.3 放球问题",
     "count": 6,
     "problems_title_slugs": "count-sorted-vowel-strings number-of-sets-of-k-non-overlapping-line-segments number-of-music-playlists count-ways-to-make-array-with-product count-the-number-of-ideal-arrays balanced-k-factor-decomposition",
     "problems": [
@@ -798,7 +798,7 @@
     ]
   },
   {
-    "name": "二、组合数学 / §2.4 容斥原理",
+    "name": "9 数学算法 / 二、组合数学 / §2.4 容斥原理",
     "count": 12,
     "problems_title_slugs": "sum-multiples nth-magical-number ugly-number-iii distribute-candies-among-children-ii number-of-strings-which-can-be-rearranged-to-contain-substring minimize-the-maximum-of-two-arrays minimum-time-to-complete-all-deliveries kth-smallest-amount-with-single-denomination-combination number-of-effective-subsequences find-all-possible-stable-binary-arrays-ii find-the-number-of-subsequences-with-equal-gcd distribute-candies-among-children-iii",
     "problems": [
@@ -865,7 +865,7 @@
     ]
   },
   {
-    "name": "二、组合数学 / §2.5 贡献法",
+    "name": "9 数学算法 / 二、组合数学 / §2.5 贡献法",
     "count": 9,
     "problems_title_slugs": "vowels-of-all-substrings sum-of-all-odd-length-subarrays power-of-heroes sum-of-subsequence-widths maximum-and-minimum-sums-of-at-most-size-k-subsequences manhattan-distances-of-all-arrangements-of-pieces sum-of-imbalance-numbers-of-all-subarrays distribute-coins-in-binary-tree minimum-fuel-cost-to-report-to-the-capital",
     "problems": [
@@ -917,7 +917,7 @@
     ]
   },
   {
-    "name": "二、组合数学 / §2.6 生成函数（母函数）",
+    "name": "9 数学算法 / 二、组合数学 / §2.6 生成函数（母函数）",
     "count": 6,
     "problems_title_slugs": "number-of-dice-rolls-with-target-sum k-inverse-pairs-array count-the-number-of-inversions find-the-sum-of-the-power-of-all-subsequences number-of-great-partitions find-the-original-typed-string-ii",
     "problems": [
@@ -954,7 +954,7 @@
     ]
   },
   {
-    "name": "三、概率期望",
+    "name": "9 数学算法 / 三、概率期望",
     "count": 10,
     "problems_title_slugs": "airplane-seat-assignment-probability knight-probability-in-chessboard new-21-game probability-of-a-two-boxes-having-the-same-number-of-distinct-balls soup-servings nge-tou-zi-de-dian-shu-lcof qi-wang-ge-shu-tong-ji I3Gm2h toss-strange-coins find-the-minimum-amount-of-time-to-brew-potions",
     "problems": [
@@ -1011,7 +1011,7 @@
     ]
   },
   {
-    "name": "四、博弈论",
+    "name": "9 数学算法 / 四、博弈论",
     "count": 24,
     "problems_title_slugs": "nim-game divisor-game vowels-game-in-a-string remove-colored-pieces-if-both-neighbors-are-the-same-color stone-game stone-game-iv predict-the-winner stone-game-vii stone-game-vi sum-game stone-game-iii stone-game-ii stone-game-v can-i-win stone-game-ix chalkboard-xor-game stone-game-viii cat-and-mouse cat-and-mouse-ii fsa7oZ flip-game-ii game-of-nim subtree-removal-game-with-fibonacci-tree the-wording-game",
     "problems": [
@@ -1138,7 +1138,7 @@
     ]
   },
   {
-    "name": "五、计算几何 / §5.1 点、线",
+    "name": "9 数学算法 / 五、计算几何 / §5.1 点、线",
     "count": 8,
     "problems_title_slugs": "check-if-it-is-a-straight-line minimum-lines-to-represent-a-line-chart maximum-number-of-visible-points intersection-lcci bisect-squares-lcci best-line-lcci zui-xiao-ju-xing-mian-ji minimum-number-of-lines-to-cover-points",
     "problems": [
@@ -1185,7 +1185,7 @@
     ]
   },
   {
-    "name": "五、计算几何 / §5.2 圆",
+    "name": "9 数学算法 / 五、计算几何 / §5.2 圆",
     "count": 5,
     "problems_title_slugs": "circle-and-rectangle-overlapping maximum-number-of-darts-inside-of-a-circular-dartboard vFjcfV check-if-the-rectangle-corner-is-reachable erect-the-fence-ii",
     "problems": [
@@ -1217,7 +1217,7 @@
     ]
   },
   {
-    "name": "五、计算几何 / §5.3 矩形、多边形",
+    "name": "9 数学算法 / 五、计算几何 / §5.3 矩形、多边形",
     "count": 7,
     "problems_title_slugs": "rectangle-overlap rectangle-area valid-square minimum-area-rectangle minimum-area-rectangle-ii count-number-of-trapezoids-ii convex-polygon",
     "problems": [
@@ -1259,7 +1259,7 @@
     ]
   },
   {
-    "name": "五、计算几何 / §5.4 凸包",
+    "name": "9 数学算法 / 五、计算几何 / §5.4 凸包",
     "count": 3,
     "problems_title_slugs": "erect-the-fence largest-triangle-area you-le-yuan-de-mi-gong",
     "problems": [
@@ -1281,7 +1281,7 @@
     ]
   },
   {
-    "name": "六、随机算法 / §6.1 随机数",
+    "name": "9 数学算法 / 六、随机算法 / §6.1 随机数",
     "count": 11,
     "problems_title_slugs": "random-pick-index linked-list-random-node shuffle-an-array implement-rand10-using-rand7 random-pick-with-weight random-pick-with-blacklist generate-random-point-in-a-circle random-point-in-non-overlapping-rectangles random-flip-matrix insert-delete-getrandom-o1 insert-delete-getrandom-o1-duplicates-allowed",
     "problems": [
@@ -1343,7 +1343,7 @@
     ]
   },
   {
-    "name": "六、随机算法 / §6.2 随机化技巧",
+    "name": "9 数学算法 / 六、随机算法 / §6.2 随机化技巧",
     "count": 4,
     "problems_title_slugs": "convert-integer-to-the-sum-of-two-no-zero-integers array-with-elements-not-equal-to-average-of-neighbors online-majority-element-in-subarray generate-schedule",
     "problems": [
@@ -1370,7 +1370,7 @@
     ]
   },
   {
-    "name": "七、杂项 / §7.1 回文数",
+    "name": "9 数学算法 / 七、杂项 / §7.1 回文数",
     "count": 13,
     "problems_title_slugs": "palindrome-number strictly-palindromic-number find-palindrome-with-fixed-length prime-palindrome minimum-cost-to-make-array-equalindromic super-palindromes sum-of-k-mirror-numbers count-binary-palindromic-numbers find-the-largest-palindrome-divisible-by-k find-the-count-of-good-integers find-the-closest-palindrome next-special-palindrome-number largest-palindrome-product",
     "problems": [
@@ -1442,7 +1442,7 @@
     ]
   },
   {
-    "name": "七、杂项 / §7.2 整数拆分",
+    "name": "9 数学算法 / 七、杂项 / §7.2 整数拆分",
     "count": 2,
     "problems_title_slugs": "integer-break maximize-number-of-nice-divisors",
     "problems": [
@@ -1459,7 +1459,7 @@
     ]
   },
   {
-    "name": "七、杂项 / §7.3 曼哈顿距离",
+    "name": "9 数学算法 / 七、杂项 / §7.3 曼哈顿距离",
     "count": 7,
     "problems_title_slugs": "maximum-manhattan-distance-after-k-changes maximum-of-absolute-value-expression minimize-manhattan-distances reverse-subarray-to-maximize-array-value maximize-the-distance-between-points-on-a-square minimum-time-for-k-virus-variants-to-spread beautiful-pairs",
     "problems": [
@@ -1501,7 +1501,7 @@
     ]
   },
   {
-    "name": "七、杂项 / §7.4 多项式",
+    "name": "9 数学算法 / 七、杂项 / §7.4 多项式",
     "count": 7,
     "problems_title_slugs": "valid-triangle-number 3sum-with-multiplicity image-overlap multiply-two-polynomials 3sum-smaller match-alphanumerical-pattern-in-matrix-i maximum-number-of-matching-indices-after-right-shifts",
     "problems": [
@@ -1543,7 +1543,7 @@
     ]
   },
   {
-    "name": "七、杂项 / §7.5 快速沃尔什变换（FWT）",
+    "name": "9 数学算法 / 七、杂项 / §7.5 快速沃尔什变换（FWT）",
     "count": 2,
     "problems_title_slugs": "number-of-unique-xor-triplets-ii find-minimum-time-to-finish-all-jobs",
     "problems": [
@@ -1560,7 +1560,7 @@
     ]
   },
   {
-    "name": "七、杂项 / §7.7 其他",
+    "name": "9 数学算法 / 七、杂项 / §7.7 其他",
     "count": 43,
     "problems_title_slugs": "count-odd-numbers-in-an-interval-range calculate-money-in-leetcode-bank determine-the-minimum-sum-of-a-k-avoiding-array count-total-number-of-colored-cells minimum-sensors-to-cover-grid find-the-minimum-possible-sum-of-a-beautiful-array find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k bulb-switcher check-if-number-is-a-sum-of-powers-of-three apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k find-the-number-of-copy-arrays sum-of-numbers-with-units-digit-k minimum-operations-to-make-a-special-number count-the-hidden-sequences minimum-operations-to-make-array-equal-ii can-make-arithmetic-progression-from-sequence append-k-integers-with-minimal-sum minimum-addition-to-make-integer-beautiful convert-to-base-2 number-of-perfect-pairs minimum-garden-perimeter-to-collect-enough-apples adding-two-negabinary-numbers find-the-winner-of-the-circular-game fraction-to-recurring-decimal minimize-length-of-array-using-operations smallest-good-base equal-rational-numbers best-position-for-a-service-centre sum-of-floored-pairs building-boxes sum-of-number-and-its-reverse minimum-number-of-operations-to-reinitialize-a-permutation poor-pigs permutation-sequence abbreviating-the-product-of-a-range minimum-operations-to-equalize-binary-string deep-dark-fraction SNJvJP 05ZEDJ similar-rgb-color remove-9 most-expensive-item-that-can-not-be-bought color-the-triangle-red",
     "problems": [

@@ -29,7 +29,7 @@ DISCUSSION_URL_MAP = {
     },
     "SqopEo": {
         "filename": "binary_search",
-        "title": "二分查找"
+        "title": "二分算法"
     },
     "9oZFK9": {
         "filename": "monotonic_stack",
@@ -45,15 +45,15 @@ DISCUSSION_URL_MAP = {
     },
     "01LUak": {
         "filename": "graph",
-        "title": "图论"
+        "title": "图论算法"
     },
     "tXLS3i": {
         "filename": "dynamic_programming",
-        "title": "DP"
+        "title": "动态规划"
     },
     "mOr1u6": {
         "filename": "data_structure",
-        "title": "数据结构"
+        "title": "常用数据结构"
     },
     "IYT3ss": {
         "filename": "math",
@@ -168,10 +168,23 @@ def extract_heading_and_list_elements(html_content: str) -> str:
     return str(new_soup.prettify())
 
 
-def save_json_from_html_content(simplified_html: str, filename: str) -> List[Dict[str, Any]]:
+def save_json_from_html_content(
+    simplified_html: str,
+    filename: str,
+    category_index: Optional[int] = None,
+    category_title: Optional[str] = None,
+) -> List[Dict[str, Any]]:
     """使用 parse_html 解析精简 HTML 并保存为 JSON。"""
     os.makedirs(LOCAL_JSON_DIR, exist_ok=True)
     data = html_parser.parse_html_content(simplified_html)
+
+    # 在 name 前面添加序号和专题名称
+    if category_index is not None and category_title:
+        prefix = f"{category_index} {category_title}"
+        for item in data:
+            base_name = item.get("name", "")
+            item["name"] = f"{prefix} / {base_name}" if base_name else prefix
+
     json_path = os.path.join(LOCAL_JSON_DIR, f"{filename}.json")
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
@@ -179,7 +192,12 @@ def save_json_from_html_content(simplified_html: str, filename: str) -> List[Dic
     return data
 
 
-def fetch_and_save_discussion_html(discuss_id: str, filename: str) -> bool:
+def fetch_and_save_discussion_html(
+    discuss_id: str,
+    filename: str,
+    category_index: Optional[int] = None,
+    category_title: Optional[str] = None,
+) -> bool:
     """
     获取讨论页面 HTML 并保存到本地
     :param discuss_id: 讨论 ID
@@ -203,7 +221,7 @@ def fetch_and_save_discussion_html(discuss_id: str, filename: str) -> bool:
         f.write(simplified_html)
 
     print(f"精简 HTML 已保存到: {filepath}")
-    save_json_from_html_content(simplified_html, filename)
+    save_json_from_html_content(simplified_html, filename, category_index, category_title)
     return True
 
 
@@ -212,12 +230,12 @@ def fetch_all_discussions() -> None:
     获取所有讨论页面并保存
     """
     print(f"\n将获取 {len(DISCUSSION_URL_MAP)} 个讨论页面...")
-    
+
     success_count = 0
-    for discuss_id, info in DISCUSSION_URL_MAP.items():
-        if fetch_and_save_discussion_html(discuss_id, info["filename"]):
+    for idx, (discuss_id, info) in enumerate(DISCUSSION_URL_MAP.items(), 1):
+        if fetch_and_save_discussion_html(discuss_id, info["filename"], idx, info["title"]):
             success_count += 1
-    
+
     print(f"\n完成: 成功 {success_count}/{len(DISCUSSION_URL_MAP)} 个")
 
 
@@ -318,7 +336,7 @@ def interactive_mode(client: LeetCodeClient):
                 cat_index = int(cat_input) - 1
                 if 0 <= cat_index < len(PROBLEM_CATEGORIES):
                     discuss_id, filename, title = PROBLEM_CATEGORIES[cat_index]
-                    fetch_and_save_discussion_html(discuss_id, filename)
+                    fetch_and_save_discussion_html(discuss_id, filename, cat_index + 1, title)
                 else:
                     print("无效的分类编号")
             except ValueError:
@@ -401,7 +419,7 @@ def main():
     elif args.fetch:
         if 1 <= args.fetch <= len(PROBLEM_CATEGORIES):
             discuss_id, filename, title = PROBLEM_CATEGORIES[args.fetch - 1]
-            fetch_and_save_discussion_html(discuss_id, filename)
+            fetch_and_save_discussion_html(discuss_id, filename, args.fetch, title)
         else:
             print(f"无效的分类编号: {args.fetch}")
     else:
@@ -422,7 +440,7 @@ def main():
                     cat_index = int(fetch_input) - 1
                     if 0 <= cat_index < len(PROBLEM_CATEGORIES):
                         discuss_id, filename, title = PROBLEM_CATEGORIES[cat_index]
-                        fetch_and_save_discussion_html(discuss_id, filename)
+                        fetch_and_save_discussion_html(discuss_id, filename, cat_index + 1, title)
                     else:
                         print("无效的分类编号")
                 except ValueError:

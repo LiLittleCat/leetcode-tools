@@ -1,6 +1,6 @@
 [
   {
-    "name": "零、常用枚举技巧 / §0.1 枚举右，维护左 / §0.1.1 基础",
+    "name": "8 常用数据结构 / 零、常用枚举技巧 / §0.1 枚举右，维护左 / §0.1.1 基础",
     "count": 22,
     "problems_title_slugs": "two-sum number-of-good-pairs largest-positive-integer-that-exists-with-its-negative best-time-to-buy-and-sell-stock maximum-difference-between-increasing-elements maximum-distance-in-arrays max-sum-of-a-pair-with-equal-sum-of-digits number-of-equivalent-domino-pairs max-number-of-k-sum-pairs pairs-with-sum-lcci contains-duplicate-ii minimum-consecutive-cards-to-pick-up number-of-pairs-of-interchangeable-rectangles max-pair-sum-in-an-array count-number-of-trapezoids-i count-number-of-bad-pairs identify-the-largest-outlier-in-an-array minimum-absolute-distance-between-mirror-pairs best-sightseeing-pair count-nice-pairs-in-an-array maximum-product-of-first-and-last-elements-of-a-subsequence find-indices-with-index-and-value-difference-ii",
     "problems": [
@@ -117,7 +117,7 @@
     ]
   },
   {
-    "name": "零、常用枚举技巧 / §0.1 枚举右，维护左 / §0.1.2 进阶",
+    "name": "8 常用数据结构 / 零、常用枚举技巧 / §0.1 枚举右，维护左 / §0.1.2 进阶",
     "count": 18,
     "problems_title_slugs": "pairs-of-songs-with-total-durations-divisible-by-60 count-pairs-that-form-a-complete-day-ii number-of-beautiful-pairs count-pairs-of-similar-strings maximum-value-of-an-ordered-triplet-ii check-if-array-pairs-are-divisible-by-k maximum-sum-of-two-non-overlapping-subarrays maximize-win-from-two-segments count-special-quadruplets count-special-subsequences count-almost-equal-pairs-ii maximize-subarrays-after-removing-one-conflicting-pair two-sum-bsts number-of-divisible-triplet-sums 4sum-ii find-the-number-of-ways-to-place-people-ii equal-sum-grid-partition-ii longest-balanced-substring-i",
     "problems": [
@@ -214,7 +214,7 @@
     ]
   },
   {
-    "name": "零、常用枚举技巧 / §0.2 枚举中间",
+    "name": "8 常用数据结构 / 零、常用枚举技巧 / §0.2 枚举中间",
     "count": 15,
     "problems_title_slugs": "minimum-sum-of-mountain-triplets-ii count-special-triplets unique-length-3-palindromic-subsequences right-triangles maximum-value-of-an-ordered-triplet-ii number-of-boomerangs 132-pattern count-pairs-of-connectable-servers-in-a-weighted-tree-network count-good-triplets shortest-matching-substring maximum-score-of-a-node-sequence count-valid-paths-in-a-tree count-increasing-quadruplets maximum-value-sum-by-placing-three-rooks-ii maximum-increasing-triplet-value",
     "problems": [
@@ -296,7 +296,7 @@
     ]
   },
   {
-    "name": "零、常用枚举技巧 / §0.3 遍历对角线",
+    "name": "8 常用数据结构 / 零、常用枚举技巧 / §0.3 遍历对角线",
     "count": 6,
     "problems_title_slugs": "sort-matrix-by-diagonals difference-of-number-of-distinct-values-on-diagonals sort-the-matrix-diagonally diagonal-traverse max-black-square-lcci longest-line-of-consecutive-one-in-matrix",
     "problems": [
@@ -333,7 +333,7 @@
     ]
   },
   {
-    "name": "一、前缀和 / §1.1 基础",
+    "name": "8 常用数据结构 / 一、前缀和 / §1.1 基础",
     "count": 12,
     "problems_title_slugs": "range-sum-query-immutable sum-of-variable-length-subarrays count-vowel-strings-in-ranges xor-queries-of-a-subarray special-array-ii maximum-absolute-sum-of-any-subarray maximum-subarray best-time-to-buy-and-sell-stock-using-strategy shift-distance-between-two-strings make-a-positive-array minimum-time-to-visit-all-houses count-odd-numbers-in-an-interval-range",
     "problems": [
@@ -400,7 +400,7 @@
     ]
   },
   {
-    "name": "一、前缀和 / §1.2 前缀和与哈希表",
+    "name": "8 常用数据结构 / 一、前缀和 / §1.2 前缀和与哈希表",
     "count": 36,
     "problems_title_slugs": "subarray-sum-equals-k binary-subarrays-with-sum number-of-sub-arrays-with-odd-sum subarray-sums-divisible-by-k continuous-subarray-sum count-the-number-of-beautiful-subarrays contiguous-array find-longest-subarray-lcci find-maximum-balanced-xor-subarray-length maximum-good-subarray-sum find-two-non-overlapping-sub-arrays-each-with-target-sum maximum-number-of-non-overlapping-subarrays-with-sum-equals-target longest-well-performing-interval stable-subarrays-with-equal-boundary-and-interior-sum maximum-subarray-sum-with-length-divisible-by-k count-subarrays-with-median-k make-sum-divisible-by-p count-of-interesting-subarrays count-subarrays-with-majority-element-ii number-of-submatrices-that-sum-to-target count-triplets-that-can-form-two-arrays-of-equal-xor longest-balanced-substring-ii maximum-number-of-ways-to-partition-an-array count-distinct-subarrays-divisible-by-k-in-sorted-array count-beautiful-substrings-ii maximum-size-subarray-sum-equals-k split-array-with-equal-sum widest-pair-of-indices-with-equal-range-sum number-of-substrings-with-fixed-ratio count-subarrays-with-more-ones-than-zeros number-of-divisible-substrings minimum-positive-sum-subarray max-sum-of-rectangle-no-larger-than-k count-subarrays-with-majority-element-ii count-subarrays-with-more-ones-than-zeros path-sum-iii",
     "problems": [
@@ -587,7 +587,7 @@
     ]
   },
   {
-    "name": "一、前缀和 / §1.3 距离和",
+    "name": "8 常用数据结构 / 一、前缀和 / §1.3 距离和",
     "count": 7,
     "problems_title_slugs": "sum-of-absolute-differences-in-a-sorted-array sum-of-distances minimum-operations-to-make-all-array-elements-equal apply-operations-to-maximize-frequency-score minimum-adjacent-swaps-for-k-consecutive-ones minimum-moves-to-pick-k-ones minimum-operations-to-make-subarray-elements-equal",
     "problems": [
@@ -629,7 +629,7 @@
     ]
   },
   {
-    "name": "一、前缀和 / §1.4 状态压缩前缀和",
+    "name": "8 常用数据结构 / 一、前缀和 / §1.4 状态压缩前缀和",
     "count": 5,
     "problems_title_slugs": "can-make-palindrome-from-substring find-the-longest-substring-containing-vowels-in-even-counts find-longest-awesome-substring number-of-wonderful-substrings count-paths-that-can-form-a-palindrome-in-a-tree",
     "problems": [
@@ -661,7 +661,7 @@
     ]
   },
   {
-    "name": "一、前缀和 / §1.5 进阶",
+    "name": "8 常用数据结构 / 一、前缀和 / §1.5 进阶",
     "count": 20,
     "problems_title_slugs": "longest-subsequence-with-limited-sum design-exam-scores-tracker largest-magic-square plates-between-candles can-you-eat-your-favorite-candy-on-your-favorite-day get-biggest-three-rhombus-sums-in-a-grid concatenate-non-zero-digits-and-multiply-by-sum-ii maximum-sum-of-two-non-overlapping-subarrays maximum-trailing-zeros-in-a-cornered-path ways-to-split-array-into-three-subarrays sum-of-floored-pairs count-stable-subarrays sum-of-total-strength-of-wizards maximum-difference-between-even-and-odd-frequency-ii palindrome-rearrangement-queries number-of-same-end-substrings maximize-the-beauty-of-the-garden minimum-relative-loss-after-buying-chocolates successful-pairs-of-spells-and-potions count-good-triplets",
     "problems": [
@@ -768,7 +768,7 @@
     ]
   },
   {
-    "name": "一、前缀和 / §1.6 二维前缀和",
+    "name": "8 常用数据结构 / 一、前缀和 / §1.6 二维前缀和",
     "count": 7,
     "problems_title_slugs": "range-sum-query-2d-immutable matrix-block-sum count-submatrices-with-top-left-element-and-sum-less-than-k find-kth-largest-xor-coordinate-value count-submatrices-with-equal-frequency-of-x-and-y maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold maximum-difference-score-in-a-grid",
     "problems": [
@@ -810,7 +810,7 @@
     ]
   },
   {
-    "name": "二、差分 / §2.1 一维差分 / §2.1.1 基础",
+    "name": "8 常用数据结构 / 二、差分 / §2.1 一维差分 / §2.1.1 基础",
     "count": 9,
     "problems_title_slugs": "points-that-intersect-with-cars check-if-all-the-integers-in-a-range-are-covered maximum-population-year living-people-lcci count-tested-devices-after-test-operations car-pooling corporate-flight-bookings zero-array-transformation-i range-addition",
     "problems": [
@@ -862,7 +862,7 @@
     ]
   },
   {
-    "name": "二、差分 / §2.1 一维差分 / §2.1.2 进阶",
+    "name": "8 常用数据结构 / 二、差分 / §2.1 一维差分 / §2.1.2 进阶",
     "count": 31,
     "problems_title_slugs": "separate-squares-i shifting-letters-ii minimum-number-of-k-consecutive-bit-flips maximum-sum-obtained-of-any-permutation minimum-number-of-increments-on-subarrays-to-form-a-target-array zero-array-transformation-ii describe-the-painting minimum-array-changes-to-make-differences-equal number-of-people-aware-of-a-secret number-of-flowers-in-full-bloom apply-operations-to-make-all-array-elements-equal-to-zero minimum-operations-to-make-array-equal-to-target count-cells-in-overlapping-horizontal-and-vertical-substrings smallest-rotation-with-highest-score maximum-frequency-of-an-element-after-performing-operations-ii maximize-the-minimum-powered-city minimum-moves-to-make-array-complementary zero-array-transformation-iii xor-after-range-multiplication-queries-ii count-the-number-of-houses-at-a-certain-distance-ii brightest-position-on-street average-height-of-buildings-in-each-segment count-positions-on-street-with-required-brightness maximum-number-of-intersections-on-the-chart maximum-total-area-occupied-by-pistons merge-intervals insert-interval my-calendar-iii divide-intervals-into-minimum-number-of-groups meeting-rooms-ii employee-free-time",
     "problems": [
@@ -1024,7 +1024,7 @@
     ]
   },
   {
-    "name": "二、差分 / §2.2 二维差分",
+    "name": "8 常用数据结构 / 二、差分 / §2.2 二维差分",
     "count": 4,
     "problems_title_slugs": "increment-submatrices-by-one rectangle-area-ii stamping-the-grid xepqZ5",
     "problems": [
@@ -1051,7 +1051,7 @@
     ]
   },
   {
-    "name": "三、栈 / §3.1 基础",
+    "name": "8 常用数据结构 / 三、栈 / §3.1 基础",
     "count": 8,
     "problems_title_slugs": "build-an-array-with-stack-operations backspace-string-compare baseball-game removing-stars-from-a-string design-browser-history validate-stack-sequences find-mirror-score-of-a-string simplify-path",
     "problems": [
@@ -1098,7 +1098,7 @@
     ]
   },
   {
-    "name": "三、栈 / §3.2 进阶",
+    "name": "8 常用数据结构 / 三、栈 / §3.2 进阶",
     "count": 10,
     "problems_title_slugs": "lexicographically-minimum-string-after-removing-stars min-stack design-a-stack-with-increment-operation exclusive-time-of-functions using-a-robot-to-print-the-lexicographically-smallest-string maximum-frequency-stack dinner-plate-stacks minimum-time-to-complete-all-tasks maximum-frequency-score-of-a-subarray max-stack",
     "problems": [
@@ -1155,7 +1155,7 @@
     ]
   },
   {
-    "name": "三、栈 / §3.3 邻项消除",
+    "name": "8 常用数据结构 / 三、栈 / §3.3 邻项消除",
     "count": 12,
     "problems_title_slugs": "minimum-string-length-after-removing-substrings remove-all-adjacent-duplicates-in-string make-the-string-great resulting-string-after-adjacent-removals check-if-word-is-valid-after-substitutions minimum-deletions-to-make-array-beautiful remove-all-adjacent-duplicates-in-string-ii remove-k-balanced-substrings maximum-score-from-removing-substrings replace-non-coprime-numbers-in-array asteroid-collision robot-collisions",
     "problems": [
@@ -1222,7 +1222,7 @@
     ]
   },
   {
-    "name": "三、栈 / §3.4 合法括号字符串（RBS）",
+    "name": "8 常用数据结构 / 三、栈 / §3.4 合法括号字符串（RBS）",
     "count": 13,
     "problems_title_slugs": "valid-parentheses minimum-add-to-make-parentheses-valid remove-outermost-parentheses maximum-nesting-depth-of-the-parentheses reverse-substrings-between-each-pair-of-parentheses score-of-parentheses minimum-remove-to-make-valid-parentheses minimum-number-of-swaps-to-make-the-string-balanced valid-parenthesis-string maximum-nesting-depth-of-two-valid-parentheses-strings minimum-insertions-to-balance-a-parentheses-string check-if-a-parentheses-string-can-be-valid longest-valid-parentheses",
     "problems": [
@@ -1294,7 +1294,7 @@
     ]
   },
   {
-    "name": "三、栈 / §3.5 表达式解析",
+    "name": "8 常用数据结构 / 三、栈 / §3.5 表达式解析",
     "count": 20,
     "problems_title_slugs": "clumsy-factorial evaluate-reverse-polish-notation decode-string string-to-integer-atoi basic-calculator basic-calculator-ii number-of-atoms parsing-a-boolean-expression tag-validator parse-lisp-expression brace-expansion-ii minimum-cost-to-change-the-final-value-of-expression valid-number basic-calculator-iv ternary-expression-parser evaluate-valid-expressions basic-calculator-iii brace-expansion build-binary-expression-tree-from-infix-expression design-an-expression-tree-with-evaluate-function",
     "problems": [
@@ -1401,7 +1401,7 @@
     ]
   },
   {
-    "name": "三、栈 / §3.6 对顶栈",
+    "name": "8 常用数据结构 / 三、栈 / §3.6 对顶栈",
     "count": 1,
     "problems_title_slugs": "design-a-text-editor",
     "problems": [
@@ -1413,7 +1413,7 @@
     ]
   },
   {
-    "name": "四、队列 / §4.1 基础",
+    "name": "8 常用数据结构 / 四、队列 / §4.1 基础",
     "count": 8,
     "problems_title_slugs": "number-of-recent-calls reveal-cards-in-increasing-order dota2-senate moving-average-from-data-stream design-hit-counter design-phone-directory first-unique-number time-taken-to-cross-the-door",
     "problems": [
@@ -1460,7 +1460,7 @@
     ]
   },
   {
-    "name": "四、队列 / §4.2 设计",
+    "name": "8 常用数据结构 / 四、队列 / §4.2 设计",
     "count": 6,
     "problems_title_slugs": "design-front-middle-back-queue implement-router implement-stack-using-queues implement-queue-using-stacks design-circular-queue design-circular-deque",
     "problems": [
@@ -1497,7 +1497,7 @@
     ]
   },
   {
-    "name": "四、队列 / §4.3 双端队列",
+    "name": "8 常用数据结构 / 四、队列 / §4.3 双端队列",
     "count": 2,
     "problems_title_slugs": "faulty-keyboard maximum-number-of-tasks-you-can-assign",
     "problems": [
@@ -1514,7 +1514,7 @@
     ]
   },
   {
-    "name": "四、队列 / §4.4 单调队列",
+    "name": "8 常用数据结构 / 四、队列 / §4.4 单调队列",
     "count": 8,
     "problems_title_slugs": "sliding-window-maximum dui-lie-de-zui-da-zhi-lcof longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit continuous-subarrays maximum-number-of-robots-within-budget count-prime-gap-balanced-subarrays shortest-subarray-with-sum-at-least-k max-value-of-equation",
     "problems": [
@@ -1561,7 +1561,7 @@
     ]
   },
   {
-    "name": "五、堆（优先队列） / §5.1 基础",
+    "name": "8 常用数据结构 / 五、堆（优先队列） / §5.1 基础",
     "count": 22,
     "problems_title_slugs": "last-stone-weight final-array-state-after-k-multiplication-operations-i take-gifts-from-the-richest-pile smallest-number-in-infinite-set maximal-score-after-applying-k-operations minimum-operations-to-exceed-threshold-value-ii remove-stones-to-minimize-the-total kth-largest-element-in-a-stream k-th-nearest-obstacle-queries seat-reservation-manager minimum-operations-to-halve-array-sum maximum-product-after-k-increments minimum-number-of-seconds-to-make-mountain-height-zero the-number-of-the-smallest-unoccupied-chair number-of-orders-in-the-backlog divide-intervals-into-minimum-number-of-groups choose-k-elements-with-maximum-sum total-cost-to-hire-k-workers single-threaded-cpu maximum-average-pass-ratio minimum-cost-to-connect-sticks meeting-rooms-ii",
     "problems": [
@@ -1678,7 +1678,7 @@
     ]
   },
   {
-    "name": "五、堆（优先队列） / §5.2 进阶",
+    "name": "8 常用数据结构 / 五、堆（优先队列） / §5.2 进阶",
     "count": 35,
     "problems_title_slugs": "merge-k-sorted-lists maximum-spending-after-buying-items design-twitter ipo maximum-number-of-eaten-apples swim-in-rising-water path-with-minimum-effort process-tasks-using-servers construct-target-array-with-multiple-sums maximum-number-of-events-that-can-be-attended maximum-profit-in-job-scheduling smallest-range-covering-elements-from-k-lists maximum-subsequence-score maximum-performance-of-a-team meeting-rooms-iii maximum-number-of-points-from-grid-queries minimum-difference-in-sums-after-removal-of-elements minimum-cost-to-hire-k-workers find-servers-that-handled-most-number-of-requests minimum-interval-to-include-each-query trapping-rain-water-ii find-building-where-alice-and-bob-can-meet smallest-substring-with-identical-characters-ii minimum-time-to-complete-all-tasks final-array-state-after-k-multiplication-operations-ii minimize-deviation-in-array minimum-number-of-visited-cells-in-a-grid time-to-cross-a-bridge o8SXZn design-a-file-sharing-system minimum-time-to-build-blocks find-time-required-to-eliminate-bacterial-strains tweet-counts-per-frequency exam-room design-movie-rental-system",
     "problems": [
@@ -1860,7 +1860,7 @@
     ]
   },
   {
-    "name": "五、堆（优先队列） / §5.3 第 K 小/大",
+    "name": "8 常用数据结构 / 五、堆（优先队列） / §5.3 第 K 小/大",
     "count": 8,
     "problems_title_slugs": "ugly-number-ii kth-smallest-element-in-a-sorted-matrix merge-k-sorted-lists find-k-pairs-with-smallest-sums find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows k-th-smallest-prime-fraction maximum-total-subarray-value-ii find-the-k-sum-of-an-array",
     "problems": [
@@ -1907,7 +1907,7 @@
     ]
   },
   {
-    "name": "五、堆（优先队列） / §5.4 重排元素",
+    "name": "8 常用数据结构 / 五、堆（优先队列） / §5.4 重排元素",
     "count": 7,
     "problems_title_slugs": "string-without-aaa-or-bbb reorganize-string distant-barcodes longest-happy-string replace-question-marks-in-string-to-minimize-its-value task-scheduler rearrange-string-k-distance-apart",
     "problems": [
@@ -1949,7 +1949,7 @@
     ]
   },
   {
-    "name": "五、堆（优先队列） / §5.5 反悔堆",
+    "name": "8 常用数据结构 / 五、堆（优先队列） / §5.5 反悔堆",
     "count": 9,
     "problems_title_slugs": "p0NxJO furthest-building-you-can-reach course-schedule-iii minimum-number-of-refueling-stops zero-array-transformation-iii maximum-elegance-of-a-k-length-subsequence earliest-second-to-mark-indices-ii maximum-transactions-without-negative-balance make-the-prefix-sum-non-negative",
     "problems": [
@@ -2001,7 +2001,7 @@
     ]
   },
   {
-    "name": "五、堆（优先队列） / §5.6 懒删除堆",
+    "name": "8 常用数据结构 / 五、堆（优先队列） / §5.6 懒删除堆",
     "count": 12,
     "problems_title_slugs": "design-a-number-container-system power-grid-maintenance design-a-food-rating-system most-frequent-ids design-task-manager stock-price-fluctuation dinner-plate-stacks the-skyline-problem minimum-pair-removal-to-sort-array-ii sum-of-weighted-modes-in-subarrays design-a-3d-binary-matrix-with-efficient-layer-tracking max-stack",
     "problems": [
@@ -2068,7 +2068,7 @@
     ]
   },
   {
-    "name": "五、堆（优先队列） / §5.7 对顶堆（滑动窗口第 K 小/大）",
+    "name": "8 常用数据结构 / 五、堆（优先队列） / §5.7 对顶堆（滑动窗口第 K 小/大）",
     "count": 11,
     "problems_title_slugs": "sequentially-ordinal-rank-tracker find-median-from-data-stream sliding-window-median sliding-subarray-beauty finding-mk-average minimum-operations-to-make-elements-within-k-subarrays-equal divide-an-array-into-subarrays-with-minimum-cost-ii find-x-sum-of-all-k-long-subarrays-ii 5TxKeK design-an-array-statistics-tracker minimum-operations-to-make-subarray-elements-equal",
     "problems": [
@@ -2130,7 +2130,7 @@
     ]
   },
   {
-    "name": "六、字典树（trie） / §6.1 基础",
+    "name": "8 常用数据结构 / 六、字典树（trie） / §6.1 基础",
     "count": 12,
     "problems_title_slugs": "implement-trie-prefix-tree partition-string replace-words longest-word-in-dictionary sum-of-prefix-scores-of-strings map-sum-pairs search-suggestions-system remove-sub-folders-from-the-filesystem short-encoding-of-words k-divisible-elements-subarrays implement-trie-ii-prefix-tree unique-substrings-with-equal-digit-frequency",
     "problems": [
@@ -2197,7 +2197,7 @@
     ]
   },
   {
-    "name": "六、字典树（trie） / §6.2 进阶",
+    "name": "8 常用数据结构 / 六、字典树（trie） / §6.2 进阶",
     "count": 18,
     "problems_title_slugs": "design-add-and-search-words-data-structure implement-magic-dictionary word-search-ii longest-common-suffix-queries prefix-and-suffix-search count-prefix-and-suffix-pairs-ii palindrome-pairs delete-duplicate-folders-in-system word-squares word-abbreviation design-in-memory-file-system add-bold-tag-in-string bold-words-in-string design-search-autocomplete-system index-pairs-of-a-string design-file-system longest-word-with-all-prefixes k-th-smallest-in-lexicographical-order",
     "problems": [
@@ -2294,7 +2294,7 @@
     ]
   },
   {
-    "name": "六、字典树（trie） / §6.3 字典树优化 DP",
+    "name": "8 常用数据结构 / 六、字典树（trie） / §6.3 字典树优化 DP",
     "count": 5,
     "problems_title_slugs": "word-break word-break-ii re-space-lcci concatenated-words minimum-cost-to-convert-string-ii",
     "problems": [
@@ -2326,7 +2326,7 @@
     ]
   },
   {
-    "name": "六、字典树（trie） / §6.4 0-1 字典树（异或字典树）",
+    "name": "8 常用数据结构 / 六、字典树（trie） / §6.4 0-1 字典树（异或字典树）",
     "count": 7,
     "problems_title_slugs": "maximum-xor-of-two-numbers-in-an-array maximum-strong-pair-xor-ii maximum-xor-with-an-element-from-array count-pairs-with-xor-in-a-range maximum-genetic-difference-query subarrays-with-xor-at-least-k maximum-xor-of-two-non-overlapping-subtrees",
     "problems": [
@@ -2368,7 +2368,7 @@
     ]
   },
   {
-    "name": "七、并查集 / §7.1 基础",
+    "name": "8 常用数据结构 / 七、并查集 / §7.1 基础",
     "count": 8,
     "problems_title_slugs": "redundant-connection properties-graph satisfiability-of-equality-equations accounts-merge path-existence-queries-in-a-graph-i sentence-similarity-ii the-earliest-moment-when-everyone-become-friends synonymous-sentences",
     "problems": [
@@ -2415,7 +2415,7 @@
     ]
   },
   {
-    "name": "七、并查集 / §7.2 进阶",
+    "name": "8 常用数据结构 / 七、并查集 / §7.2 进阶",
     "count": 29,
     "problems_title_slugs": "minimum-swaps-to-sort-by-digit-sum minimum-number-of-operations-to-sort-a-binary-tree-by-level smallest-string-with-swaps lexicographically-smallest-equivalent-string minimize-hamming-distance-after-swap-operations minimum-time-for-k-connected-components minimize-maximum-component-cost swim-in-rising-water maximize-alternating-sum-using-swaps couples-holding-hands redundant-connection-ii most-stones-removed-with-same-row-or-column similar-string-groups last-day-where-you-can-still-cross process-restricted-friend-requests remove-max-number-of-edges-to-keep-graph-fully-traversable regions-cut-by-slashes find-the-safest-path-in-a-grid maximum-number-of-points-from-grid-queries maximize-spanning-tree-stability-with-upgrades count-valid-paths-in-a-tree number-of-good-paths groups-of-strings rank-transform-of-a-matrix bricks-falling-when-hit check-if-the-rectangle-corner-is-reachable kskhHQ minimize-maximum-value-in-a-grid sort-array-by-moving-items-to-empty-space",
     "problems": [
@@ -2567,7 +2567,7 @@
     ]
   },
   {
-    "name": "七、并查集 / §7.3 GCD 并查集",
+    "name": "8 常用数据结构 / 七、并查集 / §7.3 GCD 并查集",
     "count": 5,
     "problems_title_slugs": "greatest-common-divisor-traversal graph-connectivity-with-threshold largest-component-size-by-common-factor gcd-sort-of-an-array count-connected-components-in-lcm-graph",
     "problems": [
@@ -2599,7 +2599,7 @@
     ]
   },
   {
-    "name": "七、并查集 / §7.4 数组上的并查集",
+    "name": "8 常用数据结构 / 七、并查集 / §7.4 数组上的并查集",
     "count": 7,
     "problems_title_slugs": "find-latest-group-of-size-m avoid-flood-in-the-city maximum-number-of-events-that-can-be-attended maximum-segment-sum-after-removals subarray-with-elements-greater-than-varying-threshold minimum-operations-to-equalize-binary-string minimum-reverse-operations",
     "problems": [
@@ -2641,7 +2641,7 @@
     ]
   },
   {
-    "name": "七、并查集 / §7.5 区间并查集",
+    "name": "8 常用数据结构 / 七、并查集 / §7.5 区间并查集",
     "count": 4,
     "problems_title_slugs": "shortest-distance-after-road-addition-queries-ii minimum-interval-to-include-each-query QO5KpG amount-of-new-area-painted-each-day",
     "problems": [
@@ -2668,7 +2668,7 @@
     ]
   },
   {
-    "name": "七、并查集 / §7.6 带权并查集（边权并查集）",
+    "name": "8 常用数据结构 / 七、并查集 / §7.6 带权并查集（边权并查集）",
     "count": 3,
     "problems_title_slugs": "evaluate-division maximum-partition-factor check-for-contradictions-in-equations",
     "problems": [
@@ -2690,7 +2690,7 @@
     ]
   },
   {
-    "name": "八、树状数组和线段树 / §8.1 树状数组",
+    "name": "8 常用数据结构 / 八、树状数组和线段树 / §8.1 树状数组",
     "count": 29,
     "problems_title_slugs": "range-sum-query-mutable distribute-elements-into-two-arrays-ii number-of-integers-with-popcount-depth-equal-to-k-ii peaks-in-array create-sorted-array-through-instructions best-team-with-no-conflicts queries-on-a-permutation-with-key count-number-of-rectangles-containing-each-point count-good-triplets-in-an-array count-number-of-teams make-array-empty sliding-subarray-beauty shortest-path-in-a-weighted-tree coin-bonus minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits maximum-balanced-subsequence-sum maximum-sum-queries sum-of-beautiful-subsequences maximum-area-rectangle-with-point-constraints-ii kth-smallest-path-xor-sum alternating-groups-iii find-the-number-of-ways-to-place-people-ii design-most-recently-used-queue permutation-sequence find-the-index-of-permutation count-the-number-of-k-big-indices beautiful-pairs maximum-profitable-triplets-with-increasing-prices-ii range-sum-query-2d-mutable",
     "problems": [
@@ -2842,7 +2842,7 @@
     ]
   },
   {
-    "name": "八、树状数组和线段树 / §8.2 逆序对",
+    "name": "8 常用数据结构 / 八、树状数组和线段树 / §8.2 逆序对",
     "count": 8,
     "problems_title_slugs": "shu-zu-zhong-de-ni-xu-dui-lcof count-of-smaller-numbers-after-self reverse-pairs count-of-range-sum number-of-pairs-satisfying-inequality minimum-adjacent-swaps-to-reach-the-kth-smallest-number minimum-number-of-moves-to-make-palindrome count-pairs-in-two-arrays",
     "problems": [
@@ -2889,7 +2889,7 @@
     ]
   },
   {
-    "name": "八、树状数组和线段树 / §8.3 线段树（无区间更新）",
+    "name": "8 常用数据结构 / 八、树状数组和线段树 / §8.3 线段树（无区间更新）",
     "count": 12,
     "problems_title_slugs": "fruits-into-baskets-iii find-building-where-alice-and-bob-can-meet booking-concert-tickets-in-groups block-placement-queries longest-substring-of-one-repeating-character find-x-value-of-array-ii maximum-sum-of-subsequence-with-non-adjacent-elements maximize-subarray-sum-after-removing-all-occurrences-of-one-element maximize-active-section-with-trade-ii ryfUiz online-majority-element-in-subarray longest-increasing-subsequence-ii",
     "problems": [
@@ -2956,7 +2956,7 @@
     ]
   },
   {
-    "name": "八、树状数组和线段树 / §8.4 Lazy 线段树（有区间更新）",
+    "name": "8 常用数据结构 / 八、树状数组和线段树 / §8.4 Lazy 线段树（有区间更新）",
     "count": 11,
     "problems_title_slugs": "handling-sum-queries-after-update fancy-sequence design-memory-allocator minimum-time-to-complete-all-tasks minimum-cost-to-split-an-array rectangle-area-ii separate-squares-ii maximize-count-of-distinct-primes-after-split longest-balanced-subarray-ii subarrays-distinct-element-sum-of-squares-ii QO5KpG",
     "problems": [
@@ -3018,7 +3018,7 @@
     ]
   },
   {
-    "name": "八、树状数组和线段树 / §8.5 动态开点线段树",
+    "name": "8 常用数据结构 / 八、树状数组和线段树 / §8.5 动态开点线段树",
     "count": 8,
     "problems_title_slugs": "falling-squares range-module my-calendar-i my-calendar-ii my-calendar-iii count-integers-in-intervals maximum-number-of-jumps-to-reach-the-last-index kth-smallest-path-xor-sum",
     "problems": [
@@ -3065,7 +3065,7 @@
     ]
   },
   {
-    "name": "八、树状数组和线段树 / §8.6 可持久化线段树",
+    "name": "8 常用数据结构 / 八、树状数组和线段树 / §8.6 可持久化线段树",
     "count": 1,
     "problems_title_slugs": "minimum-operations-to-equalize-subarrays",
     "problems": [
@@ -3077,7 +3077,7 @@
     ]
   },
   {
-    "name": "八、树状数组和线段树 / §8.7 ST 表（Sparse Table）",
+    "name": "8 常用数据结构 / 八、树状数组和线段树 / §8.7 ST 表（Sparse Table）",
     "count": 2,
     "problems_title_slugs": "maximum-total-subarray-value-ii maximize-active-section-with-trade-ii",
     "problems": [
@@ -3094,7 +3094,7 @@
     ]
   },
   {
-    "name": "九、伸展树（Splay 树）",
+    "name": "8 常用数据结构 / 九、伸展树（Splay 树）",
     "count": 2,
     "problems_title_slugs": "design-a-text-editor range-xor-queries-with-subarray-reversals",
     "problems": [
@@ -3111,7 +3111,7 @@
     ]
   },
   {
-    "name": "十、根号算法 / §8.1 根号分解（Sqrt Decomposition）",
+    "name": "8 常用数据结构 / 十、根号算法 / §8.1 根号分解（Sqrt Decomposition）",
     "count": 4,
     "problems_title_slugs": "xor-after-range-multiplication-queries-ii you-le-yuan-de-you-lan-ji-hua sum-of-special-evenly-spaced-elements-in-array maximum-number-of-matching-indices-after-right-shifts",
     "problems": [
@@ -3138,7 +3138,7 @@
     ]
   },
   {
-    "name": "十、根号算法 / §8.2 莫队算法",
+    "name": "8 常用数据结构 / 十、根号算法 / §8.2 莫队算法",
     "count": 2,
     "problems_title_slugs": "threshold-majority-queries kth-smallest-path-xor-sum",
     "problems": [
@@ -3155,7 +3155,7 @@
     ]
   },
   {
-    "name": "十、根号算法 / §8.3 其他",
+    "name": "8 常用数据结构 / 十、根号算法 / §8.3 其他",
     "count": 1,
     "problems_title_slugs": "count-the-number-of-substrings-with-dominant-ones",
     "problems": [
@@ -3167,7 +3167,7 @@
     ]
   },
   {
-    "name": "专题：离线算法",
+    "name": "8 常用数据结构 / 专题：离线算法",
     "count": 13,
     "problems_title_slugs": "query-kth-smallest-trimmed-number power-grid-maintenance most-beautiful-item-for-each-query closest-room maximum-number-of-points-from-grid-queries minimum-interval-to-include-each-query checking-existence-of-edge-length-limited-paths find-building-where-alice-and-bob-can-meet count-zero-request-servers maximum-genetic-difference-query maximum-sum-queries kth-smallest-path-xor-sum maximum-area-rectangle-with-point-constraints-ii",
     "problems": [
@@ -3239,7 +3239,7 @@
     ]
   },
   {
-    "name": "专题：比较复杂的题目 / Part A",
+    "name": "8 常用数据结构 / 专题：比较复杂的题目 / Part A",
     "count": 13,
     "problems_title_slugs": "find-the-minimum-area-to-cover-all-ones-ii time-to-cross-a-bridge number-of-valid-move-combinations-on-chessboard cat-and-mouse cat-and-mouse-ii the-earliest-and-latest-rounds-where-players-compete fsa7oZ Za25hA De4qBB xun-bao rMeRt2 1ybDKD cnHoX6",
     "problems": [
@@ -3311,7 +3311,7 @@
     ]
   },
   {
-    "name": "专题：比较复杂的题目 / Part B",
+    "name": "8 常用数据结构 / 专题：比较复杂的题目 / Part B",
     "count": 10,
     "problems_title_slugs": "split-message-based-on-limit text-justification roman-to-integer integer-to-roman integer-to-english-words strong-password-checker string-to-integer-atoi valid-number lru-cache lfu-cache",
     "problems": [

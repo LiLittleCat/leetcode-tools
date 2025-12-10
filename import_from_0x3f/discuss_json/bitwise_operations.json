@@ -1,6 +1,6 @@
 [
   {
-    "name": "一、基础题",
+    "name": "5 位运算 / 一、基础题",
     "count": 21,
     "problems_title_slugs": "smallest-number-with-all-set-bits number-of-bit-changes-to-make-two-integers-equal sort-integers-by-the-number-of-1-bits hamming-distance minimum-bit-flips-to-convert-number number-of-steps-to-reduce-a-number-to-zero number-complement complement-of-base-10-integer binary-gap find-the-k-or-of-an-array binary-number-with-alternating-bits find-the-prefix-common-array-of-two-arrays insert-into-bits-lcci power-of-two power-of-four number-of-1-bits counting-bits number-of-even-and-odd-bits keep-multiplying-found-values-by-two generate-binary-strings-without-adjacent-zeros split-and-merge-array-transformation",
     "problems": [
@@ -112,7 +112,7 @@
     ]
   },
   {
-    "name": "二、异或（XOR）的性质",
+    "name": "5 位运算 / 二、异或（XOR）的性质",
     "count": 17,
     "problems_title_slugs": "xor-operation-in-an-array decode-xored-array find-the-original-array-of-prefix-xor xor-queries-of-a-subarray neighboring-bitwise-xor maximum-xor-for-each-query minimum-number-of-operations-to-make-array-xor-equal-to-k count-triplets-that-can-form-two-arrays-of-equal-xor minimize-xor find-xor-beauty-of-array maximum-xor-after-operations count-the-number-of-beautiful-subarrays substring-xor-queries decode-xored-permutation count-pairs-of-points-with-distance-k count-pairs-with-xor-in-a-range count-triplets-with-even-xor-set-bits-ii",
     "problems": [
@@ -204,7 +204,7 @@
     ]
   },
   {
-    "name": "三、与或（AND/OR）的性质",
+    "name": "5 位运算 / 三、与或（AND/OR）的性质",
     "count": 10,
     "problems_title_slugs": "check-if-bitwise-or-has-trailing-zeros minimum-flips-to-make-a-or-b-equal-to-c longest-subarray-with-maximum-bitwise-and split-array-into-maximum-number-of-subarrays longest-nice-subarray maximum-or minimum-array-end minimum-cost-walk-in-weighted-graph minimum-sum-of-values-by-dividing-array maximum-number-that-makes-result-of-bitwise-and-zero",
     "problems": [
@@ -261,7 +261,7 @@
     ]
   },
   {
-    "name": "三、与或（AND/OR）的性质 / AND/OR LogTrick",
+    "name": "5 位运算 / 三、与或（AND/OR）的性质 / AND/OR LogTrick",
     "count": 6,
     "problems_title_slugs": "find-subarray-with-bitwise-or-closest-to-k find-a-value-of-a-mysterious-function-closest-to-target shortest-subarray-with-or-at-least-k-ii smallest-subarrays-with-maximum-bitwise-or number-of-subarrays-with-and-value-of-k bitwise-ors-of-subarrays",
     "problems": [
@@ -298,7 +298,7 @@
     ]
   },
   {
-    "name": "三、与或（AND/OR）的性质 / GCD LogTrick",
+    "name": "5 位运算 / 三、与或（AND/OR）的性质 / GCD LogTrick",
     "count": 5,
     "problems_title_slugs": "number-of-subarrays-with-gcd-equal-to-k minimum-number-of-operations-to-make-all-array-elements-equal-to-1 minimum-stability-factor-of-array maximize-subarray-gcd-score maximum-gcd-sum-of-a-subarray",
     "problems": [
@@ -330,7 +330,7 @@
     ]
   },
   {
-    "name": "四、拆位 / 贡献法",
+    "name": "5 位运算 / 四、拆位 / 贡献法",
     "count": 8,
     "problems_title_slugs": "total-hamming-distance sum-of-all-subset-xor-totals bitwise-xor-of-all-pairings largest-combination-with-bitwise-and-greater-than-zero find-xor-sum-of-all-pairs-bitwise-and bitwise-or-of-even-numbers-in-an-array bitwise-or-of-all-subsequence-sums sum-of-digit-differences-of-all-pairs",
     "problems": [
@@ -377,7 +377,7 @@
     ]
   },
   {
-    "name": "五、试填法",
+    "name": "5 位运算 / 五、试填法",
     "count": 7,
     "problems_title_slugs": "maximum-xor-of-two-numbers-in-an-array maximum-strong-pair-xor-ii maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k find-products-of-elements-of-big-array minimize-or-of-remaining-elements-using-operations find-the-maximum-sequence-value-of-array maximum-sized-array",
     "problems": [
@@ -419,7 +419,7 @@
     ]
   },
   {
-    "name": "六、恒等式",
+    "name": "5 位运算 / 六、恒等式",
     "count": 2,
     "problems_title_slugs": "find-xor-sum-of-all-pairs-bitwise-and number-of-excellent-pairs",
     "problems": [
@@ -436,7 +436,7 @@
     ]
   },
   {
-    "name": "七、线性基",
+    "name": "5 位运算 / 七、线性基",
     "count": 2,
     "problems_title_slugs": "maximum-xor-of-subsequences partition-array-for-maximum-xor-and-and",
     "problems": [
@@ -453,7 +453,7 @@
     ]
   },
   {
-    "name": "八、思维题",
+    "name": "5 位运算 / 八、思维题",
     "count": 14,
     "problems_title_slugs": "apply-bitwise-operations-to-make-strings-equal minimum-numbers-of-function-calls-to-make-target-array minimum-operations-to-reduce-an-integer-to-0 construct-the-minimum-bitwise-array-ii minimum-impossible-or maximum-k-to-sort-a-permutation cycle-length-queries-in-a-tree maximum-xor-product minimum-operations-to-make-the-integer-zero minimum-operations-to-form-subsequence-with-target-sum apply-operations-on-array-to-maximize-sum-of-squares chalkboard-xor-game guess-the-number-using-bitwise-questions-i guess-the-number-using-bitwise-questions-ii",
     "problems": [
@@ -530,7 +530,7 @@
     ]
   },
   {
-    "name": "九、其他",
+    "name": "5 位运算 / 九、其他",
     "count": 21,
     "problems_title_slugs": "single-number single-number-iii find-missing-and-repeated-values single-number-ii set-mismatch reverse-bits sum-of-two-integers bitwise-and-of-numbers-range range-product-queries-of-powers concatenation-of-consecutive-binary-numbers find-elements-in-a-contaminated-binary-tree gray-code circular-permutation-in-binary-representation triples-with-bitwise-and-equal-to-zero find-the-k-th-character-in-string-game-ii minimum-one-bit-operations-to-make-integers-zero number-of-unique-xor-triplets-ii ryfUiz ip-to-cidr once-twice maximum-hamming-distances",
     "problems": [

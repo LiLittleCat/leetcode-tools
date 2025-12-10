@@ -1,6 +1,6 @@
 [
   {
-    "name": "一、定长滑动窗口 / §1.1 基础",
+    "name": "1 滑动窗口与双指针 / 一、定长滑动窗口 / §1.1 基础",
     "count": 13,
     "problems_title_slugs": "maximum-number-of-vowels-in-a-substring-of-given-length maximum-average-subarray-i number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold k-radius-subarray-averages minimum-recolors-to-get-k-consecutive-black-blocks maximum-sum-of-almost-unique-subarray maximum-sum-of-distinct-subarrays-with-length-k maximum-points-you-can-obtain-from-cards diet-plan-performance find-k-length-substrings-with-no-repeated-characters distinct-numbers-in-each-subarray minimum-swaps-to-group-all-1s-together number-of-unique-flavors-after-sharing-k-candies",
     "problems": [
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "name": "一、定长滑动窗口 / §1.2 进阶（选做）",
+    "name": "1 滑动窗口与双指针 / 一、定长滑动窗口 / §1.2 进阶（选做）",
     "count": 20,
     "problems_title_slugs": "minimum-discards-to-balance-inventory grumpy-bookstore-owner reschedule-meetings-for-maximum-free-time-i distinct-points-reachable-after-substring-removal best-time-to-buy-and-sell-stock-using-strategy minimum-swaps-to-group-all-1s-together-ii defuse-the-bomb maximum-number-of-occurrences-of-a-substring sliding-subarray-beauty minimum-number-of-flips-to-make-the-binary-string-alternating permutation-in-string find-all-anagrams-in-a-string substring-with-concatenation-of-all-words find-substring-with-given-hash-value count-complete-substrings binary-string-with-substrings-representing-1-to-n sum-of-weighted-modes-in-subarrays k-empty-slots number-of-equal-count-substrings maximum-frequency-score-of-a-subarray",
     "problems": [
@@ -179,7 +179,7 @@
     ]
   },
   {
-    "name": "一、定长滑动窗口 / §1.3 其他（选做）",
+    "name": "1 滑动窗口与双指针 / 一、定长滑动窗口 / §1.3 其他（选做）",
     "count": 5,
     "problems_title_slugs": "find-all-k-distant-indices-in-an-array find-the-k-beauty-of-a-number minimum-difference-between-highest-and-lowest-of-k-scores check-if-a-string-contains-all-binary-codes-of-size-k contains-duplicate-iii",
     "problems": [
@@ -211,7 +211,7 @@
     ]
   },
   {
-    "name": "二、不定长滑动窗口 / §2.1 越短越合法/求最长/最大 / §2.1.1 基础",
+    "name": "1 滑动窗口与双指针 / 二、不定长滑动窗口 / §2.1 越短越合法/求最长/最大 / §2.1.1 基础",
     "count": 12,
     "problems_title_slugs": "longest-substring-without-repeating-characters maximum-length-substring-with-two-occurrences longest-subarray-of-1s-after-deleting-one-element minimum-removals-to-balance-array get-equal-substrings-within-budget fruit-into-baskets maximum-erasure-value length-of-longest-subarray-with-at-most-k-frequency maximize-the-confusion-of-an-exam max-consecutive-ones-iii minimum-operations-to-reduce-x-to-zero longest-semi-repeating-subarray",
     "problems": [
@@ -278,7 +278,7 @@
     ]
   },
   {
-    "name": "二、不定长滑动窗口 / §2.1 越短越合法/求最长/最大 / §2.1.2 进阶（选做）",
+    "name": "1 滑动窗口与双指针 / 二、不定长滑动窗口 / §2.1 越短越合法/求最长/最大 / §2.1.2 进阶（选做）",
     "count": 20,
     "problems_title_slugs": "find-the-longest-semi-repetitive-substring maximum-beauty-of-an-array-after-applying-operation frequency-of-the-most-frequent-element take-k-of-each-character-from-left-and-right find-the-longest-equal-subarray maximum-white-tiles-covered-by-a-carpet maximum-fruits-harvested-after-at-most-k-steps maximize-win-from-two-segments minimum-number-of-operations-to-make-array-continuous maximum-number-of-visible-points length-of-the-longest-valid-substring maximum-subarray-with-equal-products maximum-coins-from-k-consecutive-bags longest-substring-with-at-least-k-repeating-characters longest-nice-substring apply-operations-to-maximize-frequency-score moving-stones-until-consecutive-ii max-consecutive-ones-ii longest-substring-with-at-most-two-distinct-characters longest-substring-with-at-most-k-distinct-characters",
     "problems": [
@@ -385,7 +385,7 @@
     ]
   },
   {
-    "name": "二、不定长滑动窗口 / §2.2 越长越合法/求最短/最小",
+    "name": "1 滑动窗口与双指针 / 二、不定长滑动窗口 / §2.2 越长越合法/求最短/最小",
     "count": 6,
     "problems_title_slugs": "minimum-size-subarray-sum shortest-and-lexicographically-smallest-beautiful-string replace-the-substring-for-balanced-string minimum-size-subarray-in-infinite-array minimum-window-substring smallest-range-covering-elements-from-k-lists",
     "problems": [
@@ -422,7 +422,7 @@
     ]
   },
   {
-    "name": "二、不定长滑动窗口 / §2.3 求子数组个数 / §2.3.1 越短越合法",
+    "name": "1 滑动窗口与双指针 / 二、不定长滑动窗口 / §2.3 求子数组个数 / §2.3.1 越短越合法",
     "count": 8,
     "problems_title_slugs": "subarray-product-less-than-k count-substrings-that-satisfy-k-constraint-i count-subarrays-with-score-less-than-k continuous-subarrays 1GxJYY count-substrings-without-repeating-character find-the-median-of-the-uniqueness-array count-substrings-that-satisfy-k-constraint-ii",
     "problems": [
@@ -469,7 +469,7 @@
     ]
   },
   {
-    "name": "二、不定长滑动窗口 / §2.3 求子数组个数 / §2.3.2 越长越合法",
+    "name": "1 滑动窗口与双指针 / 二、不定长滑动窗口 / §2.3 求子数组个数 / §2.3.2 越长越合法",
     "count": 7,
     "problems_title_slugs": "number-of-substrings-containing-all-three-characters count-subarrays-where-max-element-appears-at-least-k-times count-substrings-with-k-frequency-characters-i count-complete-subarrays-in-an-array count-the-number-of-good-subarrays count-substrings-that-can-be-rearranged-to-contain-a-string-ii number-of-subarrays-having-even-product",
     "problems": [
@@ -511,7 +511,7 @@
     ]
   },
   {
-    "name": "二、不定长滑动窗口 / §2.3 求子数组个数 / §2.3.3 恰好型滑动窗口",
+    "name": "1 滑动窗口与双指针 / 二、不定长滑动窗口 / §2.3 求子数组个数 / §2.3.3 恰好型滑动窗口",
     "count": 4,
     "problems_title_slugs": "binary-subarrays-with-sum count-number-of-nice-subarrays count-of-substrings-containing-every-vowel-and-k-consonants-ii subarrays-with-k-different-integers",
     "problems": [
@@ -538,7 +538,7 @@
     ]
   },
   {
-    "name": "二、不定长滑动窗口 / §2.4 其他（选做）",
+    "name": "1 滑动窗口与双指针 / 二、不定长滑动窗口 / §2.4 其他（选做）",
     "count": 8,
     "problems_title_slugs": "friends-of-appropriate-ages longest-nice-subarray swap-for-longest-repeated-character-substring longest-repeating-character-replacement find-all-anagrams-in-a-string ways-to-split-array-into-three-subarrays he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof kth-smallest-subarray-sum",
     "problems": [
@@ -585,7 +585,7 @@
     ]
   },
   {
-    "name": "三、单序列双指针 / §3.1 相向双指针",
+    "name": "1 滑动窗口与双指针 / 三、单序列双指针 / §3.1 相向双指针",
     "count": 33,
     "problems_title_slugs": "reverse-string flip-square-submatrix-vertically reverse-string-ii reverse-words-in-a-string-iii reverse-vowels-of-a-string reverse-only-letters valid-palindrome minimum-length-of-string-after-deleting-similar-ends watering-plants-ii squares-of-a-sorted-array find-k-closest-elements the-k-strongest-values-in-an-array two-sum-ii-input-array-is-sorted sum-of-square-numbers count-pairs-whose-sum-is-less-than-target count-the-number-of-fair-pairs 4xy4Wx 3sum 3sum-closest 4sum valid-triangle-number number-of-ways-where-square-of-number-is-equal-to-product-of-two-numbers 3sum-with-multiplicity bag-of-tokens container-with-most-water trapping-rain-water split-two-strings-to-make-palindrome number-of-subsequences-that-satisfy-the-given-sum-condition count-pairs-of-nodes two-sum-less-than-k sort-transformed-array merge-operations-to-turn-array-into-a-palindrome 3sum-smaller",
     "problems": [
@@ -757,7 +757,7 @@
     ]
   },
   {
-    "name": "三、单序列双指针 / §3.2 同向双指针",
+    "name": "1 滑动窗口与双指针 / 三、单序列双指针 / §3.2 同向双指针",
     "count": 10,
     "problems_title_slugs": "valid-triangle-number number-of-perfect-pairs shortest-subarray-to-be-removed-to-make-array-sorted count-the-number-of-incremovable-subarrays-ii recover-the-original-array maximum-total-beauty-of-the-gardens maximum-number-of-people-that-can-be-caught-in-tag minimize-connected-groups-by-inserting-interval shortest-unsorted-continuous-subarray smallest-subarray-to-sort-in-every-sliding-window",
     "problems": [
@@ -814,7 +814,7 @@
     ]
   },
   {
-    "name": "三、单序列双指针 / §3.3 背向双指针",
+    "name": "1 滑动窗口与双指针 / 三、单序列双指针 / §3.3 背向双指针",
     "count": 2,
     "problems_title_slugs": "maximum-score-of-a-good-subarray largest-perimeter-triangle",
     "problems": [
@@ -831,7 +831,7 @@
     ]
   },
   {
-    "name": "三、单序列双指针 / §3.4 原地修改",
+    "name": "1 滑动窗口与双指针 / 三、单序列双指针 / §3.4 原地修改",
     "count": 16,
     "problems_title_slugs": "remove-element remove-duplicates-from-sorted-array remove-duplicates-from-sorted-array-ii find-resultant-array-after-removing-anagrams maximize-sum-of-at-most-k-distinct-elements move-zeroes sort-array-by-parity sort-array-by-parity-ii transform-array-by-parity apply-operations-to-an-array duplicate-zeros sort-colors build-array-from-permutation find-all-duplicates-in-an-array find-all-numbers-disappeared-in-an-array first-missing-positive",
     "problems": [
@@ -918,7 +918,7 @@
     ]
   },
   {
-    "name": "四、双序列双指针 / §4.1 双指针",
+    "name": "1 滑动窗口与双指针 / 四、双序列双指针 / §4.1 双指针",
     "count": 21,
     "problems_title_slugs": "adding-spaces-to-a-string minimum-common-value merge-sorted-array merge-two-2d-arrays-by-summing-values intersection-of-two-arrays-ii 2vYnGI maximum-distance-between-a-pair-of-values find-the-distance-value-between-two-arrays long-pressed-name expressive-words move-pieces-to-obtain-a-string swap-adjacent-in-lr-string backspace-string-compare interval-list-intersections smallest-difference-lcci get-the-maximum-score shortest-word-distance-ii maximum-coins-heroes-can-collect meeting-scheduler dot-product-of-two-sparse-vectors product-of-two-run-length-encoded-arrays",
     "problems": [
@@ -1030,7 +1030,7 @@
     ]
   },
   {
-    "name": "四、双序列双指针 / §4.2 判断子序列",
+    "name": "1 滑动窗口与双指针 / 四、双序列双指针 / §4.2 判断子序列",
     "count": 11,
     "problems_title_slugs": "is-subsequence longest-word-in-dictionary-through-deleting append-characters-to-string-to-make-subsequence make-string-a-subsequence-using-cyclic-increments camelcase-matching find-the-integer-added-to-array-ii longest-uncommon-subsequence-ii faulty-sensor maximum-number-of-removable-characters subsequence-with-the-minimum-score find-the-lexicographically-smallest-valid-sequence",
     "problems": [
@@ -1092,7 +1092,7 @@
     ]
   },
   {
-    "name": "五、三指针",
+    "name": "1 滑动窗口与双指针 / 五、三指针",
     "count": 7,
     "problems_title_slugs": "number-of-arithmetic-triplets count-the-number-of-fair-pairs number-of-subarrays-with-bounded-maximum count-subarrays-with-fixed-bounds maximum-frequency-of-an-element-after-performing-operations-ii intersection-of-three-sorted-arrays maximize-the-distance-between-points-on-a-square",
     "problems": [
@@ -1134,7 +1134,7 @@
     ]
   },
   {
-    "name": "六、分组循环",
+    "name": "1 滑动窗口与双指针 / 六、分组循环",
     "count": 41,
     "problems_title_slugs": "max-consecutive-ones consecutive-characters longer-contiguous-segments-of-ones-than-zeros length-of-the-longest-alphabetical-continuous-substring find-special-substring-of-length-k find-resultant-array-after-removing-anagrams number-of-zero-filled-subarrays number-of-substrings-with-only-1s delete-characters-to-make-fancy-string longest-continuous-increasing-subsequence longest-fibonacci-subarray count-binary-substrings longest-turbulent-subarray number-of-smooth-descent-periods-of-a-stock summary-ranges longest-even-odd-subarray-with-threshold reduction-operations-to-make-the-array-elements-equal longest-mountain-in-array remove-colored-pieces-if-both-neighbors-are-the-same-color longest-unequal-adjacent-groups-subsequence-i count-number-of-homogenous-substrings find-if-array-can-be-sorted minimum-time-to-make-rope-colorful longest-substring-of-all-vowels-in-order longest-alternating-subarray find-the-power-of-k-size-subarrays-ii adjacent-increasing-subarrays-detection-ii longest-strictly-increasing-or-strictly-decreasing-subarray push-dominoes unique-substrings-in-wraparound-string maximize-active-section-with-trade-i arithmetic-slices text-justification candy make-lexicographically-smallest-array-by-swapping-elements find-score-of-an-array-after-marking-all-elements trionic-array-ii count-strictly-increasing-subarrays minimum-split-into-subarrays-with-gcd-greater-than-one number-of-subarrays-having-even-product linked-list-frequency",
     "problems": [

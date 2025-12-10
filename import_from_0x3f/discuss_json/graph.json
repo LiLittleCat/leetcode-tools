@@ -1,6 +1,6 @@
 [
   {
-    "name": "一、图的遍历 / §1.1 深度优先搜索（DFS）",
+    "name": "6 图论算法 / 一、图的遍历 / §1.1 深度优先搜索（DFS）",
     "count": 25,
     "problems_title_slugs": "number-of-provinces find-if-path-exists-in-graph all-paths-from-source-to-target jump-game-iii keys-and-rooms count-unreachable-pairs-of-nodes-in-an-undirected-graph number-of-operations-to-make-network-connected minimum-score-of-a-path-between-two-cities remove-methods-from-project count-the-number-of-complete-components all-ancestors-of-a-node-in-a-directed-acyclic-graph maximize-amount-after-two-days-of-conversions minimize-malware-spread detonate-the-maximum-bombs accounts-merge course-schedule find-eventual-safe-states maximize-alternating-sum-using-swaps minimize-malware-spread-ii find-all-people-with-secret minimum-cost-walk-in-weighted-graph chuan-di-xin-xi graph-valid-tree number-of-connected-components-in-an-undirected-graph maximum-candies-you-can-get-from-boxes",
     "problems": [
@@ -132,7 +132,7 @@
     ]
   },
   {
-    "name": "一、图的遍历 / §1.2 广度优先搜索（BFS）",
+    "name": "6 图论算法 / 一、图的遍历 / §1.2 广度优先搜索（BFS）",
     "count": 7,
     "problems_title_slugs": "shortest-distance-after-road-addition-queries-i get-watched-videos-by-your-friends count-the-number-of-houses-at-a-certain-distance-i shortest-path-with-alternating-colors the-time-when-the-network-becomes-idle shortest-cycle-in-a-graph bus-routes",
     "problems": [
@@ -174,7 +174,7 @@
     ]
   },
   {
-    "name": "一、图的遍历 / §1.3 图论建模 + BFS 最短路",
+    "name": "6 图论算法 / 一、图的遍历 / §1.3 图论建模 + BFS 最短路",
     "count": 19,
     "problems_title_slugs": "minimum-genetic-mutation minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix sliding-puzzle open-the-lock split-and-merge-array-transformation remove-invalid-parentheses freedom-trail shortest-path-visiting-all-nodes k-similar-strings word-ladder zuma-game minimum-knight-moves maximum-hamming-distances minimum-number-of-operations-to-make-x-and-y-equal jump-game-iv minimum-operations-to-convert-number minimum-jumps-to-reach-home minimum-jumps-to-reach-end-via-prime-teleportation zui-xiao-tiao-yue-ci-shu",
     "problems": [
@@ -276,7 +276,7 @@
     ]
   },
   {
-    "name": "二、拓扑排序 / §2.1 拓扑排序",
+    "name": "6 图论算法 / 二、拓扑排序 / §2.1 拓扑排序",
     "count": 14,
     "problems_title_slugs": "course-schedule-ii find-all-possible-recipes-from-given-supplies build-a-matrix-with-conditions find-eventual-safe-states strange-printer-ii sort-items-by-groups-respecting-dependencies collect-coins-in-a-tree Jf1JuT sequence-reconstruction apply-substitutions alien-dictionary all-paths-from-source-lead-to-destination minimum-height-trees validate-binary-tree-nodes",
     "problems": [
@@ -353,7 +353,7 @@
     ]
   },
   {
-    "name": "二、拓扑排序 / §2.2 在拓扑序上 DP",
+    "name": "6 图论算法 / 二、拓扑排序 / §2.2 在拓扑序上 DP",
     "count": 5,
     "problems_title_slugs": "loud-and-rich parallel-courses-iii network-recovery-pathways largest-color-value-in-a-directed-graph parallel-courses",
     "problems": [
@@ -385,7 +385,7 @@
     ]
   },
   {
-    "name": "二、拓扑排序 / §2.3 基环树",
+    "name": "6 图论算法 / 二、拓扑排序 / §2.3 基环树",
     "count": 10,
     "problems_title_slugs": "find-closest-node-to-given-two-nodes longest-cycle-in-a-graph redundant-connection redundant-connection-ii count-visited-nodes-in-a-directed-graph maximum-employees-to-be-invited-to-a-meeting maximize-value-of-function-in-a-ball-passing-game Za25hA distance-to-a-cycle-in-undirected-graph find-the-duplicate-number",
     "problems": [
@@ -442,7 +442,7 @@
     ]
   },
   {
-    "name": "三、最短路 / §3.1 单源最短路：Dijkstra 算法",
+    "name": "6 图论算法 / 三、最短路 / §3.1 单源最短路：Dijkstra 算法",
     "count": 33,
     "problems_title_slugs": "network-delay-time find-minimum-time-to-reach-last-room-i minimum-time-to-visit-disappearing-nodes design-graph-with-shortest-path-calculator minimum-time-to-reach-destination-in-directed-graph path-with-maximum-probability minimum-cost-path-with-edge-reversals find-minimum-time-to-reach-last-room-ii path-with-minimum-effort number-of-restricted-paths-from-first-to-last-node find-edges-in-shortest-paths number-of-ways-to-arrive-at-destination swim-in-rising-water minimum-cost-of-a-path-with-special-roads digit-operations-to-make-two-integers-equal second-minimum-time-to-reach-destination minimize-the-maximum-edge-weight-of-graph reachable-nodes-in-subdivided-graph minimum-weighted-subgraph-with-the-required-paths minimum-time-to-visit-a-cell-in-a-grid race-car minimum-cost-to-reach-destination-in-time cheapest-flights-within-k-stops modify-graph-edge-weights minimum-path-cost-in-a-hidden-grid minimum-cost-to-reach-city-with-discounts minimum-cost-to-buy-apples find-the-closest-marked-node DFPeFJ partition-array-to-minimize-xor minimum-time-to-transport-all-individuals find-shortest-path-with-k-hops minimum-time-to-complete-all-tasks",
     "problems": [
@@ -614,7 +614,7 @@
     ]
   },
   {
-    "name": "三、最短路 / §3.2 全源最短路：Floyd 算法",
+    "name": "6 图论算法 / 三、最短路 / §3.2 全源最短路：Floyd 算法",
     "count": 7,
     "problems_title_slugs": "design-graph-with-shortest-path-calculator find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance minimum-cost-to-convert-string-i number-of-possible-sets-of-closing-branches minimum-cost-to-convert-string-ii course-schedule-iv detonate-the-maximum-bombs",
     "problems": [
@@ -656,7 +656,7 @@
     ]
   },
   {
-    "name": "四、最小生成树",
+    "name": "6 图论算法 / 四、最小生成树",
     "count": 6,
     "problems_title_slugs": "min-cost-to-connect-all-points maximize-spanning-tree-stability-with-upgrades find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree connecting-cities-with-minimum-cost optimize-water-distribution-in-a-village minimum-cost-for-cutting-cake-ii",
     "problems": [
@@ -693,7 +693,7 @@
     ]
   },
   {
-    "name": "五、欧拉路径/欧拉回路",
+    "name": "6 图论算法 / 五、欧拉路径/欧拉回路",
     "count": 3,
     "problems_title_slugs": "reconstruct-itinerary cracking-the-safe valid-arrangement-of-pairs",
     "problems": [
@@ -715,7 +715,7 @@
     ]
   },
   {
-    "name": "六、强连通分量/双连通分量",
+    "name": "6 图论算法 / 六、强连通分量/双连通分量",
     "count": 4,
     "problems_title_slugs": "critical-connections-in-a-network minimum-number-of-days-to-disconnect-island s5kipK minimum-runes-to-add-to-cast-spell",
     "problems": [
@@ -742,7 +742,7 @@
     ]
   },
   {
-    "name": "七、二分图染色",
+    "name": "6 图论算法 / 七、二分图染色",
     "count": 3,
     "problems_title_slugs": "is-graph-bipartite possible-bipartition maximum-partition-factor",
     "problems": [
@@ -764,7 +764,7 @@
     ]
   },
   {
-    "name": "八、网络流",
+    "name": "6 图论算法 / 八、网络流",
     "count": 17,
     "problems_title_slugs": "maximum-compatibility-score-sum minimum-time-to-break-locks-i minimum-moves-to-spread-stones-over-grid minimum-xor-sum-of-two-arrays maximum-students-taking-exam maximum-and-sum-of-array select-cells-in-grid-with-maximum-score minimum-cost-to-connect-two-groups-of-points maximum-value-sum-by-placing-three-rooks-ii broken-board-dominoes 7rLGCR maximum-number-of-accepted-invitations minimum-time-to-kill-all-monsters minimum-time-to-break-locks-ii campus-bikes-ii minimum-operations-to-remove-adjacent-ones-in-matrix minimum-total-distance-traveled",
     "problems": [
@@ -856,7 +856,7 @@
     ]
   },
   {
-    "name": "九、其他",
+    "name": "6 图论算法 / 九、其他",
     "count": 18,
     "problems_title_slugs": "flower-planting-with-no-adjacent minimum-degree-of-a-connected-trio-in-a-graph add-edges-to-make-degrees-of-all-nodes-even remove-max-number-of-edges-to-keep-graph-fully-traversable maximum-path-quality-of-a-graph checking-existence-of-edge-length-limited-paths maximum-score-of-a-node-sequence divide-nodes-into-the-maximum-number-of-groups count-pairs-of-nodes minimum-operations-to-equalize-binary-string minimum-reverse-operations frequencies-of-shortest-supersequences count-the-repetitions you-le-yuan-de-you-lan-ji-hua find-the-celebrity checking-existence-of-edge-length-limited-paths-ii paths-in-maze-that-lead-to-same-room determine-if-a-simple-graph-exists",
     "problems": [
