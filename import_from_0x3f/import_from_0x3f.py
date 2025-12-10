@@ -5,22 +5,31 @@
 """
 
 import os
+import sys
 import requests
 import json
 import re
 import argparse
+from pathlib import Path
 from typing import Optional, List, Dict, Any
 from dotenv import load_dotenv
 from bs4 import BeautifulSoup
-from leetcode_favorite import LeetCodeClient
-import parse_html as html_parser
+
+# 保证可以引用项目根目录下的模块
+BASE_DIR = Path(__file__).resolve().parent
+ROOT_DIR = BASE_DIR.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
+from leetcode_favorite import LeetCodeClient  # noqa: E402
+import parse_html as html_parser  # noqa: E402
 
 
 LEETCODE_DISCUSS_PRE_URL = "https://leetcode.cn/circle/discuss/"
 
 # 本地保存目录
-LOCAL_HTML_DIR = os.path.join(os.path.dirname(__file__), "discuss_html")
-LOCAL_JSON_DIR = os.path.join(os.path.dirname(__file__), "discuss_json")
+LOCAL_HTML_DIR = BASE_DIR / "discuss_html"
+LOCAL_JSON_DIR = BASE_DIR / "discuss_json"
 
 DISCUSSION_URL_MAP = {
     "0viNMK": {
@@ -185,7 +194,7 @@ def save_json_from_html_content(
             base_name = item.get("name", "")
             item["name"] = f"{prefix} / {base_name}" if base_name else prefix
 
-    json_path = os.path.join(LOCAL_JSON_DIR, f"{filename}.json")
+    json_path = LOCAL_JSON_DIR / f"{filename}.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"解析结果已保存到: {json_path}")
@@ -216,7 +225,7 @@ def fetch_and_save_discussion_html(
     simplified_html = extract_heading_and_list_elements(html_content)
 
     # 保存精简 HTML
-    filepath = os.path.join(LOCAL_HTML_DIR, f"{filename}.html")
+    filepath = LOCAL_HTML_DIR / f"{filename}.html"
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(simplified_html)
 
@@ -241,8 +250,8 @@ def fetch_all_discussions() -> None:
 
 def load_category_from_json(filename: str) -> List[Dict[str, Any]]:
     """从保存的 JSON 中加载分类信息。"""
-    path = os.path.join(LOCAL_JSON_DIR, f"{filename}.json")
-    if not os.path.exists(path):
+    path = LOCAL_JSON_DIR / f"{filename}.json"
+    if not path.exists():
         print(f"JSON 文件不存在: {path}")
         return []
     with open(path, "r", encoding="utf-8") as f:
@@ -408,7 +417,7 @@ def main():
     args = parser.parse_args()
     
     # 加载环境变量
-    env_path = os.path.join(os.path.dirname(__file__), '.env')
+    env_path = ROOT_DIR / '.env'
     load_dotenv(env_path)
     
     csrf_token = os.getenv('csrftoken')
