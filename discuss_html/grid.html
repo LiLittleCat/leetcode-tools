@@ -1,1 +1,386 @@
-<html><head><meta charset="utf-8"/></head><body><h2>一、网格图 DFS</h2><ul><li><a href="https://leetcode.cn/problems/number-of-islands/">200. 岛屿数量</a></li><li><a href="https://leetcode.cn/problems/max-area-of-island/">695. 岛屿的最大面积</a></li><li><a href="https://leetcode.cn/problems/count-islands-with-total-value-divisible-by-k/">3619. 总价值可以被 K 整除的岛屿数目</a>1461</li><li><a href="https://leetcode.cn/problems/pond-sizes-lcci/">面试题 16.19. 水域大小</a></li><li><a href="https://leetcode.cn/problems/YesdPw/">LCS 03. 主题空间</a></li><li><a href="https://leetcode.cn/problems/island-perimeter/">463. 岛屿的周长</a></li><li><a href="https://leetcode.cn/problems/maximum-number-of-fish-in-a-grid/">2658. 网格图中鱼的最大数目</a>1490</li><li><a href="https://leetcode.cn/problems/flood-fill/">733. 图像渲染</a></li><li><a href="https://leetcode.cn/problems/coloring-a-border/">1034. 边界着色</a>1579</li><li><a href="https://leetcode.cn/problems/number-of-enclaves/">1020. 飞地的数量</a>1615</li><li><a href="https://leetcode.cn/problems/maximum-number-of-moves-in-a-grid/">2684. 矩阵中移动的最大次数</a>1626</li><li><a href="https://leetcode.cn/problems/number-of-closed-islands/">1254. 统计封闭岛屿的数目</a>1659</li><li><a href="https://leetcode.cn/problems/surrounded-regions/">130. 被围绕的区域</a></li><li><a href="https://leetcode.cn/problems/count-sub-islands/">1905. 统计子岛屿</a>1679</li><li><a href="https://leetcode.cn/problems/check-if-there-is-a-valid-path-in-a-grid/">1391. 检查网格中是否存在有效路径</a>1746</li><li><a href="https://leetcode.cn/problems/pacific-atlantic-water-flow/">417. 太平洋大西洋水流问题</a></li><li><a href="https://leetcode.cn/problems/minesweeper/">529. 扫雷游戏</a></li><li><a href="https://leetcode.cn/problems/detect-cycles-in-2d-grid/">1559. 二维网格图中探测环</a>1838</li><li><a href="https://leetcode.cn/problems/making-a-large-island/">827. 最大人工岛</a>1934 我的题解有变形题</li><li><a href="https://leetcode.cn/problems/EXvqDp/">LCP 63. 弹珠游戏</a>也可以不用 DFS</li><li><a href="https://leetcode.cn/problems/number-of-islands-ii/">305. 岛屿数量 II</a>（会员题）</li><li><a href="https://leetcode.cn/problems/number-of-spaces-cleaning-robot-cleaned/">2061. 扫地机器人清扫过的空间个数</a>（会员题）也可以迭代</li><li><a href="https://leetcode.cn/problems/sum-of-remoteness-of-all-cells/">2852. 所有单元格的远离程度之和</a>（会员题）</li><li><a href="https://leetcode.cn/problems/robot-room-cleaner/">489. 扫地机器人</a>（会员题）</li></ul><h2>二、网格图 BFS</h2><ul><li><a href="https://leetcode.cn/problems/nearest-exit-from-entrance-in-maze/">1926. 迷宫中离入口最近的出口</a>1638</li><li><a href="https://leetcode.cn/problems/shortest-path-in-binary-matrix/">1091. 二进制矩阵中的最短路径</a>1658</li><li><a href="https://leetcode.cn/problems/as-far-from-land-as-possible/">1162. 地图分析</a>1666</li><li><a href="https://leetcode.cn/problems/01-matrix/">542. 01 矩阵</a></li><li><a href="https://leetcode.cn/problems/rotting-oranges/">994. 腐烂的橘子</a></li><li><a href="https://leetcode.cn/problems/map-of-highest-peak/">1765. 地图中的最高点</a>1783</li><li><a href="https://leetcode.cn/problems/shortest-bridge/">934. 最短的桥</a>1826</li><li><a href="https://leetcode.cn/problems/k-highest-ranked-items-within-a-price-range/">2146. 价格范围内最高排名的 K 样物品</a>1837</li><li><a href="https://leetcode.cn/problems/shortest-path-in-a-grid-with-obstacles-elimination/">1293. 网格中的最短路径</a>1967</li><li><a href="https://leetcode.cn/problems/snakes-and-ladders/">909. 蛇梯棋</a>2020</li><li><a href="https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/">1210. 穿过迷宫的最少移动次数</a>2022</li><li><a href="https://leetcode.cn/problems/cut-off-trees-for-golf-event/">675. 为高尔夫比赛砍树</a></li><li><a href="https://leetcode.cn/problems/find-the-safest-path-in-a-grid/">2812. 找出最安全路径</a>2154</li><li><a href="https://leetcode.cn/problems/contain-virus/">749. 隔离病毒</a>2277</li><li><a href="https://leetcode.cn/problems/shortest-path-to-get-food/">1730. 获取食物的最短路径</a>（会员题）</li><li><a href="https://leetcode.cn/problems/walls-and-gates/">286. 墙与门</a>（会员题）</li><li><a href="https://leetcode.cn/problems/the-maze/">490. 迷宫</a>（会员题）</li><li><a href="https://leetcode.cn/problems/the-maze-ii/">505. 迷宫 II</a>（会员题）</li><li><a href="https://leetcode.cn/problems/the-maze-iii/">499. 迷宫 III</a>（会员题）</li><li><a href="https://leetcode.cn/problems/shortest-distance-from-all-buildings/">317. 离建筑物最近的距离</a>（会员题）</li><li><a href="https://leetcode.cn/problems/minimum-time-takes-to-reach-destination-without-drowning/">2814. 避免淹死并到达目的地的最短时间</a>（会员题）</li></ul><h2>三、网格图 0-1 BFS</h2><ul><li><a href="https://leetcode.cn/problems/find-a-safe-walk-through-a-grid/">3286. 穿越网格图的安全路径</a>做到</li><li><a href="https://leetcode.cn/problems/minimum-obstacle-removal-to-reach-corner/">2290. 到达角落需要移除障碍物的最小数目</a>2138</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/">1368. 使网格图至少有一条有效路径的最小代价</a>2069</li><li><a href="https://leetcode.cn/problems/grid-teleportation-traversal/">3552. 网格传送门旅游</a>2036</li><li><a href="https://leetcode.cn/problems/minimum-sideway-jumps/">1824. 最少侧跳次数</a></li><li><a href="https://leetcode.cn/problems/6UEx57/">LCP 56. 信物传送</a></li></ul><h2>四、网格图 Dijkstra</h2><h2>五、综合应用</h2><ul><li><a href="https://leetcode.cn/problems/path-with-minimum-effort/">1631. 最小体力消耗路径</a>1948</li><li><a href="https://leetcode.cn/problems/swim-in-rising-water/">778. 水位上升的泳池中游泳</a>2097</li><li><a href="https://leetcode.cn/problems/longest-increasing-path-in-a-matrix/">329. 矩阵中的最长递增路径</a></li><li><a href="https://leetcode.cn/problems/minimum-moves-to-clean-the-classroom/">3568. 清理教室的最少移动</a>2143 状压 BFS（分层图最短路）</li><li><a href="https://leetcode.cn/problems/escape-a-large-maze/">1036. 逃离大迷宫</a>2165</li><li><a href="https://leetcode.cn/problems/shortest-path-to-get-all-keys/">864. 获取所有钥匙的最短路径</a>2259 状压 BFS（分层图最短路）</li><li><a href="https://leetcode.cn/problems/minimum-moves-to-move-a-box-to-their-target-location/">1263. 推箱子</a>2297</li><li><a href="https://leetcode.cn/problems/escape-the-spreading-fire/">2258. 逃离火灾</a>2347</li><li><a href="https://leetcode.cn/problems/disconnect-path-in-a-binary-matrix-by-at-most-one-flip/">2556. 二进制矩阵中翻转最多一次使路径不连通</a>2369</li><li><a href="https://leetcode.cn/problems/minimum-time-to-visit-a-cell-in-a-grid/">2577. 在网格图中访问一个格子的最少时间</a>2382</li><li><a href="https://leetcode.cn/problems/minimum-number-of-visited-cells-in-a-grid/">2617. 网格图中最少访问的格子数</a>2582</li><li><a href="https://leetcode.cn/problems/xun-bao/">LCP 13. 寻宝</a>状压 DP</li><li><a href="https://leetcode.cn/problems/Db3wC1/">LCP 31. 变换的迷宫</a></li><li><a href="https://leetcode.cn/problems/kplEvH/">LCP 45. 自行车炫技赛场</a></li><li><a href="https://leetcode.cn/problems/rdmXM7/">LCP 75. 传送卷轴</a></li><li><a href="https://leetcode.cn/problems/shortest-path-in-a-hidden-grid/">1778. 未知网格中的最短路径</a>（会员题）</li><li><a href="https://leetcode.cn/problems/number-of-distinct-islands/">694. 不同岛屿的数量</a>（会员题）</li><li><a href="https://leetcode.cn/problems/number-of-distinct-islands-ii/">711. 不同岛屿的数量 II</a>（会员题）</li><li><a href="https://leetcode.cn/problems/path-with-maximum-minimum-value/">1102. 得分最高的路径</a>（会员题）</li></ul><h2>思考题</h2><h2>算法题单</h2></body></html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+ </head>
+ <body>
+  <h2>
+   一、网格图 DFS
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-islands/">
+     200. 岛屿数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/max-area-of-island/">
+     695. 岛屿的最大面积
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-islands-with-total-value-divisible-by-k/">
+     3619. 总价值可以被 K 整除的岛屿数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/pond-sizes-lcci/">
+     面试题 16.19. 水域大小
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/YesdPw/">
+     LCS 03. 主题空间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/island-perimeter/">
+     463. 岛屿的周长
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-fish-in-a-grid/">
+     2658. 网格图中鱼的最大数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/flood-fill/">
+     733. 图像渲染
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/coloring-a-border/">
+     1034. 边界着色
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-enclaves/">
+     1020. 飞地的数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-moves-in-a-grid/">
+     2684. 矩阵中移动的最大次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-closed-islands/">
+     1254. 统计封闭岛屿的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/surrounded-regions/">
+     130. 被围绕的区域
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-sub-islands/">
+     1905. 统计子岛屿
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/check-if-there-is-a-valid-path-in-a-grid/">
+     1391. 检查网格中是否存在有效路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/pacific-atlantic-water-flow/">
+     417. 太平洋大西洋水流问题
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minesweeper/">
+     529. 扫雷游戏
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/detect-cycles-in-2d-grid/">
+     1559. 二维网格图中探测环
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/making-a-large-island/">
+     827. 最大人工岛
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/EXvqDp/">
+     LCP 63. 弹珠游戏
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-islands-ii/">
+     305. 岛屿数量 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-spaces-cleaning-robot-cleaned/">
+     2061. 扫地机器人清扫过的空间个数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sum-of-remoteness-of-all-cells/">
+     2852. 所有单元格的远离程度之和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/robot-room-cleaner/">
+     489. 扫地机器人
+    </a>
+   </li>
+  </ul>
+  <h2>
+   二、网格图 BFS
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/nearest-exit-from-entrance-in-maze/">
+     1926. 迷宫中离入口最近的出口
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-path-in-binary-matrix/">
+     1091. 二进制矩阵中的最短路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/as-far-from-land-as-possible/">
+     1162. 地图分析
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/01-matrix/">
+     542. 01 矩阵
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/rotting-oranges/">
+     994. 腐烂的橘子
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/map-of-highest-peak/">
+     1765. 地图中的最高点
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-bridge/">
+     934. 最短的桥
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/k-highest-ranked-items-within-a-price-range/">
+     2146. 价格范围内最高排名的 K 样物品
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-path-in-a-grid-with-obstacles-elimination/">
+     1293. 网格中的最短路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/snakes-and-ladders/">
+     909. 蛇梯棋
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/">
+     1210. 穿过迷宫的最少移动次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/cut-off-trees-for-golf-event/">
+     675. 为高尔夫比赛砍树
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-safest-path-in-a-grid/">
+     2812. 找出最安全路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/contain-virus/">
+     749. 隔离病毒
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-path-to-get-food/">
+     1730. 获取食物的最短路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/walls-and-gates/">
+     286. 墙与门
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/the-maze/">
+     490. 迷宫
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/the-maze-ii/">
+     505. 迷宫 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/the-maze-iii/">
+     499. 迷宫 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-distance-from-all-buildings/">
+     317. 离建筑物最近的距离
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-takes-to-reach-destination-without-drowning/">
+     2814. 避免淹死并到达目的地的最短时间
+    </a>
+   </li>
+  </ul>
+  <h2>
+   三、网格图 0-1 BFS
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/find-a-safe-walk-through-a-grid/">
+     3286. 穿越网格图的安全路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-obstacle-removal-to-reach-corner/">
+     2290. 到达角落需要移除障碍物的最小数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/">
+     1368. 使网格图至少有一条有效路径的最小代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/grid-teleportation-traversal/">
+     3552. 网格传送门旅游
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-sideway-jumps/">
+     1824. 最少侧跳次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/6UEx57/">
+     LCP 56. 信物传送
+    </a>
+   </li>
+  </ul>
+  <h2>
+   四、网格图 Dijkstra
+  </h2>
+  <h2>
+   五、综合应用
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/path-with-minimum-effort/">
+     1631. 最小体力消耗路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/swim-in-rising-water/">
+     778. 水位上升的泳池中游泳
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-increasing-path-in-a-matrix/">
+     329. 矩阵中的最长递增路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-moves-to-clean-the-classroom/">
+     3568. 清理教室的最少移动
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/escape-a-large-maze/">
+     1036. 逃离大迷宫
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-path-to-get-all-keys/">
+     864. 获取所有钥匙的最短路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-moves-to-move-a-box-to-their-target-location/">
+     1263. 推箱子
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/escape-the-spreading-fire/">
+     2258. 逃离火灾
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/disconnect-path-in-a-binary-matrix-by-at-most-one-flip/">
+     2556. 二进制矩阵中翻转最多一次使路径不连通
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-visit-a-cell-in-a-grid/">
+     2577. 在网格图中访问一个格子的最少时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-visited-cells-in-a-grid/">
+     2617. 网格图中最少访问的格子数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/xun-bao/">
+     LCP 13. 寻宝
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/Db3wC1/">
+     LCP 31. 变换的迷宫
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/kplEvH/">
+     LCP 45. 自行车炫技赛场
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/rdmXM7/">
+     LCP 75. 传送卷轴
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-path-in-a-hidden-grid/">
+     1778. 未知网格中的最短路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-distinct-islands/">
+     694. 不同岛屿的数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-distinct-islands-ii/">
+     711. 不同岛屿的数量 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/path-with-maximum-minimum-value/">
+     1102. 得分最高的路径
+    </a>
+   </li>
+  </ul>
+  <h2>
+   思考题
+  </h2>
+  <h2>
+   算法题单
+  </h2>
+ </body>
+</html>

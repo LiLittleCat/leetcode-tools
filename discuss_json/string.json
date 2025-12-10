@@ -1,0 +1,515 @@
+[
+  {
+    "name": "一、KMP（前缀的后缀）",
+    "count": 16,
+    "problems_title_slugs": "find-the-index-of-the-first-occurrence-in-a-string rotate-string longest-happy-prefix number-of-subarrays-that-match-a-pattern-ii form-array-by-concatenating-subarrays-of-another-array maximum-repeating-substring repeated-substring-pattern shortest-string-that-contains-three-strings find-beautiful-indices-in-the-given-array-ii shortest-palindrome count-cells-in-overlapping-horizontal-and-vertical-substrings repeated-string-match shortest-matching-substring find-all-good-strings find-pattern-in-infinite-stream-ii find-the-shortest-superstring-ii",
+    "problems": [
+      {
+        "title": "28. 找出字符串中第一个匹配项的下标",
+        "titleSlug": "find-the-index-of-the-first-occurrence-in-a-string",
+        "url": "https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/"
+      },
+      {
+        "title": "796. 旋转字符串",
+        "titleSlug": "rotate-string",
+        "url": "https://leetcode.cn/problems/rotate-string/"
+      },
+      {
+        "title": "1392. 最长快乐前缀",
+        "titleSlug": "longest-happy-prefix",
+        "url": "https://leetcode.cn/problems/longest-happy-prefix/"
+      },
+      {
+        "title": "3036. 匹配模式数组的子数组数目 II",
+        "titleSlug": "number-of-subarrays-that-match-a-pattern-ii",
+        "url": "https://leetcode.cn/problems/number-of-subarrays-that-match-a-pattern-ii/"
+      },
+      {
+        "title": "1764. 通过连接另一个数组的子数组得到一个数组",
+        "titleSlug": "form-array-by-concatenating-subarrays-of-another-array",
+        "url": "https://leetcode.cn/problems/form-array-by-concatenating-subarrays-of-another-array/"
+      },
+      {
+        "title": "1668. 最大重复子字符串",
+        "titleSlug": "maximum-repeating-substring",
+        "url": "https://leetcode.cn/problems/maximum-repeating-substring/"
+      },
+      {
+        "title": "459. 重复的子字符串",
+        "titleSlug": "repeated-substring-pattern",
+        "url": "https://leetcode.cn/problems/repeated-substring-pattern/"
+      },
+      {
+        "title": "2800. 包含三个字符串的最短字符串",
+        "titleSlug": "shortest-string-that-contains-three-strings",
+        "url": "https://leetcode.cn/problems/shortest-string-that-contains-three-strings/"
+      },
+      {
+        "title": "3008. 找出数组中的美丽下标 II",
+        "titleSlug": "find-beautiful-indices-in-the-given-array-ii",
+        "url": "https://leetcode.cn/problems/find-beautiful-indices-in-the-given-array-ii/"
+      },
+      {
+        "title": "214. 最短回文串",
+        "titleSlug": "shortest-palindrome",
+        "url": "https://leetcode.cn/problems/shortest-palindrome/"
+      },
+      {
+        "title": "3529. 统计水平子串和垂直子串重叠格子的数目",
+        "titleSlug": "count-cells-in-overlapping-horizontal-and-vertical-substrings",
+        "url": "https://leetcode.cn/problems/count-cells-in-overlapping-horizontal-and-vertical-substrings/"
+      },
+      {
+        "title": "686. 重复叠加字符串匹配",
+        "titleSlug": "repeated-string-match",
+        "url": "https://leetcode.cn/problems/repeated-string-match/"
+      },
+      {
+        "title": "3455. 最短匹配子字符串",
+        "titleSlug": "shortest-matching-substring",
+        "url": "https://leetcode.cn/problems/shortest-matching-substring/"
+      },
+      {
+        "title": "1397. 找到所有好字符串",
+        "titleSlug": "find-all-good-strings",
+        "url": "https://leetcode.cn/problems/find-all-good-strings/"
+      },
+      {
+        "title": "3037. 在无限流中寻找模式 II",
+        "titleSlug": "find-pattern-in-infinite-stream-ii",
+        "url": "https://leetcode.cn/problems/find-pattern-in-infinite-stream-ii/"
+      },
+      {
+        "title": "3571. 最短超级串 II",
+        "titleSlug": "find-the-shortest-superstring-ii",
+        "url": "https://leetcode.cn/problems/find-the-shortest-superstring-ii/"
+      }
+    ]
+  },
+  {
+    "name": "二、Z 函数（后缀的前缀）",
+    "count": 9,
+    "problems_title_slugs": "sum-of-scores-of-built-strings minimum-time-to-revert-word-to-initial-state-ii count-prefix-and-suffix-pairs-ii find-the-occurrence-of-first-almost-equal-substring minimum-number-of-valid-strings-to-form-target-ii lexicographically-smallest-generated-string maximum-deletions-on-a-string count-beautiful-splits-in-an-array number-of-ways-to-separate-numbers",
+    "problems": [
+      {
+        "title": "2223. 构造字符串的总得分和",
+        "titleSlug": "sum-of-scores-of-built-strings",
+        "url": "https://leetcode.cn/problems/sum-of-scores-of-built-strings/"
+      },
+      {
+        "title": "3031. 将单词恢复初始状态所需的最短时间 II",
+        "titleSlug": "minimum-time-to-revert-word-to-initial-state-ii",
+        "url": "https://leetcode.cn/problems/minimum-time-to-revert-word-to-initial-state-ii/"
+      },
+      {
+        "title": "3045. 统计前后缀下标对 II",
+        "titleSlug": "count-prefix-and-suffix-pairs-ii",
+        "url": "https://leetcode.cn/problems/count-prefix-and-suffix-pairs-ii/"
+      },
+      {
+        "title": "3303. 第一个几乎相等子字符串的下标",
+        "titleSlug": "find-the-occurrence-of-first-almost-equal-substring",
+        "url": "https://leetcode.cn/problems/find-the-occurrence-of-first-almost-equal-substring/"
+      },
+      {
+        "title": "3292. 形成目标字符串需要的最少字符串数 II",
+        "titleSlug": "minimum-number-of-valid-strings-to-form-target-ii",
+        "url": "https://leetcode.cn/problems/minimum-number-of-valid-strings-to-form-target-ii/"
+      },
+      {
+        "title": "3474. 字典序最小的生成字符串",
+        "titleSlug": "lexicographically-smallest-generated-string",
+        "url": "https://leetcode.cn/problems/lexicographically-smallest-generated-string/"
+      },
+      {
+        "title": "2430. 对字母串可执行的最大删除数",
+        "titleSlug": "maximum-deletions-on-a-string",
+        "url": "https://leetcode.cn/problems/maximum-deletions-on-a-string/"
+      },
+      {
+        "title": "3388. 统计数组中的美丽分割",
+        "titleSlug": "count-beautiful-splits-in-an-array",
+        "url": "https://leetcode.cn/problems/count-beautiful-splits-in-an-array/"
+      },
+      {
+        "title": "1977. 划分数字的方案数",
+        "titleSlug": "number-of-ways-to-separate-numbers",
+        "url": "https://leetcode.cn/problems/number-of-ways-to-separate-numbers/"
+      }
+    ]
+  },
+  {
+    "name": "三、Manacher 算法（回文串）",
+    "count": 12,
+    "problems_title_slugs": "longest-palindromic-substring palindromic-substrings shortest-palindrome check-if-dfs-strings-are-palindromes palindrome-partitioning-iv maximum-product-of-the-length-of-two-palindromic-substrings longest-palindrome-after-substring-concatenation-ii longest-palindromic-substring maximum-number-of-non-overlapping-palindrome-substrings longest-palindrome-after-substring-concatenation-ii longest-palindromic-path-in-graph minimum-steps-to-convert-string-with-operations",
+    "problems": [
+      {
+        "title": "5. 最长回文子串",
+        "titleSlug": "longest-palindromic-substring",
+        "url": "https://leetcode.cn/problems/longest-palindromic-substring/"
+      },
+      {
+        "title": "647. 回文子串",
+        "titleSlug": "palindromic-substrings",
+        "url": "https://leetcode.cn/problems/palindromic-substrings/"
+      },
+      {
+        "title": "214. 最短回文串",
+        "titleSlug": "shortest-palindrome",
+        "url": "https://leetcode.cn/problems/shortest-palindrome/"
+      },
+      {
+        "title": "3327. 判断 DFS 字符串是否是回文串",
+        "titleSlug": "check-if-dfs-strings-are-palindromes",
+        "url": "https://leetcode.cn/problems/check-if-dfs-strings-are-palindromes/"
+      },
+      {
+        "title": "1745. 分割回文串 IV",
+        "titleSlug": "palindrome-partitioning-iv",
+        "url": "https://leetcode.cn/problems/palindrome-partitioning-iv/"
+      },
+      {
+        "title": "1960. 两个回文子字符串长度的最大乘积",
+        "titleSlug": "maximum-product-of-the-length-of-two-palindromic-substrings",
+        "url": "https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-substrings/"
+      },
+      {
+        "title": "3504. 子字符串连接后的最长回文串 II",
+        "titleSlug": "longest-palindrome-after-substring-concatenation-ii",
+        "url": "https://leetcode.cn/problems/longest-palindrome-after-substring-concatenation-ii/"
+      },
+      {
+        "title": "5. 最长回文子串",
+        "titleSlug": "longest-palindromic-substring",
+        "url": "https://leetcode.cn/problems/longest-palindromic-substring/"
+      },
+      {
+        "title": "2472. 不重叠回文子字符串的最大数目",
+        "titleSlug": "maximum-number-of-non-overlapping-palindrome-substrings",
+        "url": "https://leetcode.cn/problems/maximum-number-of-non-overlapping-palindrome-substrings/"
+      },
+      {
+        "title": "3504. 子字符串连接后的最长回文串 II",
+        "titleSlug": "longest-palindrome-after-substring-concatenation-ii",
+        "url": "https://leetcode.cn/problems/longest-palindrome-after-substring-concatenation-ii/"
+      },
+      {
+        "title": "3615. 图中的最长回文路径",
+        "titleSlug": "longest-palindromic-path-in-graph",
+        "url": "https://leetcode.cn/problems/longest-palindromic-path-in-graph/"
+      },
+      {
+        "title": "3579. 字符串转换需要的最小操作数",
+        "titleSlug": "minimum-steps-to-convert-string-with-operations",
+        "url": "https://leetcode.cn/problems/minimum-steps-to-convert-string-with-operations/"
+      }
+    ]
+  },
+  {
+    "name": "四、字符串哈希",
+    "count": 15,
+    "problems_title_slugs": "find-the-index-of-the-first-occurrence-in-a-string repeated-dna-sequences distinct-echo-substrings maximum-number-of-occurrences-of-a-substring k-divisible-elements-subarrays lexicographically-smallest-string-after-reverse construct-string-with-minimum-cost linked-list-in-binary-tree longest-duplicate-substring maximum-length-of-repeated-subarray longest-common-subpath minimum-number-of-valid-strings-to-form-target-ii unique-substrings-with-equal-digit-frequency strings-differ-by-one-character longest-repeating-substring",
+    "problems": [
+      {
+        "title": "28. 找出字符串中第一个匹配项的下标",
+        "titleSlug": "find-the-index-of-the-first-occurrence-in-a-string",
+        "url": "https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/"
+      },
+      {
+        "title": "187. 重复的 DNA 序列",
+        "titleSlug": "repeated-dna-sequences",
+        "url": "https://leetcode.cn/problems/repeated-dna-sequences/"
+      },
+      {
+        "title": "1316. 不同的循环子字符串",
+        "titleSlug": "distinct-echo-substrings",
+        "url": "https://leetcode.cn/problems/distinct-echo-substrings/"
+      },
+      {
+        "title": "1297. 子串的最大出现次数",
+        "titleSlug": "maximum-number-of-occurrences-of-a-substring",
+        "url": "https://leetcode.cn/problems/maximum-number-of-occurrences-of-a-substring/"
+      },
+      {
+        "title": "2261. 含最多 K 个可整除元素的子数组",
+        "titleSlug": "k-divisible-elements-subarrays",
+        "url": "https://leetcode.cn/problems/k-divisible-elements-subarrays/"
+      },
+      {
+        "title": "3722. 反转后字典序最小的字符串",
+        "titleSlug": "lexicographically-smallest-string-after-reverse",
+        "url": "https://leetcode.cn/problems/lexicographically-smallest-string-after-reverse/"
+      },
+      {
+        "title": "3213. 最小代价构造字符串",
+        "titleSlug": "construct-string-with-minimum-cost",
+        "url": "https://leetcode.cn/problems/construct-string-with-minimum-cost/"
+      },
+      {
+        "title": "1367. 二叉树中的链表",
+        "titleSlug": "linked-list-in-binary-tree",
+        "url": "https://leetcode.cn/problems/linked-list-in-binary-tree/"
+      },
+      {
+        "title": "1044. 最长重复子串",
+        "titleSlug": "longest-duplicate-substring",
+        "url": "https://leetcode.cn/problems/longest-duplicate-substring/"
+      },
+      {
+        "title": "718. 最长重复子数组",
+        "titleSlug": "maximum-length-of-repeated-subarray",
+        "url": "https://leetcode.cn/problems/maximum-length-of-repeated-subarray/"
+      },
+      {
+        "title": "1923. 最长公共子路径",
+        "titleSlug": "longest-common-subpath",
+        "url": "https://leetcode.cn/problems/longest-common-subpath/"
+      },
+      {
+        "title": "3292. 形成目标字符串需要的最少字符串数 II",
+        "titleSlug": "minimum-number-of-valid-strings-to-form-target-ii",
+        "url": "https://leetcode.cn/problems/minimum-number-of-valid-strings-to-form-target-ii/"
+      },
+      {
+        "title": "2168. 每个数字的频率都相同的独特子字符串的数量",
+        "titleSlug": "unique-substrings-with-equal-digit-frequency",
+        "url": "https://leetcode.cn/problems/unique-substrings-with-equal-digit-frequency/"
+      },
+      {
+        "title": "1554. 只有一个不同字符的字符串",
+        "titleSlug": "strings-differ-by-one-character",
+        "url": "https://leetcode.cn/problems/strings-differ-by-one-character/"
+      },
+      {
+        "title": "1062. 最长重复子串",
+        "titleSlug": "longest-repeating-substring",
+        "url": "https://leetcode.cn/problems/longest-repeating-substring/"
+      }
+    ]
+  },
+  {
+    "name": "五、最小表示法",
+    "count": 5,
+    "problems_title_slugs": "orderly-queue find-the-lexicographically-largest-string-from-the-box-i lexicographically-smallest-string-after-applying-operations find-the-lexicographically-largest-string-from-the-box-ii largest-subarray-length-k",
+    "problems": [
+      {
+        "title": "899. 有序队列",
+        "titleSlug": "orderly-queue",
+        "url": "https://leetcode.cn/problems/orderly-queue/"
+      },
+      {
+        "title": "3403. 从盒子中找出字典序最大的字符串 I",
+        "titleSlug": "find-the-lexicographically-largest-string-from-the-box-i",
+        "url": "https://leetcode.cn/problems/find-the-lexicographically-largest-string-from-the-box-i/"
+      },
+      {
+        "title": "1625. 执行操作后字典序最小的字符串",
+        "titleSlug": "lexicographically-smallest-string-after-applying-operations",
+        "url": "https://leetcode.cn/problems/lexicographically-smallest-string-after-applying-operations/"
+      },
+      {
+        "title": "3406. 从盒子中找出字典序最大的字符串 II",
+        "titleSlug": "find-the-lexicographically-largest-string-from-the-box-ii",
+        "url": "https://leetcode.cn/problems/find-the-lexicographically-largest-string-from-the-box-ii/"
+      },
+      {
+        "title": "1708. 长度为 K 的最大子数组",
+        "titleSlug": "largest-subarray-length-k",
+        "url": "https://leetcode.cn/problems/largest-subarray-length-k/"
+      }
+    ]
+  },
+  {
+    "name": "七、AC 自动机",
+    "count": 6,
+    "problems_title_slugs": "stream-of-characters multi-search-lcci string-matching-in-an-array construct-string-with-minimum-cost length-of-the-longest-valid-substring minimum-number-of-valid-strings-to-form-target-ii",
+    "problems": [
+      {
+        "title": "1032. 字符流",
+        "titleSlug": "stream-of-characters",
+        "url": "https://leetcode.cn/problems/stream-of-characters/"
+      },
+      {
+        "title": "面试题 17.17. 多次搜索",
+        "titleSlug": "multi-search-lcci",
+        "url": "https://leetcode.cn/problems/multi-search-lcci/"
+      },
+      {
+        "title": "1408. 数组中的字符串匹配",
+        "titleSlug": "string-matching-in-an-array",
+        "url": "https://leetcode.cn/problems/string-matching-in-an-array/"
+      },
+      {
+        "title": "3213. 最小代价构造字符串",
+        "titleSlug": "construct-string-with-minimum-cost",
+        "url": "https://leetcode.cn/problems/construct-string-with-minimum-cost/"
+      },
+      {
+        "title": "2781. 最长合法子字符串的长度",
+        "titleSlug": "length-of-the-longest-valid-substring",
+        "url": "https://leetcode.cn/problems/length-of-the-longest-valid-substring/"
+      },
+      {
+        "title": "3292. 形成目标字符串需要的最少字符串数 II",
+        "titleSlug": "minimum-number-of-valid-strings-to-form-target-ii",
+        "url": "https://leetcode.cn/problems/minimum-number-of-valid-strings-to-form-target-ii/"
+      }
+    ]
+  },
+  {
+    "name": "八、后缀数组/后缀自动机",
+    "count": 19,
+    "problems_title_slugs": "last-substring-in-lexicographical-order largest-merge-of-two-strings shortest-and-lexicographically-smallest-beautiful-string lexicographically-smallest-string-after-reverse construct-string-with-minimum-cost longest-duplicate-substring maximum-length-of-repeated-subarray longest-common-subpath string-matching-in-an-array count-distinct-subarrays-divisible-by-k-in-sorted-array shortest-uncommon-substring-in-an-array longest-palindrome-after-substring-concatenation-ii distinct-echo-substrings count-beautiful-splits-in-an-array substring-xor-queries pattern-matching-lcci number-of-distinct-substrings-in-a-string longest-repeating-substring equalize-strings-by-adding-or-removing-characters-at-ends",
+    "problems": [
+      {
+        "title": "1163. 按字典序排在最后的子串",
+        "titleSlug": "last-substring-in-lexicographical-order",
+        "url": "https://leetcode.cn/problems/last-substring-in-lexicographical-order/"
+      },
+      {
+        "title": "1754. 构造字典序最大的合并字符串",
+        "titleSlug": "largest-merge-of-two-strings",
+        "url": "https://leetcode.cn/problems/largest-merge-of-two-strings/"
+      },
+      {
+        "title": "2904. 最短且字典序最小的美丽子字符串",
+        "titleSlug": "shortest-and-lexicographically-smallest-beautiful-string",
+        "url": "https://leetcode.cn/problems/shortest-and-lexicographically-smallest-beautiful-string/"
+      },
+      {
+        "title": "3722. 反转后字典序最小的字符串",
+        "titleSlug": "lexicographically-smallest-string-after-reverse",
+        "url": "https://leetcode.cn/problems/lexicographically-smallest-string-after-reverse/"
+      },
+      {
+        "title": "3213. 最小代价构造字符串",
+        "titleSlug": "construct-string-with-minimum-cost",
+        "url": "https://leetcode.cn/problems/construct-string-with-minimum-cost/"
+      },
+      {
+        "title": "1044. 最长重复子串",
+        "titleSlug": "longest-duplicate-substring",
+        "url": "https://leetcode.cn/problems/longest-duplicate-substring/"
+      },
+      {
+        "title": "718. 最长重复子数组",
+        "titleSlug": "maximum-length-of-repeated-subarray",
+        "url": "https://leetcode.cn/problems/maximum-length-of-repeated-subarray/"
+      },
+      {
+        "title": "1923. 最长公共子路径",
+        "titleSlug": "longest-common-subpath",
+        "url": "https://leetcode.cn/problems/longest-common-subpath/"
+      },
+      {
+        "title": "1408. 数组中的字符串匹配",
+        "titleSlug": "string-matching-in-an-array",
+        "url": "https://leetcode.cn/problems/string-matching-in-an-array/"
+      },
+      {
+        "title": "3729. 统计有序数组中可被 K 整除的子数组数量",
+        "titleSlug": "count-distinct-subarrays-divisible-by-k-in-sorted-array",
+        "url": "https://leetcode.cn/problems/count-distinct-subarrays-divisible-by-k-in-sorted-array/"
+      },
+      {
+        "title": "3076. 数组中的最短非公共子字符串",
+        "titleSlug": "shortest-uncommon-substring-in-an-array",
+        "url": "https://leetcode.cn/problems/shortest-uncommon-substring-in-an-array/"
+      },
+      {
+        "title": "3504. 子字符串连接后的最长回文串 II",
+        "titleSlug": "longest-palindrome-after-substring-concatenation-ii",
+        "url": "https://leetcode.cn/problems/longest-palindrome-after-substring-concatenation-ii/"
+      },
+      {
+        "title": "1316. 不同的循环子字符串",
+        "titleSlug": "distinct-echo-substrings",
+        "url": "https://leetcode.cn/problems/distinct-echo-substrings/"
+      },
+      {
+        "title": "3388. 统计数组中的美丽分割",
+        "titleSlug": "count-beautiful-splits-in-an-array",
+        "url": "https://leetcode.cn/problems/count-beautiful-splits-in-an-array/"
+      },
+      {
+        "title": "2564. 子字符串异或查询",
+        "titleSlug": "substring-xor-queries",
+        "url": "https://leetcode.cn/problems/substring-xor-queries/"
+      },
+      {
+        "title": "面试题 16.18. 模式匹配",
+        "titleSlug": "pattern-matching-lcci",
+        "url": "https://leetcode.cn/problems/pattern-matching-lcci/"
+      },
+      {
+        "title": "1698. 字符串的不同子字符串个数",
+        "titleSlug": "number-of-distinct-substrings-in-a-string",
+        "url": "https://leetcode.cn/problems/number-of-distinct-substrings-in-a-string/"
+      },
+      {
+        "title": "1062. 最长重复子串",
+        "titleSlug": "longest-repeating-substring",
+        "url": "https://leetcode.cn/problems/longest-repeating-substring/"
+      },
+      {
+        "title": "3135. 通过添加或删除结尾字符来同化字符串",
+        "titleSlug": "equalize-strings-by-adding-or-removing-characters-at-ends",
+        "url": "https://leetcode.cn/problems/equalize-strings-by-adding-or-removing-characters-at-ends/"
+      }
+    ]
+  },
+  {
+    "name": "九、子序列自动机",
+    "count": 5,
+    "problems_title_slugs": "number-of-matching-subsequences freedom-trail longest-subsequence-repeated-k-times shortest-way-to-form-string minimum-window-subsequence",
+    "problems": [
+      {
+        "title": "792. 匹配子序列的单词数",
+        "titleSlug": "number-of-matching-subsequences",
+        "url": "https://leetcode.cn/problems/number-of-matching-subsequences/"
+      },
+      {
+        "title": "514. 自由之路",
+        "titleSlug": "freedom-trail",
+        "url": "https://leetcode.cn/problems/freedom-trail/"
+      },
+      {
+        "title": "2014. 重复 K 次的最长子序列",
+        "titleSlug": "longest-subsequence-repeated-k-times",
+        "url": "https://leetcode.cn/problems/longest-subsequence-repeated-k-times/"
+      },
+      {
+        "title": "1055. 形成字符串的最短路径",
+        "titleSlug": "shortest-way-to-form-string",
+        "url": "https://leetcode.cn/problems/shortest-way-to-form-string/"
+      },
+      {
+        "title": "727. 最小窗口子序列",
+        "titleSlug": "minimum-window-subsequence",
+        "url": "https://leetcode.cn/problems/minimum-window-subsequence/"
+      }
+    ]
+  },
+  {
+    "name": "十、其他",
+    "count": 3,
+    "problems_title_slugs": "longest-common-prefix-of-k-strings-after-removal count-the-repetitions phone-number-prefix",
+    "problems": [
+      {
+        "title": "3485. 删除元素后 K 个字符串的最长公共前缀",
+        "titleSlug": "longest-common-prefix-of-k-strings-after-removal",
+        "url": "https://leetcode.cn/problems/longest-common-prefix-of-k-strings-after-removal/"
+      },
+      {
+        "title": "466. 统计重复个数",
+        "titleSlug": "count-the-repetitions",
+        "url": "https://leetcode.cn/problems/count-the-repetitions/"
+      },
+      {
+        "title": "3491. 电话号码前缀",
+        "titleSlug": "phone-number-prefix",
+        "url": "https://leetcode.cn/problems/phone-number-prefix/"
+      }
+    ]
+  }
+]

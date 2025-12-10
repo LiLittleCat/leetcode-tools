@@ -1,0 +1,955 @@
+[
+  {
+    "name": "一、图的遍历 / §1.1 深度优先搜索（DFS）",
+    "count": 25,
+    "problems_title_slugs": "number-of-provinces find-if-path-exists-in-graph all-paths-from-source-to-target jump-game-iii keys-and-rooms count-unreachable-pairs-of-nodes-in-an-undirected-graph number-of-operations-to-make-network-connected minimum-score-of-a-path-between-two-cities remove-methods-from-project count-the-number-of-complete-components all-ancestors-of-a-node-in-a-directed-acyclic-graph maximize-amount-after-two-days-of-conversions minimize-malware-spread detonate-the-maximum-bombs accounts-merge course-schedule find-eventual-safe-states maximize-alternating-sum-using-swaps minimize-malware-spread-ii find-all-people-with-secret minimum-cost-walk-in-weighted-graph chuan-di-xin-xi graph-valid-tree number-of-connected-components-in-an-undirected-graph maximum-candies-you-can-get-from-boxes",
+    "problems": [
+      {
+        "title": "547. 省份数量",
+        "titleSlug": "number-of-provinces",
+        "url": "https://leetcode.cn/problems/number-of-provinces/"
+      },
+      {
+        "title": "1971. 寻找图中是否存在路径",
+        "titleSlug": "find-if-path-exists-in-graph",
+        "url": "https://leetcode.cn/problems/find-if-path-exists-in-graph/"
+      },
+      {
+        "title": "797. 所有可能的路径",
+        "titleSlug": "all-paths-from-source-to-target",
+        "url": "https://leetcode.cn/problems/all-paths-from-source-to-target/"
+      },
+      {
+        "title": "1306. 跳跃游戏 III",
+        "titleSlug": "jump-game-iii",
+        "url": "https://leetcode.cn/problems/jump-game-iii/"
+      },
+      {
+        "title": "841. 钥匙和房间",
+        "titleSlug": "keys-and-rooms",
+        "url": "https://leetcode.cn/problems/keys-and-rooms/"
+      },
+      {
+        "title": "2316. 统计无向图中无法互相到达点对数",
+        "titleSlug": "count-unreachable-pairs-of-nodes-in-an-undirected-graph",
+        "url": "https://leetcode.cn/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/"
+      },
+      {
+        "title": "1319. 连通网络的操作次数",
+        "titleSlug": "number-of-operations-to-make-network-connected",
+        "url": "https://leetcode.cn/problems/number-of-operations-to-make-network-connected/"
+      },
+      {
+        "title": "2492. 两个城市间路径的最小分数",
+        "titleSlug": "minimum-score-of-a-path-between-two-cities",
+        "url": "https://leetcode.cn/problems/minimum-score-of-a-path-between-two-cities/"
+      },
+      {
+        "title": "3310. 移除可疑的方法",
+        "titleSlug": "remove-methods-from-project",
+        "url": "https://leetcode.cn/problems/remove-methods-from-project/"
+      },
+      {
+        "title": "2685. 统计完全连通分量的数量",
+        "titleSlug": "count-the-number-of-complete-components",
+        "url": "https://leetcode.cn/problems/count-the-number-of-complete-components/"
+      },
+      {
+        "title": "2192. 有向无环图中一个节点的所有祖先",
+        "titleSlug": "all-ancestors-of-a-node-in-a-directed-acyclic-graph",
+        "url": "https://leetcode.cn/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/"
+      },
+      {
+        "title": "3387. 两天自由外汇交易后的最大货币数",
+        "titleSlug": "maximize-amount-after-two-days-of-conversions",
+        "url": "https://leetcode.cn/problems/maximize-amount-after-two-days-of-conversions/"
+      },
+      {
+        "title": "924. 尽量减少恶意软件的传播",
+        "titleSlug": "minimize-malware-spread",
+        "url": "https://leetcode.cn/problems/minimize-malware-spread/"
+      },
+      {
+        "title": "2101. 引爆最多的炸弹",
+        "titleSlug": "detonate-the-maximum-bombs",
+        "url": "https://leetcode.cn/problems/detonate-the-maximum-bombs/"
+      },
+      {
+        "title": "721. 账户合并",
+        "titleSlug": "accounts-merge",
+        "url": "https://leetcode.cn/problems/accounts-merge/"
+      },
+      {
+        "title": "207. 课程表",
+        "titleSlug": "course-schedule",
+        "url": "https://leetcode.cn/problems/course-schedule/"
+      },
+      {
+        "title": "802. 找到最终的安全状态",
+        "titleSlug": "find-eventual-safe-states",
+        "url": "https://leetcode.cn/problems/find-eventual-safe-states/"
+      },
+      {
+        "title": "3695. 交换元素后的最大交替和",
+        "titleSlug": "maximize-alternating-sum-using-swaps",
+        "url": "https://leetcode.cn/problems/maximize-alternating-sum-using-swaps/"
+      },
+      {
+        "title": "928. 尽量减少恶意软件的传播 II",
+        "titleSlug": "minimize-malware-spread-ii",
+        "url": "https://leetcode.cn/problems/minimize-malware-spread-ii/"
+      },
+      {
+        "title": "2092. 找出知晓秘密的所有专家",
+        "titleSlug": "find-all-people-with-secret",
+        "url": "https://leetcode.cn/problems/find-all-people-with-secret/"
+      },
+      {
+        "title": "3108. 带权图里旅途的最小代价",
+        "titleSlug": "minimum-cost-walk-in-weighted-graph",
+        "url": "https://leetcode.cn/problems/minimum-cost-walk-in-weighted-graph/"
+      },
+      {
+        "title": "LCP 07. 传递信息",
+        "titleSlug": "chuan-di-xin-xi",
+        "url": "https://leetcode.cn/problems/chuan-di-xin-xi/"
+      },
+      {
+        "title": "261. 以图判树",
+        "titleSlug": "graph-valid-tree",
+        "url": "https://leetcode.cn/problems/graph-valid-tree/"
+      },
+      {
+        "title": "323. 无向图中连通分量的数目",
+        "titleSlug": "number-of-connected-components-in-an-undirected-graph",
+        "url": "https://leetcode.cn/problems/number-of-connected-components-in-an-undirected-graph/"
+      },
+      {
+        "title": "1298. 你能从盒子里获得的最大糖果数",
+        "titleSlug": "maximum-candies-you-can-get-from-boxes",
+        "url": "https://leetcode.cn/problems/maximum-candies-you-can-get-from-boxes/"
+      }
+    ]
+  },
+  {
+    "name": "一、图的遍历 / §1.2 广度优先搜索（BFS）",
+    "count": 7,
+    "problems_title_slugs": "shortest-distance-after-road-addition-queries-i get-watched-videos-by-your-friends count-the-number-of-houses-at-a-certain-distance-i shortest-path-with-alternating-colors the-time-when-the-network-becomes-idle shortest-cycle-in-a-graph bus-routes",
+    "problems": [
+      {
+        "title": "3243. 新增道路查询后的最短距离 I",
+        "titleSlug": "shortest-distance-after-road-addition-queries-i",
+        "url": "https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-i/"
+      },
+      {
+        "title": "1311. 获取你好友已观看的视频",
+        "titleSlug": "get-watched-videos-by-your-friends",
+        "url": "https://leetcode.cn/problems/get-watched-videos-by-your-friends/"
+      },
+      {
+        "title": "3015. 按距离统计房屋对数目 I",
+        "titleSlug": "count-the-number-of-houses-at-a-certain-distance-i",
+        "url": "https://leetcode.cn/problems/count-the-number-of-houses-at-a-certain-distance-i/"
+      },
+      {
+        "title": "1129. 颜色交替的最短路径",
+        "titleSlug": "shortest-path-with-alternating-colors",
+        "url": "https://leetcode.cn/problems/shortest-path-with-alternating-colors/"
+      },
+      {
+        "title": "2039. 网络空闲的时刻",
+        "titleSlug": "the-time-when-the-network-becomes-idle",
+        "url": "https://leetcode.cn/problems/the-time-when-the-network-becomes-idle/"
+      },
+      {
+        "title": "2608. 图中的最短环",
+        "titleSlug": "shortest-cycle-in-a-graph",
+        "url": "https://leetcode.cn/problems/shortest-cycle-in-a-graph/"
+      },
+      {
+        "title": "815. 公交路线",
+        "titleSlug": "bus-routes",
+        "url": "https://leetcode.cn/problems/bus-routes/"
+      }
+    ]
+  },
+  {
+    "name": "一、图的遍历 / §1.3 图论建模 + BFS 最短路",
+    "count": 19,
+    "problems_title_slugs": "minimum-genetic-mutation minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix sliding-puzzle open-the-lock split-and-merge-array-transformation remove-invalid-parentheses freedom-trail shortest-path-visiting-all-nodes k-similar-strings word-ladder zuma-game minimum-knight-moves maximum-hamming-distances minimum-number-of-operations-to-make-x-and-y-equal jump-game-iv minimum-operations-to-convert-number minimum-jumps-to-reach-home minimum-jumps-to-reach-end-via-prime-teleportation zui-xiao-tiao-yue-ci-shu",
+    "problems": [
+      {
+        "title": "433. 最小基因变化",
+        "titleSlug": "minimum-genetic-mutation",
+        "url": "https://leetcode.cn/problems/minimum-genetic-mutation/"
+      },
+      {
+        "title": "1284. 转化为全零矩阵的最少反转次数",
+        "titleSlug": "minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix",
+        "url": "https://leetcode.cn/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/"
+      },
+      {
+        "title": "773. 滑动谜题",
+        "titleSlug": "sliding-puzzle",
+        "url": "https://leetcode.cn/problems/sliding-puzzle/"
+      },
+      {
+        "title": "752. 打开转盘锁",
+        "titleSlug": "open-the-lock",
+        "url": "https://leetcode.cn/problems/open-the-lock/"
+      },
+      {
+        "title": "3690. 拆分合并数组",
+        "titleSlug": "split-and-merge-array-transformation",
+        "url": "https://leetcode.cn/problems/split-and-merge-array-transformation/"
+      },
+      {
+        "title": "301. 删除无效的括号",
+        "titleSlug": "remove-invalid-parentheses",
+        "url": "https://leetcode.cn/problems/remove-invalid-parentheses/"
+      },
+      {
+        "title": "514. 自由之路",
+        "titleSlug": "freedom-trail",
+        "url": "https://leetcode.cn/problems/freedom-trail/"
+      },
+      {
+        "title": "847. 访问所有节点的最短路径",
+        "titleSlug": "shortest-path-visiting-all-nodes",
+        "url": "https://leetcode.cn/problems/shortest-path-visiting-all-nodes/"
+      },
+      {
+        "title": "854. 相似度为 K 的字符串",
+        "titleSlug": "k-similar-strings",
+        "url": "https://leetcode.cn/problems/k-similar-strings/"
+      },
+      {
+        "title": "127. 单词接龙",
+        "titleSlug": "word-ladder",
+        "url": "https://leetcode.cn/problems/word-ladder/"
+      },
+      {
+        "title": "488. 祖玛游戏",
+        "titleSlug": "zuma-game",
+        "url": "https://leetcode.cn/problems/zuma-game/"
+      },
+      {
+        "title": "1197. 进击的骑士",
+        "titleSlug": "minimum-knight-moves",
+        "url": "https://leetcode.cn/problems/minimum-knight-moves/"
+      },
+      {
+        "title": "3141. 最大汉明距离",
+        "titleSlug": "maximum-hamming-distances",
+        "url": "https://leetcode.cn/problems/maximum-hamming-distances/"
+      },
+      {
+        "title": "2998. 使 X 和 Y 相等的最少操作次数",
+        "titleSlug": "minimum-number-of-operations-to-make-x-and-y-equal",
+        "url": "https://leetcode.cn/problems/minimum-number-of-operations-to-make-x-and-y-equal/"
+      },
+      {
+        "title": "1345. 跳跃游戏 IV",
+        "titleSlug": "jump-game-iv",
+        "url": "https://leetcode.cn/problems/jump-game-iv/"
+      },
+      {
+        "title": "2059. 转化数字的最小运算数",
+        "titleSlug": "minimum-operations-to-convert-number",
+        "url": "https://leetcode.cn/problems/minimum-operations-to-convert-number/"
+      },
+      {
+        "title": "1654. 到家的最少跳跃次数",
+        "titleSlug": "minimum-jumps-to-reach-home",
+        "url": "https://leetcode.cn/problems/minimum-jumps-to-reach-home/"
+      },
+      {
+        "title": "3629. 通过质数传送到达终点的最少跳跃次数",
+        "titleSlug": "minimum-jumps-to-reach-end-via-prime-teleportation",
+        "url": "https://leetcode.cn/problems/minimum-jumps-to-reach-end-via-prime-teleportation/"
+      },
+      {
+        "title": "LCP 09. 最小跳跃次数",
+        "titleSlug": "zui-xiao-tiao-yue-ci-shu",
+        "url": "https://leetcode.cn/problems/zui-xiao-tiao-yue-ci-shu/"
+      }
+    ]
+  },
+  {
+    "name": "二、拓扑排序 / §2.1 拓扑排序",
+    "count": 14,
+    "problems_title_slugs": "course-schedule-ii find-all-possible-recipes-from-given-supplies build-a-matrix-with-conditions find-eventual-safe-states strange-printer-ii sort-items-by-groups-respecting-dependencies collect-coins-in-a-tree Jf1JuT sequence-reconstruction apply-substitutions alien-dictionary all-paths-from-source-lead-to-destination minimum-height-trees validate-binary-tree-nodes",
+    "problems": [
+      {
+        "title": "210. 课程表 II",
+        "titleSlug": "course-schedule-ii",
+        "url": "https://leetcode.cn/problems/course-schedule-ii/"
+      },
+      {
+        "title": "2115. 从给定原材料中找到所有可以做出的菜",
+        "titleSlug": "find-all-possible-recipes-from-given-supplies",
+        "url": "https://leetcode.cn/problems/find-all-possible-recipes-from-given-supplies/"
+      },
+      {
+        "title": "2392. 给定条件下构造矩阵",
+        "titleSlug": "build-a-matrix-with-conditions",
+        "url": "https://leetcode.cn/problems/build-a-matrix-with-conditions/"
+      },
+      {
+        "title": "802. 找到最终的安全状态",
+        "titleSlug": "find-eventual-safe-states",
+        "url": "https://leetcode.cn/problems/find-eventual-safe-states/"
+      },
+      {
+        "title": "1591. 奇怪的打印机 II",
+        "titleSlug": "strange-printer-ii",
+        "url": "https://leetcode.cn/problems/strange-printer-ii/"
+      },
+      {
+        "title": "1203. 项目管理",
+        "titleSlug": "sort-items-by-groups-respecting-dependencies",
+        "url": "https://leetcode.cn/problems/sort-items-by-groups-respecting-dependencies/"
+      },
+      {
+        "title": "2603. 收集树中金币",
+        "titleSlug": "collect-coins-in-a-tree",
+        "url": "https://leetcode.cn/problems/collect-coins-in-a-tree/"
+      },
+      {
+        "title": "LCR 114. 火星词典",
+        "titleSlug": "Jf1JuT",
+        "url": "https://leetcode.cn/problems/Jf1JuT/"
+      },
+      {
+        "title": "444. 序列重建",
+        "titleSlug": "sequence-reconstruction",
+        "url": "https://leetcode.cn/problems/sequence-reconstruction/"
+      },
+      {
+        "title": "3481. 应用替换",
+        "titleSlug": "apply-substitutions",
+        "url": "https://leetcode.cn/problems/apply-substitutions/"
+      },
+      {
+        "title": "269. 火星词典",
+        "titleSlug": "alien-dictionary",
+        "url": "https://leetcode.cn/problems/alien-dictionary/"
+      },
+      {
+        "title": "1059. 从始点到终点的所有路径",
+        "titleSlug": "all-paths-from-source-lead-to-destination",
+        "url": "https://leetcode.cn/problems/all-paths-from-source-lead-to-destination/"
+      },
+      {
+        "title": "310. 最小高度树",
+        "titleSlug": "minimum-height-trees",
+        "url": "https://leetcode.cn/problems/minimum-height-trees/"
+      },
+      {
+        "title": "1361. 验证二叉树",
+        "titleSlug": "validate-binary-tree-nodes",
+        "url": "https://leetcode.cn/problems/validate-binary-tree-nodes/"
+      }
+    ]
+  },
+  {
+    "name": "二、拓扑排序 / §2.2 在拓扑序上 DP",
+    "count": 5,
+    "problems_title_slugs": "loud-and-rich parallel-courses-iii network-recovery-pathways largest-color-value-in-a-directed-graph parallel-courses",
+    "problems": [
+      {
+        "title": "851. 喧闹和富有",
+        "titleSlug": "loud-and-rich",
+        "url": "https://leetcode.cn/problems/loud-and-rich/"
+      },
+      {
+        "title": "2050. 并行课程 III",
+        "titleSlug": "parallel-courses-iii",
+        "url": "https://leetcode.cn/problems/parallel-courses-iii/"
+      },
+      {
+        "title": "3620. 恢复网络路径",
+        "titleSlug": "network-recovery-pathways",
+        "url": "https://leetcode.cn/problems/network-recovery-pathways/"
+      },
+      {
+        "title": "1857. 有向图中最大颜色值",
+        "titleSlug": "largest-color-value-in-a-directed-graph",
+        "url": "https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/"
+      },
+      {
+        "title": "1136. 并行课程",
+        "titleSlug": "parallel-courses",
+        "url": "https://leetcode.cn/problems/parallel-courses/"
+      }
+    ]
+  },
+  {
+    "name": "二、拓扑排序 / §2.3 基环树",
+    "count": 10,
+    "problems_title_slugs": "find-closest-node-to-given-two-nodes longest-cycle-in-a-graph redundant-connection redundant-connection-ii count-visited-nodes-in-a-directed-graph maximum-employees-to-be-invited-to-a-meeting maximize-value-of-function-in-a-ball-passing-game Za25hA distance-to-a-cycle-in-undirected-graph find-the-duplicate-number",
+    "problems": [
+      {
+        "title": "2359. 找到离给定两个节点最近的节点",
+        "titleSlug": "find-closest-node-to-given-two-nodes",
+        "url": "https://leetcode.cn/problems/find-closest-node-to-given-two-nodes/"
+      },
+      {
+        "title": "2360. 图中的最长环",
+        "titleSlug": "longest-cycle-in-a-graph",
+        "url": "https://leetcode.cn/problems/longest-cycle-in-a-graph/"
+      },
+      {
+        "title": "684. 冗余连接",
+        "titleSlug": "redundant-connection",
+        "url": "https://leetcode.cn/problems/redundant-connection/"
+      },
+      {
+        "title": "685. 冗余连接 II",
+        "titleSlug": "redundant-connection-ii",
+        "url": "https://leetcode.cn/problems/redundant-connection-ii/"
+      },
+      {
+        "title": "2876. 有向图访问计数",
+        "titleSlug": "count-visited-nodes-in-a-directed-graph",
+        "url": "https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph/"
+      },
+      {
+        "title": "2127. 参加会议的最多员工数",
+        "titleSlug": "maximum-employees-to-be-invited-to-a-meeting",
+        "url": "https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/"
+      },
+      {
+        "title": "2836. 在传球游戏中最大化函数值",
+        "titleSlug": "maximize-value-of-function-in-a-ball-passing-game",
+        "url": "https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-passing-game"
+      },
+      {
+        "title": "LCP 21. 追逐游戏",
+        "titleSlug": "Za25hA",
+        "url": "https://leetcode.cn/problems/Za25hA/"
+      },
+      {
+        "title": "2204. 无向图中到环的距离",
+        "titleSlug": "distance-to-a-cycle-in-undirected-graph",
+        "url": "https://leetcode.cn/problems/distance-to-a-cycle-in-undirected-graph/"
+      },
+      {
+        "title": "287. 寻找重复数",
+        "titleSlug": "find-the-duplicate-number",
+        "url": "https://leetcode.cn/problems/find-the-duplicate-number/"
+      }
+    ]
+  },
+  {
+    "name": "三、最短路 / §3.1 单源最短路：Dijkstra 算法",
+    "count": 33,
+    "problems_title_slugs": "network-delay-time find-minimum-time-to-reach-last-room-i minimum-time-to-visit-disappearing-nodes design-graph-with-shortest-path-calculator minimum-time-to-reach-destination-in-directed-graph path-with-maximum-probability minimum-cost-path-with-edge-reversals find-minimum-time-to-reach-last-room-ii path-with-minimum-effort number-of-restricted-paths-from-first-to-last-node find-edges-in-shortest-paths number-of-ways-to-arrive-at-destination swim-in-rising-water minimum-cost-of-a-path-with-special-roads digit-operations-to-make-two-integers-equal second-minimum-time-to-reach-destination minimize-the-maximum-edge-weight-of-graph reachable-nodes-in-subdivided-graph minimum-weighted-subgraph-with-the-required-paths minimum-time-to-visit-a-cell-in-a-grid race-car minimum-cost-to-reach-destination-in-time cheapest-flights-within-k-stops modify-graph-edge-weights minimum-path-cost-in-a-hidden-grid minimum-cost-to-reach-city-with-discounts minimum-cost-to-buy-apples find-the-closest-marked-node DFPeFJ partition-array-to-minimize-xor minimum-time-to-transport-all-individuals find-shortest-path-with-k-hops minimum-time-to-complete-all-tasks",
+    "problems": [
+      {
+        "title": "743. 网络延迟时间",
+        "titleSlug": "network-delay-time",
+        "url": "https://leetcode.cn/problems/network-delay-time/"
+      },
+      {
+        "title": "3341. 到达最后一个房间的最少时间 I",
+        "titleSlug": "find-minimum-time-to-reach-last-room-i",
+        "url": "https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-i/"
+      },
+      {
+        "title": "3112. 访问消失节点的最少时间",
+        "titleSlug": "minimum-time-to-visit-disappearing-nodes",
+        "url": "https://leetcode.cn/problems/minimum-time-to-visit-disappearing-nodes/"
+      },
+      {
+        "title": "2642. 设计可以求最短路径的图类",
+        "titleSlug": "design-graph-with-shortest-path-calculator",
+        "url": "https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/"
+      },
+      {
+        "title": "3604. 有向图中到达终点的最少时间",
+        "titleSlug": "minimum-time-to-reach-destination-in-directed-graph",
+        "url": "https://leetcode.cn/problems/minimum-time-to-reach-destination-in-directed-graph/"
+      },
+      {
+        "title": "1514. 概率最大的路径",
+        "titleSlug": "path-with-maximum-probability",
+        "url": "https://leetcode.cn/problems/path-with-maximum-probability/"
+      },
+      {
+        "title": "3650. 边反转的最小路径总成本",
+        "titleSlug": "minimum-cost-path-with-edge-reversals",
+        "url": "https://leetcode.cn/problems/minimum-cost-path-with-edge-reversals/"
+      },
+      {
+        "title": "3342. 到达最后一个房间的最少时间 II",
+        "titleSlug": "find-minimum-time-to-reach-last-room-ii",
+        "url": "https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-ii/"
+      },
+      {
+        "title": "1631. 最小体力消耗路径",
+        "titleSlug": "path-with-minimum-effort",
+        "url": "https://leetcode.cn/problems/path-with-minimum-effort/"
+      },
+      {
+        "title": "1786. 从第一个节点出发到最后一个节点的受限路径数",
+        "titleSlug": "number-of-restricted-paths-from-first-to-last-node",
+        "url": "https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/"
+      },
+      {
+        "title": "3123. 最短路径中的边",
+        "titleSlug": "find-edges-in-shortest-paths",
+        "url": "https://leetcode.cn/problems/find-edges-in-shortest-paths/"
+      },
+      {
+        "title": "1976. 到达目的地的方案数",
+        "titleSlug": "number-of-ways-to-arrive-at-destination",
+        "url": "https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/"
+      },
+      {
+        "title": "778. 水位上升的泳池中游泳",
+        "titleSlug": "swim-in-rising-water",
+        "url": "https://leetcode.cn/problems/swim-in-rising-water/"
+      },
+      {
+        "title": "2662. 前往目标的最小代价",
+        "titleSlug": "minimum-cost-of-a-path-with-special-roads",
+        "url": "https://leetcode.cn/problems/minimum-cost-of-a-path-with-special-roads/"
+      },
+      {
+        "title": "3377. 使两个整数相等的数位操作",
+        "titleSlug": "digit-operations-to-make-two-integers-equal",
+        "url": "https://leetcode.cn/problems/digit-operations-to-make-two-integers-equal/"
+      },
+      {
+        "title": "2045. 到达目的地的第二短时间",
+        "titleSlug": "second-minimum-time-to-reach-destination",
+        "url": "https://leetcode.cn/problems/second-minimum-time-to-reach-destination/"
+      },
+      {
+        "title": "3419. 图的最大边权的最小值",
+        "titleSlug": "minimize-the-maximum-edge-weight-of-graph",
+        "url": "https://leetcode.cn/problems/minimize-the-maximum-edge-weight-of-graph/"
+      },
+      {
+        "title": "882. 细分图中的可到达节点",
+        "titleSlug": "reachable-nodes-in-subdivided-graph",
+        "url": "https://leetcode.cn/problems/reachable-nodes-in-subdivided-graph/"
+      },
+      {
+        "title": "2203. 得到要求路径的最小带权子图",
+        "titleSlug": "minimum-weighted-subgraph-with-the-required-paths",
+        "url": "https://leetcode.cn/problems/minimum-weighted-subgraph-with-the-required-paths/"
+      },
+      {
+        "title": "2577. 在网格图中访问一个格子的最少时间",
+        "titleSlug": "minimum-time-to-visit-a-cell-in-a-grid",
+        "url": "https://leetcode.cn/problems/minimum-time-to-visit-a-cell-in-a-grid/"
+      },
+      {
+        "title": "818. 赛车",
+        "titleSlug": "race-car",
+        "url": "https://leetcode.cn/problems/race-car/"
+      },
+      {
+        "title": "1928. 规定时间内到达终点的最小花费",
+        "titleSlug": "minimum-cost-to-reach-destination-in-time",
+        "url": "https://leetcode.cn/problems/minimum-cost-to-reach-destination-in-time/"
+      },
+      {
+        "title": "787. K 站中转内最便宜的航班",
+        "titleSlug": "cheapest-flights-within-k-stops",
+        "url": "https://leetcode.cn/problems/cheapest-flights-within-k-stops/"
+      },
+      {
+        "title": "2699. 修改图中的边权",
+        "titleSlug": "modify-graph-edge-weights",
+        "url": "https://leetcode.cn/problems/modify-graph-edge-weights/"
+      },
+      {
+        "title": "1810. 隐藏网格下的最小消耗路径",
+        "titleSlug": "minimum-path-cost-in-a-hidden-grid",
+        "url": "https://leetcode.cn/problems/minimum-path-cost-in-a-hidden-grid/"
+      },
+      {
+        "title": "2093. 前往目标城市的最小费用",
+        "titleSlug": "minimum-cost-to-reach-city-with-discounts",
+        "url": "https://leetcode.cn/problems/minimum-cost-to-reach-city-with-discounts/"
+      },
+      {
+        "title": "2473. 购买苹果的最低成本",
+        "titleSlug": "minimum-cost-to-buy-apples",
+        "url": "https://leetcode.cn/problems/minimum-cost-to-buy-apples/"
+      },
+      {
+        "title": "2737. 找到最近的标记节点",
+        "titleSlug": "find-the-closest-marked-node",
+        "url": "https://leetcode.cn/problems/find-the-closest-marked-node/"
+      },
+      {
+        "title": "LCP 35. 电动车游城市",
+        "titleSlug": "DFPeFJ",
+        "url": "https://leetcode.cn/problems/DFPeFJ/"
+      },
+      {
+        "title": "3599. 划分数组得到最小 XOR",
+        "titleSlug": "partition-array-to-minimize-xor",
+        "url": "https://leetcode.cn/problems/partition-array-to-minimize-xor/"
+      },
+      {
+        "title": "3594. 所有人渡河所需的最短时间",
+        "titleSlug": "minimum-time-to-transport-all-individuals",
+        "url": "https://leetcode.cn/problems/minimum-time-to-transport-all-individuals/"
+      },
+      {
+        "title": "2714. 找到 K 次跨越的最短路径",
+        "titleSlug": "find-shortest-path-with-k-hops",
+        "url": "https://leetcode.cn/problems/find-shortest-path-with-k-hops/"
+      },
+      {
+        "title": "2589. 完成所有任务的最少时间",
+        "titleSlug": "minimum-time-to-complete-all-tasks",
+        "url": "https://leetcode.cn/problems/minimum-time-to-complete-all-tasks/"
+      }
+    ]
+  },
+  {
+    "name": "三、最短路 / §3.2 全源最短路：Floyd 算法",
+    "count": 7,
+    "problems_title_slugs": "design-graph-with-shortest-path-calculator find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance minimum-cost-to-convert-string-i number-of-possible-sets-of-closing-branches minimum-cost-to-convert-string-ii course-schedule-iv detonate-the-maximum-bombs",
+    "problems": [
+      {
+        "title": "2642. 设计可以求最短路径的图类",
+        "titleSlug": "design-graph-with-shortest-path-calculator",
+        "url": "https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/"
+      },
+      {
+        "title": "1334. 阈值距离内邻居最少的城市",
+        "titleSlug": "find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+        "url": "https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/"
+      },
+      {
+        "title": "2976. 转换字符串的最小成本 I",
+        "titleSlug": "minimum-cost-to-convert-string-i",
+        "url": "https://leetcode.cn/problems/minimum-cost-to-convert-string-i/"
+      },
+      {
+        "title": "2959. 关闭分部的可行集合数目",
+        "titleSlug": "number-of-possible-sets-of-closing-branches",
+        "url": "https://leetcode.cn/problems/number-of-possible-sets-of-closing-branches/"
+      },
+      {
+        "title": "2977. 转换字符串的最小成本 II",
+        "titleSlug": "minimum-cost-to-convert-string-ii",
+        "url": "https://leetcode.cn/problems/minimum-cost-to-convert-string-ii/"
+      },
+      {
+        "title": "1462. 课程表 IV",
+        "titleSlug": "course-schedule-iv",
+        "url": "https://leetcode.cn/problems/course-schedule-iv/"
+      },
+      {
+        "title": "2101. 引爆最多的炸弹",
+        "titleSlug": "detonate-the-maximum-bombs",
+        "url": "https://leetcode.cn/problems/detonate-the-maximum-bombs/"
+      }
+    ]
+  },
+  {
+    "name": "四、最小生成树",
+    "count": 6,
+    "problems_title_slugs": "min-cost-to-connect-all-points maximize-spanning-tree-stability-with-upgrades find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree connecting-cities-with-minimum-cost optimize-water-distribution-in-a-village minimum-cost-for-cutting-cake-ii",
+    "problems": [
+      {
+        "title": "1584. 连接所有点的最小费用",
+        "titleSlug": "min-cost-to-connect-all-points",
+        "url": "https://leetcode.cn/problems/min-cost-to-connect-all-points/"
+      },
+      {
+        "title": "3600. 升级后最大生成树稳定性",
+        "titleSlug": "maximize-spanning-tree-stability-with-upgrades",
+        "url": "https://leetcode.cn/problems/maximize-spanning-tree-stability-with-upgrades/"
+      },
+      {
+        "title": "1489. 找到最小生成树里的关键边和伪关键边",
+        "titleSlug": "find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree",
+        "url": "https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/"
+      },
+      {
+        "title": "1135. 最低成本连通所有城市",
+        "titleSlug": "connecting-cities-with-minimum-cost",
+        "url": "https://leetcode.cn/problems/connecting-cities-with-minimum-cost/"
+      },
+      {
+        "title": "1168. 水资源分配优化",
+        "titleSlug": "optimize-water-distribution-in-a-village",
+        "url": "https://leetcode.cn/problems/optimize-water-distribution-in-a-village/"
+      },
+      {
+        "title": "3219. 切蛋糕的最小总开销 II",
+        "titleSlug": "minimum-cost-for-cutting-cake-ii",
+        "url": "https://leetcode.cn/problems/minimum-cost-for-cutting-cake-ii/"
+      }
+    ]
+  },
+  {
+    "name": "五、欧拉路径/欧拉回路",
+    "count": 3,
+    "problems_title_slugs": "reconstruct-itinerary cracking-the-safe valid-arrangement-of-pairs",
+    "problems": [
+      {
+        "title": "332. 重新安排行程",
+        "titleSlug": "reconstruct-itinerary",
+        "url": "https://leetcode.cn/problems/reconstruct-itinerary/"
+      },
+      {
+        "title": "753. 破解保险箱",
+        "titleSlug": "cracking-the-safe",
+        "url": "https://leetcode.cn/problems/cracking-the-safe/"
+      },
+      {
+        "title": "2097. 合法重新排列数对",
+        "titleSlug": "valid-arrangement-of-pairs",
+        "url": "https://leetcode.cn/problems/valid-arrangement-of-pairs/"
+      }
+    ]
+  },
+  {
+    "name": "六、强连通分量/双连通分量",
+    "count": 4,
+    "problems_title_slugs": "critical-connections-in-a-network minimum-number-of-days-to-disconnect-island s5kipK minimum-runes-to-add-to-cast-spell",
+    "problems": [
+      {
+        "title": "1192. 查找集群内的关键连接",
+        "titleSlug": "critical-connections-in-a-network",
+        "url": "https://leetcode.cn/problems/critical-connections-in-a-network/"
+      },
+      {
+        "title": "1568. 使陆地分离的最少天数",
+        "titleSlug": "minimum-number-of-days-to-disconnect-island",
+        "url": "https://leetcode.cn/problems/minimum-number-of-days-to-disconnect-island/"
+      },
+      {
+        "title": "LCP 54. 夺回据点",
+        "titleSlug": "s5kipK",
+        "url": "https://leetcode.cn/problems/s5kipK/"
+      },
+      {
+        "title": "3383. 施法所需最低符文数量",
+        "titleSlug": "minimum-runes-to-add-to-cast-spell",
+        "url": "https://leetcode.cn/problems/minimum-runes-to-add-to-cast-spell/"
+      }
+    ]
+  },
+  {
+    "name": "七、二分图染色",
+    "count": 3,
+    "problems_title_slugs": "is-graph-bipartite possible-bipartition maximum-partition-factor",
+    "problems": [
+      {
+        "title": "785. 判断二分图",
+        "titleSlug": "is-graph-bipartite",
+        "url": "https://leetcode.cn/problems/is-graph-bipartite/"
+      },
+      {
+        "title": "886. 可能的二分法",
+        "titleSlug": "possible-bipartition",
+        "url": "https://leetcode.cn/problems/possible-bipartition/"
+      },
+      {
+        "title": "3710. 最大划分因子",
+        "titleSlug": "maximum-partition-factor",
+        "url": "https://leetcode.cn/problems/maximum-partition-factor/"
+      }
+    ]
+  },
+  {
+    "name": "八、网络流",
+    "count": 17,
+    "problems_title_slugs": "maximum-compatibility-score-sum minimum-time-to-break-locks-i minimum-moves-to-spread-stones-over-grid minimum-xor-sum-of-two-arrays maximum-students-taking-exam maximum-and-sum-of-array select-cells-in-grid-with-maximum-score minimum-cost-to-connect-two-groups-of-points maximum-value-sum-by-placing-three-rooks-ii broken-board-dominoes 7rLGCR maximum-number-of-accepted-invitations minimum-time-to-kill-all-monsters minimum-time-to-break-locks-ii campus-bikes-ii minimum-operations-to-remove-adjacent-ones-in-matrix minimum-total-distance-traveled",
+    "problems": [
+      {
+        "title": "1947. 最大兼容性评分和",
+        "titleSlug": "maximum-compatibility-score-sum",
+        "url": "https://leetcode.cn/problems/maximum-compatibility-score-sum/"
+      },
+      {
+        "title": "3376. 破解锁的最少时间 I",
+        "titleSlug": "minimum-time-to-break-locks-i",
+        "url": "https://leetcode.cn/problems/minimum-time-to-break-locks-i/"
+      },
+      {
+        "title": "2850. 将石头分散到网格图的最少移动次数",
+        "titleSlug": "minimum-moves-to-spread-stones-over-grid",
+        "url": "https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid/"
+      },
+      {
+        "title": "1879. 两个数组最小的异或值之和",
+        "titleSlug": "minimum-xor-sum-of-two-arrays",
+        "url": "https://leetcode.cn/problems/minimum-xor-sum-of-two-arrays/"
+      },
+      {
+        "title": "1349. 参加考试的最大学生数",
+        "titleSlug": "maximum-students-taking-exam",
+        "url": "https://leetcode.cn/problems/maximum-students-taking-exam/"
+      },
+      {
+        "title": "2172. 数组的最大与和",
+        "titleSlug": "maximum-and-sum-of-array",
+        "url": "https://leetcode.cn/problems/maximum-and-sum-of-array/"
+      },
+      {
+        "title": "3276. 选择矩阵中单元格的最大得分",
+        "titleSlug": "select-cells-in-grid-with-maximum-score",
+        "url": "https://leetcode.cn/problems/select-cells-in-grid-with-maximum-score/"
+      },
+      {
+        "title": "1595. 连通两组点的最小成本",
+        "titleSlug": "minimum-cost-to-connect-two-groups-of-points",
+        "url": "https://leetcode.cn/problems/minimum-cost-to-connect-two-groups-of-points/"
+      },
+      {
+        "title": "3257. 放三个车的价值之和最大 II",
+        "titleSlug": "maximum-value-sum-by-placing-three-rooks-ii",
+        "url": "https://leetcode.cn/problems/maximum-value-sum-by-placing-three-rooks-ii/"
+      },
+      {
+        "title": "LCP 04. 覆盖",
+        "titleSlug": "broken-board-dominoes",
+        "url": "https://leetcode.cn/problems/broken-board-dominoes/"
+      },
+      {
+        "title": "LCP 38. 守卫城堡",
+        "titleSlug": "7rLGCR",
+        "url": "https://leetcode.cn/problems/7rLGCR/"
+      },
+      {
+        "title": "1820. 最多邀请的个数",
+        "titleSlug": "maximum-number-of-accepted-invitations",
+        "url": "https://leetcode.cn/problems/maximum-number-of-accepted-invitations/"
+      },
+      {
+        "title": "2403. 杀死所有怪物的最短时间",
+        "titleSlug": "minimum-time-to-kill-all-monsters",
+        "url": "https://leetcode.cn/problems/minimum-time-to-kill-all-monsters/"
+      },
+      {
+        "title": "3385. 破解锁的最少时间 II",
+        "titleSlug": "minimum-time-to-break-locks-ii",
+        "url": "https://leetcode.cn/problems/minimum-time-to-break-locks-ii/"
+      },
+      {
+        "title": "1066. 校园自行车分配 II",
+        "titleSlug": "campus-bikes-ii",
+        "url": "https://leetcode.cn/problems/campus-bikes-ii/"
+      },
+      {
+        "title": "2123. 使矩阵中的 1 互不相邻的最小操作数",
+        "titleSlug": "minimum-operations-to-remove-adjacent-ones-in-matrix",
+        "url": "https://leetcode.cn/problems/minimum-operations-to-remove-adjacent-ones-in-matrix/"
+      },
+      {
+        "title": "2463. 最小移动总距离",
+        "titleSlug": "minimum-total-distance-traveled",
+        "url": "https://leetcode.cn/problems/minimum-total-distance-traveled/"
+      }
+    ]
+  },
+  {
+    "name": "九、其他",
+    "count": 18,
+    "problems_title_slugs": "flower-planting-with-no-adjacent minimum-degree-of-a-connected-trio-in-a-graph add-edges-to-make-degrees-of-all-nodes-even remove-max-number-of-edges-to-keep-graph-fully-traversable maximum-path-quality-of-a-graph checking-existence-of-edge-length-limited-paths maximum-score-of-a-node-sequence divide-nodes-into-the-maximum-number-of-groups count-pairs-of-nodes minimum-operations-to-equalize-binary-string minimum-reverse-operations frequencies-of-shortest-supersequences count-the-repetitions you-le-yuan-de-you-lan-ji-hua find-the-celebrity checking-existence-of-edge-length-limited-paths-ii paths-in-maze-that-lead-to-same-room determine-if-a-simple-graph-exists",
+    "problems": [
+      {
+        "title": "1042. 不邻接植花",
+        "titleSlug": "flower-planting-with-no-adjacent",
+        "url": "https://leetcode.cn/problems/flower-planting-with-no-adjacent/"
+      },
+      {
+        "title": "1761. 一个图中连通三元组的最小度数",
+        "titleSlug": "minimum-degree-of-a-connected-trio-in-a-graph",
+        "url": "https://leetcode.cn/problems/minimum-degree-of-a-connected-trio-in-a-graph/"
+      },
+      {
+        "title": "2508. 添加边使所有节点度数都为偶数",
+        "titleSlug": "add-edges-to-make-degrees-of-all-nodes-even",
+        "url": "https://leetcode.cn/problems/add-edges-to-make-degrees-of-all-nodes-even/"
+      },
+      {
+        "title": "1579. 保证图可完全遍历",
+        "titleSlug": "remove-max-number-of-edges-to-keep-graph-fully-traversable",
+        "url": "https://leetcode.cn/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/"
+      },
+      {
+        "title": "2065. 最大化一张图中的路径价值",
+        "titleSlug": "maximum-path-quality-of-a-graph",
+        "url": "https://leetcode.cn/problems/maximum-path-quality-of-a-graph/"
+      },
+      {
+        "title": "1697. 检查边长度限制的路径是否存在",
+        "titleSlug": "checking-existence-of-edge-length-limited-paths",
+        "url": "https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths/"
+      },
+      {
+        "title": "2242. 节点序列的最大得分",
+        "titleSlug": "maximum-score-of-a-node-sequence",
+        "url": "https://leetcode.cn/problems/maximum-score-of-a-node-sequence/"
+      },
+      {
+        "title": "2493. 将节点分成尽可能多的组",
+        "titleSlug": "divide-nodes-into-the-maximum-number-of-groups",
+        "url": "https://leetcode.cn/problems/divide-nodes-into-the-maximum-number-of-groups/"
+      },
+      {
+        "title": "1782. 统计点对的数目",
+        "titleSlug": "count-pairs-of-nodes",
+        "url": "https://leetcode.cn/problems/count-pairs-of-nodes/"
+      },
+      {
+        "title": "3666. 使二进制字符串全为 1 的最少操作次数",
+        "titleSlug": "minimum-operations-to-equalize-binary-string",
+        "url": "https://leetcode.cn/problems/minimum-operations-to-equalize-binary-string/"
+      },
+      {
+        "title": "2612. 最少翻转操作数",
+        "titleSlug": "minimum-reverse-operations",
+        "url": "https://leetcode.cn/problems/minimum-reverse-operations/"
+      },
+      {
+        "title": "3435. 最短公共超序列的字母出现频率",
+        "titleSlug": "frequencies-of-shortest-supersequences",
+        "url": "https://leetcode.cn/problems/frequencies-of-shortest-supersequences/"
+      },
+      {
+        "title": "466. 统计重复个数",
+        "titleSlug": "count-the-repetitions",
+        "url": "https://leetcode.cn/problems/count-the-repetitions/"
+      },
+      {
+        "title": "LCP 16. 游乐园的游览计划",
+        "titleSlug": "you-le-yuan-de-you-lan-ji-hua",
+        "url": "https://leetcode.cn/problems/you-le-yuan-de-you-lan-ji-hua/"
+      },
+      {
+        "title": "277. 搜寻名人",
+        "titleSlug": "find-the-celebrity",
+        "url": "https://leetcode.cn/problems/find-the-celebrity/"
+      },
+      {
+        "title": "1724. 检查边长度限制的路径是否存在 II",
+        "titleSlug": "checking-existence-of-edge-length-limited-paths-ii",
+        "url": "https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths-ii/"
+      },
+      {
+        "title": "2077. 殊途同归",
+        "titleSlug": "paths-in-maze-that-lead-to-same-room",
+        "url": "https://leetcode.cn/problems/paths-in-maze-that-lead-to-same-room/"
+      },
+      {
+        "title": "3656. 判断是否存在简单图",
+        "titleSlug": "determine-if-a-simple-graph-exists",
+        "url": "https://leetcode.cn/problems/determine-if-a-simple-graph-exists/"
+      }
+    ]
+  }
+]

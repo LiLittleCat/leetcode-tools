@@ -1,0 +1,292 @@
+[
+  {
+    "name": "一、单调栈 / §1.1 基础",
+    "count": 6,
+    "problems_title_slugs": "daily-temperatures final-prices-with-a-special-discount-in-a-shop next-greater-element-i next-greater-element-ii online-stock-span car-fleet",
+    "problems": [
+      {
+        "title": "739. 每日温度",
+        "titleSlug": "daily-temperatures",
+        "url": "https://leetcode.cn/problems/daily-temperatures/"
+      },
+      {
+        "title": "1475. 商品折扣后的最终价格",
+        "titleSlug": "final-prices-with-a-special-discount-in-a-shop",
+        "url": "https://leetcode.cn/problems/final-prices-with-a-special-discount-in-a-shop/"
+      },
+      {
+        "title": "496. 下一个更大元素 I",
+        "titleSlug": "next-greater-element-i",
+        "url": "https://leetcode.cn/problems/next-greater-element-i/"
+      },
+      {
+        "title": "503. 下一个更大元素 II",
+        "titleSlug": "next-greater-element-ii",
+        "url": "https://leetcode.cn/problems/next-greater-element-ii/"
+      },
+      {
+        "title": "901. 股票价格跨度",
+        "titleSlug": "online-stock-span",
+        "url": "https://leetcode.cn/problems/online-stock-span/"
+      },
+      {
+        "title": "853. 车队",
+        "titleSlug": "car-fleet",
+        "url": "https://leetcode.cn/problems/car-fleet/"
+      }
+    ]
+  },
+  {
+    "name": "一、单调栈 / §1.2 进阶（选做）",
+    "count": 21,
+    "problems_title_slugs": "next-greater-node-in-linked-list max-chunks-to-make-sorted-ii maximum-binary-tree 132-pattern find-the-number-of-subarrays-where-boundary-elements-are-maximum beautiful-towers-ii number-of-visible-people-in-a-queue next-greater-element-iv minimum-cost-tree-from-leaf-values steps-to-make-array-non-decreasing car-fleet-ii maximum-sum-queries count-non-decreasing-subarrays-after-k-operations maximum-array-hopping-score-ii binary-searchable-numbers-in-an-unsorted-array maximal-range-that-each-element-is-maximum-in-it number-of-people-that-can-be-seen-in-a-grid smallest-subarray-to-sort-in-every-sliding-window maximum-width-ramp minimum-operations-to-convert-all-elements-to-zero longest-well-performing-interval",
+    "problems": [
+      {
+        "title": "1019. 链表中的下一个更大节点",
+        "titleSlug": "next-greater-node-in-linked-list",
+        "url": "https://leetcode.cn/problems/next-greater-node-in-linked-list/"
+      },
+      {
+        "title": "768. 最多能完成排序的块 II",
+        "titleSlug": "max-chunks-to-make-sorted-ii",
+        "url": "https://leetcode.cn/problems/max-chunks-to-make-sorted-ii/"
+      },
+      {
+        "title": "654. 最大二叉树",
+        "titleSlug": "maximum-binary-tree",
+        "url": "https://leetcode.cn/problems/maximum-binary-tree/"
+      },
+      {
+        "title": "456. 132 模式",
+        "titleSlug": "132-pattern",
+        "url": "https://leetcode.cn/problems/132-pattern/"
+      },
+      {
+        "title": "3113. 边界元素是最大值的子数组数目",
+        "titleSlug": "find-the-number-of-subarrays-where-boundary-elements-are-maximum",
+        "url": "https://leetcode.cn/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/"
+      },
+      {
+        "title": "2866. 美丽塔 II",
+        "titleSlug": "beautiful-towers-ii",
+        "url": "https://leetcode.cn/problems/beautiful-towers-ii/"
+      },
+      {
+        "title": "1944. 队列中可以看到的人数",
+        "titleSlug": "number-of-visible-people-in-a-queue",
+        "url": "https://leetcode.cn/problems/number-of-visible-people-in-a-queue/"
+      },
+      {
+        "title": "2454. 下一个更大元素 IV",
+        "titleSlug": "next-greater-element-iv",
+        "url": "https://leetcode.cn/problems/next-greater-element-iv/"
+      },
+      {
+        "title": "1130. 叶值的最小代价生成树",
+        "titleSlug": "minimum-cost-tree-from-leaf-values",
+        "url": "https://leetcode.cn/problems/minimum-cost-tree-from-leaf-values/"
+      },
+      {
+        "title": "2289. 使数组按非递减顺序排列",
+        "titleSlug": "steps-to-make-array-non-decreasing",
+        "url": "https://leetcode.cn/problems/steps-to-make-array-non-decreasing/"
+      },
+      {
+        "title": "1776. 车队 II",
+        "titleSlug": "car-fleet-ii",
+        "url": "https://leetcode.cn/problems/car-fleet-ii/"
+      },
+      {
+        "title": "2736. 最大和查询",
+        "titleSlug": "maximum-sum-queries",
+        "url": "https://leetcode.cn/problems/maximum-sum-queries/"
+      },
+      {
+        "title": "3420. 统计 K 次操作以内得到非递减子数组的数目",
+        "titleSlug": "count-non-decreasing-subarrays-after-k-operations",
+        "url": "https://leetcode.cn/problems/count-non-decreasing-subarrays-after-k-operations/"
+      },
+      {
+        "title": "3221. 最大数组跳跃得分 II",
+        "titleSlug": "maximum-array-hopping-score-ii",
+        "url": "https://leetcode.cn/problems/maximum-array-hopping-score-ii/"
+      },
+      {
+        "title": "1966. 未排序数组中的可被二分搜索的数",
+        "titleSlug": "binary-searchable-numbers-in-an-unsorted-array",
+        "url": "https://leetcode.cn/problems/binary-searchable-numbers-in-an-unsorted-array/"
+      },
+      {
+        "title": "2832. 每个元素为最大值的最大范围",
+        "titleSlug": "maximal-range-that-each-element-is-maximum-in-it",
+        "url": "https://leetcode.cn/problems/maximal-range-that-each-element-is-maximum-in-it/"
+      },
+      {
+        "title": "2282. 在一个网格中可以看到的人数",
+        "titleSlug": "number-of-people-that-can-be-seen-in-a-grid",
+        "url": "https://leetcode.cn/problems/number-of-people-that-can-be-seen-in-a-grid/"
+      },
+      {
+        "title": "3555. 排序每个滑动窗口中最小的子数组",
+        "titleSlug": "smallest-subarray-to-sort-in-every-sliding-window",
+        "url": "https://leetcode.cn/problems/smallest-subarray-to-sort-in-every-sliding-window/"
+      },
+      {
+        "title": "962. 最大宽度坡",
+        "titleSlug": "maximum-width-ramp",
+        "url": "https://leetcode.cn/problems/maximum-width-ramp/"
+      },
+      {
+        "title": "3542. 将所有元素变为 0 的最少操作次数",
+        "titleSlug": "minimum-operations-to-convert-all-elements-to-zero",
+        "url": "https://leetcode.cn/problems/minimum-operations-to-convert-all-elements-to-zero/"
+      },
+      {
+        "title": "1124. 表现良好的最长时间段",
+        "titleSlug": "longest-well-performing-interval",
+        "url": "https://leetcode.cn/problems/longest-well-performing-interval/"
+      }
+    ]
+  },
+  {
+    "name": "二、矩形",
+    "count": 8,
+    "problems_title_slugs": "largest-rectangle-in-histogram maximum-score-of-a-good-subarray maximal-rectangle maximal-square trapping-rain-water count-submatrices-with-all-ones count-square-submatrices-with-all-ones pour-water",
+    "problems": [
+      {
+        "title": "84. 柱状图中最大的矩形",
+        "titleSlug": "largest-rectangle-in-histogram",
+        "url": "https://leetcode.cn/problems/largest-rectangle-in-histogram/"
+      },
+      {
+        "title": "1793. 好子数组的最大分数",
+        "titleSlug": "maximum-score-of-a-good-subarray",
+        "url": "https://leetcode.cn/problems/maximum-score-of-a-good-subarray/"
+      },
+      {
+        "title": "85. 最大矩形",
+        "titleSlug": "maximal-rectangle",
+        "url": "https://leetcode.cn/problems/maximal-rectangle/"
+      },
+      {
+        "title": "221. 最大正方形",
+        "titleSlug": "maximal-square",
+        "url": "https://leetcode.cn/problems/maximal-square/"
+      },
+      {
+        "title": "42. 接雨水",
+        "titleSlug": "trapping-rain-water",
+        "url": "https://leetcode.cn/problems/trapping-rain-water/"
+      },
+      {
+        "title": "1504. 统计全 1 子矩形",
+        "titleSlug": "count-submatrices-with-all-ones",
+        "url": "https://leetcode.cn/problems/count-submatrices-with-all-ones/"
+      },
+      {
+        "title": "1277. 统计全为 1 的正方形子矩阵",
+        "titleSlug": "count-square-submatrices-with-all-ones",
+        "url": "https://leetcode.cn/problems/count-square-submatrices-with-all-ones/"
+      },
+      {
+        "title": "755. 倒水",
+        "titleSlug": "pour-water",
+        "url": "https://leetcode.cn/problems/pour-water/"
+      }
+    ]
+  },
+  {
+    "name": "三、贡献法",
+    "count": 9,
+    "problems_title_slugs": "sum-of-subarray-minimums sum-of-subarray-ranges maximum-subarray-min-product apply-operations-to-maximize-score sum-of-total-strength-of-wizards maximum-and-minimum-sums-of-at-most-size-k-subarrays find-sorted-submatrices-with-maximum-element-at-most-k subarray-with-elements-greater-than-varying-threshold count-subarrays-where-max-element-appears-at-least-k-times",
+    "problems": [
+      {
+        "title": "907. 子数组的最小值之和",
+        "titleSlug": "sum-of-subarray-minimums",
+        "url": "https://leetcode.cn/problems/sum-of-subarray-minimums/"
+      },
+      {
+        "title": "2104. 子数组范围和（最大值-最小值）",
+        "titleSlug": "sum-of-subarray-ranges",
+        "url": "https://leetcode.cn/problems/sum-of-subarray-ranges/"
+      },
+      {
+        "title": "1856. 子数组最小乘积的最大值",
+        "titleSlug": "maximum-subarray-min-product",
+        "url": "https://leetcode.cn/problems/maximum-subarray-min-product/"
+      },
+      {
+        "title": "2818. 操作使得分最大",
+        "titleSlug": "apply-operations-to-maximize-score",
+        "url": "https://leetcode.cn/problems/apply-operations-to-maximize-score/"
+      },
+      {
+        "title": "2281. 巫师的总力量和（最小值×和）",
+        "titleSlug": "sum-of-total-strength-of-wizards",
+        "url": "https://leetcode.cn/problems/sum-of-total-strength-of-wizards/"
+      },
+      {
+        "title": "3430. 最多 K 个元素的子数组的最值之和",
+        "titleSlug": "maximum-and-minimum-sums-of-at-most-size-k-subarrays",
+        "url": "https://leetcode.cn/problems/maximum-and-minimum-sums-of-at-most-size-k-subarrays/"
+      },
+      {
+        "title": "3359. 查找最大元素不超过 K 的有序子矩阵",
+        "titleSlug": "find-sorted-submatrices-with-maximum-element-at-most-k",
+        "url": "https://leetcode.cn/problems/find-sorted-submatrices-with-maximum-element-at-most-k/"
+      },
+      {
+        "title": "2334. 元素值大于变化阈值的子数组",
+        "titleSlug": "subarray-with-elements-greater-than-varying-threshold",
+        "url": "https://leetcode.cn/problems/subarray-with-elements-greater-than-varying-threshold/"
+      },
+      {
+        "title": "2962. 统计最大元素出现至少 K 次的子数组·我的题解",
+        "titleSlug": "count-subarrays-where-max-element-appears-at-least-k-times",
+        "url": "https://leetcode.cn/problems/count-subarrays-where-max-element-appears-at-least-k-times/solutions/2560940/hua-dong-chuang-kou-fu-ti-dan-pythonjava-xvwg/"
+      }
+    ]
+  },
+  {
+    "name": "四、最小字典序",
+    "count": 7,
+    "problems_title_slugs": "remove-k-digits find-the-most-competitive-subsequence remove-duplicate-letters ev2bru smallest-subsequence-of-distinct-characters create-maximum-number smallest-k-length-subsequence-with-occurrences-of-a-letter",
+    "problems": [
+      {
+        "title": "402. 移掉 K 位数字",
+        "titleSlug": "remove-k-digits",
+        "url": "https://leetcode.cn/problems/remove-k-digits/"
+      },
+      {
+        "title": "1673. 找出最具竞争力的子序列",
+        "titleSlug": "find-the-most-competitive-subsequence",
+        "url": "https://leetcode.cn/problems/find-the-most-competitive-subsequence/"
+      },
+      {
+        "title": "316. 去除重复字母",
+        "titleSlug": "remove-duplicate-letters",
+        "url": "https://leetcode.cn/problems/remove-duplicate-letters/"
+      },
+      {
+        "title": "316 扩展：重复个数不超过 limit",
+        "titleSlug": "ev2bru",
+        "url": "https://leetcode.cn/contest/tianchi2022/problems/ev2bru/"
+      },
+      {
+        "title": "1081. 不同字符的最小子序列",
+        "titleSlug": "smallest-subsequence-of-distinct-characters",
+        "url": "https://leetcode.cn/problems/smallest-subsequence-of-distinct-characters/"
+      },
+      {
+        "title": "321. 拼接最大数",
+        "titleSlug": "create-maximum-number",
+        "url": "https://leetcode.cn/problems/create-maximum-number/"
+      },
+      {
+        "title": "2030. 含特定字母的最小子序列",
+        "titleSlug": "smallest-k-length-subsequence-with-occurrences-of-a-letter",
+        "url": "https://leetcode.cn/problems/smallest-k-length-subsequence-with-occurrences-of-a-letter/"
+      }
+    ]
+  }
+]

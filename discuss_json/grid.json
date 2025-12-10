@@ -1,0 +1,380 @@
+[
+  {
+    "name": "一、网格图 DFS",
+    "count": 24,
+    "problems_title_slugs": "number-of-islands max-area-of-island count-islands-with-total-value-divisible-by-k pond-sizes-lcci YesdPw island-perimeter maximum-number-of-fish-in-a-grid flood-fill coloring-a-border number-of-enclaves maximum-number-of-moves-in-a-grid number-of-closed-islands surrounded-regions count-sub-islands check-if-there-is-a-valid-path-in-a-grid pacific-atlantic-water-flow minesweeper detect-cycles-in-2d-grid making-a-large-island EXvqDp number-of-islands-ii number-of-spaces-cleaning-robot-cleaned sum-of-remoteness-of-all-cells robot-room-cleaner",
+    "problems": [
+      {
+        "title": "200. 岛屿数量",
+        "titleSlug": "number-of-islands",
+        "url": "https://leetcode.cn/problems/number-of-islands/"
+      },
+      {
+        "title": "695. 岛屿的最大面积",
+        "titleSlug": "max-area-of-island",
+        "url": "https://leetcode.cn/problems/max-area-of-island/"
+      },
+      {
+        "title": "3619. 总价值可以被 K 整除的岛屿数目",
+        "titleSlug": "count-islands-with-total-value-divisible-by-k",
+        "url": "https://leetcode.cn/problems/count-islands-with-total-value-divisible-by-k/"
+      },
+      {
+        "title": "面试题 16.19. 水域大小",
+        "titleSlug": "pond-sizes-lcci",
+        "url": "https://leetcode.cn/problems/pond-sizes-lcci/"
+      },
+      {
+        "title": "LCS 03. 主题空间",
+        "titleSlug": "YesdPw",
+        "url": "https://leetcode.cn/problems/YesdPw/"
+      },
+      {
+        "title": "463. 岛屿的周长",
+        "titleSlug": "island-perimeter",
+        "url": "https://leetcode.cn/problems/island-perimeter/"
+      },
+      {
+        "title": "2658. 网格图中鱼的最大数目",
+        "titleSlug": "maximum-number-of-fish-in-a-grid",
+        "url": "https://leetcode.cn/problems/maximum-number-of-fish-in-a-grid/"
+      },
+      {
+        "title": "733. 图像渲染",
+        "titleSlug": "flood-fill",
+        "url": "https://leetcode.cn/problems/flood-fill/"
+      },
+      {
+        "title": "1034. 边界着色",
+        "titleSlug": "coloring-a-border",
+        "url": "https://leetcode.cn/problems/coloring-a-border/"
+      },
+      {
+        "title": "1020. 飞地的数量",
+        "titleSlug": "number-of-enclaves",
+        "url": "https://leetcode.cn/problems/number-of-enclaves/"
+      },
+      {
+        "title": "2684. 矩阵中移动的最大次数",
+        "titleSlug": "maximum-number-of-moves-in-a-grid",
+        "url": "https://leetcode.cn/problems/maximum-number-of-moves-in-a-grid/"
+      },
+      {
+        "title": "1254. 统计封闭岛屿的数目",
+        "titleSlug": "number-of-closed-islands",
+        "url": "https://leetcode.cn/problems/number-of-closed-islands/"
+      },
+      {
+        "title": "130. 被围绕的区域",
+        "titleSlug": "surrounded-regions",
+        "url": "https://leetcode.cn/problems/surrounded-regions/"
+      },
+      {
+        "title": "1905. 统计子岛屿",
+        "titleSlug": "count-sub-islands",
+        "url": "https://leetcode.cn/problems/count-sub-islands/"
+      },
+      {
+        "title": "1391. 检查网格中是否存在有效路径",
+        "titleSlug": "check-if-there-is-a-valid-path-in-a-grid",
+        "url": "https://leetcode.cn/problems/check-if-there-is-a-valid-path-in-a-grid/"
+      },
+      {
+        "title": "417. 太平洋大西洋水流问题",
+        "titleSlug": "pacific-atlantic-water-flow",
+        "url": "https://leetcode.cn/problems/pacific-atlantic-water-flow/"
+      },
+      {
+        "title": "529. 扫雷游戏",
+        "titleSlug": "minesweeper",
+        "url": "https://leetcode.cn/problems/minesweeper/"
+      },
+      {
+        "title": "1559. 二维网格图中探测环",
+        "titleSlug": "detect-cycles-in-2d-grid",
+        "url": "https://leetcode.cn/problems/detect-cycles-in-2d-grid/"
+      },
+      {
+        "title": "827. 最大人工岛",
+        "titleSlug": "making-a-large-island",
+        "url": "https://leetcode.cn/problems/making-a-large-island/"
+      },
+      {
+        "title": "LCP 63. 弹珠游戏",
+        "titleSlug": "EXvqDp",
+        "url": "https://leetcode.cn/problems/EXvqDp/"
+      },
+      {
+        "title": "305. 岛屿数量 II",
+        "titleSlug": "number-of-islands-ii",
+        "url": "https://leetcode.cn/problems/number-of-islands-ii/"
+      },
+      {
+        "title": "2061. 扫地机器人清扫过的空间个数",
+        "titleSlug": "number-of-spaces-cleaning-robot-cleaned",
+        "url": "https://leetcode.cn/problems/number-of-spaces-cleaning-robot-cleaned/"
+      },
+      {
+        "title": "2852. 所有单元格的远离程度之和",
+        "titleSlug": "sum-of-remoteness-of-all-cells",
+        "url": "https://leetcode.cn/problems/sum-of-remoteness-of-all-cells/"
+      },
+      {
+        "title": "489. 扫地机器人",
+        "titleSlug": "robot-room-cleaner",
+        "url": "https://leetcode.cn/problems/robot-room-cleaner/"
+      }
+    ]
+  },
+  {
+    "name": "二、网格图 BFS",
+    "count": 21,
+    "problems_title_slugs": "nearest-exit-from-entrance-in-maze shortest-path-in-binary-matrix as-far-from-land-as-possible 01-matrix rotting-oranges map-of-highest-peak shortest-bridge k-highest-ranked-items-within-a-price-range shortest-path-in-a-grid-with-obstacles-elimination snakes-and-ladders minimum-moves-to-reach-target-with-rotations cut-off-trees-for-golf-event find-the-safest-path-in-a-grid contain-virus shortest-path-to-get-food walls-and-gates the-maze the-maze-ii the-maze-iii shortest-distance-from-all-buildings minimum-time-takes-to-reach-destination-without-drowning",
+    "problems": [
+      {
+        "title": "1926. 迷宫中离入口最近的出口",
+        "titleSlug": "nearest-exit-from-entrance-in-maze",
+        "url": "https://leetcode.cn/problems/nearest-exit-from-entrance-in-maze/"
+      },
+      {
+        "title": "1091. 二进制矩阵中的最短路径",
+        "titleSlug": "shortest-path-in-binary-matrix",
+        "url": "https://leetcode.cn/problems/shortest-path-in-binary-matrix/"
+      },
+      {
+        "title": "1162. 地图分析",
+        "titleSlug": "as-far-from-land-as-possible",
+        "url": "https://leetcode.cn/problems/as-far-from-land-as-possible/"
+      },
+      {
+        "title": "542. 01 矩阵",
+        "titleSlug": "01-matrix",
+        "url": "https://leetcode.cn/problems/01-matrix/"
+      },
+      {
+        "title": "994. 腐烂的橘子",
+        "titleSlug": "rotting-oranges",
+        "url": "https://leetcode.cn/problems/rotting-oranges/"
+      },
+      {
+        "title": "1765. 地图中的最高点",
+        "titleSlug": "map-of-highest-peak",
+        "url": "https://leetcode.cn/problems/map-of-highest-peak/"
+      },
+      {
+        "title": "934. 最短的桥",
+        "titleSlug": "shortest-bridge",
+        "url": "https://leetcode.cn/problems/shortest-bridge/"
+      },
+      {
+        "title": "2146. 价格范围内最高排名的 K 样物品",
+        "titleSlug": "k-highest-ranked-items-within-a-price-range",
+        "url": "https://leetcode.cn/problems/k-highest-ranked-items-within-a-price-range/"
+      },
+      {
+        "title": "1293. 网格中的最短路径",
+        "titleSlug": "shortest-path-in-a-grid-with-obstacles-elimination",
+        "url": "https://leetcode.cn/problems/shortest-path-in-a-grid-with-obstacles-elimination/"
+      },
+      {
+        "title": "909. 蛇梯棋",
+        "titleSlug": "snakes-and-ladders",
+        "url": "https://leetcode.cn/problems/snakes-and-ladders/"
+      },
+      {
+        "title": "1210. 穿过迷宫的最少移动次数",
+        "titleSlug": "minimum-moves-to-reach-target-with-rotations",
+        "url": "https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/"
+      },
+      {
+        "title": "675. 为高尔夫比赛砍树",
+        "titleSlug": "cut-off-trees-for-golf-event",
+        "url": "https://leetcode.cn/problems/cut-off-trees-for-golf-event/"
+      },
+      {
+        "title": "2812. 找出最安全路径",
+        "titleSlug": "find-the-safest-path-in-a-grid",
+        "url": "https://leetcode.cn/problems/find-the-safest-path-in-a-grid/"
+      },
+      {
+        "title": "749. 隔离病毒",
+        "titleSlug": "contain-virus",
+        "url": "https://leetcode.cn/problems/contain-virus/"
+      },
+      {
+        "title": "1730. 获取食物的最短路径",
+        "titleSlug": "shortest-path-to-get-food",
+        "url": "https://leetcode.cn/problems/shortest-path-to-get-food/"
+      },
+      {
+        "title": "286. 墙与门",
+        "titleSlug": "walls-and-gates",
+        "url": "https://leetcode.cn/problems/walls-and-gates/"
+      },
+      {
+        "title": "490. 迷宫",
+        "titleSlug": "the-maze",
+        "url": "https://leetcode.cn/problems/the-maze/"
+      },
+      {
+        "title": "505. 迷宫 II",
+        "titleSlug": "the-maze-ii",
+        "url": "https://leetcode.cn/problems/the-maze-ii/"
+      },
+      {
+        "title": "499. 迷宫 III",
+        "titleSlug": "the-maze-iii",
+        "url": "https://leetcode.cn/problems/the-maze-iii/"
+      },
+      {
+        "title": "317. 离建筑物最近的距离",
+        "titleSlug": "shortest-distance-from-all-buildings",
+        "url": "https://leetcode.cn/problems/shortest-distance-from-all-buildings/"
+      },
+      {
+        "title": "2814. 避免淹死并到达目的地的最短时间",
+        "titleSlug": "minimum-time-takes-to-reach-destination-without-drowning",
+        "url": "https://leetcode.cn/problems/minimum-time-takes-to-reach-destination-without-drowning/"
+      }
+    ]
+  },
+  {
+    "name": "三、网格图 0-1 BFS",
+    "count": 6,
+    "problems_title_slugs": "find-a-safe-walk-through-a-grid minimum-obstacle-removal-to-reach-corner minimum-cost-to-make-at-least-one-valid-path-in-a-grid grid-teleportation-traversal minimum-sideway-jumps 6UEx57",
+    "problems": [
+      {
+        "title": "3286. 穿越网格图的安全路径",
+        "titleSlug": "find-a-safe-walk-through-a-grid",
+        "url": "https://leetcode.cn/problems/find-a-safe-walk-through-a-grid/"
+      },
+      {
+        "title": "2290. 到达角落需要移除障碍物的最小数目",
+        "titleSlug": "minimum-obstacle-removal-to-reach-corner",
+        "url": "https://leetcode.cn/problems/minimum-obstacle-removal-to-reach-corner/"
+      },
+      {
+        "title": "1368. 使网格图至少有一条有效路径的最小代价",
+        "titleSlug": "minimum-cost-to-make-at-least-one-valid-path-in-a-grid",
+        "url": "https://leetcode.cn/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/"
+      },
+      {
+        "title": "3552. 网格传送门旅游",
+        "titleSlug": "grid-teleportation-traversal",
+        "url": "https://leetcode.cn/problems/grid-teleportation-traversal/"
+      },
+      {
+        "title": "1824. 最少侧跳次数",
+        "titleSlug": "minimum-sideway-jumps",
+        "url": "https://leetcode.cn/problems/minimum-sideway-jumps/"
+      },
+      {
+        "title": "LCP 56. 信物传送",
+        "titleSlug": "6UEx57",
+        "url": "https://leetcode.cn/problems/6UEx57/"
+      }
+    ]
+  },
+  {
+    "name": "五、综合应用",
+    "count": 19,
+    "problems_title_slugs": "path-with-minimum-effort swim-in-rising-water longest-increasing-path-in-a-matrix minimum-moves-to-clean-the-classroom escape-a-large-maze shortest-path-to-get-all-keys minimum-moves-to-move-a-box-to-their-target-location escape-the-spreading-fire disconnect-path-in-a-binary-matrix-by-at-most-one-flip minimum-time-to-visit-a-cell-in-a-grid minimum-number-of-visited-cells-in-a-grid xun-bao Db3wC1 kplEvH rdmXM7 shortest-path-in-a-hidden-grid number-of-distinct-islands number-of-distinct-islands-ii path-with-maximum-minimum-value",
+    "problems": [
+      {
+        "title": "1631. 最小体力消耗路径",
+        "titleSlug": "path-with-minimum-effort",
+        "url": "https://leetcode.cn/problems/path-with-minimum-effort/"
+      },
+      {
+        "title": "778. 水位上升的泳池中游泳",
+        "titleSlug": "swim-in-rising-water",
+        "url": "https://leetcode.cn/problems/swim-in-rising-water/"
+      },
+      {
+        "title": "329. 矩阵中的最长递增路径",
+        "titleSlug": "longest-increasing-path-in-a-matrix",
+        "url": "https://leetcode.cn/problems/longest-increasing-path-in-a-matrix/"
+      },
+      {
+        "title": "3568. 清理教室的最少移动",
+        "titleSlug": "minimum-moves-to-clean-the-classroom",
+        "url": "https://leetcode.cn/problems/minimum-moves-to-clean-the-classroom/"
+      },
+      {
+        "title": "1036. 逃离大迷宫",
+        "titleSlug": "escape-a-large-maze",
+        "url": "https://leetcode.cn/problems/escape-a-large-maze/"
+      },
+      {
+        "title": "864. 获取所有钥匙的最短路径",
+        "titleSlug": "shortest-path-to-get-all-keys",
+        "url": "https://leetcode.cn/problems/shortest-path-to-get-all-keys/"
+      },
+      {
+        "title": "1263. 推箱子",
+        "titleSlug": "minimum-moves-to-move-a-box-to-their-target-location",
+        "url": "https://leetcode.cn/problems/minimum-moves-to-move-a-box-to-their-target-location/"
+      },
+      {
+        "title": "2258. 逃离火灾",
+        "titleSlug": "escape-the-spreading-fire",
+        "url": "https://leetcode.cn/problems/escape-the-spreading-fire/"
+      },
+      {
+        "title": "2556. 二进制矩阵中翻转最多一次使路径不连通",
+        "titleSlug": "disconnect-path-in-a-binary-matrix-by-at-most-one-flip",
+        "url": "https://leetcode.cn/problems/disconnect-path-in-a-binary-matrix-by-at-most-one-flip/"
+      },
+      {
+        "title": "2577. 在网格图中访问一个格子的最少时间",
+        "titleSlug": "minimum-time-to-visit-a-cell-in-a-grid",
+        "url": "https://leetcode.cn/problems/minimum-time-to-visit-a-cell-in-a-grid/"
+      },
+      {
+        "title": "2617. 网格图中最少访问的格子数",
+        "titleSlug": "minimum-number-of-visited-cells-in-a-grid",
+        "url": "https://leetcode.cn/problems/minimum-number-of-visited-cells-in-a-grid/"
+      },
+      {
+        "title": "LCP 13. 寻宝",
+        "titleSlug": "xun-bao",
+        "url": "https://leetcode.cn/problems/xun-bao/"
+      },
+      {
+        "title": "LCP 31. 变换的迷宫",
+        "titleSlug": "Db3wC1",
+        "url": "https://leetcode.cn/problems/Db3wC1/"
+      },
+      {
+        "title": "LCP 45. 自行车炫技赛场",
+        "titleSlug": "kplEvH",
+        "url": "https://leetcode.cn/problems/kplEvH/"
+      },
+      {
+        "title": "LCP 75. 传送卷轴",
+        "titleSlug": "rdmXM7",
+        "url": "https://leetcode.cn/problems/rdmXM7/"
+      },
+      {
+        "title": "1778. 未知网格中的最短路径",
+        "titleSlug": "shortest-path-in-a-hidden-grid",
+        "url": "https://leetcode.cn/problems/shortest-path-in-a-hidden-grid/"
+      },
+      {
+        "title": "694. 不同岛屿的数量",
+        "titleSlug": "number-of-distinct-islands",
+        "url": "https://leetcode.cn/problems/number-of-distinct-islands/"
+      },
+      {
+        "title": "711. 不同岛屿的数量 II",
+        "titleSlug": "number-of-distinct-islands-ii",
+        "url": "https://leetcode.cn/problems/number-of-distinct-islands-ii/"
+      },
+      {
+        "title": "1102. 得分最高的路径",
+        "titleSlug": "path-with-maximum-minimum-value",
+        "url": "https://leetcode.cn/problems/path-with-maximum-minimum-value/"
+      }
+    ]
+  }
+]

@@ -1,1 +1,3814 @@
-<html><head><meta charset="utf-8"/></head><body><h2>前言</h2><h2>一、入门 DP</h2><h3>§1.1 爬楼梯</h3><ul><li><a href="https://leetcode.cn/problems/climbing-stairs/">70. 爬楼梯</a></li><li><a href="https://leetcode.cn/problems/min-cost-climbing-stairs/">746. 使用最小花费爬楼梯</a>约 1500</li><li><a href="https://leetcode.cn/problems/climbing-stairs-ii/">3693. 爬楼梯 II</a>1560</li><li><a href="https://leetcode.cn/problems/combination-sum-iv/">377. 组合总和 Ⅳ</a>约 1600</li><li><a href="https://leetcode.cn/problems/count-ways-to-build-good-strings/">2466. 统计构造好字符串的方案数</a>1694</li><li><a href="https://leetcode.cn/problems/count-number-of-texts/">2266. 统计打字方案数</a>1857</li><li><a href="https://leetcode.cn/problems/number-of-good-binary-strings/">2533. 好二进制字符串的数量</a>（会员题）同 2466 题</li></ul><h3>§1.2 打家劫舍</h3><h4>答疑</h4><ul><li><a href="https://leetcode.cn/problems/house-robber/">198. 打家劫舍</a></li><li><a href="https://leetcode.cn/problems/house-robber-ii/">213. 打家劫舍 II</a>环形数组</li><li><a href="https://leetcode.cn/problems/count-number-of-ways-to-place-houses/">2320. 统计放置房子的方式数</a>1608</li><li><a href="https://leetcode.cn/problems/delete-and-earn/">740. 删除并获得点数</a></li><li><a href="https://leetcode.cn/problems/maximum-total-damage-with-spell-casting/">3186. 施咒的最大总伤害</a>1841</li></ul><ul><li><a href="https://leetcode.cn/problems/solving-questions-with-brainpower/">2140. 解决智力问题</a>1709</li></ul><h3>§1.3 最大子数组和（最大子段和）</h3><ol><li>用<a href="https://leetcode.cn/problems/range-sum-query-immutable/solution/qian-zhui-he-ji-qi-kuo-zhan-fu-ti-dan-py-vaar/">前缀和</a>，转化成<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">121. 买卖股票的最佳时机</a>。</li></ol><ul><li><a href="https://leetcode.cn/problems/maximum-subarray/">53. 最大子数组和</a>可以看看我题解中的</li><li><a href="https://leetcode.cn/problems/find-the-substring-with-maximum-cost/">2606. 找到最大开销的子字符串</a>1422</li><li><a href="https://leetcode.cn/problems/maximum-absolute-sum-of-any-subarray/">1749. 任意子数组和的绝对值的最大值</a>1542</li><li><a href="https://leetcode.cn/problems/k-concatenation-maximum-sum/">1191. K 次串联后最大子数组之和</a>1748</li><li><a href="https://leetcode.cn/problems/maximum-sum-circular-subarray/">918. 环形子数组的最大和</a>1777 环形数组</li><li><a href="https://leetcode.cn/problems/maximum-score-of-spliced-array/">2321. 拼接数组的最大分数</a>1791</li></ul><ul><li><a href="https://leetcode.cn/problems/maximum-product-subarray/">152. 乘积最大子数组</a></li><li><a href="https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/">1186. 删除一次得到子数组最大和</a>1799</li><li><a href="https://leetcode.cn/problems/maximum-subarray-sum-with-length-divisible-by-k/">3381. 长度可被 K 整除的子数组的最大元素和</a>1943</li></ul><h3>思考题</h3><h2>二、网格图 DP</h2><h3>§2.1 基础</h3><ul><li><a href="https://leetcode.cn/problems/minimum-path-sum/">64. 最小路径和</a></li><li><a href="https://leetcode.cn/problems/unique-paths/">62. 不同路径</a></li><li><a href="https://leetcode.cn/problems/unique-paths-ii/">63. 不同路径 II</a></li><li><a href="https://leetcode.cn/problems/triangle/">120. 三角形最小路径和</a></li><li><a href="https://leetcode.cn/problems/count-paths-with-the-given-xor-value/">3393. 统计异或值为给定值的路径数目</a>1573</li><li><a href="https://leetcode.cn/problems/minimum-falling-path-sum/">931. 下降路径最小和</a>1573</li><li><a href="https://leetcode.cn/problems/maximum-number-of-moves-in-a-grid/">2684. 矩阵中移动的最大次数</a>1626</li><li><a href="https://leetcode.cn/problems/minimum-cost-path-with-alternating-directions-ii/">3603. 交替方向的最小路径代价 II</a>1639</li><li><a href="https://leetcode.cn/problems/minimum-path-cost-in-a-grid/">2304. 网格中的最小路径代价</a>1658</li><li><a href="https://leetcode.cn/problems/minimum-falling-path-sum-ii/">1289. 下降路径最小和 II</a>1697</li><li><a href="https://leetcode.cn/problems/maximum-amount-of-money-robot-can-earn/">3418. 机器人可以获得的最大金币数</a>1798</li><li><a href="https://leetcode.cn/problems/maximum-path-score-in-a-grid/">3742. 网格中得分最大的路径</a>1804</li></ul><ul><li><a href="https://leetcode.cn/problems/minimum-sideway-jumps/">1824. 最少侧跳次数</a>1778</li></ul><h3>§2.2 进阶</h3><ul><li><a href="https://leetcode.cn/problems/maximum-non-negative-product-in-a-matrix/">1594. 矩阵的最大非负积</a>1807</li><li><a href="https://leetcode.cn/problems/number-of-paths-with-max-score/">1301. 最大得分的路径数目</a>1853</li><li><a href="https://leetcode.cn/problems/twisted-mirror-path-count/">3665. 统计镜子反射路径数目</a>1883</li><li><a href="https://leetcode.cn/problems/paths-in-matrix-whose-sum-is-divisible-by-k/">2435. 矩阵中和能被 K 整除的路径</a>1952</li><li><a href="https://leetcode.cn/problems/dungeon-game/">174. 地下城游戏</a></li><li><a href="https://leetcode.cn/problems/longest-increasing-path-in-a-matrix/">329. 矩阵中的最长递增路径</a></li><li><a href="https://leetcode.cn/problems/number-of-increasing-paths-in-a-grid/">2328. 网格图中递增路径的数目</a>2001</li><li><a href="https://leetcode.cn/problems/check-if-there-is-a-valid-parentheses-string-path/">2267. 检查是否有合法括号字符串路径</a>2085</li><li><a href="https://leetcode.cn/problems/maximum-number-of-points-with-cost/">1937. 扣分后的最大得分</a>2106</li><li><a href="https://leetcode.cn/problems/find-the-maximum-number-of-fruits-collected/">3363. 最多可收集的水果数目</a>实际难度 2200</li><li><a href="https://leetcode.cn/problems/cherry-pickup-ii/">1463. 摘樱桃 II</a></li><li><a href="https://leetcode.cn/problems/cherry-pickup/">741. 摘樱桃</a></li><li><a href="https://leetcode.cn/problems/length-of-longest-v-shaped-diagonal-segment/">3459. 最长 V 形对角线段的长度</a>2337 状态设计</li><li><a href="https://leetcode.cn/problems/check-if-there-is-a-path-with-equal-number-of-0s-and-1s/">2510. 检查是否有路径经过相同数量的 0 和 1</a>（会员题）</li></ul><h2>三、背包</h2><h3>§3.1 0-1 背包</h3><ul><li><a href="https://leetcode.cn/problems/partition-equal-subset-sum/">416. 分割等和子集</a></li><li><a href="https://leetcode.cn/problems/target-sum/">494. 目标和</a></li><li><a href="https://leetcode.cn/problems/length-of-the-longest-subsequence-that-sums-to-target/">2915. 和为目标值的最长子序列的长度</a>1659</li><li><a href="https://leetcode.cn/problems/ways-to-express-an-integer-as-sum-of-powers/">2787. 将一个数字表示成幂的和的方案数</a>1818</li><li><a href="https://leetcode.cn/problems/maximum-total-reward-using-operations-i/">3180. 执行操作可获得的最大总奖励 I</a>1849</li></ul><ul><li><a href="https://leetcode.cn/problems/ones-and-zeroes/">474. 一和零</a>二维背包</li><li><a href="https://leetcode.cn/problems/zero-array-transformation-iv/">3489. 零数组变换 IV</a>2068</li><li><a href="https://leetcode.cn/problems/subsequence-sum-after-capping-elements/">3685. 含上限元素的子序列和</a>2073</li><li><a href="https://leetcode.cn/problems/last-stone-weight-ii/">1049. 最后一块石头的重量 II</a>2092</li><li><a href="https://leetcode.cn/problems/closest-dessert-cost/">1774. 最接近目标价格的甜点成本</a></li><li><a href="https://leetcode.cn/problems/profitable-schemes/">879. 盈利计划</a>2204</li><li><a href="https://leetcode.cn/problems/find-the-sum-of-the-power-of-all-subsequences/">3082. 求出所有子序列的能量和</a>2242</li><li><a href="https://leetcode.cn/problems/tallest-billboard/">956. 最高的广告牌</a>2381</li><li><a href="https://leetcode.cn/problems/number-of-great-partitions/">2518. 好分区的数目</a>2415</li><li><a href="https://leetcode.cn/problems/painting-the-walls/">2742. 给墙壁刷油漆</a>2425 至少装满</li><li><a href="https://leetcode.cn/problems/find-the-maximum-sequence-value-of-array/">3287. 求出数组中最大序列值</a>2545</li><li><a href="https://leetcode.cn/problems/maximum-total-reward-using-operations-ii/">3181. 执行操作可获得的最大总奖励 II</a>2688 bitset 优化</li><li><a href="https://leetcode.cn/problems/oPs9Bm/">LCP 47. 入场安检</a></li><li><a href="https://leetcode.cn/problems/maximum-profit-from-trading-stocks/">2291. 最大股票收益</a>（会员题）</li><li><a href="https://leetcode.cn/problems/maximize-total-tastiness-of-purchased-fruits/">2431. 最大限度地提高购买水果的口味</a>（会员题）</li><li><a href="https://leetcode.cn/problems/maximum-weight-in-two-bags/">3647. 两个袋子中的最大重量</a>（会员题）多背包</li><li><a href="https://leetcode.cn/problems/number-of-ways-to-build-house-of-cards/">2189. 建造纸牌屋的方法数</a>（会员题）</li></ul><h3>§3.2 完全背包</h3><ul><li><a href="https://leetcode.cn/problems/coin-change/">322. 零钱兑换</a></li><li><a href="https://leetcode.cn/problems/coin-change-ii/">518. 零钱兑换 II</a></li><li><a href="https://leetcode.cn/problems/perfect-squares/">279. 完全平方数</a></li><li><a href="https://leetcode.cn/problems/minimum-number-of-primes-to-sum-to-target/">3610. 目标和所需的最小质数个数</a>（会员题）</li><li><a href="https://leetcode.cn/problems/the-number-of-ways-to-make-the-sum/">3183. 达到总和的方法数量</a>（会员题）混合背包</li></ul><ul><li><a href="https://leetcode.cn/problems/inverse-coin-change/">3592. 硬币面值还原</a>1701</li><li><a href="https://leetcode.cn/problems/form-largest-integer-with-digits-that-add-up-to-target/">1449. 数位成本和为目标值的最大数字</a>1927</li></ul><h3>§3.3 多重背包（选做）</h3><ul><li><a href="https://leetcode.cn/problems/number-of-ways-to-earn-points/">2585. 获得分数的方法数</a>1910</li><li><a href="https://leetcode.cn/problems/find-the-original-typed-string-ii/">3333. 找到初始输入字符串 II</a>2629</li><li><a href="https://leetcode.cn/problems/count-of-sub-multisets-with-bounded-sum/">2902. 和带限制的子多重集合的数目</a>2759</li></ul><ul><li><a href="https://leetcode.cn/problems/zero-array-transformation-iv/">3489. 零数组变换 IV</a></li></ul><h3>§3.4 分组背包</h3><ul><li><a href="https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum/">1155. 掷骰子等于目标和的方法数</a>1654</li><li><a href="https://leetcode.cn/problems/minimize-the-difference-between-target-and-chosen-elements/">1981. 最小化目标值与所选元素的差</a>2010</li><li><a href="https://leetcode.cn/problems/maximum-value-of-k-coins-from-piles/">2218. 从栈中取出 K 个硬币的最大面值和</a>2158</li></ul><h3>§3.5 树形背包（选做）</h3><ul><li><a href="https://leetcode.cn/problems/maximum-profit-from-trading-stocks-with-discounts/">3562. 折扣价交易股票的最大利润</a>2458</li></ul><h2>四、经典线性 DP</h2><h3>§4.1 最长公共子序列（LCS）</h3><h4>§4.1.1 基础</h4><ul><li><a href="https://leetcode.cn/problems/longest-common-subsequence/">1143. 最长公共子序列</a></li><li><a href="https://leetcode.cn/problems/delete-operation-for-two-strings/">583. 两个字符串的删除操作</a></li><li><a href="https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/">712. 两个字符串的最小 ASCII 删除和</a></li><li><a href="https://leetcode.cn/problems/edit-distance/">72. 编辑距离</a></li><li><a href="https://leetcode.cn/problems/uncrossed-lines/">1035. 不相交的线</a>1806</li><li><a href="https://leetcode.cn/problems/max-dot-product-of-two-subsequences/">1458. 两个子序列的最大点积</a>1824</li></ul><ul><li><a href="https://leetcode.cn/problems/maximum-length-of-repeated-subarray/">718. 最长重复子数组</a></li></ul><h4>§4.1.2 进阶</h4><ul><li><a href="https://leetcode.cn/problems/maximum-multiplication-score/">3290. 最高乘法得分</a>1692</li><li><a href="https://leetcode.cn/problems/distinct-subsequences/">115. 不同的子序列</a></li><li><a href="https://leetcode.cn/problems/maximum-number-of-subsequences-after-one-inserting/">3628. 插入一个字母的最大子序列数</a>1754</li><li><a href="https://leetcode.cn/problems/find-maximum-removals-from-source-string/">3316. 从原字符串里进行删除操作的最多次数</a>2062</li><li><a href="https://leetcode.cn/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/">1639. 通过给定词典构造目标字符串的方案数</a>2082</li><li><a href="https://leetcode.cn/problems/interleaving-string/">97. 交错字符串</a></li><li><a href="https://leetcode.cn/problems/shortest-common-supersequence/">1092. 最短公共超序列</a></li><li><a href="https://leetcode.cn/problems/wildcard-matching/">44. 通配符匹配</a></li><li><a href="https://leetcode.cn/problems/regular-expression-matching/">10. 正则表达式匹配</a></li></ul><h3>§4.2 最长递增子序列（LIS）</h3><ol><li>数据结构优化。（见<a href="https://leetcode.cn/problems/longest-increasing-subsequence-ii/">2407 题</a>）</li></ol><h4>§4.2.1 基础</h4><ul><li><a href="https://leetcode.cn/problems/longest-increasing-subsequence/">300. 最长递增子序列</a></li><li><a href="https://leetcode.cn/problems/increasing-triplet-subsequence/">334. 递增的三元子序列</a></li><li><a href="https://leetcode.cn/problems/sorting-three-groups/">2826. 将三个组排序</a>1721</li><li><a href="https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/">1671. 得到山形数组的最少删除次数</a>1913</li><li><a href="https://leetcode.cn/problems/find-the-longest-valid-obstacle-course-at-each-position/">1964. 找出到每个位置为止最长的有效障碍赛跑路线</a>1933</li><li><a href="https://leetcode.cn/problems/minimum-operations-to-make-the-array-k-increasing/">2111. 使数组 K 递增的最少操作次数</a>1941 包含进阶问题</li></ul><h4>§4.2.2 进阶</h4><ul><li><a href="https://leetcode.cn/problems/russian-doll-envelopes/">354. 俄罗斯套娃信封问题</a></li><li><a href="https://leetcode.cn/problems/best-team-with-no-conflicts/">1626. 无矛盾的最佳球队</a>2027</li><li><a href="https://leetcode.cn/problems/maximum-height-by-stacking-cuboids/">1691. 堆叠长方体的最大高度</a>2172</li><li><a href="https://leetcode.cn/problems/delete-columns-to-make-sorted-iii/">960. 删列造序 III</a>2247</li><li><a href="https://leetcode.cn/problems/longest-increasing-subsequence-ii/">2407. 最长递增子序列 II</a>2280</li><li><a href="https://leetcode.cn/problems/number-of-longest-increasing-subsequence/">673. 最长递增子序列的个数</a></li><li><a href="https://leetcode.cn/problems/make-array-strictly-increasing/">1187. 使数组严格递增</a>2316</li><li><a href="https://leetcode.cn/problems/minimum-operations-to-make-a-subsequence/">1713. 得到子序列的最少操作次数</a>2351 用 LIS 求 LCS</li><li><a href="https://leetcode.cn/problems/length-of-the-longest-increasing-path/">3288. 最长上升路径的长度</a>2450</li></ul><ul><li><a href="https://leetcode.cn/problems/largest-divisible-subset/">368. 最大整除子集</a>约 1800</li><li><a href="https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii/">2901. 最长相邻不相等子序列 II</a>1899</li></ul><h2>五、划分型 DP</h2><h3>§5.1 判定能否划分</h3><ul><li><a href="https://leetcode.cn/problems/check-if-there-is-a-valid-partition-for-the-array/">2369. 检查数组是否存在有效划分</a>1780</li><li><a href="https://leetcode.cn/problems/word-break/">139. 单词拆分</a></li></ul><h3>§5.2 最优划分</h3><ul><li><a href="https://leetcode.cn/problems/palindrome-partitioning-ii/">132. 分割回文串 II</a></li><li><a href="https://leetcode.cn/problems/extra-characters-in-a-string/">2707. 字符串中的额外字符</a>1736</li><li><a href="https://leetcode.cn/problems/maximize-total-cost-of-alternating-subarrays/">3196. 最大化子数组的总成本</a>1847 也有状态机 DP 做法</li><li><a href="https://leetcode.cn/problems/partition-string-into-minimum-beautiful-substrings/">2767. 将字符串分割为最少的美丽子字符串</a>1865</li><li><a href="https://leetcode.cn/problems/decode-ways/">91. 解码方法</a></li><li><a href="https://leetcode.cn/problems/decode-ways-ii/">639. 解码方法 II</a></li><li><a href="https://leetcode.cn/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/">LCR 165. 解密数字</a></li><li><a href="https://leetcode.cn/problems/partition-array-for-maximum-sum/">1043. 分隔数组以得到最大和</a>1916</li><li><a href="https://leetcode.cn/problems/minimum-substring-partition-of-equal-character-frequency/">3144. 分割字符频率相等的最少子字符串</a>1917</li><li><a href="https://leetcode.cn/problems/restore-the-array/">1416. 恢复数组</a>1920</li><li><a href="https://leetcode.cn/problems/maximum-number-of-non-overlapping-palindrome-substrings/">2472. 不重叠回文子字符串的最大数目</a>2013</li><li><a href="https://leetcode.cn/problems/filling-bookcase-shelves/">1105. 填充书架</a>2014</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-split-an-array/">2547. 拆分数组的最小代价</a>2020</li><li><a href="https://leetcode.cn/problems/count-partitions-with-max-min-difference-at-most-k/">3578. 统计极差最大为 K 的分割方式数</a>2033 优化</li><li><a href="https://leetcode.cn/problems/maximum-deletions-on-a-string/">2430. 对字母串可执行的最大删除数</a>2102</li><li><a href="https://leetcode.cn/problems/minimum-total-distance-traveled/">2463. 最小移动总距离</a>2454</li><li><a href="https://leetcode.cn/problems/minimum-steps-to-convert-string-with-operations/">3579. 字符串转换需要的最小操作数</a>2493 可以做到</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-divide-array-into-subarrays/">3500. 将数组分割为子数组的最小代价</a>2569 式子变形</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-convert-string-ii/">2977. 转换字符串的最小成本 II</a>2696</li><li><a href="https://leetcode.cn/problems/minimum-cost-good-caption/">3441. 变成好标题的最少代价</a>2765</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-separate-sentence-into-rows/">2052. 将句子分隔成行的最低成本</a>（会员题）</li><li><a href="https://leetcode.cn/problems/minimum-subarrays-in-a-valid-split/">2464. 有效分割中的最少子数组数目</a>（会员题）</li></ul><h3>§5.3 约束划分个数</h3><ul><li><a href="https://leetcode.cn/problems/largest-sum-of-averages/">813. 最大平均值和的分组</a>1937</li><li><a href="https://leetcode.cn/problems/partition-array-to-minimize-xor/">3599. 划分数组得到最小 XOR</a>1955 做法不止一种</li><li><a href="https://leetcode.cn/problems/split-array-largest-sum/">410. 分割数组的最大值</a></li><li><a href="https://leetcode.cn/problems/palindrome-partitioning-iii/">1278. 分割回文串 III</a>1979</li><li><a href="https://leetcode.cn/problems/palindrome-partitioning-iv/">1745. 分割回文串 IV</a></li><li><a href="https://leetcode.cn/problems/minimum-difficulty-of-a-job-schedule/">1335. 工作计划的最低难度</a>2035</li><li><a href="https://leetcode.cn/problems/paint-house-iii/">1473. 粉刷房子 III</a>2056</li><li><a href="https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/">2209. 用地毯覆盖后的最少白色砖块</a>2106</li><li><a href="https://leetcode.cn/problems/allocate-mailboxes/">1478. 安排邮筒</a>2190</li><li><a href="https://leetcode.cn/problems/sum-of-k-subarrays-with-length-at-least-m/">3473. 长度至少为 M 的 K 个子数组之和</a>2274 优化</li><li><a href="https://leetcode.cn/problems/minimum-total-space-wasted-with-k-resizing-operations/">1959. K 次调整数组大小浪费的最小总空间</a>2310</li><li><a href="https://leetcode.cn/problems/number-of-beautiful-partitions/">2478. 完美分割的方案数</a>2344</li><li><a href="https://leetcode.cn/problems/merge-operations-for-minimum-travel-time/">3538. 合并得到最小旅行时间</a>2461 相邻相关</li><li><a href="https://leetcode.cn/problems/minimum-operations-to-make-elements-within-k-subarrays-equal/">3505. 使 K 个子数组内元素相等的最少操作数</a>2539</li><li><a href="https://leetcode.cn/problems/maximum-strength-of-k-disjoint-subarrays/">3077. K 个不相交子数组的最大能量值</a>2557 优化</li><li><a href="https://leetcode.cn/problems/minimum-changes-to-make-k-semi-palindromes/">2911. 得到 K 个半回文串的最少修改次数</a>2608</li><li><a href="https://leetcode.cn/problems/minimum-sum-of-values-by-dividing-array/">3117. 划分数组得到最小的值之和</a>2735</li></ul><h2>六、状态机 DP</h2><h3>§6.1 买卖股票</h3><ul><li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">121. 买卖股票的最佳时机</a>交易一次</li><li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/">122. 买卖股票的最佳时机 II</a>交易次数不限</li><li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/">123. 买卖股票的最佳时机 III</a>交易两次</li><li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/">188. 买卖股票的最佳时机 IV</a>交易次</li><li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-v/">3573. 买卖股票的最佳时机 V</a>交易次 1777</li><li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309. 买卖股票的最佳时机含冷冻期</a>交易次数不限</li><li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">714. 买卖股票的最佳时机含手续费</a>交易次数不限</li></ul><h3>§6.2 基础</h3><ul><li><a href="https://leetcode.cn/problems/maximum-energy-boost-from-two-drinks/">3259. 超级饮料的最大强化能量</a>1484</li><li><a href="https://leetcode.cn/problems/number-of-ways-to-select-buildings/">2222. 选择建筑的方案数</a>1657</li><li><a href="https://leetcode.cn/problems/maximum-strength-of-a-group/">2708. 一个小组的最大实力值</a>做到时间（联系 152 题）</li><li><a href="https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/">1567. 乘积为正数的最长子数组长度</a>1710</li><li><a href="https://leetcode.cn/problems/visit-array-positions-to-maximize-score/">2786. 访问数组中的位置使分数最大</a>1733</li><li><a href="https://leetcode.cn/problems/maximum-alternating-subsequence-sum/">1911. 最大交替子序列和</a>1786</li><li><a href="https://leetcode.cn/problems/wiggle-subsequence/">376. 摆动序列</a></li><li><a href="https://leetcode.cn/problems/maximum-coin-collection/">3466. 最大硬币收集量</a>（会员题）</li></ul><h3>§6.3 进阶</h3><ul><li><a href="https://leetcode.cn/problems/maximum-number-of-subsequences-after-one-inserting/">3628. 插入一个字母的最大子序列数</a>1754</li><li><a href="https://leetcode.cn/problems/longest-non-decreasing-subarray-from-two-arrays/">2771. 构造最长非递减子数组</a>1792</li><li><a href="https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/">1186. 删除一次得到子数组最大和</a>1799</li><li><a href="https://leetcode.cn/problems/maximum-non-negative-product-in-a-matrix/">1594. 矩阵的最大非负积</a>1807</li><li><a href="https://leetcode.cn/problems/longest-non-decreasing-subarray-after-replacing-at-most-one-element/">3738. 替换至多一个元素后最长非递减子数组</a>1811</li><li><a href="https://leetcode.cn/problems/maximize-total-cost-of-alternating-subarrays/">3196. 最大化子数组的总成本</a>1847 也有划分型 DP 做法</li><li><a href="https://leetcode.cn/problems/knight-dialer/">935. 骑士拨号器</a></li><li><a href="https://leetcode.cn/problems/get-the-maximum-score/">1537. 最大得分</a>1961</li><li><a href="https://leetcode.cn/problems/minimum-increment-operations-to-make-array-beautiful/">2919. 使数组变美的最小增量运算数</a>2031</li><li><a href="https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/">801. 使序列递增的最小交换次数</a>2066</li><li><a href="https://leetcode.cn/problems/maximum-frequency-after-subarray-operation/">3434. 子数组操作后的最大频率</a>2094</li><li><a href="https://leetcode.cn/problems/count-number-of-special-subsequences/">1955. 统计特殊子序列的数目</a>2125</li><li><a href="https://leetcode.cn/problems/find-the-maximum-sum-of-node-values/">3068. 最大节点价值之和</a>2268</li><li><a href="https://leetcode.cn/problems/trionic-array-ii/">3640. 三段式数组 II</a>2278</li><li><a href="https://leetcode.cn/problems/substring-with-largest-variance/">2272. 最大波动的子字符串</a>2516</li><li><a href="https://leetcode.cn/problems/maximum-walls-destroyed-by-robots/">3661. 可以被机器人摧毁的最大墙壁数目</a>2525</li><li><a href="https://leetcode.cn/problems/maximize-cyclic-partition-score/">3743. 循环划分的最大得分</a>3125 环形数组</li><li><a href="https://leetcode.cn/problems/UlBDOe/">LCP 19. 秋叶收藏集</a></li><li><a href="https://leetcode.cn/problems/paint-fence/">276. 栅栏涂色</a>（会员题）</li><li><a href="https://leetcode.cn/problems/maximum-subarray-sum-after-one-operation/">1746. 经过一次操作后的最大子数组和</a>（会员题）</li><li><a href="https://leetcode.cn/problems/maximum-alternating-subarray-sum/">2036. 最大交替子数组和</a>（会员题）</li><li><a href="https://leetcode.cn/problems/minimum-costs-using-the-train-line/">2361. 乘坐火车路线的最少费用</a>（会员题）</li><li><a href="https://leetcode.cn/problems/constructing-two-increasing-arrays/">3269. 构建两个递增数组</a>（会员题）</li></ul><h2>七、其他线性 DP</h2><h3>§7.1 一维 DP</h3><ul><li><a href="https://leetcode.cn/problems/taking-maximum-energy-from-the-mystic-dungeon/">3147. 从魔法师身上吸取的最大能量</a>1460</li><li><a href="https://leetcode.cn/problems/minimum-number-of-coins-for-fruits/">2944. 购买水果需要的最少金币数</a>1709</li><li><a href="https://leetcode.cn/problems/solving-questions-with-brainpower/">2140. 解决智力问题</a>1709 可以用刷表法</li><li><a href="https://leetcode.cn/problems/minimum-cost-for-tickets/">983. 最低票价</a>1786 有做法</li><li><a href="https://leetcode.cn/problems/largest-divisible-subset/">368. 最大整除子集</a>约 1800</li><li><a href="https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii/">2901. 最长相邻不相等子序列 II</a>1899</li><li><a href="https://leetcode.cn/problems/2-keys-keyboard/">650. 两个键的键盘</a>约 2000</li><li><a href="https://leetcode.cn/problems/minimum-number-of-refueling-stops/">871. 最低加油次数</a>2074</li><li><a href="https://leetcode.cn/problems/longest-valid-parentheses/">32. 最长有效括号</a></li><li><a href="https://leetcode.cn/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/">2167. 移除所有载有违禁货物车厢所需的最少时间</a>2219</li><li><a href="https://leetcode.cn/problems/minimum-time-to-finish-the-race/">2188. 完成比赛的最少时间</a>2315</li><li><a href="https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal/">2896. 执行操作使两个字符串相等</a>做到</li><li><a href="https://leetcode.cn/problems/race-car/">818. 赛车</a>2392</li><li><a href="https://leetcode.cn/problems/minimum-operations-to-make-character-frequencies-equal/">3389. 使字符频率相等的最少操作次数</a>2940</li><li><a href="https://leetcode.cn/problems/maximize-the-distance-between-points-on-a-square/">3464. 正方形上的点之间的最大距离</a></li><li><a href="https://leetcode.cn/problems/maximum-array-hopping-score-i/">3205. 最大数组跳跃得分 I</a>（会员题）有做法</li><li><a href="https://leetcode.cn/problems/handshakes-that-dont-cross/">1259. 不相交的握手</a>（会员题）</li><li><a href="https://leetcode.cn/problems/the-number-of-beautiful-subsets/">2597. 美丽子集的数目</a>用 DP 解决</li><li><a href="https://leetcode.cn/problems/count-the-number-of-k-free-subsets/">2638. 统计 K-Free 子集的总数</a>（会员题）上面这题的加强版</li></ul><h3>§7.2 不相交区间</h3><ul><li><a href="https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/">2830. 销售利润最大化</a>1851</li><li><a href="https://leetcode.cn/problems/maximum-earnings-from-taxi/">2008. 出租车的最大盈利</a>1872</li><li><a href="https://leetcode.cn/problems/two-best-non-overlapping-events/">2054. 两个最好的不重叠活动</a>1883</li><li><a href="https://leetcode.cn/problems/maximum-profit-in-job-scheduling/">1235. 规划兼职工作</a>2023 做法不止一种</li><li><a href="https://leetcode.cn/problems/maximum-number-of-events-that-can-be-attended-ii/">1751. 最多可以参加的会议数目 II</a>2041</li><li><a href="https://leetcode.cn/problems/maximum-score-of-non-overlapping-intervals/">3414. 不重叠区间的最大得分</a>2723</li></ul><h3>§7.3 子数组 DP</h3><ul><li><a href="https://leetcode.cn/problems/maximum-subarray/">53. 最大子数组和</a></li><li><a href="https://leetcode.cn/problems/maximum-product-subarray/">152. 乘积最大子数组</a></li><li><a href="https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/">1186. 删除一次得到子数组最大和</a>1799</li><li><a href="https://leetcode.cn/problems/longest-non-decreasing-subarray-after-replacing-at-most-one-element/">3738. 替换至多一个元素后最长非递减子数组</a>1811</li><li><a href="https://leetcode.cn/problems/find-x-value-of-array-i/">3524. 求出数组的 X 值 I</a>2008 刷表法</li><li><a href="https://leetcode.cn/problems/count-substrings-divisible-by-last-digit/">3448. 统计可以被最后一个数位整除的子字符串数目</a>2387 刷表法</li></ul><ul><li><a href="https://leetcode.cn/problems/total-appeal-of-a-string/">2262. 字符串的总引力</a>2033</li><li><a href="https://leetcode.cn/problems/count-unique-characters-of-all-substrings-of-a-given-string/">828. 统计子串中的唯一字符</a>2034</li><li><a href="https://leetcode.cn/problems/unique-substrings-in-wraparound-string/">467. 环绕字符串中唯一的子字符串</a></li></ul><h3>§7.4 合法子序列 DP</h3><ul><li><a href="https://leetcode.cn/problems/longest-square-streak-in-an-array/">2501. 数组中最长的方波</a>1480</li><li><a href="https://leetcode.cn/problems/longest-arithmetic-subsequence-of-given-difference/">1218. 最长定差子序列</a>1597</li><li><a href="https://leetcode.cn/problems/sorting-three-groups/">2826. 将三个组排序</a>1721 做法不止一种</li><li><a href="https://leetcode.cn/problems/longest-arithmetic-subsequence/">1027. 最长等差数列</a>1759</li><li><a href="https://leetcode.cn/problems/longest-ideal-subsequence/">2370. 最长理想子序列</a>1835</li><li><a href="https://leetcode.cn/problems/length-of-longest-fibonacci-subsequence/">873. 最长的斐波那契子序列的长度</a>1911</li><li><a href="https://leetcode.cn/problems/number-of-stable-subsequences/">3686. 稳定子序列的数量</a>1969</li><li><a href="https://leetcode.cn/problems/find-the-maximum-length-of-valid-subsequence-ii/">3202. 找出有效子序列的最大长度 II</a>1974</li><li><a href="https://leetcode.cn/problems/arithmetic-slices-ii-subsequence/">446. 等差数列划分 II - 子序列</a>求个数</li><li><a href="https://leetcode.cn/problems/sum-of-good-subsequences/">3351. 好子序列的元素之和</a>2086 求和</li><li><a href="https://leetcode.cn/problems/maximize-consecutive-elements-in-an-array-after-modification/">3041. 修改数组后最大化数组中的连续元素数目</a>2231</li><li><a href="https://leetcode.cn/problems/longest-subsequence-with-decreasing-adjacent-difference/">3409. 最长相邻绝对差递减子序列</a>2500 状态设计</li><li><a href="https://leetcode.cn/problems/find-the-sum-of-subsequence-powers/">3098. 求出所有子序列的能量和</a>2553</li><li><a href="https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii/">2901. 最长相邻不相等子序列 II</a>做到线性复杂度</li><li><a href="https://leetcode.cn/problems/sum-of-consecutive-subsequences/">3299. 连续子序列的和</a>（会员题）</li></ul><ul><li><a href="https://leetcode.cn/problems/longest-string-chain/">1048. 最长字符串链</a>1599</li><li><a href="https://leetcode.cn/problems/distinct-subsequences-ii/">940. 不同的子序列 II</a>1985</li><li><a href="https://leetcode.cn/problems/number-of-unique-good-subsequences/">1987. 不同的好子序列数目</a>2422 思考方式同 940 题</li><li><a href="https://leetcode.cn/problems/count-different-palindromic-subsequences/">730. 统计不同回文子序列</a></li></ul><h3>§7.5 子矩形 DP</h3><ul><li><a href="https://leetcode.cn/problems/maximum-difference-score-in-a-grid/">3148. 矩阵中的最大得分</a>1820</li><li><a href="https://leetcode.cn/problems/maximal-square/">221. 最大正方形</a></li><li><a href="https://leetcode.cn/problems/count-square-submatrices-with-all-ones/">1277. 统计全为 1 的正方形子矩阵</a></li><li><a href="https://leetcode.cn/problems/count-fertile-pyramids-in-a-land/">2088. 统计农场中肥沃金字塔的数目</a>2105</li><li><a href="https://leetcode.cn/problems/find-the-minimum-area-to-cover-all-ones-ii/">3197. 包含所有 1 的最小矩形面积 II</a>做到</li></ul><h3>§7.6 多维 DP</h3><ul><li><a href="https://leetcode.cn/problems/number-of-ways-to-select-buildings/">2222. 选择建筑的方案数</a>1657 把改成怎么做？</li><li><a href="https://leetcode.cn/problems/sorting-three-groups/">2826. 将三个组排序</a>1721 做法不止一种</li><li><a href="https://leetcode.cn/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/">2400. 恰好移动 k 步到达某一位置的方法数目</a>1751</li><li><a href="https://leetcode.cn/problems/greatest-sum-divisible-by-three/">1262. 可被三整除的最大和</a>1762</li><li><a href="https://leetcode.cn/problems/maximum-points-tourist-can-earn/">3332. 旅客可以得到的最多点数</a>1828</li><li><a href="https://leetcode.cn/problems/find-the-maximum-length-of-a-good-subsequence-i/">3176. 求出最长好子序列 I</a>1849</li><li><a href="https://leetcode.cn/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/">1269. 停在原地的方案数</a>1854</li><li><a href="https://leetcode.cn/problems/find-the-count-of-monotonic-pairs-i/">3250. 单调数组对的数目 I</a>1898</li><li><a href="https://leetcode.cn/problems/minimum-cost-for-cutting-cake-i/">3218. 切蛋糕的最小总开销 I</a>也有贪心做法</li><li><a href="https://leetcode.cn/problems/minimum-number-of-operations-to-satisfy-conditions/">3122. 使矩阵满足条件的最少操作次数</a>1905</li><li><a href="https://leetcode.cn/problems/out-of-boundary-paths/">576. 出界的路径数</a></li><li><a href="https://leetcode.cn/problems/frog-jump/">403. 青蛙过河</a></li><li><a href="https://leetcode.cn/problems/count-ways-to-choose-coprime-integers-from-rows/">3725. 统计每一行选择互质整数的方案数</a>1982</li><li><a href="https://leetcode.cn/problems/dice-roll-simulation/">1223. 掷骰子模拟</a>2008</li><li><a href="https://leetcode.cn/problems/minimum-distance-to-type-a-word-using-two-fingers/">1320. 二指输入的的最小距离</a>2028 状态优化</li><li><a href="https://leetcode.cn/problems/minimum-array-sum/">3366. 最小数组和</a>2040</li><li><a href="https://leetcode.cn/problems/count-all-possible-routes/">1575. 统计所有可行路径</a>2055</li><li><a href="https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair/">3154. 到达第 K 级台阶的方案数</a>2071</li><li><a href="https://leetcode.cn/problems/number-of-distinct-roll-sequences/">2318. 不同骰子序列的数目</a>2090</li><li><a href="https://leetcode.cn/problems/find-minimum-cost-to-remove-array-elements/">3469. 移除所有数组元素的最小代价</a>2112 状态设计</li><li><a href="https://leetcode.cn/problems/decremental-string-concatenation/">2746. 字符串连接删减字母</a>2126</li><li><a href="https://leetcode.cn/problems/number-of-ways-of-cutting-a-pizza/">1444. 切披萨的方案数</a>2127</li><li><a href="https://leetcode.cn/problems/count-the-number-of-winning-sequences/">3320. 统计能获胜的出招序列数</a>2153</li><li><a href="https://leetcode.cn/problems/paint-house-iv/">3429. 粉刷房子 IV</a>2166</li><li><a href="https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal/">2896. 执行操作使两个字符串相等</a>2172</li><li><a href="https://leetcode.cn/problems/build-array-where-you-can-find-the-maximum-exactly-k-comparisons/">1420. 生成数组</a>2176</li><li><a href="https://leetcode.cn/problems/count-the-number-of-inversions/">3193. 统计逆序对的数目</a>2266</li><li><a href="https://leetcode.cn/problems/letter-tile-possibilities/">1079. 活字印刷</a>计数 DP，做到</li><li><a href="https://leetcode.cn/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/">1866. 恰有 K 根木棍可以看到的排列数目</a>2333</li><li><a href="https://leetcode.cn/problems/selling-pieces-of-wood/">2312. 卖木头块</a>2363</li><li><a href="https://leetcode.cn/problems/find-the-maximum-length-of-a-good-subsequence-ii/">3177. 求出最长好子序列 II</a>2365</li><li><a href="https://leetcode.cn/problems/egg-drop-with-2-eggs-and-n-floors/">1884. 鸡蛋掉落-两枚鸡蛋</a></li><li><a href="https://leetcode.cn/problems/super-egg-drop/">887. 鸡蛋掉落</a>2377</li><li><a href="https://leetcode.cn/problems/number-of-music-playlists/">920. 播放列表的数量</a>2400</li><li><a href="https://leetcode.cn/problems/freedom-trail/">514. 自由之路</a>做到</li><li><a href="https://leetcode.cn/problems/find-the-number-of-subsequences-with-equal-gcd/">3336. 最大公约数相等的子序列数量</a>2403</li><li><a href="https://leetcode.cn/problems/pizza-with-3n-slices/">1388. 3n 块披萨</a>2410</li><li><a href="https://leetcode.cn/problems/valid-permutations-for-di-sequence/">903. DI 序列的有效排列</a>2433</li><li><a href="https://leetcode.cn/problems/the-earliest-and-latest-rounds-where-players-compete/">1900. 最佳运动员的比拼回合</a>2455</li><li><a href="https://leetcode.cn/problems/string-compression-ii/">1531. 压缩字符串 II</a>2576</li><li><a href="https://leetcode.cn/problems/minimum-skips-to-arrive-at-meeting-on-time/">1883. 准时抵达会议现场的最小跳过休息次数</a>2588 避免浮点运算的技巧</li><li><a href="https://leetcode.cn/problems/least-operators-to-express-number/">964. 表示数字的最少运算符</a>2594</li><li><a href="https://leetcode.cn/problems/count-number-of-balanced-permutations/">3343. 统计平衡排列的数目</a>2615 计数 DP</li><li><a href="https://leetcode.cn/problems/make-the-xor-of-all-segments-equal-to-zero/">1787. 使所有区间的异或结果为零</a>2640</li><li><a href="https://leetcode.cn/problems/maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k/">3509. 最大化交错和为 K 的子序列乘积</a>2703</li><li><a href="https://leetcode.cn/problems/minimum-cost-good-caption/">3441. 变成好标题的最少代价</a>2765</li><li><a href="https://leetcode.cn/problems/find-sum-of-array-product-of-magical-sequences/">3539. 魔法序列的数组乘积之和</a>2694 计数 DP</li><li><a href="https://leetcode.cn/problems/check-if-an-original-string-exists-given-two-encoded-strings/">2060. 同源字符串检测</a>2804</li><li><a href="https://leetcode.cn/problems/minimum-time-to-make-array-sum-at-most-x/">2809. 使数组和小于等于 x 的最少时间</a>2979</li><li><a href="https://leetcode.cn/problems/maximize-the-number-of-partitions-after-operations/">3003. 执行操作后的最大分割数量</a>3039 如何分析时间复杂度</li><li><a href="https://leetcode.cn/problems/maximum-score-from-grid-operations/">3225. 网格图操作后的最大分数</a>3028 IOI2022 原题</li><li><a href="https://leetcode.cn/problems/ZbAuEH/">LCP 57. 打地鼠</a></li><li><a href="https://leetcode.cn/problems/Y1VbOX/">LCP 43. 十字路口的交通</a></li><li><a href="https://leetcode.cn/problems/3aqs1c/">LCP 65. 舒适的湿度</a></li><li><a href="https://leetcode.cn/problems/Up5XYM/">LCP 36. 最多牌组数</a></li><li><a href="https://leetcode.cn/problems/7rLGCR/">LCP 38. 守卫城堡</a></li><li><a href="https://leetcode.cn/problems/paint-house/">256. 粉刷房子</a>（会员题）</li><li><a href="https://leetcode.cn/problems/paint-house-ii/">265. 粉刷房子 II</a>（会员题）</li><li><a href="https://leetcode.cn/problems/find-the-number-of-k-even-arrays/">3339. 查找 K 偶数数组的数量</a>（会员题）</li><li><a href="https://leetcode.cn/problems/maximum-vacation-days/">568. 最大休假天数</a>（会员题）</li><li><a href="https://leetcode.cn/problems/count-ways-to-distribute-candies/">1692. 计算分配糖果的不同方式</a>（会员题）</li><li><a href="https://leetcode.cn/problems/choose-numbers-from-two-arrays-in-range/">2143. 在两个数组的区间中选取数字</a>（会员题）</li><li><a href="https://leetcode.cn/problems/constructing-two-increasing-arrays/">3269. 构建两个递增数组</a>（会员题）</li></ul><ul><li><a href="https://leetcode.cn/problems/shopping-offers/">638. 大礼包</a></li></ul><h2>八、区间 DP</h2><h3>§8.1 最长回文子序列</h3><ul><li><a href="https://leetcode.cn/problems/longest-palindromic-subsequence/">516. 最长回文子序列</a></li><li><a href="https://leetcode.cn/problems/minimum-insertion-steps-to-make-a-string-palindrome/">1312. 让字符串成为回文串的最少插入次数</a>1787</li><li><a href="https://leetcode.cn/problems/longest-palindromic-subsequence-after-at-most-k-operations/">3472. 至多 K 次操作后的最长回文子序列</a>1884</li><li><a href="https://leetcode.cn/problems/maximize-palindrome-length-from-subsequences/">1771. 由子序列构造的最长回文串的长度</a>2182</li><li><a href="https://leetcode.cn/problems/count-different-palindromic-subsequences/">730. 统计不同回文子序列</a></li><li><a href="https://leetcode.cn/problems/longest-palindromic-subsequence-ii/">1682. 最长回文子序列 II</a>（会员题）</li><li><a href="https://leetcode.cn/problems/valid-palindrome-iii/">1216. 验证回文串 III</a>（会员题）</li><li><a href="https://leetcode.cn/problems/palindrome-removal/">1246. 删除回文子数组</a>（会员题）</li></ul><h3>§8.2 区间 DP</h3><ul><li><a href="https://leetcode.cn/problems/longest-palindromic-substring/">5. 最长回文子串</a></li><li><a href="https://leetcode.cn/problems/palindromic-substrings/">647. 回文子串</a></li><li><a href="https://leetcode.cn/problems/maximum-number-of-operations-with-the-same-score-ii/">3040. 相同分数的最大操作数目 II</a>1709</li><li><a href="https://leetcode.cn/problems/guess-number-higher-or-lower-ii/">375. 猜数字大小 II</a></li><li><a href="https://leetcode.cn/problems/minimum-cost-tree-from-leaf-values/">1130. 叶值的最小代价生成树</a>1919</li><li><a href="https://leetcode.cn/problems/unique-binary-search-trees/">96. 不同的二叉搜索树</a></li><li><a href="https://leetcode.cn/problems/maximum-score-from-performing-multiplication-operations/">1770. 执行乘法运算的最大分数</a>2068</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-cut-a-stick/">1547. 切棍子的最小成本</a>2116</li><li><a href="https://leetcode.cn/problems/minimum-score-triangulation-of-polygon/">1039. 多边形三角剖分的最低得分</a>2130</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-merge-stones/">1000. 合并石头的最低成本</a>2423</li><li><a href="https://leetcode.cn/problems/the-score-of-students-solving-math-expression/">2019. 解出数学表达式的学生分数</a>2584</li><li><a href="https://leetcode.cn/problems/boolean-evaluation-lcci/">面试题 08.14. 布尔运算</a></li><li><a href="https://leetcode.cn/problems/lexicographically-smallest-string-after-adjacent-removals/">3563. 移除相邻字符后字典序最小的字符串</a>2585</li><li><a href="https://leetcode.cn/problems/maximum-xor-score-subarray-queries/">3277. 查询子数组最大异或值</a>2693</li><li><a href="https://leetcode.cn/problems/scramble-string/">87. 扰乱字符串</a></li><li><a href="https://leetcode.cn/problems/burst-balloons/">312. 戳气球</a></li><li><a href="https://leetcode.cn/problems/strange-printer/">664. 奇怪的打印机</a></li><li><a href="https://leetcode.cn/problems/remove-boxes/">546. 移除盒子</a>同 CF1107E</li><li><a href="https://leetcode.cn/problems/encode-string-with-shortest-length/">471. 编码最短长度的字符串</a>（会员题）</li><li><a href="https://leetcode.cn/problems/maximum-number-of-removal-queries-that-can-be-processed-i/">3018. 可处理的最大删除操作数 I</a>（会员题）</li></ul><h2>九、状态压缩 DP（状压 DP）</h2><h3>§9.1 排列型状压 DP ① 相邻无关</h3><ul><li><a href="https://leetcode.cn/problems/beautiful-arrangement/solution/jiao-ni-yi-bu-bu-si-kao-zhuang-ya-dpcong-c6kd/">教你一步步思考状压 DP：从记忆化搜索到递推</a></li></ul><ul><li><a href="https://leetcode.cn/problems/beautiful-arrangement/">526. 优美的排列</a></li><li><a href="https://leetcode.cn/problems/minimum-time-to-break-locks-i/">3376. 破解锁的最少时间 I</a></li><li><a href="https://leetcode.cn/problems/minimum-xor-sum-of-two-arrays/">1879. 两个数组最小的异或值之和</a>2145</li><li><a href="https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid/">2850. 将石头分散到网格图的最少移动次数</a></li><li><a href="https://leetcode.cn/problems/maximum-compatibility-score-sum/">1947. 最大兼容性评分和</a></li><li><a href="https://leetcode.cn/problems/maximize-score-after-n-operations/">1799. N 次操作后的最大分数和</a></li><li><a href="https://leetcode.cn/problems/concatenated-divisibility/">3533. 判断连接可整除性</a>2257 字典序 暴搜</li><li><a href="https://leetcode.cn/problems/maximum-profit-from-valid-topological-order-in-dag/">3530. 有向无环图中合法拓扑排序的最大利润</a>2353 拓扑序</li><li><a href="https://leetcode.cn/problems/maximum-and-sum-of-array/">2172. 数组的最大与和</a>2392</li><li><a href="https://leetcode.cn/problems/number-of-self-divisible-permutations/">2992. 自整除排列的数量</a>（会员题）</li><li><a href="https://leetcode.cn/problems/minimum-time-to-kill-all-monsters/">2403. 杀死所有怪物的最短时间</a>（会员题）同 3376 题</li><li><a href="https://leetcode.cn/problems/campus-bikes-ii/">1066. 校园自行车分配 II</a>（会员题）</li></ul><h3>§9.2 排列型状压 DP ② 相邻相关</h3><ul><li><a href="https://leetcode.cn/problems/special-permutations/">2741. 特别的排列</a>2021</li><li><a href="https://leetcode.cn/problems/number-of-squareful-arrays/">996. 平方数组的数目</a></li><li><a href="https://leetcode.cn/problems/minimum-incompatibility/">1681. 最小不兼容性</a>2390 见我在官解下的评论</li><li><a href="https://leetcode.cn/problems/longest-palindromic-path-in-graph/">3615. 图中的最长回文路径</a>2463</li><li><a href="https://leetcode.cn/problems/maximum-number-of-moves-to-kill-all-pawns/">3283. 吃掉所有兵需要的最多移动次数</a>2473</li><li><a href="https://leetcode.cn/problems/find-the-minimum-cost-array-permutation/">3149. 找出分数最低的排列</a>2642</li></ul><h3>§9.3 旅行商问题（TSP）</h3><ul><li><a href="https://leetcode.cn/problems/find-the-shortest-superstring/">943. 最短超级串</a>2186</li><li><a href="https://leetcode.cn/problems/shortest-path-visiting-all-nodes/">847. 访问所有节点的最短路径</a>2201</li><li><a href="https://leetcode.cn/problems/xun-bao/">LCP 13. 寻宝</a></li><li><a href="https://leetcode.cn/problems/maximum-cost-of-trip-with-k-highways/">2247. K 条高速公路的最大旅行费用</a>（会员题）</li></ul><ul><li><a href="https://leetcode.cn/problems/minimum-moves-to-clean-the-classroom/">3568. 清理教室的最少移动</a>2143</li><li><a href="https://leetcode.cn/problems/shortest-path-to-get-all-keys/">864. 获取所有钥匙的最短路径</a>2259</li></ul><h3>§9.4 子集状压 DP</h3><ul><li><a href="https://leetcode.cn/problems/fair-distribution-of-cookies/">2305. 公平分发饼干</a>1887</li><li><a href="https://leetcode.cn/problems/minimum-number-of-work-sessions-to-finish-the-tasks/">1986. 完成任务的最少工作时间段</a>1995</li><li><a href="https://leetcode.cn/problems/maximum-product-of-two-integers-with-no-common-bits/">3670. 没有公共位的整数最大乘积</a>2234</li><li><a href="https://leetcode.cn/problems/find-minimum-time-to-finish-all-jobs/">1723. 完成所有工作的最短时间</a>2284</li><li><a href="https://leetcode.cn/problems/distribute-repeating-integers/">1655. 分配重复整数</a>2307</li><li><a href="https://leetcode.cn/problems/minimum-increments-for-target-multiples-in-an-array/">3444. 使数组包含目标值倍数的最少增量</a>2337</li><li><a href="https://leetcode.cn/problems/maximum-good-subtree-score/">3575. 最大好子树分数</a>2360</li><li><a href="https://leetcode.cn/problems/maximum-students-taking-exam/">1349. 参加考试的最大学生数</a>2386</li><li><a href="https://leetcode.cn/problems/minimum-incompatibility/">1681. 最小不兼容性</a>2390 有做法</li><li><a href="https://leetcode.cn/problems/count-the-number-of-square-free-subsets/">2572. 无平方子集计数</a>2420</li><li><a href="https://leetcode.cn/problems/the-number-of-good-subsets/">1994. 好子集的数目</a>2465</li><li><a href="https://leetcode.cn/problems/parallel-courses-ii/">1494. 并行课程 II</a></li><li><a href="https://leetcode.cn/problems/broken-board-dominoes/">LCP 04. 覆盖</a></li><li><a href="https://leetcode.cn/problems/EJvmW4/">LCP 53. 守护太空城</a></li><li><a href="https://leetcode.cn/problems/optimal-account-balancing/">465. 最优账单平衡</a>（会员题）</li><li><a href="https://leetcode.cn/problems/minimum-number-of-lines-to-cover-points/">2152. 穿过所有点的所需最少直线数量</a>（会员题）</li></ul><ul><li><a href="https://leetcode.cn/problems/minimum-time-to-transport-all-individuals/">3594. 所有人渡河所需的最短时间</a>2604</li></ul><h3>§9.5 轮廓线 DP</h3><ul><li><a href="https://leetcode.cn/problems/number-of-ways-to-paint-n-3-grid/">1411. 给 N x 3 网格图涂色的方案数</a>1845</li><li><a href="https://leetcode.cn/problems/painting-a-grid-with-three-different-colors/">1931. 用三种不同颜色为网格涂色</a>2170</li><li><a href="https://leetcode.cn/problems/maximum-students-taking-exam/">1349. 参加考试的最大学生数</a>2386</li><li><a href="https://leetcode.cn/problems/maximize-grid-happiness/">1659. 最大化网格幸福感</a>2655</li><li><a href="https://leetcode.cn/problems/unique-paths-iii/">980. 不同路径 III</a></li><li><a href="https://leetcode.cn/problems/broken-board-dominoes/">LCP 04. 覆盖</a></li><li><a href="https://leetcode.cn/problems/1ybDKD/">LCP 76. 魔法棋盘</a></li><li><a href="https://leetcode.cn/problems/number-of-ways-to-build-sturdy-brick-wall/">2184. 建造坚实的砖墙的方法数</a>（会员题）</li></ul><h3>§9.6 SOS DP</h3><ul><li><a href="https://leetcode.cn/problems/maximum-product-of-two-integers-with-no-common-bits/">3670. 没有公共位的整数最大乘积</a>2234</li><li><a href="https://leetcode.cn/problems/count-number-of-maximum-bitwise-or-subsets/">2044. 统计按位或能得到最大值的子集数目</a></li><li><a href="https://leetcode.cn/problems/find-a-good-subset-of-the-matrix/">2732. 找到矩阵中的好子集</a></li><li><a href="https://leetcode.cn/problems/number-of-effective-subsequences/">3757. 有效子序列的数量</a>2519</li></ul><h3>§9.7 其他状压 DP</h3><ul><li><a href="https://leetcode.cn/problems/matchsticks-to-square/">473. 火柴拼正方形</a></li><li><a href="https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/">698. 划分为k个相等的子集</a></li><li><a href="https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/">2002. 两个回文子序列长度的最大乘积</a>1869</li><li><a href="https://leetcode.cn/problems/smallest-sufficient-team/">1125. 最小的必要团队</a>2251</li><li><a href="https://leetcode.cn/problems/number-of-ways-to-wear-different-hats-to-each-other/">1434. 每个人戴不同帽子的方案数</a>2273</li><li><a href="https://leetcode.cn/problems/can-i-win/">464. 我能赢吗</a></li><li><a href="https://leetcode.cn/problems/stickers-to-spell-word/">691. 贴纸拼词</a></li><li><a href="https://leetcode.cn/problems/select-cells-in-grid-with-maximum-score/">3276. 选择矩阵中单元格的最大得分</a>2403 横看成岭侧成峰</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-connect-two-groups-of-points/">1595. 连通两组点的最小成本</a>2538</li><li><a href="https://leetcode.cn/problems/maximum-number-of-groups-getting-fresh-donuts/">1815. 得到新鲜甜甜圈的最多组数</a>2559</li><li><a href="https://leetcode.cn/problems/rMeRt2/">LCP 69. Hello LeetCode!</a></li><li><a href="https://leetcode.cn/problems/cnHoX6/">LCP 82. 万灵之树</a></li><li><a href="https://leetcode.cn/problems/android-unlock-patterns/">351. 安卓系统手势解锁</a>（会员题）</li></ul><h2>十、数位 DP</h2><h3>§10.1 统计合法元素的数目</h3><ul><li><a href="https://leetcode.cn/problems/count-distinct-integers-after-removing-zeros/">3747. 统计移除零后不同整数的数目</a>1848</li><li><a href="https://leetcode.cn/problems/count-of-integers/">2719. 统计整数数目</a></li><li><a href="https://leetcode.cn/problems/count-largest-group/">1399. 统计最大组的数目</a>非暴力做法</li><li><a href="https://leetcode.cn/problems/maximum-number-of-balls-in-a-box/">1742. 盒子中小球的最大数量</a>非暴力做法</li><li><a href="https://leetcode.cn/problems/rotated-digits/">788. 旋转数字</a>非暴力做法</li><li><a href="https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/">902. 最大为 N 的数字组合</a>1990</li><li><a href="https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones/">600. 不含连续 1 的非负整数</a></li><li><a href="https://leetcode.cn/problems/count-special-integers/">2376. 统计特殊整数</a>2120</li><li><a href="https://leetcode.cn/problems/count-numbers-with-unique-digits/">357. 统计各位数字都不同的数字个数</a>同 2376 题</li><li><a href="https://leetcode.cn/problems/numbers-with-repeated-digits/">1012. 至少有 1 位重复的数字</a>2230</li><li><a href="https://leetcode.cn/problems/count-numbers-with-non-decreasing-digits/">3519. 统计逐位非递减的整数</a>2246 进制转换</li><li><a href="https://leetcode.cn/problems/number-of-beautiful-integers-in-the-range/">2827. 范围中美丽整数的数目</a>2324</li><li><a href="https://leetcode.cn/problems/count-the-number-of-powerful-integers/">2999. 统计强大整数的数目</a>2351</li><li><a href="https://leetcode.cn/problems/count-stepping-numbers-in-range/">2801. 统计范围内的步进数字数目</a>2367</li><li><a href="https://leetcode.cn/problems/count-symmetric-integers/">2843. 统计对称整数的数目</a>非暴力做法</li><li><a href="https://leetcode.cn/problems/count-k-reducible-numbers-less-than-n/">3352. 统计小于 N 的 K 可约简整数</a>2451</li><li><a href="https://leetcode.cn/problems/number-of-integers-with-popcount-depth-equal-to-k-i/">3621. 位计数深度为 K 的整数数目 I</a>同 3352 题</li><li><a href="https://leetcode.cn/problems/count-beautiful-numbers/">3490. 统计美丽整数的数目</a>2502</li><li><a href="https://leetcode.cn/problems/find-all-good-strings/">1397. 找到所有好字符串</a>2667</li><li><a href="https://leetcode.cn/problems/stepping-numbers/">1215. 步进数</a>（会员题）</li><li><a href="https://leetcode.cn/problems/digit-count-in-range/">1067. 范围内的数字计数</a>（会员题）</li><li><a href="https://leetcode.cn/problems/count-numbers-with-unique-digits-ii/">3032. 统计各位数字都不同的数字个数 II</a>（会员题）</li></ul><ul><li><a href="https://leetcode.cn/problems/count-no-zero-pairs-that-sum-to-n/">3704. 统计和为 N 的无零数对</a>2419 数对</li></ul><h3>§10.2 统计合法元素的价值总和</h3><ul><li><a href="https://leetcode.cn/problems/number-of-digit-one/">233. 数字 1 的个数</a></li><li><a href="https://leetcode.cn/problems/number-of-2s-in-range-lcci/">面试题 17.06. 2 出现的次数</a></li><li><a href="https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/">3007. 价值和小于等于 K 的最大数字</a>2258 做法不止一种</li><li><a href="https://leetcode.cn/problems/total-waviness-of-numbers-in-range-ii/">3753. 范围内总波动值 II</a>2297</li></ul><h3>§10.3 其他数位 DP</h3><ul><li><a href="https://leetcode.cn/problems/count-binary-palindromic-numbers/">3677. 统计二进制回文数字的数目</a>2223</li><li><a href="https://leetcode.cn/problems/smallest-divisible-digit-product-ii/">3348. 最小可整除数位乘积 II</a>3101 只有下界</li></ul><h2>十一、优化 DP</h2><h3>§11.1 前缀和优化 DP</h3><ul><li><a href="https://leetcode.cn/problems/jump-game-vii/">1871. 跳跃游戏 VII</a>1896 也可以用滑动窗口优化</li><li><a href="https://leetcode.cn/problems/number-of-people-aware-of-a-secret/">2327. 知道秘密的人数</a>做到</li><li><a href="https://leetcode.cn/problems/number-of-zigzag-arrays-i/">3699. 锯齿形数组的总数 I</a>2123</li><li><a href="https://leetcode.cn/problems/first-day-where-you-have-been-in-all-the-rooms/">1997. 访问完所有房间的第一天</a>2260</li><li><a href="https://leetcode.cn/problems/k-inverse-pairs-array/">629. K 个逆序对数组</a></li><li><a href="https://leetcode.cn/problems/count-the-number-of-inversions/">3193. 统计逆序对的数目</a>2266</li><li><a href="https://leetcode.cn/problems/sum-of-k-subarrays-with-length-at-least-m/">3473. 长度至少为 M 的 K 个子数组之和</a>2274 划分型</li><li><a href="https://leetcode.cn/problems/find-the-count-of-monotonic-pairs-ii/">3251. 单调数组对的数目 II</a>2323 也有组合数学做法</li><li><a href="https://leetcode.cn/problems/number-of-beautiful-partitions/">2478. 完美分割的方案数</a>2344</li><li><a href="https://leetcode.cn/problems/new-21-game/">837. 新 21 点</a>2350 也可以用滑动窗口优化</li><li><a href="https://leetcode.cn/problems/maximum-strength-of-k-disjoint-subarrays/">3077. K 个不相交子数组的最大能量值</a>2557 划分型</li><li><a href="https://leetcode.cn/problems/find-the-original-typed-string-ii/">3333. 找到初始输入字符串 II</a>2629 也有生成函数做法</li><li><a href="https://leetcode.cn/problems/count-of-sub-multisets-with-bounded-sum/">2902. 和带限制的子多重集合的数目</a>2759</li><li><a href="https://leetcode.cn/problems/number-of-ways-to-separate-numbers/">1977. 划分数字的方案数</a>2817</li><li><a href="https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii/">3130. 找出所有稳定的二进制数组 II</a>2825 也有组合数学做法</li></ul><h3>§11.2 单调栈优化 DP</h3><ul><li><a href="https://leetcode.cn/problems/minimum-difficulty-of-a-job-schedule/">1335. 工作计划的最低难度</a>2035</li><li><a href="https://leetcode.cn/problems/beautiful-towers-ii/">2866. 美丽塔 II</a>2072</li><li><a href="https://leetcode.cn/problems/minimum-number-of-visited-cells-in-a-grid/">2617. 网格图中最少访问的格子数</a>2582</li><li><a href="https://leetcode.cn/problems/maximum-number-of-books-you-can-take/">2355. 你能拿走的最大图书数量</a>（会员题）</li></ul><h3>§11.3 单调队列优化 DP</h3><ul><li><a href="https://leetcode.cn/problems/minimum-number-of-coins-for-fruits/">2944. 购买水果需要的最少金币数</a>1709 做到</li><li><a href="https://leetcode.cn/problems/jump-game-vi/">1696. 跳跃游戏 VI</a>1954</li><li><a href="https://leetcode.cn/problems/constrained-subsequence-sum/">1425. 带限制的子序列和</a>2032</li><li><a href="https://leetcode.cn/problems/count-partitions-with-max-min-difference-at-most-k/">3578. 统计极差最大为 K 的分割方式数</a>2033</li><li><a href="https://leetcode.cn/problems/guess-number-higher-or-lower-ii/">375. 猜数字大小 II</a>做到</li><li><a href="https://leetcode.cn/problems/delivering-boxes-from-storage-to-ports/">1687. 从仓库到码头运输箱子</a>2610</li><li><a href="https://leetcode.cn/problems/minimum-total-distance-traveled/">2463. 最小移动总距离</a>做到（注：还有的反悔贪心做法）</li><li><a href="https://leetcode.cn/problems/minimum-sum-of-values-by-dividing-array/">3117. 划分数组得到最小的值之和</a>2735</li><li><a href="https://leetcode.cn/problems/find-maximum-non-decreasing-array-length/">2945. 找到最大非递减数组的长度</a>2943</li><li><a href="https://leetcode.cn/problems/minimum-number-of-coins-for-fruits-ii/">2969. 购买水果需要的最少金币数 II</a>（会员题）</li></ul><h3>§11.4 树状数组/线段树优化 DP</h3><ul><li><a href="https://leetcode.cn/problems/best-team-with-no-conflicts/">1626. 无矛盾的最佳球队</a>2027</li><li><a href="https://leetcode.cn/problems/longest-increasing-subsequence-ii/">2407. 最长递增子序列 II</a>2280</li><li><a href="https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index/">2770. 达到末尾下标所需的最大跳跃次数</a>见我题解下的<a href="https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index/solutions/2336752/dong-tai-gui-hua-cong-ji-yi-hua-sou-suo-2ptkg/comments/2060234">评论</a></li><li><a href="https://leetcode.cn/problems/maximum-balanced-subsequence-sum/">2926. 平衡子序列的最大和</a>2448</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-split-an-array/">2547. 拆分数组的最小代价</a>做到</li><li><a href="https://leetcode.cn/problems/sum-of-beautiful-subsequences/">3671. 子序列美丽值求和</a>2647</li><li><a href="https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii/">2916. 子数组不同元素数目的平方和 II</a>2816 思路类似 2547 题</li></ul><h3>§11.5 字典树优化 DP</h3><ul><li><a href="https://leetcode.cn/problems/word-break/">139. 单词拆分</a></li><li><a href="https://leetcode.cn/problems/extra-characters-in-a-string/">2707. 字符串中的额外字符</a></li><li><a href="https://leetcode.cn/problems/re-space-lcci/">面试题 17.13. 恢复空格</a></li><li><a href="https://leetcode.cn/problems/concatenated-words/">472. 连接词</a>约 2300</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-convert-string-ii/">2977. 转换字符串的最小成本 II</a>2696</li></ul><h3>§11.6 矩阵快速幂优化 DP</h3><ol><li>线性 DP（常系数齐次线性递推），转移系数写在第一行，其余行，例如<a href="https://leetcode.cn/problems/climbing-stairs/">70</a>，<a href="https://leetcode.cn/problems/n-th-tribonacci-number/">1137</a>。<a href="https://leetcode.cn/problems/climbing-stairs/solutions/2560716/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-7zm1/">讲解</a>。</li><li>多维 DP 或者状态机 DP，转移系数可表示为一个大小的矩阵，例如<a href="https://leetcode.cn/problems/knight-dialer/">935</a>。<a href="https://leetcode.cn/problems/knight-dialer/solutions/3004116/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-x06l/">讲解</a>。</li></ol><ul><li><a href="https://leetcode.cn/problems/climbing-stairs/">70. 爬楼梯</a></li><li><a href="https://leetcode.cn/problems/fibonacci-number/">509. 斐波那契数</a></li><li><a href="https://leetcode.cn/problems/n-th-tribonacci-number/">1137. 第 N 个泰波那契数</a></li><li><a href="https://leetcode.cn/problems/count-vowels-permutation/">1220. 统计元音字母序列的数目</a></li><li><a href="https://leetcode.cn/problems/student-attendance-record-ii/">552. 学生出勤记录 II</a></li><li><a href="https://leetcode.cn/problems/knight-dialer/">935. 骑士拨号器</a></li><li><a href="https://leetcode.cn/problems/domino-and-tromino-tiling/">790. 多米诺和托米诺平铺</a></li><li><a href="https://leetcode.cn/problems/number-of-ways-to-paint-n-3-grid/">1411. 给 N x 3 网格图涂色的方案数</a></li><li><a href="https://leetcode.cn/problems/painting-a-grid-with-three-different-colors/">1931. 用三种不同颜色为网格涂色</a></li><li><a href="https://leetcode.cn/problems/total-characters-in-string-after-transformations-ii/">3337. 字符串转换后的长度 II</a>2412</li><li><a href="https://leetcode.cn/problems/number-of-zigzag-arrays-ii/">3700. 锯齿形数组的总数 II</a>2435</li><li><a href="https://leetcode.cn/problems/string-transformation/">2851. 字符串转换</a>2858</li><li><a href="https://leetcode.cn/problems/number-of-ways-to-reach-destination-in-the-grid/">2912. 在网格上移动到目的地的方法数</a>（会员题）</li></ul><h3>§11.7 斜率优化 DP</h3><ul><li><a href="https://leetcode.cn/problems/find-the-minimum-amount-of-time-to-brew-potions/">3494. 酿造药水需要的最少总时间</a></li><li><a href="https://leetcode.cn/problems/minimum-cost-to-divide-array-into-subarrays/">3500. 将数组分割为子数组的最小代价</a></li><li><a href="https://leetcode.cn/problems/climbing-stairs-ii/">3693. 爬楼梯 II</a>与无关的做法</li></ul><h3>§11.8 WQS 二分优化 DP</h3><ul><li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/">188. 买卖股票的最佳时机 IV</a></li><li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-v/">3573. 买卖股票的最佳时机 V</a></li><li><a href="https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/">2209. 用地毯覆盖后的最少白色砖块</a></li><li><a href="https://leetcode.cn/problems/maximize-cyclic-partition-score/">3743. 循环划分的最大得分</a></li></ul><h3>§11.9 其他优化 DP</h3><ul><li><a href="https://leetcode.cn/problems/minimum-sum-after-divisible-sum-deletions/">3654. 删除可整除和后的最小数组和</a>2039</li><li><a href="https://leetcode.cn/problems/maximum-number-of-points-with-cost/">1937. 扣分后的最大得分</a>2106</li><li><a href="https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/">2713. 矩阵中严格递增的单元格数</a>2387</li><li><a href="https://leetcode.cn/problems/minimum-cost-path-with-teleportations/">3651. 带传送的最小路径成本</a>2411</li><li><a href="https://leetcode.cn/problems/number-of-distinct-roll-sequences/">2318. 不同骰子序列的数目</a>容斥优化（类似 CF1943D2）</li><li><a href="https://leetcode.cn/problems/maximum-total-reward-using-operations-ii/">3181. 执行操作可获得的最大总奖励 II</a>2688 bitset 优化</li><li><a href="https://leetcode.cn/problems/check-if-there-is-a-valid-parentheses-string-path/">2267. 检查是否有合法括号字符串路径</a>可以进一步地用 bitset 优化</li><li><a href="https://leetcode.cn/problems/construct-string-with-minimum-cost/">3213. 最小代价构造字符串</a>字符串哈希 / 后缀数组 / AC 自动机优化</li><li><a href="https://leetcode.cn/problems/minimum-number-of-valid-strings-to-form-target-ii/">3292. 形成目标字符串需要的最少字符串数 II</a>字符串哈希 / AC 自动机优化</li><li><a href="https://leetcode.cn/problems/maximize-cyclic-partition-score/">3743. 循环划分的最大得分</a>闵可夫斯基和</li><li><a href="https://leetcode.cn/problems/qie-fen-shu-zu/">LCP 14. 切分数组</a></li><li><a href="https://leetcode.cn/problems/NfY1m5/">LCP 59. 搭桥过河</a>Slope Trick</li><li><a href="https://leetcode.cn/problems/make-array-non-decreasing-or-non-increasing/">2263. 数组变为有序的最小操作次数</a>（会员题）Slope Trick</li></ul><h2>十二、树形 DP</h2><h3>§12.1 树的直径</h3><ul><li><a href="https://leetcode.cn/problems/diameter-of-binary-tree/">543. 二叉树的直径</a></li><li><a href="https://leetcode.cn/problems/longest-univalue-path/">687. 最长同值路径</a></li><li><a href="https://leetcode.cn/problems/binary-tree-maximum-path-sum/">124. 二叉树中的最大路径和</a></li><li><a href="https://leetcode.cn/problems/amount-of-time-for-binary-tree-to-be-infected/">2385. 感染二叉树需要的总时间</a>1711</li><li><a href="https://leetcode.cn/problems/longest-path-with-different-adjacent-characters/">2246. 相邻字符不同的最长路径</a>2126</li><li><a href="https://leetcode.cn/problems/find-minimum-diameter-after-merging-two-trees/">3203. 合并两棵树后的最小直径</a>2266</li><li><a href="https://leetcode.cn/problems/count-subtrees-with-max-distance-between-cities/">1617. 统计子树中城市之间最大距离</a>2309</li><li><a href="https://leetcode.cn/problems/difference-between-maximum-and-minimum-price-sum/">2538. 最大价值和与最小价值和的差值</a>2398</li><li><a href="https://leetcode.cn/problems/diameter-of-n-ary-tree/">1522. N 叉树的直径</a>（会员题）</li><li><a href="https://leetcode.cn/problems/tree-diameter/">1245. 树的直径</a>（会员题）</li><li><a href="https://leetcode.cn/problems/binary-tree-longest-consecutive-sequence-ii/">549. 二叉树最长连续序列 II</a>（会员题）</li><li><a href="https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-i/">3372. 连接两棵树后最大目标节点数目 I</a>算法优化</li></ul><h3>§12.2 树上最大独立集</h3><ul><li><a href="https://leetcode.cn/problems/house-robber-iii/">337. 打家劫舍 III</a>（没有上司的舞会）</li><li><a href="https://leetcode.cn/problems/minimize-the-total-price-of-the-trips/">2646. 最小化旅行的价格总和</a>2238</li><li><a href="https://leetcode.cn/problems/subtree-inversion-sum/">3544. 子树反转和</a>2545 记忆化搜索 / 树上刷表法</li><li><a href="https://leetcode.cn/problems/choose-edges-to-maximize-score-in-a-tree/">2378. 选择边来最大化树的得分</a>（会员题）</li></ul><h3>§12.3 树上最小支配集</h3><ul><li><a href="https://leetcode.cn/problems/binary-tree-cameras/">968. 监控二叉树</a>2124</li></ul><h3>§12.4 换根 DP</h3><ul><li><a href="https://leetcode.cn/problems/sum-of-distances-in-tree/">834. 树中距离之和</a>2197</li><li><a href="https://leetcode.cn/problems/count-number-of-possible-root-nodes/">2581. 统计可能的树根数目</a>2228</li><li><a href="https://leetcode.cn/problems/minimum-edge-reversals-so-every-node-is-reachable/">2858. 可以到达每一个节点的最少边反转次数</a>2295</li><li><a href="https://leetcode.cn/problems/minimum-height-trees/">310. 最小高度树</a>也可以用拓扑排序做</li><li><a href="https://leetcode.cn/problems/time-taken-to-mark-all-nodes/">3241. 标记所有节点需要的时间</a>2522</li><li><a href="https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-i/">3372. 连接两棵树后最大目标节点数目 I</a>做到，解决和很大但很小的场景</li></ul><h3>§12.5 其他树形 DP</h3><ul><li><a href="https://leetcode.cn/problems/maximum-score-after-applying-operations-on-a-tree/">2925. 在树上执行操作以后得到的最大分数</a>1940</li><li><a href="https://leetcode.cn/problems/find-the-maximum-sum-of-node-values/">3068. 最大节点价值之和</a>2268</li><li><a href="https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/">2920. 收集所有金币可获得的最大积分</a>2351 记忆化搜索</li><li><a href="https://leetcode.cn/problems/maximum-good-subtree-score/">3575. 最大好子树分数</a>2360</li><li><a href="https://leetcode.cn/problems/maximum-profit-from-trading-stocks-with-discounts/">3562. 折扣价交易股票的最大利润</a>2458 背包</li><li><a href="https://leetcode.cn/problems/count-ways-to-build-rooms-in-an-ant-colony/">1916. 统计为蚁群构筑房间的不同顺序</a>2486</li><li><a href="https://leetcode.cn/problems/maximize-sum-of-weights-after-edge-removals/">3367. 移除边之后的权重最大和</a>2602</li><li><a href="https://leetcode.cn/problems/er-cha-shu-ren-wu-diao-du/">LCP 10. 二叉树任务调度</a></li><li><a href="https://leetcode.cn/problems/er-cha-shu-ran-se-UGC/">LCP 34. 二叉树染色</a></li><li><a href="https://leetcode.cn/problems/U7WvvU/">LCP 64. 二叉树灯饰</a></li><li><a href="https://leetcode.cn/problems/minimum-flips-in-binary-tree-to-get-result/">2313. 二叉树中得到结果所需的最少翻转次数</a>（会员题）</li></ul><h2>十三、图 DP</h2><ul><li><a href="https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-i/">3243. 新增道路查询后的最短距离 I</a>1568</li><li><a href="https://leetcode.cn/problems/cheapest-flights-within-k-stops/">787. K 站中转内最便宜的航班</a>1786</li><li><a href="https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/">1786. 从第一个节点出发到最后一个节点的受限路径数</a>2079</li><li><a href="https://leetcode.cn/problems/parallel-courses-iii/">2050. 并行课程 III</a>2084</li><li><a href="https://leetcode.cn/problems/network-recovery-pathways/">3620. 恢复网络路径</a></li><li><a href="https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/">1976. 到达目的地的方案数</a>2095</li><li><a href="https://leetcode.cn/problems/maximum-weighted-k-edge-path/">3543. K 条边路径的最大边权和</a>2110bitset</li><li><a href="https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/">1857. 有向图中最大颜色值</a>2313</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-reach-destination-in-time/">1928. 规定时间内到达终点的最小花费</a>2413</li><li><a href="https://leetcode.cn/problems/cat-and-mouse/">913. 猫和老鼠</a>2800 拓扑序</li><li><a href="https://leetcode.cn/problems/cat-and-mouse-ii/">1728. 猫和老鼠 II</a>2849 拓扑序</li><li><a href="https://leetcode.cn/problems/chuan-di-xin-xi/">LCP 07. 传递信息</a></li><li><a href="https://leetcode.cn/problems/the-most-similar-path-in-a-graph/">1548. 图中最相似的路径</a>（会员题）</li></ul><h2>十四、博弈 DP</h2><ul><li><a href="https://leetcode.cn/problems/divisor-game/">1025. 除数博弈</a>1435 有数学做法</li><li><a href="https://leetcode.cn/problems/stone-game/">877. 石子游戏</a>1590 有数学做法</li><li><a href="https://leetcode.cn/problems/predict-the-winner/">486. 预测赢家</a></li><li><a href="https://leetcode.cn/problems/stone-game-iv/">1510. 石子游戏 IV</a>1787</li><li><a href="https://leetcode.cn/problems/stone-game-vii/">1690. 石子游戏 VII</a>1951</li><li><a href="https://leetcode.cn/problems/stone-game-iii/">1406. 石子游戏 III</a>2027</li><li><a href="https://leetcode.cn/problems/stone-game-ii/">1140. 石子游戏 II</a>2035</li><li><a href="https://leetcode.cn/problems/stone-game-v/">1563. 石子游戏 V</a>2087</li><li><a href="https://leetcode.cn/problems/can-i-win/">464. 我能赢吗</a></li><li><a href="https://leetcode.cn/problems/stone-game-viii/">1872. 石子游戏 VIII</a>2440</li><li><a href="https://leetcode.cn/problems/cat-and-mouse/">913. 猫和老鼠</a>2800</li><li><a href="https://leetcode.cn/problems/cat-and-mouse-ii/">1728. 猫和老鼠 II</a>2849</li><li><a href="https://leetcode.cn/problems/flip-game-ii/">294. 翻转游戏 II</a>（会员题）</li></ul><h2>十五、概率/期望 DP</h2><ul><li><a href="https://leetcode.cn/problems/knight-probability-in-chessboard/">688. 骑士在棋盘上的概率</a></li><li><a href="https://leetcode.cn/problems/new-21-game/">837. 新 21 点</a>2350</li><li><a href="https://leetcode.cn/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/">1467. 两个盒子中球的颜色数相同的概率</a>2357</li><li><a href="https://leetcode.cn/problems/soup-servings/">808. 分汤</a>2397</li><li><a href="https://leetcode.cn/problems/nge-tou-zi-de-dian-shu-lcof/">LCR 185. 统计结果概率</a></li><li><a href="https://leetcode.cn/contest/ubiquant2022/problems/I3Gm2h/">九坤-04. 筹码游戏</a></li><li><a href="https://leetcode.cn/problems/toss-strange-coins/">1230. 抛掷硬币</a>（会员题）</li></ul><h2>专题：输出具体方案（打印方案）</h2><ul><li><a href="https://leetcode.cn/problems/largest-divisible-subset/">368. 最大整除子集</a></li><li><a href="https://leetcode.cn/problems/largest-multiple-of-three/">1363. 形成三的最大倍数</a>1823 字典序</li><li><a href="https://leetcode.cn/problems/form-largest-integer-with-digits-that-add-up-to-target/">1449. 数位成本和为目标值的最大数字</a>1927 字典序</li><li><a href="https://leetcode.cn/problems/shortest-common-supersequence/">1092. 最短公共超序列</a>1977</li><li><a href="https://leetcode.cn/problems/find-the-shortest-superstring/">943. 最短超级串</a>2186</li><li><a href="https://leetcode.cn/problems/smallest-sufficient-team/">1125. 最小的必要团队</a>2251</li><li><a href="https://leetcode.cn/problems/concatenated-divisibility/">3533. 判断连接可整除性</a>2257 字典序 暴搜</li><li><a href="https://leetcode.cn/problems/find-the-largest-palindrome-divisible-by-k/">3260. 找出最大的 N 位 K 回文数</a>2370 字典序 暴搜</li><li><a href="https://leetcode.cn/problems/find-the-minimum-cost-array-permutation/">3149. 找出分数最低的排列</a>2642 字典序</li><li><a href="https://leetcode.cn/problems/minimum-cost-good-caption/">3441. 变成好标题的最少代价</a>2765 字典序</li><li><a href="https://leetcode.cn/problems/smallest-divisible-digit-product-ii/">3348. 最小可整除数位乘积 II</a>3101 字典序 暴搜</li><li><a href="https://leetcode.cn/problems/coin-path/">656. 金币路径</a>（会员题）字典序</li><li><a href="https://leetcode.cn/problems/encode-string-with-shortest-length/">471. 编码最短长度的字符串</a>（会员题）</li></ul><h2>专题：前后缀分解</h2><ul><li><a href="https://leetcode.cn/problems/find-pivot-index/">724. 寻找数组的中心下标</a>做到</li><li><a href="https://leetcode.cn/problems/find-the-middle-index-in-array/">1991. 找到数组的中间位置</a>同 724 题</li><li><a href="https://leetcode.cn/problems/equal-score-substrings/">3707. 相等子字符串分数</a>1262</li><li><a href="https://leetcode.cn/problems/number-of-ways-to-split-array/">2270. 分割数组的方案数</a>1334</li><li><a href="https://leetcode.cn/problems/minimum-average-difference/">2256. 最小平均差</a>1395</li><li><a href="https://leetcode.cn/problems/maximum-score-after-splitting-a-string/">1422. 分割字符串的最大得分</a>做到</li><li><a href="https://leetcode.cn/problems/product-of-array-except-self/">238. 除自身以外数组的乘积</a></li><li><a href="https://leetcode.cn/problems/longest-subarray-of-1s-after-deleting-one-element/">1493. 删掉一个元素以后全为 1 的最长子数组</a>1423</li><li><a href="https://leetcode.cn/problems/longest-mountain-in-array/">845. 数组中的最长山脉</a>1437 也可以分组循环</li><li><a href="https://leetcode.cn/problems/sum-of-beauty-in-the-array/">2012. 数组美丽值求和</a>1468</li><li><a href="https://leetcode.cn/problems/minimum-sum-of-mountain-triplets-ii/">2909. 元素和最小的山形三元组 II</a>1479</li><li><a href="https://leetcode.cn/problems/minimum-penalty-for-a-shop/">2483. 商店的最少代价</a>1495</li><li><a href="https://leetcode.cn/problems/number-of-good-ways-to-split-a-string/">1525. 字符串的好分割数目</a>1500</li><li><a href="https://leetcode.cn/problems/count-special-triplets/">3583. 统计特殊三元组</a>1510</li><li><a href="https://leetcode.cn/problems/make-array-elements-equal-to-zero/">3354. 使数组元素等于零</a>做到</li><li><a href="https://leetcode.cn/problems/unique-length-3-palindromic-subsequences/">1930. 长度为 3 的不同回文子序列</a>1533</li><li><a href="https://leetcode.cn/problems/maximum-value-of-an-ordered-triplet-ii/">2874. 有序三元组中的最大值 II</a>1583</li><li><a href="https://leetcode.cn/problems/ways-to-make-a-fair-array/">1664. 生成平衡数组的方案数</a>1590</li><li><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/">123. 买卖股票的最佳时机 III</a>拆分成两个 121 题</li><li><a href="https://leetcode.cn/problems/split-array-with-minimum-difference/">3698. 分割数组得到最小绝对差</a>1649</li><li><a href="https://leetcode.cn/problems/longest-common-prefix-between-adjacent-strings-after-removals/">3598. 相邻字符串之间的最长公共前缀</a>1655</li><li><a href="https://leetcode.cn/problems/number-of-ways-to-select-buildings/">2222. 选择建筑的方案数</a>1657</li><li><a href="https://leetcode.cn/problems/maximum-sum-of-two-non-overlapping-subarrays/">1031. 两个无重叠子数组的最大和</a>1680</li><li><a href="https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays/">689. 三个无重叠子数组的最大和</a></li><li><a href="https://leetcode.cn/problems/find-all-good-indices/">2420. 找到所有好下标</a>1695</li><li><a href="https://leetcode.cn/problems/find-good-days-to-rob-the-bank/">2100. 适合野炊的日子</a>1702</li><li><a href="https://leetcode.cn/problems/flip-string-to-monotone-increasing/">926. 将字符串翻转到单调递增</a></li><li><a href="https://leetcode.cn/problems/increasing-triplet-subsequence/">334. 递增的三元子序列</a></li><li><a href="https://leetcode.cn/problems/minimum-deletions-to-make-string-balanced/">1653. 使字符串平衡的最少删除次数</a>1794</li><li><a href="https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/">1186. 删除一次得到子数组最大和</a>1799</li><li><a href="https://leetcode.cn/problems/longest-non-decreasing-subarray-after-replacing-at-most-one-element/">3738. 替换至多一个元素后最长非递减子数组</a>1811</li><li><a href="https://leetcode.cn/problems/trapping-rain-water/">42. 接雨水</a>（<a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1Qg411q7ia%2F%3Ft%3D3m05s">讲解</a>）</li><li><a href="https://leetcode.cn/problems/difference-of-number-of-distinct-values-on-diagonals/">2711. 对角线上不同值的数量差</a>做到</li><li><a href="https://leetcode.cn/problems/find-two-non-overlapping-sub-arrays-each-with-target-sum/">1477. 找两个和为目标值且不重叠的子数组</a>1851</li><li><a href="https://leetcode.cn/problems/maximum-or/">2680. 最大或值</a>1912</li><li><a href="https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/">1671. 得到山形数组的最少删除次数</a>1913</li><li><a href="https://leetcode.cn/problems/construct-product-matrix/">2906. 构造乘积矩阵</a>2075</li><li><a href="https://leetcode.cn/problems/find-the-maximum-factor-score-of-array/">3334. 数组的最大因子得分</a>非暴力做法</li><li><a href="https://leetcode.cn/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/">2167. 移除所有载有违禁货物车厢所需的最少时间</a>2219</li><li><a href="https://leetcode.cn/problems/count-palindromic-subsequences/">2484. 统计回文子序列数目</a>2223</li><li><a href="https://leetcode.cn/problems/minimum-difference-in-sums-after-removal-of-elements/">2163. 删除元素后和的最小差值</a>2225</li><li><a href="https://leetcode.cn/problems/subsequence-with-the-minimum-score/">2565. 最少得分子序列</a>2432</li><li><a href="https://leetcode.cn/problems/count-special-quadruplets/">1995. 统计特殊四元组</a>四个数</li><li><a href="https://leetcode.cn/problems/count-increasing-quadruplets/">2552. 统计上升四元组</a>2433 四个数</li><li><a href="https://leetcode.cn/problems/find-the-lexicographically-smallest-valid-sequence/">3302. 字典序最小的合法序列</a>2474 第 2565 题的进阶版本</li><li><a href="https://leetcode.cn/problems/count-special-subsequences/">3404. 统计特殊子序列的数目</a>2445 四个数</li><li><a href="https://leetcode.cn/problems/find-the-occurrence-of-first-almost-equal-substring/">3303. 第一个几乎相等子字符串的下标</a>2509</li><li><a href="https://leetcode.cn/problems/find-the-maximum-sequence-value-of-array/">3287. 求出数组中最大序列值</a>2545</li><li><a href="https://leetcode.cn/problems/maximum-value-sum-by-placing-three-rooks-ii/">3257. 放三个车的价值之和最大 II</a>2553</li><li><a href="https://leetcode.cn/problems/maximize-subarray-sum-after-removing-all-occurrences-of-one-element/">3410. 删除所有值为某个元素后的最大子数组和</a>2844</li><li><a href="https://leetcode.cn/problems/maximize-the-number-of-partitions-after-operations/">3003. 执行操作后的最大分割数量</a>3039</li><li><a href="https://leetcode.cn/problems/max-consecutive-ones-ii/">487. 最大连续 1 的个数 II</a>（会员题）</li><li><a href="https://leetcode.cn/problems/maximum-subarray-sum-after-one-operation/">1746. 经过一次操作后的最大子数组和</a>（会员题）</li></ul><ul><li>输入一个长为的数组，你需要返回一个长为的数组，其中表示删除，也就是禁止在第天买卖股票，在此约束下<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">121. 买卖股票的最佳时机</a>的答案。</li></ul><h2>专题：把 X 变成 Y</h2><ul><li><a href="https://leetcode.cn/problems/integer-replacement/">397. 整数替换</a></li><li><a href="https://leetcode.cn/problems/minimum-number-of-operations-to-make-x-and-y-equal/">2998. 使 X 和 Y 相等的最少操作次数</a>1795</li><li><a href="https://leetcode.cn/problems/minimum-operations-to-convert-number/">2059. 转化数字的最小运算数</a>1850</li><li><a href="https://leetcode.cn/problems/broken-calculator/">991. 坏了的计算器</a>1909</li><li><a href="https://leetcode.cn/problems/minimum-number-of-days-to-eat-n-oranges/">1553. 吃掉 N 个橘子的最少天数</a>2048</li></ul><ul><li><a href="https://leetcode.cn/problems/digit-operations-to-make-two-integers-equal/">3377. 使两个整数相等的数位操作</a>2186</li></ul><h2>专题：跳跃游戏</h2><ul><li><a href="https://leetcode.cn/problems/jump-game-iii/">1306. 跳跃游戏 III</a>1397</li><li><a href="https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index/">2770. 达到末尾下标所需的最大跳跃次数</a>1533</li><li><a href="https://leetcode.cn/problems/frog-jump/">403. 青蛙过河</a></li><li><a href="https://leetcode.cn/problems/jump-game-v/">1340. 跳跃游戏 V</a>1866</li><li><a href="https://leetcode.cn/problems/jump-game-vii/">1871. 跳跃游戏 VII</a>1896</li><li><a href="https://leetcode.cn/problems/jump-game-vi/">1696. 跳跃游戏 VI</a>1954</li><li><a href="https://leetcode.cn/problems/odd-even-jump/">975. 奇偶跳</a>2079</li><li><a href="https://leetcode.cn/problems/minimum-jumps-to-reach-home/">1654. 到家的最少跳跃次数</a>2124</li><li><a href="https://leetcode.cn/problems/zui-xiao-tiao-yue-ci-shu/">LCP 09. 最小跳跃次数</a></li><li><a href="https://leetcode.cn/problems/meChtZ/">LCP 20. 快速公交</a></li><li><a href="https://leetcode.cn/problems/coin-path/">656. 金币路径</a>（会员题）</li><li><a href="https://leetcode.cn/problems/jump-game-viii/">2297. 跳跃游戏 VIII</a>（会员题）</li></ul><h2>其他</h2><ul><li><a href="https://leetcode.cn/problems/sort-integers-by-the-power-value/">1387. 将整数按权重排序</a>1507</li><li><a href="https://leetcode.cn/problems/binary-trees-with-factors/">823. 带因子的二叉树</a>1900</li><li><a href="https://leetcode.cn/problems/pyramid-transition-matrix/">756. 金字塔转换矩阵</a>1990</li><li><a href="https://leetcode.cn/problems/number-of-strings-which-can-be-rearranged-to-contain-substring/">2930. 重新排列后包含指定子字符串的字符串数目</a>2227</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-change-the-final-value-of-expression/">1896. 反转表达式值的最少操作次数</a>2532</li></ul><h2>算法题单</h2></body></html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+ </head>
+ <body>
+  <h2>
+   前言
+  </h2>
+  <h2>
+   一、入门 DP
+  </h2>
+  <h3>
+   §1.1 爬楼梯
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/climbing-stairs/">
+     70. 爬楼梯
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/min-cost-climbing-stairs/">
+     746. 使用最小花费爬楼梯
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/climbing-stairs-ii/">
+     3693. 爬楼梯 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/combination-sum-iv/">
+     377. 组合总和 Ⅳ
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-ways-to-build-good-strings/">
+     2466. 统计构造好字符串的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-number-of-texts/">
+     2266. 统计打字方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-good-binary-strings/">
+     2533. 好二进制字符串的数量
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §1.2 打家劫舍
+  </h3>
+  <h4>
+   答疑
+  </h4>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/house-robber/">
+     198. 打家劫舍
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/house-robber-ii/">
+     213. 打家劫舍 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-number-of-ways-to-place-houses/">
+     2320. 统计放置房子的方式数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/delete-and-earn/">
+     740. 删除并获得点数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-total-damage-with-spell-casting/">
+     3186. 施咒的最大总伤害
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/solving-questions-with-brainpower/">
+     2140. 解决智力问题
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §1.3 最大子数组和（最大子段和）
+  </h3>
+  <ol>
+   <li>
+    <a href="https://leetcode.cn/problems/range-sum-query-immutable/solution/qian-zhui-he-ji-qi-kuo-zhan-fu-ti-dan-py-vaar/">
+     前缀和
+    </a>
+    <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">
+     121. 买卖股票的最佳时机
+    </a>
+   </li>
+  </ol>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-subarray/">
+     53. 最大子数组和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-substring-with-maximum-cost/">
+     2606. 找到最大开销的子字符串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-absolute-sum-of-any-subarray/">
+     1749. 任意子数组和的绝对值的最大值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/k-concatenation-maximum-sum/">
+     1191. K 次串联后最大子数组之和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-sum-circular-subarray/">
+     918. 环形子数组的最大和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-score-of-spliced-array/">
+     2321. 拼接数组的最大分数
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-product-subarray/">
+     152. 乘积最大子数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/">
+     1186. 删除一次得到子数组最大和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-subarray-sum-with-length-divisible-by-k/">
+     3381. 长度可被 K 整除的子数组的最大元素和
+    </a>
+   </li>
+  </ul>
+  <h3>
+   思考题
+  </h3>
+  <h2>
+   二、网格图 DP
+  </h2>
+  <h3>
+   §2.1 基础
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-path-sum/">
+     64. 最小路径和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/unique-paths/">
+     62. 不同路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/unique-paths-ii/">
+     63. 不同路径 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/triangle/">
+     120. 三角形最小路径和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-paths-with-the-given-xor-value/">
+     3393. 统计异或值为给定值的路径数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-falling-path-sum/">
+     931. 下降路径最小和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-moves-in-a-grid/">
+     2684. 矩阵中移动的最大次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-path-with-alternating-directions-ii/">
+     3603. 交替方向的最小路径代价 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-path-cost-in-a-grid/">
+     2304. 网格中的最小路径代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-falling-path-sum-ii/">
+     1289. 下降路径最小和 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-amount-of-money-robot-can-earn/">
+     3418. 机器人可以获得的最大金币数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-path-score-in-a-grid/">
+     3742. 网格中得分最大的路径
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-sideway-jumps/">
+     1824. 最少侧跳次数
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §2.2 进阶
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-non-negative-product-in-a-matrix/">
+     1594. 矩阵的最大非负积
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-paths-with-max-score/">
+     1301. 最大得分的路径数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/twisted-mirror-path-count/">
+     3665. 统计镜子反射路径数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/paths-in-matrix-whose-sum-is-divisible-by-k/">
+     2435. 矩阵中和能被 K 整除的路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/dungeon-game/">
+     174. 地下城游戏
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-increasing-path-in-a-matrix/">
+     329. 矩阵中的最长递增路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-increasing-paths-in-a-grid/">
+     2328. 网格图中递增路径的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/check-if-there-is-a-valid-parentheses-string-path/">
+     2267. 检查是否有合法括号字符串路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-points-with-cost/">
+     1937. 扣分后的最大得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-maximum-number-of-fruits-collected/">
+     3363. 最多可收集的水果数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/cherry-pickup-ii/">
+     1463. 摘樱桃 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/cherry-pickup/">
+     741. 摘樱桃
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/length-of-longest-v-shaped-diagonal-segment/">
+     3459. 最长 V 形对角线段的长度
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/check-if-there-is-a-path-with-equal-number-of-0s-and-1s/">
+     2510. 检查是否有路径经过相同数量的 0 和 1
+    </a>
+   </li>
+  </ul>
+  <h2>
+   三、背包
+  </h2>
+  <h3>
+   §3.1 0-1 背包
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/partition-equal-subset-sum/">
+     416. 分割等和子集
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/target-sum/">
+     494. 目标和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/length-of-the-longest-subsequence-that-sums-to-target/">
+     2915. 和为目标值的最长子序列的长度
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/ways-to-express-an-integer-as-sum-of-powers/">
+     2787. 将一个数字表示成幂的和的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-total-reward-using-operations-i/">
+     3180. 执行操作可获得的最大总奖励 I
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/ones-and-zeroes/">
+     474. 一和零
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/zero-array-transformation-iv/">
+     3489. 零数组变换 IV
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/subsequence-sum-after-capping-elements/">
+     3685. 含上限元素的子序列和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/last-stone-weight-ii/">
+     1049. 最后一块石头的重量 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/closest-dessert-cost/">
+     1774. 最接近目标价格的甜点成本
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/profitable-schemes/">
+     879. 盈利计划
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-sum-of-the-power-of-all-subsequences/">
+     3082. 求出所有子序列的能量和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/tallest-billboard/">
+     956. 最高的广告牌
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-great-partitions/">
+     2518. 好分区的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/painting-the-walls/">
+     2742. 给墙壁刷油漆
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-maximum-sequence-value-of-array/">
+     3287. 求出数组中最大序列值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-total-reward-using-operations-ii/">
+     3181. 执行操作可获得的最大总奖励 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/oPs9Bm/">
+     LCP 47. 入场安检
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-profit-from-trading-stocks/">
+     2291. 最大股票收益
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-total-tastiness-of-purchased-fruits/">
+     2431. 最大限度地提高购买水果的口味
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-weight-in-two-bags/">
+     3647. 两个袋子中的最大重量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-build-house-of-cards/">
+     2189. 建造纸牌屋的方法数
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §3.2 完全背包
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/coin-change/">
+     322. 零钱兑换
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/coin-change-ii/">
+     518. 零钱兑换 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/perfect-squares/">
+     279. 完全平方数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-primes-to-sum-to-target/">
+     3610. 目标和所需的最小质数个数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/the-number-of-ways-to-make-the-sum/">
+     3183. 达到总和的方法数量
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/inverse-coin-change/">
+     3592. 硬币面值还原
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/form-largest-integer-with-digits-that-add-up-to-target/">
+     1449. 数位成本和为目标值的最大数字
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §3.3 多重背包（选做）
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-earn-points/">
+     2585. 获得分数的方法数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-original-typed-string-ii/">
+     3333. 找到初始输入字符串 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-of-sub-multisets-with-bounded-sum/">
+     2902. 和带限制的子多重集合的数目
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/zero-array-transformation-iv/">
+     3489. 零数组变换 IV
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §3.4 分组背包
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum/">
+     1155. 掷骰子等于目标和的方法数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimize-the-difference-between-target-and-chosen-elements/">
+     1981. 最小化目标值与所选元素的差
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-value-of-k-coins-from-piles/">
+     2218. 从栈中取出 K 个硬币的最大面值和
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §3.5 树形背包（选做）
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-profit-from-trading-stocks-with-discounts/">
+     3562. 折扣价交易股票的最大利润
+    </a>
+   </li>
+  </ul>
+  <h2>
+   四、经典线性 DP
+  </h2>
+  <h3>
+   §4.1 最长公共子序列（LCS）
+  </h3>
+  <h4>
+   §4.1.1 基础
+  </h4>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-common-subsequence/">
+     1143. 最长公共子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/delete-operation-for-two-strings/">
+     583. 两个字符串的删除操作
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/">
+     712. 两个字符串的最小 ASCII 删除和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/edit-distance/">
+     72. 编辑距离
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/uncrossed-lines/">
+     1035. 不相交的线
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/max-dot-product-of-two-subsequences/">
+     1458. 两个子序列的最大点积
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-length-of-repeated-subarray/">
+     718. 最长重复子数组
+    </a>
+   </li>
+  </ul>
+  <h4>
+   §4.1.2 进阶
+  </h4>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-multiplication-score/">
+     3290. 最高乘法得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/distinct-subsequences/">
+     115. 不同的子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-subsequences-after-one-inserting/">
+     3628. 插入一个字母的最大子序列数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-maximum-removals-from-source-string/">
+     3316. 从原字符串里进行删除操作的最多次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/">
+     1639. 通过给定词典构造目标字符串的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/interleaving-string/">
+     97. 交错字符串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-common-supersequence/">
+     1092. 最短公共超序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/wildcard-matching/">
+     44. 通配符匹配
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/regular-expression-matching/">
+     10. 正则表达式匹配
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §4.2 最长递增子序列（LIS）
+  </h3>
+  <ol>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-increasing-subsequence-ii/">
+     2407 题
+    </a>
+   </li>
+  </ol>
+  <h4>
+   §4.2.1 基础
+  </h4>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-increasing-subsequence/">
+     300. 最长递增子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/increasing-triplet-subsequence/">
+     334. 递增的三元子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sorting-three-groups/">
+     2826. 将三个组排序
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/">
+     1671. 得到山形数组的最少删除次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-longest-valid-obstacle-course-at-each-position/">
+     1964. 找出到每个位置为止最长的有效障碍赛跑路线
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-operations-to-make-the-array-k-increasing/">
+     2111. 使数组 K 递增的最少操作次数
+    </a>
+   </li>
+  </ul>
+  <h4>
+   §4.2.2 进阶
+  </h4>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/russian-doll-envelopes/">
+     354. 俄罗斯套娃信封问题
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/best-team-with-no-conflicts/">
+     1626. 无矛盾的最佳球队
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-height-by-stacking-cuboids/">
+     1691. 堆叠长方体的最大高度
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/delete-columns-to-make-sorted-iii/">
+     960. 删列造序 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-increasing-subsequence-ii/">
+     2407. 最长递增子序列 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-longest-increasing-subsequence/">
+     673. 最长递增子序列的个数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/make-array-strictly-increasing/">
+     1187. 使数组严格递增
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-operations-to-make-a-subsequence/">
+     1713. 得到子序列的最少操作次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/length-of-the-longest-increasing-path/">
+     3288. 最长上升路径的长度
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/largest-divisible-subset/">
+     368. 最大整除子集
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii/">
+     2901. 最长相邻不相等子序列 II
+    </a>
+   </li>
+  </ul>
+  <h2>
+   五、划分型 DP
+  </h2>
+  <h3>
+   §5.1 判定能否划分
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/check-if-there-is-a-valid-partition-for-the-array/">
+     2369. 检查数组是否存在有效划分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/word-break/">
+     139. 单词拆分
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §5.2 最优划分
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/palindrome-partitioning-ii/">
+     132. 分割回文串 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/extra-characters-in-a-string/">
+     2707. 字符串中的额外字符
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-total-cost-of-alternating-subarrays/">
+     3196. 最大化子数组的总成本
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/partition-string-into-minimum-beautiful-substrings/">
+     2767. 将字符串分割为最少的美丽子字符串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/decode-ways/">
+     91. 解码方法
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/decode-ways-ii/">
+     639. 解码方法 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/">
+     LCR 165. 解密数字
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/partition-array-for-maximum-sum/">
+     1043. 分隔数组以得到最大和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-substring-partition-of-equal-character-frequency/">
+     3144. 分割字符频率相等的最少子字符串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/restore-the-array/">
+     1416. 恢复数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-non-overlapping-palindrome-substrings/">
+     2472. 不重叠回文子字符串的最大数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/filling-bookcase-shelves/">
+     1105. 填充书架
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-split-an-array/">
+     2547. 拆分数组的最小代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-partitions-with-max-min-difference-at-most-k/">
+     3578. 统计极差最大为 K 的分割方式数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-deletions-on-a-string/">
+     2430. 对字母串可执行的最大删除数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-total-distance-traveled/">
+     2463. 最小移动总距离
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-steps-to-convert-string-with-operations/">
+     3579. 字符串转换需要的最小操作数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-divide-array-into-subarrays/">
+     3500. 将数组分割为子数组的最小代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-convert-string-ii/">
+     2977. 转换字符串的最小成本 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-good-caption/">
+     3441. 变成好标题的最少代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-separate-sentence-into-rows/">
+     2052. 将句子分隔成行的最低成本
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-subarrays-in-a-valid-split/">
+     2464. 有效分割中的最少子数组数目
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §5.3 约束划分个数
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/largest-sum-of-averages/">
+     813. 最大平均值和的分组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/partition-array-to-minimize-xor/">
+     3599. 划分数组得到最小 XOR
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/split-array-largest-sum/">
+     410. 分割数组的最大值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/palindrome-partitioning-iii/">
+     1278. 分割回文串 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/palindrome-partitioning-iv/">
+     1745. 分割回文串 IV
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-difficulty-of-a-job-schedule/">
+     1335. 工作计划的最低难度
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/paint-house-iii/">
+     1473. 粉刷房子 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/">
+     2209. 用地毯覆盖后的最少白色砖块
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/allocate-mailboxes/">
+     1478. 安排邮筒
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sum-of-k-subarrays-with-length-at-least-m/">
+     3473. 长度至少为 M 的 K 个子数组之和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-total-space-wasted-with-k-resizing-operations/">
+     1959. K 次调整数组大小浪费的最小总空间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-beautiful-partitions/">
+     2478. 完美分割的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/merge-operations-for-minimum-travel-time/">
+     3538. 合并得到最小旅行时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-operations-to-make-elements-within-k-subarrays-equal/">
+     3505. 使 K 个子数组内元素相等的最少操作数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-strength-of-k-disjoint-subarrays/">
+     3077. K 个不相交子数组的最大能量值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-changes-to-make-k-semi-palindromes/">
+     2911. 得到 K 个半回文串的最少修改次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-sum-of-values-by-dividing-array/">
+     3117. 划分数组得到最小的值之和
+    </a>
+   </li>
+  </ul>
+  <h2>
+   六、状态机 DP
+  </h2>
+  <h3>
+   §6.1 买卖股票
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">
+     121. 买卖股票的最佳时机
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/">
+     122. 买卖股票的最佳时机 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/">
+     123. 买卖股票的最佳时机 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/">
+     188. 买卖股票的最佳时机 IV
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-v/">
+     3573. 买卖股票的最佳时机 V
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/">
+     309. 买卖股票的最佳时机含冷冻期
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">
+     714. 买卖股票的最佳时机含手续费
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §6.2 基础
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-energy-boost-from-two-drinks/">
+     3259. 超级饮料的最大强化能量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-select-buildings/">
+     2222. 选择建筑的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-strength-of-a-group/">
+     2708. 一个小组的最大实力值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/">
+     1567. 乘积为正数的最长子数组长度
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/visit-array-positions-to-maximize-score/">
+     2786. 访问数组中的位置使分数最大
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-alternating-subsequence-sum/">
+     1911. 最大交替子序列和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/wiggle-subsequence/">
+     376. 摆动序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-coin-collection/">
+     3466. 最大硬币收集量
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §6.3 进阶
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-subsequences-after-one-inserting/">
+     3628. 插入一个字母的最大子序列数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-non-decreasing-subarray-from-two-arrays/">
+     2771. 构造最长非递减子数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/">
+     1186. 删除一次得到子数组最大和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-non-negative-product-in-a-matrix/">
+     1594. 矩阵的最大非负积
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-non-decreasing-subarray-after-replacing-at-most-one-element/">
+     3738. 替换至多一个元素后最长非递减子数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-total-cost-of-alternating-subarrays/">
+     3196. 最大化子数组的总成本
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/knight-dialer/">
+     935. 骑士拨号器
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/get-the-maximum-score/">
+     1537. 最大得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-increment-operations-to-make-array-beautiful/">
+     2919. 使数组变美的最小增量运算数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/">
+     801. 使序列递增的最小交换次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-frequency-after-subarray-operation/">
+     3434. 子数组操作后的最大频率
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-number-of-special-subsequences/">
+     1955. 统计特殊子序列的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-maximum-sum-of-node-values/">
+     3068. 最大节点价值之和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/trionic-array-ii/">
+     3640. 三段式数组 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/substring-with-largest-variance/">
+     2272. 最大波动的子字符串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-walls-destroyed-by-robots/">
+     3661. 可以被机器人摧毁的最大墙壁数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-cyclic-partition-score/">
+     3743. 循环划分的最大得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/UlBDOe/">
+     LCP 19. 秋叶收藏集
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/paint-fence/">
+     276. 栅栏涂色
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-subarray-sum-after-one-operation/">
+     1746. 经过一次操作后的最大子数组和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-alternating-subarray-sum/">
+     2036. 最大交替子数组和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-costs-using-the-train-line/">
+     2361. 乘坐火车路线的最少费用
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/constructing-two-increasing-arrays/">
+     3269. 构建两个递增数组
+    </a>
+   </li>
+  </ul>
+  <h2>
+   七、其他线性 DP
+  </h2>
+  <h3>
+   §7.1 一维 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/taking-maximum-energy-from-the-mystic-dungeon/">
+     3147. 从魔法师身上吸取的最大能量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-coins-for-fruits/">
+     2944. 购买水果需要的最少金币数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/solving-questions-with-brainpower/">
+     2140. 解决智力问题
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-for-tickets/">
+     983. 最低票价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/largest-divisible-subset/">
+     368. 最大整除子集
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii/">
+     2901. 最长相邻不相等子序列 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/2-keys-keyboard/">
+     650. 两个键的键盘
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-refueling-stops/">
+     871. 最低加油次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-valid-parentheses/">
+     32. 最长有效括号
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/">
+     2167. 移除所有载有违禁货物车厢所需的最少时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-finish-the-race/">
+     2188. 完成比赛的最少时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal/">
+     2896. 执行操作使两个字符串相等
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/race-car/">
+     818. 赛车
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-operations-to-make-character-frequencies-equal/">
+     3389. 使字符频率相等的最少操作次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-the-distance-between-points-on-a-square/">
+     3464. 正方形上的点之间的最大距离
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-array-hopping-score-i/">
+     3205. 最大数组跳跃得分 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/handshakes-that-dont-cross/">
+     1259. 不相交的握手
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/the-number-of-beautiful-subsets/">
+     2597. 美丽子集的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-the-number-of-k-free-subsets/">
+     2638. 统计 K-Free 子集的总数
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §7.2 不相交区间
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/">
+     2830. 销售利润最大化
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-earnings-from-taxi/">
+     2008. 出租车的最大盈利
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/two-best-non-overlapping-events/">
+     2054. 两个最好的不重叠活动
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-profit-in-job-scheduling/">
+     1235. 规划兼职工作
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-events-that-can-be-attended-ii/">
+     1751. 最多可以参加的会议数目 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-score-of-non-overlapping-intervals/">
+     3414. 不重叠区间的最大得分
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §7.3 子数组 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-subarray/">
+     53. 最大子数组和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-product-subarray/">
+     152. 乘积最大子数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/">
+     1186. 删除一次得到子数组最大和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-non-decreasing-subarray-after-replacing-at-most-one-element/">
+     3738. 替换至多一个元素后最长非递减子数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-x-value-of-array-i/">
+     3524. 求出数组的 X 值 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-substrings-divisible-by-last-digit/">
+     3448. 统计可以被最后一个数位整除的子字符串数目
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/total-appeal-of-a-string/">
+     2262. 字符串的总引力
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-unique-characters-of-all-substrings-of-a-given-string/">
+     828. 统计子串中的唯一字符
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/unique-substrings-in-wraparound-string/">
+     467. 环绕字符串中唯一的子字符串
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §7.4 合法子序列 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-square-streak-in-an-array/">
+     2501. 数组中最长的方波
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-arithmetic-subsequence-of-given-difference/">
+     1218. 最长定差子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sorting-three-groups/">
+     2826. 将三个组排序
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-arithmetic-subsequence/">
+     1027. 最长等差数列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-ideal-subsequence/">
+     2370. 最长理想子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/length-of-longest-fibonacci-subsequence/">
+     873. 最长的斐波那契子序列的长度
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-stable-subsequences/">
+     3686. 稳定子序列的数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-maximum-length-of-valid-subsequence-ii/">
+     3202. 找出有效子序列的最大长度 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/arithmetic-slices-ii-subsequence/">
+     446. 等差数列划分 II - 子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sum-of-good-subsequences/">
+     3351. 好子序列的元素之和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-consecutive-elements-in-an-array-after-modification/">
+     3041. 修改数组后最大化数组中的连续元素数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-subsequence-with-decreasing-adjacent-difference/">
+     3409. 最长相邻绝对差递减子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-sum-of-subsequence-powers/">
+     3098. 求出所有子序列的能量和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii/">
+     2901. 最长相邻不相等子序列 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sum-of-consecutive-subsequences/">
+     3299. 连续子序列的和
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-string-chain/">
+     1048. 最长字符串链
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/distinct-subsequences-ii/">
+     940. 不同的子序列 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-unique-good-subsequences/">
+     1987. 不同的好子序列数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-different-palindromic-subsequences/">
+     730. 统计不同回文子序列
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §7.5 子矩形 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-difference-score-in-a-grid/">
+     3148. 矩阵中的最大得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximal-square/">
+     221. 最大正方形
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-square-submatrices-with-all-ones/">
+     1277. 统计全为 1 的正方形子矩阵
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-fertile-pyramids-in-a-land/">
+     2088. 统计农场中肥沃金字塔的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-minimum-area-to-cover-all-ones-ii/">
+     3197. 包含所有 1 的最小矩形面积 II
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §7.6 多维 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-select-buildings/">
+     2222. 选择建筑的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sorting-three-groups/">
+     2826. 将三个组排序
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/">
+     2400. 恰好移动 k 步到达某一位置的方法数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/greatest-sum-divisible-by-three/">
+     1262. 可被三整除的最大和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-points-tourist-can-earn/">
+     3332. 旅客可以得到的最多点数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-maximum-length-of-a-good-subsequence-i/">
+     3176. 求出最长好子序列 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/">
+     1269. 停在原地的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-count-of-monotonic-pairs-i/">
+     3250. 单调数组对的数目 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-for-cutting-cake-i/">
+     3218. 切蛋糕的最小总开销 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-operations-to-satisfy-conditions/">
+     3122. 使矩阵满足条件的最少操作次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/out-of-boundary-paths/">
+     576. 出界的路径数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/frog-jump/">
+     403. 青蛙过河
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-ways-to-choose-coprime-integers-from-rows/">
+     3725. 统计每一行选择互质整数的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/dice-roll-simulation/">
+     1223. 掷骰子模拟
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-distance-to-type-a-word-using-two-fingers/">
+     1320. 二指输入的的最小距离
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-array-sum/">
+     3366. 最小数组和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-all-possible-routes/">
+     1575. 统计所有可行路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair/">
+     3154. 到达第 K 级台阶的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-distinct-roll-sequences/">
+     2318. 不同骰子序列的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-minimum-cost-to-remove-array-elements/">
+     3469. 移除所有数组元素的最小代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/decremental-string-concatenation/">
+     2746. 字符串连接删减字母
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-of-cutting-a-pizza/">
+     1444. 切披萨的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-the-number-of-winning-sequences/">
+     3320. 统计能获胜的出招序列数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/paint-house-iv/">
+     3429. 粉刷房子 IV
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal/">
+     2896. 执行操作使两个字符串相等
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/build-array-where-you-can-find-the-maximum-exactly-k-comparisons/">
+     1420. 生成数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-the-number-of-inversions/">
+     3193. 统计逆序对的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/letter-tile-possibilities/">
+     1079. 活字印刷
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/">
+     1866. 恰有 K 根木棍可以看到的排列数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/selling-pieces-of-wood/">
+     2312. 卖木头块
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-maximum-length-of-a-good-subsequence-ii/">
+     3177. 求出最长好子序列 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/egg-drop-with-2-eggs-and-n-floors/">
+     1884. 鸡蛋掉落-两枚鸡蛋
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/super-egg-drop/">
+     887. 鸡蛋掉落
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-music-playlists/">
+     920. 播放列表的数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/freedom-trail/">
+     514. 自由之路
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-number-of-subsequences-with-equal-gcd/">
+     3336. 最大公约数相等的子序列数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/pizza-with-3n-slices/">
+     1388. 3n 块披萨
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/valid-permutations-for-di-sequence/">
+     903. DI 序列的有效排列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/the-earliest-and-latest-rounds-where-players-compete/">
+     1900. 最佳运动员的比拼回合
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/string-compression-ii/">
+     1531. 压缩字符串 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-skips-to-arrive-at-meeting-on-time/">
+     1883. 准时抵达会议现场的最小跳过休息次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/least-operators-to-express-number/">
+     964. 表示数字的最少运算符
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-number-of-balanced-permutations/">
+     3343. 统计平衡排列的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/make-the-xor-of-all-segments-equal-to-zero/">
+     1787. 使所有区间的异或结果为零
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k/">
+     3509. 最大化交错和为 K 的子序列乘积
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-good-caption/">
+     3441. 变成好标题的最少代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-sum-of-array-product-of-magical-sequences/">
+     3539. 魔法序列的数组乘积之和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/check-if-an-original-string-exists-given-two-encoded-strings/">
+     2060. 同源字符串检测
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-make-array-sum-at-most-x/">
+     2809. 使数组和小于等于 x 的最少时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-the-number-of-partitions-after-operations/">
+     3003. 执行操作后的最大分割数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-score-from-grid-operations/">
+     3225. 网格图操作后的最大分数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/ZbAuEH/">
+     LCP 57. 打地鼠
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/Y1VbOX/">
+     LCP 43. 十字路口的交通
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/3aqs1c/">
+     LCP 65. 舒适的湿度
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/Up5XYM/">
+     LCP 36. 最多牌组数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/7rLGCR/">
+     LCP 38. 守卫城堡
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/paint-house/">
+     256. 粉刷房子
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/paint-house-ii/">
+     265. 粉刷房子 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-number-of-k-even-arrays/">
+     3339. 查找 K 偶数数组的数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-vacation-days/">
+     568. 最大休假天数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-ways-to-distribute-candies/">
+     1692. 计算分配糖果的不同方式
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/choose-numbers-from-two-arrays-in-range/">
+     2143. 在两个数组的区间中选取数字
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/constructing-two-increasing-arrays/">
+     3269. 构建两个递增数组
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/shopping-offers/">
+     638. 大礼包
+    </a>
+   </li>
+  </ul>
+  <h2>
+   八、区间 DP
+  </h2>
+  <h3>
+   §8.1 最长回文子序列
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-palindromic-subsequence/">
+     516. 最长回文子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-insertion-steps-to-make-a-string-palindrome/">
+     1312. 让字符串成为回文串的最少插入次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-palindromic-subsequence-after-at-most-k-operations/">
+     3472. 至多 K 次操作后的最长回文子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-palindrome-length-from-subsequences/">
+     1771. 由子序列构造的最长回文串的长度
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-different-palindromic-subsequences/">
+     730. 统计不同回文子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-palindromic-subsequence-ii/">
+     1682. 最长回文子序列 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/valid-palindrome-iii/">
+     1216. 验证回文串 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/palindrome-removal/">
+     1246. 删除回文子数组
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §8.2 区间 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-palindromic-substring/">
+     5. 最长回文子串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/palindromic-substrings/">
+     647. 回文子串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-operations-with-the-same-score-ii/">
+     3040. 相同分数的最大操作数目 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/guess-number-higher-or-lower-ii/">
+     375. 猜数字大小 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-tree-from-leaf-values/">
+     1130. 叶值的最小代价生成树
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/unique-binary-search-trees/">
+     96. 不同的二叉搜索树
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-score-from-performing-multiplication-operations/">
+     1770. 执行乘法运算的最大分数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-cut-a-stick/">
+     1547. 切棍子的最小成本
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-score-triangulation-of-polygon/">
+     1039. 多边形三角剖分的最低得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-merge-stones/">
+     1000. 合并石头的最低成本
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/the-score-of-students-solving-math-expression/">
+     2019. 解出数学表达式的学生分数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/boolean-evaluation-lcci/">
+     面试题 08.14. 布尔运算
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/lexicographically-smallest-string-after-adjacent-removals/">
+     3563. 移除相邻字符后字典序最小的字符串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-xor-score-subarray-queries/">
+     3277. 查询子数组最大异或值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/scramble-string/">
+     87. 扰乱字符串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/burst-balloons/">
+     312. 戳气球
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/strange-printer/">
+     664. 奇怪的打印机
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/remove-boxes/">
+     546. 移除盒子
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/encode-string-with-shortest-length/">
+     471. 编码最短长度的字符串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-removal-queries-that-can-be-processed-i/">
+     3018. 可处理的最大删除操作数 I
+    </a>
+   </li>
+  </ul>
+  <h2>
+   九、状态压缩 DP（状压 DP）
+  </h2>
+  <h3>
+   §9.1 排列型状压 DP ① 相邻无关
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/beautiful-arrangement/solution/jiao-ni-yi-bu-bu-si-kao-zhuang-ya-dpcong-c6kd/">
+     教你一步步思考状压 DP：从记忆化搜索到递推
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/beautiful-arrangement/">
+     526. 优美的排列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-break-locks-i/">
+     3376. 破解锁的最少时间 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-xor-sum-of-two-arrays/">
+     1879. 两个数组最小的异或值之和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid/">
+     2850. 将石头分散到网格图的最少移动次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-compatibility-score-sum/">
+     1947. 最大兼容性评分和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-score-after-n-operations/">
+     1799. N 次操作后的最大分数和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/concatenated-divisibility/">
+     3533. 判断连接可整除性
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-profit-from-valid-topological-order-in-dag/">
+     3530. 有向无环图中合法拓扑排序的最大利润
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-and-sum-of-array/">
+     2172. 数组的最大与和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-self-divisible-permutations/">
+     2992. 自整除排列的数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-kill-all-monsters/">
+     2403. 杀死所有怪物的最短时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/campus-bikes-ii/">
+     1066. 校园自行车分配 II
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §9.2 排列型状压 DP ② 相邻相关
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/special-permutations/">
+     2741. 特别的排列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-squareful-arrays/">
+     996. 平方数组的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-incompatibility/">
+     1681. 最小不兼容性
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-palindromic-path-in-graph/">
+     3615. 图中的最长回文路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-moves-to-kill-all-pawns/">
+     3283. 吃掉所有兵需要的最多移动次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-minimum-cost-array-permutation/">
+     3149. 找出分数最低的排列
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §9.3 旅行商问题（TSP）
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-shortest-superstring/">
+     943. 最短超级串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-path-visiting-all-nodes/">
+     847. 访问所有节点的最短路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/xun-bao/">
+     LCP 13. 寻宝
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-cost-of-trip-with-k-highways/">
+     2247. K 条高速公路的最大旅行费用
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-moves-to-clean-the-classroom/">
+     3568. 清理教室的最少移动
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-path-to-get-all-keys/">
+     864. 获取所有钥匙的最短路径
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §9.4 子集状压 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/fair-distribution-of-cookies/">
+     2305. 公平分发饼干
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-work-sessions-to-finish-the-tasks/">
+     1986. 完成任务的最少工作时间段
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-product-of-two-integers-with-no-common-bits/">
+     3670. 没有公共位的整数最大乘积
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-minimum-time-to-finish-all-jobs/">
+     1723. 完成所有工作的最短时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/distribute-repeating-integers/">
+     1655. 分配重复整数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-increments-for-target-multiples-in-an-array/">
+     3444. 使数组包含目标值倍数的最少增量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-good-subtree-score/">
+     3575. 最大好子树分数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-students-taking-exam/">
+     1349. 参加考试的最大学生数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-incompatibility/">
+     1681. 最小不兼容性
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-the-number-of-square-free-subsets/">
+     2572. 无平方子集计数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/the-number-of-good-subsets/">
+     1994. 好子集的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/parallel-courses-ii/">
+     1494. 并行课程 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/broken-board-dominoes/">
+     LCP 04. 覆盖
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/EJvmW4/">
+     LCP 53. 守护太空城
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/optimal-account-balancing/">
+     465. 最优账单平衡
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-lines-to-cover-points/">
+     2152. 穿过所有点的所需最少直线数量
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-transport-all-individuals/">
+     3594. 所有人渡河所需的最短时间
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §9.5 轮廓线 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-paint-n-3-grid/">
+     1411. 给 N x 3 网格图涂色的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/painting-a-grid-with-three-different-colors/">
+     1931. 用三种不同颜色为网格涂色
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-students-taking-exam/">
+     1349. 参加考试的最大学生数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-grid-happiness/">
+     1659. 最大化网格幸福感
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/unique-paths-iii/">
+     980. 不同路径 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/broken-board-dominoes/">
+     LCP 04. 覆盖
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/1ybDKD/">
+     LCP 76. 魔法棋盘
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-build-sturdy-brick-wall/">
+     2184. 建造坚实的砖墙的方法数
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §9.6 SOS DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-product-of-two-integers-with-no-common-bits/">
+     3670. 没有公共位的整数最大乘积
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-number-of-maximum-bitwise-or-subsets/">
+     2044. 统计按位或能得到最大值的子集数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-a-good-subset-of-the-matrix/">
+     2732. 找到矩阵中的好子集
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-effective-subsequences/">
+     3757. 有效子序列的数量
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §9.7 其他状压 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/matchsticks-to-square/">
+     473. 火柴拼正方形
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/">
+     698. 划分为k个相等的子集
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/">
+     2002. 两个回文子序列长度的最大乘积
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/smallest-sufficient-team/">
+     1125. 最小的必要团队
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-wear-different-hats-to-each-other/">
+     1434. 每个人戴不同帽子的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/can-i-win/">
+     464. 我能赢吗
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/stickers-to-spell-word/">
+     691. 贴纸拼词
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/select-cells-in-grid-with-maximum-score/">
+     3276. 选择矩阵中单元格的最大得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-connect-two-groups-of-points/">
+     1595. 连通两组点的最小成本
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-groups-getting-fresh-donuts/">
+     1815. 得到新鲜甜甜圈的最多组数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/rMeRt2/">
+     LCP 69. Hello LeetCode!
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/cnHoX6/">
+     LCP 82. 万灵之树
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/android-unlock-patterns/">
+     351. 安卓系统手势解锁
+    </a>
+   </li>
+  </ul>
+  <h2>
+   十、数位 DP
+  </h2>
+  <h3>
+   §10.1 统计合法元素的数目
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/count-distinct-integers-after-removing-zeros/">
+     3747. 统计移除零后不同整数的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-of-integers/">
+     2719. 统计整数数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-largest-group/">
+     1399. 统计最大组的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-balls-in-a-box/">
+     1742. 盒子中小球的最大数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/rotated-digits/">
+     788. 旋转数字
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/">
+     902. 最大为 N 的数字组合
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones/">
+     600. 不含连续 1 的非负整数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-special-integers/">
+     2376. 统计特殊整数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-numbers-with-unique-digits/">
+     357. 统计各位数字都不同的数字个数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/numbers-with-repeated-digits/">
+     1012. 至少有 1 位重复的数字
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-numbers-with-non-decreasing-digits/">
+     3519. 统计逐位非递减的整数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-beautiful-integers-in-the-range/">
+     2827. 范围中美丽整数的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-the-number-of-powerful-integers/">
+     2999. 统计强大整数的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-stepping-numbers-in-range/">
+     2801. 统计范围内的步进数字数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-symmetric-integers/">
+     2843. 统计对称整数的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-k-reducible-numbers-less-than-n/">
+     3352. 统计小于 N 的 K 可约简整数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-integers-with-popcount-depth-equal-to-k-i/">
+     3621. 位计数深度为 K 的整数数目 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-beautiful-numbers/">
+     3490. 统计美丽整数的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-all-good-strings/">
+     1397. 找到所有好字符串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/stepping-numbers/">
+     1215. 步进数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/digit-count-in-range/">
+     1067. 范围内的数字计数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-numbers-with-unique-digits-ii/">
+     3032. 统计各位数字都不同的数字个数 II
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/count-no-zero-pairs-that-sum-to-n/">
+     3704. 统计和为 N 的无零数对
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §10.2 统计合法元素的价值总和
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-digit-one/">
+     233. 数字 1 的个数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-2s-in-range-lcci/">
+     面试题 17.06. 2 出现的次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/">
+     3007. 价值和小于等于 K 的最大数字
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/total-waviness-of-numbers-in-range-ii/">
+     3753. 范围内总波动值 II
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §10.3 其他数位 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/count-binary-palindromic-numbers/">
+     3677. 统计二进制回文数字的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/smallest-divisible-digit-product-ii/">
+     3348. 最小可整除数位乘积 II
+    </a>
+   </li>
+  </ul>
+  <h2>
+   十一、优化 DP
+  </h2>
+  <h3>
+   §11.1 前缀和优化 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/jump-game-vii/">
+     1871. 跳跃游戏 VII
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-people-aware-of-a-secret/">
+     2327. 知道秘密的人数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-zigzag-arrays-i/">
+     3699. 锯齿形数组的总数 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/first-day-where-you-have-been-in-all-the-rooms/">
+     1997. 访问完所有房间的第一天
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/k-inverse-pairs-array/">
+     629. K 个逆序对数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-the-number-of-inversions/">
+     3193. 统计逆序对的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sum-of-k-subarrays-with-length-at-least-m/">
+     3473. 长度至少为 M 的 K 个子数组之和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-count-of-monotonic-pairs-ii/">
+     3251. 单调数组对的数目 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-beautiful-partitions/">
+     2478. 完美分割的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/new-21-game/">
+     837. 新 21 点
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-strength-of-k-disjoint-subarrays/">
+     3077. K 个不相交子数组的最大能量值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-original-typed-string-ii/">
+     3333. 找到初始输入字符串 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-of-sub-multisets-with-bounded-sum/">
+     2902. 和带限制的子多重集合的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-separate-numbers/">
+     1977. 划分数字的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii/">
+     3130. 找出所有稳定的二进制数组 II
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §11.2 单调栈优化 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-difficulty-of-a-job-schedule/">
+     1335. 工作计划的最低难度
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/beautiful-towers-ii/">
+     2866. 美丽塔 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-visited-cells-in-a-grid/">
+     2617. 网格图中最少访问的格子数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-books-you-can-take/">
+     2355. 你能拿走的最大图书数量
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §11.3 单调队列优化 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-coins-for-fruits/">
+     2944. 购买水果需要的最少金币数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/jump-game-vi/">
+     1696. 跳跃游戏 VI
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/constrained-subsequence-sum/">
+     1425. 带限制的子序列和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-partitions-with-max-min-difference-at-most-k/">
+     3578. 统计极差最大为 K 的分割方式数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/guess-number-higher-or-lower-ii/">
+     375. 猜数字大小 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/delivering-boxes-from-storage-to-ports/">
+     1687. 从仓库到码头运输箱子
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-total-distance-traveled/">
+     2463. 最小移动总距离
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-sum-of-values-by-dividing-array/">
+     3117. 划分数组得到最小的值之和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-maximum-non-decreasing-array-length/">
+     2945. 找到最大非递减数组的长度
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-coins-for-fruits-ii/">
+     2969. 购买水果需要的最少金币数 II
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §11.4 树状数组/线段树优化 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/best-team-with-no-conflicts/">
+     1626. 无矛盾的最佳球队
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-increasing-subsequence-ii/">
+     2407. 最长递增子序列 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index/">
+     2770. 达到末尾下标所需的最大跳跃次数
+    </a>
+    <a href="https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index/solutions/2336752/dong-tai-gui-hua-cong-ji-yi-hua-sou-suo-2ptkg/comments/2060234">
+     评论
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-balanced-subsequence-sum/">
+     2926. 平衡子序列的最大和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-split-an-array/">
+     2547. 拆分数组的最小代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sum-of-beautiful-subsequences/">
+     3671. 子序列美丽值求和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii/">
+     2916. 子数组不同元素数目的平方和 II
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §11.5 字典树优化 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/word-break/">
+     139. 单词拆分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/extra-characters-in-a-string/">
+     2707. 字符串中的额外字符
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/re-space-lcci/">
+     面试题 17.13. 恢复空格
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/concatenated-words/">
+     472. 连接词
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-convert-string-ii/">
+     2977. 转换字符串的最小成本 II
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §11.6 矩阵快速幂优化 DP
+  </h3>
+  <ol>
+   <li>
+    <a href="https://leetcode.cn/problems/climbing-stairs/">
+     70
+    </a>
+    <a href="https://leetcode.cn/problems/n-th-tribonacci-number/">
+     1137
+    </a>
+    <a href="https://leetcode.cn/problems/climbing-stairs/solutions/2560716/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-7zm1/">
+     讲解
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/knight-dialer/">
+     935
+    </a>
+    <a href="https://leetcode.cn/problems/knight-dialer/solutions/3004116/jiao-ni-yi-bu-bu-si-kao-dpcong-ji-yi-hua-x06l/">
+     讲解
+    </a>
+   </li>
+  </ol>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/climbing-stairs/">
+     70. 爬楼梯
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/fibonacci-number/">
+     509. 斐波那契数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/n-th-tribonacci-number/">
+     1137. 第 N 个泰波那契数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-vowels-permutation/">
+     1220. 统计元音字母序列的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/student-attendance-record-ii/">
+     552. 学生出勤记录 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/knight-dialer/">
+     935. 骑士拨号器
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/domino-and-tromino-tiling/">
+     790. 多米诺和托米诺平铺
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-paint-n-3-grid/">
+     1411. 给 N x 3 网格图涂色的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/painting-a-grid-with-three-different-colors/">
+     1931. 用三种不同颜色为网格涂色
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/total-characters-in-string-after-transformations-ii/">
+     3337. 字符串转换后的长度 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-zigzag-arrays-ii/">
+     3700. 锯齿形数组的总数 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/string-transformation/">
+     2851. 字符串转换
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-reach-destination-in-the-grid/">
+     2912. 在网格上移动到目的地的方法数
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §11.7 斜率优化 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-minimum-amount-of-time-to-brew-potions/">
+     3494. 酿造药水需要的最少总时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-divide-array-into-subarrays/">
+     3500. 将数组分割为子数组的最小代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/climbing-stairs-ii/">
+     3693. 爬楼梯 II
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §11.8 WQS 二分优化 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/">
+     188. 买卖股票的最佳时机 IV
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-v/">
+     3573. 买卖股票的最佳时机 V
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/">
+     2209. 用地毯覆盖后的最少白色砖块
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-cyclic-partition-score/">
+     3743. 循环划分的最大得分
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §11.9 其他优化 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-sum-after-divisible-sum-deletions/">
+     3654. 删除可整除和后的最小数组和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-points-with-cost/">
+     1937. 扣分后的最大得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/">
+     2713. 矩阵中严格递增的单元格数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-path-with-teleportations/">
+     3651. 带传送的最小路径成本
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-distinct-roll-sequences/">
+     2318. 不同骰子序列的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-total-reward-using-operations-ii/">
+     3181. 执行操作可获得的最大总奖励 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/check-if-there-is-a-valid-parentheses-string-path/">
+     2267. 检查是否有合法括号字符串路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/construct-string-with-minimum-cost/">
+     3213. 最小代价构造字符串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-valid-strings-to-form-target-ii/">
+     3292. 形成目标字符串需要的最少字符串数 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-cyclic-partition-score/">
+     3743. 循环划分的最大得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/qie-fen-shu-zu/">
+     LCP 14. 切分数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/NfY1m5/">
+     LCP 59. 搭桥过河
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/make-array-non-decreasing-or-non-increasing/">
+     2263. 数组变为有序的最小操作次数
+    </a>
+   </li>
+  </ul>
+  <h2>
+   十二、树形 DP
+  </h2>
+  <h3>
+   §12.1 树的直径
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/diameter-of-binary-tree/">
+     543. 二叉树的直径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-univalue-path/">
+     687. 最长同值路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/binary-tree-maximum-path-sum/">
+     124. 二叉树中的最大路径和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/amount-of-time-for-binary-tree-to-be-infected/">
+     2385. 感染二叉树需要的总时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-path-with-different-adjacent-characters/">
+     2246. 相邻字符不同的最长路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-minimum-diameter-after-merging-two-trees/">
+     3203. 合并两棵树后的最小直径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-subtrees-with-max-distance-between-cities/">
+     1617. 统计子树中城市之间最大距离
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/difference-between-maximum-and-minimum-price-sum/">
+     2538. 最大价值和与最小价值和的差值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/diameter-of-n-ary-tree/">
+     1522. N 叉树的直径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/tree-diameter/">
+     1245. 树的直径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/binary-tree-longest-consecutive-sequence-ii/">
+     549. 二叉树最长连续序列 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-i/">
+     3372. 连接两棵树后最大目标节点数目 I
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §12.2 树上最大独立集
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/house-robber-iii/">
+     337. 打家劫舍 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimize-the-total-price-of-the-trips/">
+     2646. 最小化旅行的价格总和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/subtree-inversion-sum/">
+     3544. 子树反转和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/choose-edges-to-maximize-score-in-a-tree/">
+     2378. 选择边来最大化树的得分
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §12.3 树上最小支配集
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/binary-tree-cameras/">
+     968. 监控二叉树
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §12.4 换根 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/sum-of-distances-in-tree/">
+     834. 树中距离之和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-number-of-possible-root-nodes/">
+     2581. 统计可能的树根数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-edge-reversals-so-every-node-is-reachable/">
+     2858. 可以到达每一个节点的最少边反转次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-height-trees/">
+     310. 最小高度树
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/time-taken-to-mark-all-nodes/">
+     3241. 标记所有节点需要的时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-i/">
+     3372. 连接两棵树后最大目标节点数目 I
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §12.5 其他树形 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-score-after-applying-operations-on-a-tree/">
+     2925. 在树上执行操作以后得到的最大分数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-maximum-sum-of-node-values/">
+     3068. 最大节点价值之和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/">
+     2920. 收集所有金币可获得的最大积分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-good-subtree-score/">
+     3575. 最大好子树分数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-profit-from-trading-stocks-with-discounts/">
+     3562. 折扣价交易股票的最大利润
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-ways-to-build-rooms-in-an-ant-colony/">
+     1916. 统计为蚁群构筑房间的不同顺序
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-sum-of-weights-after-edge-removals/">
+     3367. 移除边之后的权重最大和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/er-cha-shu-ren-wu-diao-du/">
+     LCP 10. 二叉树任务调度
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/er-cha-shu-ran-se-UGC/">
+     LCP 34. 二叉树染色
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/U7WvvU/">
+     LCP 64. 二叉树灯饰
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-flips-in-binary-tree-to-get-result/">
+     2313. 二叉树中得到结果所需的最少翻转次数
+    </a>
+   </li>
+  </ul>
+  <h2>
+   十三、图 DP
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-i/">
+     3243. 新增道路查询后的最短距离 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/cheapest-flights-within-k-stops/">
+     787. K 站中转内最便宜的航班
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/">
+     1786. 从第一个节点出发到最后一个节点的受限路径数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/parallel-courses-iii/">
+     2050. 并行课程 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/network-recovery-pathways/">
+     3620. 恢复网络路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/">
+     1976. 到达目的地的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-weighted-k-edge-path/">
+     3543. K 条边路径的最大边权和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/">
+     1857. 有向图中最大颜色值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-reach-destination-in-time/">
+     1928. 规定时间内到达终点的最小花费
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/cat-and-mouse/">
+     913. 猫和老鼠
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/cat-and-mouse-ii/">
+     1728. 猫和老鼠 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/chuan-di-xin-xi/">
+     LCP 07. 传递信息
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/the-most-similar-path-in-a-graph/">
+     1548. 图中最相似的路径
+    </a>
+   </li>
+  </ul>
+  <h2>
+   十四、博弈 DP
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/divisor-game/">
+     1025. 除数博弈
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/stone-game/">
+     877. 石子游戏
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/predict-the-winner/">
+     486. 预测赢家
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/stone-game-iv/">
+     1510. 石子游戏 IV
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/stone-game-vii/">
+     1690. 石子游戏 VII
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/stone-game-iii/">
+     1406. 石子游戏 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/stone-game-ii/">
+     1140. 石子游戏 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/stone-game-v/">
+     1563. 石子游戏 V
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/can-i-win/">
+     464. 我能赢吗
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/stone-game-viii/">
+     1872. 石子游戏 VIII
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/cat-and-mouse/">
+     913. 猫和老鼠
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/cat-and-mouse-ii/">
+     1728. 猫和老鼠 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/flip-game-ii/">
+     294. 翻转游戏 II
+    </a>
+   </li>
+  </ul>
+  <h2>
+   十五、概率/期望 DP
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/knight-probability-in-chessboard/">
+     688. 骑士在棋盘上的概率
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/new-21-game/">
+     837. 新 21 点
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/">
+     1467. 两个盒子中球的颜色数相同的概率
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/soup-servings/">
+     808. 分汤
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/nge-tou-zi-de-dian-shu-lcof/">
+     LCR 185. 统计结果概率
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/contest/ubiquant2022/problems/I3Gm2h/">
+     九坤-04. 筹码游戏
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/toss-strange-coins/">
+     1230. 抛掷硬币
+    </a>
+   </li>
+  </ul>
+  <h2>
+   专题：输出具体方案（打印方案）
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/largest-divisible-subset/">
+     368. 最大整除子集
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/largest-multiple-of-three/">
+     1363. 形成三的最大倍数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/form-largest-integer-with-digits-that-add-up-to-target/">
+     1449. 数位成本和为目标值的最大数字
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-common-supersequence/">
+     1092. 最短公共超序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-shortest-superstring/">
+     943. 最短超级串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/smallest-sufficient-team/">
+     1125. 最小的必要团队
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/concatenated-divisibility/">
+     3533. 判断连接可整除性
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-largest-palindrome-divisible-by-k/">
+     3260. 找出最大的 N 位 K 回文数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-minimum-cost-array-permutation/">
+     3149. 找出分数最低的排列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-good-caption/">
+     3441. 变成好标题的最少代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/smallest-divisible-digit-product-ii/">
+     3348. 最小可整除数位乘积 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/coin-path/">
+     656. 金币路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/encode-string-with-shortest-length/">
+     471. 编码最短长度的字符串
+    </a>
+   </li>
+  </ul>
+  <h2>
+   专题：前后缀分解
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/find-pivot-index/">
+     724. 寻找数组的中心下标
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-middle-index-in-array/">
+     1991. 找到数组的中间位置
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/equal-score-substrings/">
+     3707. 相等子字符串分数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-split-array/">
+     2270. 分割数组的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-average-difference/">
+     2256. 最小平均差
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-score-after-splitting-a-string/">
+     1422. 分割字符串的最大得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/product-of-array-except-self/">
+     238. 除自身以外数组的乘积
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-subarray-of-1s-after-deleting-one-element/">
+     1493. 删掉一个元素以后全为 1 的最长子数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-mountain-in-array/">
+     845. 数组中的最长山脉
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sum-of-beauty-in-the-array/">
+     2012. 数组美丽值求和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-sum-of-mountain-triplets-ii/">
+     2909. 元素和最小的山形三元组 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-penalty-for-a-shop/">
+     2483. 商店的最少代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-good-ways-to-split-a-string/">
+     1525. 字符串的好分割数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-special-triplets/">
+     3583. 统计特殊三元组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/make-array-elements-equal-to-zero/">
+     3354. 使数组元素等于零
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/unique-length-3-palindromic-subsequences/">
+     1930. 长度为 3 的不同回文子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-value-of-an-ordered-triplet-ii/">
+     2874. 有序三元组中的最大值 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/ways-to-make-a-fair-array/">
+     1664. 生成平衡数组的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/">
+     123. 买卖股票的最佳时机 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/split-array-with-minimum-difference/">
+     3698. 分割数组得到最小绝对差
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-common-prefix-between-adjacent-strings-after-removals/">
+     3598. 相邻字符串之间的最长公共前缀
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-select-buildings/">
+     2222. 选择建筑的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-sum-of-two-non-overlapping-subarrays/">
+     1031. 两个无重叠子数组的最大和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays/">
+     689. 三个无重叠子数组的最大和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-all-good-indices/">
+     2420. 找到所有好下标
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-good-days-to-rob-the-bank/">
+     2100. 适合野炊的日子
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/flip-string-to-monotone-increasing/">
+     926. 将字符串翻转到单调递增
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/increasing-triplet-subsequence/">
+     334. 递增的三元子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-deletions-to-make-string-balanced/">
+     1653. 使字符串平衡的最少删除次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/">
+     1186. 删除一次得到子数组最大和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-non-decreasing-subarray-after-replacing-at-most-one-element/">
+     3738. 替换至多一个元素后最长非递减子数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/trapping-rain-water/">
+     42. 接雨水
+    </a>
+    <a href="/link/?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1Qg411q7ia%2F%3Ft%3D3m05s">
+     讲解
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/difference-of-number-of-distinct-values-on-diagonals/">
+     2711. 对角线上不同值的数量差
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-two-non-overlapping-sub-arrays-each-with-target-sum/">
+     1477. 找两个和为目标值且不重叠的子数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-or/">
+     2680. 最大或值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/">
+     1671. 得到山形数组的最少删除次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/construct-product-matrix/">
+     2906. 构造乘积矩阵
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-maximum-factor-score-of-array/">
+     3334. 数组的最大因子得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/">
+     2167. 移除所有载有违禁货物车厢所需的最少时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-palindromic-subsequences/">
+     2484. 统计回文子序列数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-difference-in-sums-after-removal-of-elements/">
+     2163. 删除元素后和的最小差值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/subsequence-with-the-minimum-score/">
+     2565. 最少得分子序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-special-quadruplets/">
+     1995. 统计特殊四元组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-increasing-quadruplets/">
+     2552. 统计上升四元组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-lexicographically-smallest-valid-sequence/">
+     3302. 字典序最小的合法序列
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-special-subsequences/">
+     3404. 统计特殊子序列的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-occurrence-of-first-almost-equal-substring/">
+     3303. 第一个几乎相等子字符串的下标
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-maximum-sequence-value-of-array/">
+     3287. 求出数组中最大序列值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-value-sum-by-placing-three-rooks-ii/">
+     3257. 放三个车的价值之和最大 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-subarray-sum-after-removing-all-occurrences-of-one-element/">
+     3410. 删除所有值为某个元素后的最大子数组和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-the-number-of-partitions-after-operations/">
+     3003. 执行操作后的最大分割数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/max-consecutive-ones-ii/">
+     487. 最大连续 1 的个数 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-subarray-sum-after-one-operation/">
+     1746. 经过一次操作后的最大子数组和
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">
+     121. 买卖股票的最佳时机
+    </a>
+   </li>
+  </ul>
+  <h2>
+   专题：把 X 变成 Y
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/integer-replacement/">
+     397. 整数替换
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-operations-to-make-x-and-y-equal/">
+     2998. 使 X 和 Y 相等的最少操作次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-operations-to-convert-number/">
+     2059. 转化数字的最小运算数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/broken-calculator/">
+     991. 坏了的计算器
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-days-to-eat-n-oranges/">
+     1553. 吃掉 N 个橘子的最少天数
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/digit-operations-to-make-two-integers-equal/">
+     3377. 使两个整数相等的数位操作
+    </a>
+   </li>
+  </ul>
+  <h2>
+   专题：跳跃游戏
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/jump-game-iii/">
+     1306. 跳跃游戏 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index/">
+     2770. 达到末尾下标所需的最大跳跃次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/frog-jump/">
+     403. 青蛙过河
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/jump-game-v/">
+     1340. 跳跃游戏 V
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/jump-game-vii/">
+     1871. 跳跃游戏 VII
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/jump-game-vi/">
+     1696. 跳跃游戏 VI
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/odd-even-jump/">
+     975. 奇偶跳
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-jumps-to-reach-home/">
+     1654. 到家的最少跳跃次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/zui-xiao-tiao-yue-ci-shu/">
+     LCP 09. 最小跳跃次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/meChtZ/">
+     LCP 20. 快速公交
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/coin-path/">
+     656. 金币路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/jump-game-viii/">
+     2297. 跳跃游戏 VIII
+    </a>
+   </li>
+  </ul>
+  <h2>
+   其他
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/sort-integers-by-the-power-value/">
+     1387. 将整数按权重排序
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/binary-trees-with-factors/">
+     823. 带因子的二叉树
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/pyramid-transition-matrix/">
+     756. 金字塔转换矩阵
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-strings-which-can-be-rearranged-to-contain-substring/">
+     2930. 重新排列后包含指定子字符串的字符串数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-change-the-final-value-of-expression/">
+     1896. 反转表达式值的最少操作次数
+    </a>
+   </li>
+  </ul>
+  <h2>
+   算法题单
+  </h2>
+ </body>
+</html>

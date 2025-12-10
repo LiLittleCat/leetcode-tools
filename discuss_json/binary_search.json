@@ -1,0 +1,722 @@
+[
+  {
+    "name": "一、二分查找 / §1.1 基础",
+    "count": 5,
+    "problems_title_slugs": "find-first-and-last-position-of-element-in-sorted-array search-insert-position binary-search find-smallest-letter-greater-than-target maximum-count-of-positive-integer-and-negative-integer",
+    "problems": [
+      {
+        "title": "34. 在排序数组中查找元素的第一个和最后一个位置",
+        "titleSlug": "find-first-and-last-position-of-element-in-sorted-array",
+        "url": "https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/"
+      },
+      {
+        "title": "35. 搜索插入位置",
+        "titleSlug": "search-insert-position",
+        "url": "https://leetcode.cn/problems/search-insert-position/"
+      },
+      {
+        "title": "704. 二分查找",
+        "titleSlug": "binary-search",
+        "url": "https://leetcode.cn/problems/binary-search/"
+      },
+      {
+        "title": "744. 寻找比目标字母大的最小字母",
+        "titleSlug": "find-smallest-letter-greater-than-target",
+        "url": "https://leetcode.cn/problems/find-smallest-letter-greater-than-target/"
+      },
+      {
+        "title": "2529. 正整数和负整数的最大计数",
+        "titleSlug": "maximum-count-of-positive-integer-and-negative-integer",
+        "url": "https://leetcode.cn/problems/maximum-count-of-positive-integer-and-negative-integer/"
+      }
+    ]
+  },
+  {
+    "name": "一、二分查找 / §1.2 进阶",
+    "count": 20,
+    "problems_title_slugs": "successful-pairs-of-spells-and-potions find-the-distance-value-between-two-arrays longest-subsequence-with-limited-sum compare-strings-by-frequency-of-the-smallest-character range-frequency-queries closest-equal-element-queries count-the-number-of-fair-pairs most-beautiful-item-for-each-query snapshot-array time-based-key-value-store implement-router find-k-closest-elements minimum-absolute-sum-difference online-election ju-qing-hong-fa-shi-jian shortest-distance-to-target-color minimum-relative-loss-after-buying-chocolates element-appearing-more-than-25-in-sorted-array closest-nodes-queries-in-a-binary-search-tree check-if-a-number-is-majority-element-in-a-sorted-array",
+    "problems": [
+      {
+        "title": "2300. 咒语和药水的成功对数",
+        "titleSlug": "successful-pairs-of-spells-and-potions",
+        "url": "https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/"
+      },
+      {
+        "title": "1385. 两个数组间的距离值",
+        "titleSlug": "find-the-distance-value-between-two-arrays",
+        "url": "https://leetcode.cn/problems/find-the-distance-value-between-two-arrays/"
+      },
+      {
+        "title": "2389. 和有限的最长子序列",
+        "titleSlug": "longest-subsequence-with-limited-sum",
+        "url": "https://leetcode.cn/problems/longest-subsequence-with-limited-sum/"
+      },
+      {
+        "title": "1170. 比较字符串最小字母出现频次",
+        "titleSlug": "compare-strings-by-frequency-of-the-smallest-character",
+        "url": "https://leetcode.cn/problems/compare-strings-by-frequency-of-the-smallest-character/"
+      },
+      {
+        "title": "2080. 区间内查询数字的频率",
+        "titleSlug": "range-frequency-queries",
+        "url": "https://leetcode.cn/problems/range-frequency-queries/"
+      },
+      {
+        "title": "3488. 距离最小相等元素查询",
+        "titleSlug": "closest-equal-element-queries",
+        "url": "https://leetcode.cn/problems/closest-equal-element-queries/"
+      },
+      {
+        "title": "2563. 统计公平数对的数目",
+        "titleSlug": "count-the-number-of-fair-pairs",
+        "url": "https://leetcode.cn/problems/count-the-number-of-fair-pairs/"
+      },
+      {
+        "title": "2070. 每一个查询的最大美丽值",
+        "titleSlug": "most-beautiful-item-for-each-query",
+        "url": "https://leetcode.cn/problems/most-beautiful-item-for-each-query/"
+      },
+      {
+        "title": "1146. 快照数组",
+        "titleSlug": "snapshot-array",
+        "url": "https://leetcode.cn/problems/snapshot-array/"
+      },
+      {
+        "title": "981. 基于时间的键值存储",
+        "titleSlug": "time-based-key-value-store",
+        "url": "https://leetcode.cn/problems/time-based-key-value-store/"
+      },
+      {
+        "title": "3508. 设计路由器",
+        "titleSlug": "implement-router",
+        "url": "https://leetcode.cn/problems/implement-router/"
+      },
+      {
+        "title": "658. 找到 K 个最接近的元素",
+        "titleSlug": "find-k-closest-elements",
+        "url": "https://leetcode.cn/problems/find-k-closest-elements/"
+      },
+      {
+        "title": "1818. 绝对差值和",
+        "titleSlug": "minimum-absolute-sum-difference",
+        "url": "https://leetcode.cn/problems/minimum-absolute-sum-difference/"
+      },
+      {
+        "title": "911. 在线选举",
+        "titleSlug": "online-election",
+        "url": "https://leetcode.cn/problems/online-election/"
+      },
+      {
+        "title": "LCP 08. 剧情触发时间",
+        "titleSlug": "ju-qing-hong-fa-shi-jian",
+        "url": "https://leetcode.cn/problems/ju-qing-hong-fa-shi-jian/"
+      },
+      {
+        "title": "1182. 与目标颜色间的最短距离",
+        "titleSlug": "shortest-distance-to-target-color",
+        "url": "https://leetcode.cn/problems/shortest-distance-to-target-color/"
+      },
+      {
+        "title": "2819. 购买巧克力后的最小相对损失",
+        "titleSlug": "minimum-relative-loss-after-buying-chocolates",
+        "url": "https://leetcode.cn/problems/minimum-relative-loss-after-buying-chocolates/"
+      },
+      {
+        "title": "1287. 有序数组中出现次数超过 25% 的元素",
+        "titleSlug": "element-appearing-more-than-25-in-sorted-array",
+        "url": "https://leetcode.cn/problems/element-appearing-more-than-25-in-sorted-array/"
+      },
+      {
+        "title": "2476. 二叉搜索树最近节点查询",
+        "titleSlug": "closest-nodes-queries-in-a-binary-search-tree",
+        "url": "https://leetcode.cn/problems/closest-nodes-queries-in-a-binary-search-tree/"
+      },
+      {
+        "title": "1150. 检查一个数是否在数组中占绝大多数",
+        "titleSlug": "check-if-a-number-is-majority-element-in-a-sorted-array",
+        "url": "https://leetcode.cn/problems/check-if-a-number-is-majority-element-in-a-sorted-array/"
+      }
+    ]
+  },
+  {
+    "name": "二、二分答案 / §2.1 求最小 / 答疑",
+    "count": 14,
+    "problems_title_slugs": "find-the-smallest-divisor-given-a-threshold minimum-time-to-complete-trips capacity-to-ship-packages-within-d-days koko-eating-bananas minimum-number-of-seconds-to-make-mountain-height-zero minimum-time-to-activate-string heaters minimum-time-to-repair-cars minimum-number-of-days-to-make-m-bouquets earliest-second-to-mark-indices-i minimum-time-to-eat-all-grains minimum-operations-to-make-numbers-non-positive minimum-speed-to-arrive-on-time separate-squares-i",
+    "problems": [
+      {
+        "title": "1283. 使结果不超过阈值的最小除数",
+        "titleSlug": "find-the-smallest-divisor-given-a-threshold",
+        "url": "https://leetcode.cn/problems/find-the-smallest-divisor-given-a-threshold/"
+      },
+      {
+        "title": "2187. 完成旅途的最少时间",
+        "titleSlug": "minimum-time-to-complete-trips",
+        "url": "https://leetcode.cn/problems/minimum-time-to-complete-trips/"
+      },
+      {
+        "title": "1011. 在 D 天内送达包裹的能力",
+        "titleSlug": "capacity-to-ship-packages-within-d-days",
+        "url": "https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days/"
+      },
+      {
+        "title": "875. 爱吃香蕉的珂珂",
+        "titleSlug": "koko-eating-bananas",
+        "url": "https://leetcode.cn/problems/koko-eating-bananas/"
+      },
+      {
+        "title": "3296. 移山所需的最少秒数",
+        "titleSlug": "minimum-number-of-seconds-to-make-mountain-height-zero",
+        "url": "https://leetcode.cn/problems/minimum-number-of-seconds-to-make-mountain-height-zero/"
+      },
+      {
+        "title": "3639. 变为活跃状态的最小时间",
+        "titleSlug": "minimum-time-to-activate-string",
+        "url": "https://leetcode.cn/problems/minimum-time-to-activate-string/"
+      },
+      {
+        "title": "475. 供暖器",
+        "titleSlug": "heaters",
+        "url": "https://leetcode.cn/problems/heaters/"
+      },
+      {
+        "title": "2594. 修车的最少时间",
+        "titleSlug": "minimum-time-to-repair-cars",
+        "url": "https://leetcode.cn/problems/minimum-time-to-repair-cars/"
+      },
+      {
+        "title": "1482. 制作 m 束花所需的最少天数",
+        "titleSlug": "minimum-number-of-days-to-make-m-bouquets",
+        "url": "https://leetcode.cn/problems/minimum-number-of-days-to-make-m-bouquets/"
+      },
+      {
+        "title": "3048. 标记所有下标的最早秒数 I",
+        "titleSlug": "earliest-second-to-mark-indices-i",
+        "url": "https://leetcode.cn/problems/earliest-second-to-mark-indices-i/"
+      },
+      {
+        "title": "2604. 吃掉所有谷子的最短时间",
+        "titleSlug": "minimum-time-to-eat-all-grains",
+        "url": "https://leetcode.cn/problems/minimum-time-to-eat-all-grains/"
+      },
+      {
+        "title": "2702. 使数字变为非正数的最小操作次数",
+        "titleSlug": "minimum-operations-to-make-numbers-non-positive",
+        "url": "https://leetcode.cn/problems/minimum-operations-to-make-numbers-non-positive/"
+      },
+      {
+        "title": "1870. 准时到达的列车最小时速",
+        "titleSlug": "minimum-speed-to-arrive-on-time",
+        "url": "https://leetcode.cn/problems/minimum-speed-to-arrive-on-time/"
+      },
+      {
+        "title": "3453. 分割正方形 I",
+        "titleSlug": "separate-squares-i",
+        "url": "https://leetcode.cn/problems/separate-squares-i/"
+      }
+    ]
+  },
+  {
+    "name": "二、二分答案 / §2.2 求最大",
+    "count": 18,
+    "problems_title_slugs": "h-index-ii maximum-candies-allocated-to-k-children find-longest-special-substring-that-occurs-thrice-ii find-the-maximum-number-of-marked-indices maximum-number-of-removable-characters maximum-value-at-a-given-index-in-a-bounded-array furthest-building-you-can-reach maximum-number-of-alloys maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k maximum-running-time-of-n-computers escape-the-spreading-fire maximum-number-of-tasks-you-can-assign Nsibyl maximum-font-to-fit-a-sentence-in-a-screen cutting-ribbons pour-water-between-buckets-to-make-water-levels-equal maximum-sized-array maximum-average-subarray-ii",
+    "problems": [
+      {
+        "title": "275. H 指数 II",
+        "titleSlug": "h-index-ii",
+        "url": "https://leetcode.cn/problems/h-index-ii/"
+      },
+      {
+        "title": "2226. 每个小孩最多能分到多少糖果",
+        "titleSlug": "maximum-candies-allocated-to-k-children",
+        "url": "https://leetcode.cn/problems/maximum-candies-allocated-to-k-children/"
+      },
+      {
+        "title": "2982. 找出出现至少三次的最长特殊子字符串 II",
+        "titleSlug": "find-longest-special-substring-that-occurs-thrice-ii",
+        "url": "https://leetcode.cn/problems/find-longest-special-substring-that-occurs-thrice-ii/"
+      },
+      {
+        "title": "2576. 求出最多标记下标",
+        "titleSlug": "find-the-maximum-number-of-marked-indices",
+        "url": "https://leetcode.cn/problems/find-the-maximum-number-of-marked-indices/"
+      },
+      {
+        "title": "1898. 可移除字符的最大数目",
+        "titleSlug": "maximum-number-of-removable-characters",
+        "url": "https://leetcode.cn/problems/maximum-number-of-removable-characters/"
+      },
+      {
+        "title": "1802. 有界数组中指定下标处的最大值",
+        "titleSlug": "maximum-value-at-a-given-index-in-a-bounded-array",
+        "url": "https://leetcode.cn/problems/maximum-value-at-a-given-index-in-a-bounded-array/"
+      },
+      {
+        "title": "1642. 可以到达的最远建筑",
+        "titleSlug": "furthest-building-you-can-reach",
+        "url": "https://leetcode.cn/problems/furthest-building-you-can-reach/"
+      },
+      {
+        "title": "2861. 最大合金数",
+        "titleSlug": "maximum-number-of-alloys",
+        "url": "https://leetcode.cn/problems/maximum-number-of-alloys/"
+      },
+      {
+        "title": "3007. 价值和小于等于 K 的最大数字",
+        "titleSlug": "maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k",
+        "url": "https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/"
+      },
+      {
+        "title": "2141. 同时运行 N 台电脑的最长时间",
+        "titleSlug": "maximum-running-time-of-n-computers",
+        "url": "https://leetcode.cn/problems/maximum-running-time-of-n-computers/"
+      },
+      {
+        "title": "2258. 逃离火灾",
+        "titleSlug": "escape-the-spreading-fire",
+        "url": "https://leetcode.cn/problems/escape-the-spreading-fire/"
+      },
+      {
+        "title": "2071. 你可以安排的最多任务数目",
+        "titleSlug": "maximum-number-of-tasks-you-can-assign",
+        "url": "https://leetcode.cn/problems/maximum-number-of-tasks-you-can-assign/"
+      },
+      {
+        "title": "LCP 78. 城墙防线",
+        "titleSlug": "Nsibyl",
+        "url": "https://leetcode.cn/problems/Nsibyl/"
+      },
+      {
+        "title": "1618. 找出适应屏幕的最大字号",
+        "titleSlug": "maximum-font-to-fit-a-sentence-in-a-screen",
+        "url": "https://leetcode.cn/problems/maximum-font-to-fit-a-sentence-in-a-screen/"
+      },
+      {
+        "title": "1891. 割绳子",
+        "titleSlug": "cutting-ribbons",
+        "url": "https://leetcode.cn/problems/cutting-ribbons/"
+      },
+      {
+        "title": "2137. 通过倒水操作让所有的水桶所含水量相等",
+        "titleSlug": "pour-water-between-buckets-to-make-water-levels-equal",
+        "url": "https://leetcode.cn/problems/pour-water-between-buckets-to-make-water-levels-equal/"
+      },
+      {
+        "title": "3344. 最大尺寸数组",
+        "titleSlug": "maximum-sized-array",
+        "url": "https://leetcode.cn/problems/maximum-sized-array/"
+      },
+      {
+        "title": "644. 子数组最大平均数 II",
+        "titleSlug": "maximum-average-subarray-ii",
+        "url": "https://leetcode.cn/problems/maximum-average-subarray-ii/"
+      }
+    ]
+  },
+  {
+    "name": "二、二分答案 / §2.3 二分间接值",
+    "count": 2,
+    "problems_title_slugs": "maximum-points-inside-the-square sell-diminishing-valued-colored-balls",
+    "problems": [
+      {
+        "title": "3143. 正方形中的最多点数",
+        "titleSlug": "maximum-points-inside-the-square",
+        "url": "https://leetcode.cn/problems/maximum-points-inside-the-square/"
+      },
+      {
+        "title": "1648. 销售价值减少的颜色球",
+        "titleSlug": "sell-diminishing-valued-colored-balls",
+        "url": "https://leetcode.cn/problems/sell-diminishing-valued-colored-balls/"
+      }
+    ]
+  },
+  {
+    "name": "二、二分答案 / §2.4 最小化最大值",
+    "count": 16,
+    "problems_title_slugs": "split-array-largest-sum minimized-maximum-of-products-distributed-to-any-store minimize-maximum-component-cost minimum-limit-of-balls-in-a-bag path-with-minimum-effort minimize-maximum-of-array house-robber-iv swim-in-rising-water minimize-the-maximum-difference-of-pairs minimize-the-maximum-edge-weight-of-graph minimize-the-maximum-of-two-arrays minimum-time-to-complete-all-deliveries smallest-substring-with-identical-characters-ii minimum-stability-factor-of-array xiao-zhang-shua-ti-ji-hua minimize-max-distance-to-gas-station",
+    "problems": [
+      {
+        "title": "410. 分割数组的最大值",
+        "titleSlug": "split-array-largest-sum",
+        "url": "https://leetcode.cn/problems/split-array-largest-sum/"
+      },
+      {
+        "title": "2064. 分配给商店的最多商品的最小值",
+        "titleSlug": "minimized-maximum-of-products-distributed-to-any-store",
+        "url": "https://leetcode.cn/problems/minimized-maximum-of-products-distributed-to-any-store/"
+      },
+      {
+        "title": "3613. 最小化连通分量的最大成本",
+        "titleSlug": "minimize-maximum-component-cost",
+        "url": "https://leetcode.cn/problems/minimize-maximum-component-cost/"
+      },
+      {
+        "title": "1760. 袋子里最少数目的球",
+        "titleSlug": "minimum-limit-of-balls-in-a-bag",
+        "url": "https://leetcode.cn/problems/minimum-limit-of-balls-in-a-bag/"
+      },
+      {
+        "title": "1631. 最小体力消耗路径",
+        "titleSlug": "path-with-minimum-effort",
+        "url": "https://leetcode.cn/problems/path-with-minimum-effort/"
+      },
+      {
+        "title": "2439. 最小化数组中的最大值",
+        "titleSlug": "minimize-maximum-of-array",
+        "url": "https://leetcode.cn/problems/minimize-maximum-of-array/"
+      },
+      {
+        "title": "2560. 打家劫舍 IV",
+        "titleSlug": "house-robber-iv",
+        "url": "https://leetcode.cn/problems/house-robber-iv/"
+      },
+      {
+        "title": "778. 水位上升的泳池中游泳",
+        "titleSlug": "swim-in-rising-water",
+        "url": "https://leetcode.cn/problems/swim-in-rising-water/"
+      },
+      {
+        "title": "2616. 最小化数对的最大差值",
+        "titleSlug": "minimize-the-maximum-difference-of-pairs",
+        "url": "https://leetcode.cn/problems/minimize-the-maximum-difference-of-pairs/"
+      },
+      {
+        "title": "3419. 图的最大边权的最小值",
+        "titleSlug": "minimize-the-maximum-edge-weight-of-graph",
+        "url": "https://leetcode.cn/problems/minimize-the-maximum-edge-weight-of-graph/"
+      },
+      {
+        "title": "2513. 最小化两个数组中的最大值",
+        "titleSlug": "minimize-the-maximum-of-two-arrays",
+        "url": "https://leetcode.cn/problems/minimize-the-maximum-of-two-arrays/"
+      },
+      {
+        "title": "3733. 完成所有送货任务的最少时间",
+        "titleSlug": "minimum-time-to-complete-all-deliveries",
+        "url": "https://leetcode.cn/problems/minimum-time-to-complete-all-deliveries/"
+      },
+      {
+        "title": "3399. 字符相同的最短子字符串 II",
+        "titleSlug": "smallest-substring-with-identical-characters-ii",
+        "url": "https://leetcode.cn/problems/smallest-substring-with-identical-characters-ii/"
+      },
+      {
+        "title": "3605. 数组的最小稳定性因子",
+        "titleSlug": "minimum-stability-factor-of-array",
+        "url": "https://leetcode.cn/problems/minimum-stability-factor-of-array/"
+      },
+      {
+        "title": "LCP 12. 小张刷题计划",
+        "titleSlug": "xiao-zhang-shua-ti-ji-hua",
+        "url": "https://leetcode.cn/problems/xiao-zhang-shua-ti-ji-hua/"
+      },
+      {
+        "title": "774. 最小化去加油站的最大距离",
+        "titleSlug": "minimize-max-distance-to-gas-station",
+        "url": "https://leetcode.cn/problems/minimize-max-distance-to-gas-station/"
+      }
+    ]
+  },
+  {
+    "name": "二、二分答案 / §2.5 最大化最小值",
+    "count": 12,
+    "problems_title_slugs": "maximize-score-of-numbers-in-ranges network-recovery-pathways maximum-tastiness-of-candy-basket magnetic-force-between-two-balls maximum-partition-factor find-the-safest-path-in-a-grid maximize-the-minimum-powered-city maximize-spanning-tree-stability-with-upgrades maximize-the-minimum-game-score maximize-the-distance-between-points-on-a-square path-with-maximum-minimum-value divide-chocolate",
+    "problems": [
+      {
+        "title": "3281. 范围内整数的最大得分",
+        "titleSlug": "maximize-score-of-numbers-in-ranges",
+        "url": "https://leetcode.cn/problems/maximize-score-of-numbers-in-ranges/"
+      },
+      {
+        "title": "3620. 恢复网络路径",
+        "titleSlug": "network-recovery-pathways",
+        "url": "https://leetcode.cn/problems/network-recovery-pathways/"
+      },
+      {
+        "title": "2517. 礼盒的最大甜蜜度",
+        "titleSlug": "maximum-tastiness-of-candy-basket",
+        "url": "https://leetcode.cn/problems/maximum-tastiness-of-candy-basket/"
+      },
+      {
+        "title": "1552. 两球之间的磁力",
+        "titleSlug": "magnetic-force-between-two-balls",
+        "url": "https://leetcode.cn/problems/magnetic-force-between-two-balls/"
+      },
+      {
+        "title": "3710. 最大划分因子",
+        "titleSlug": "maximum-partition-factor",
+        "url": "https://leetcode.cn/problems/maximum-partition-factor/"
+      },
+      {
+        "title": "2812. 找出最安全路径",
+        "titleSlug": "find-the-safest-path-in-a-grid",
+        "url": "https://leetcode.cn/problems/find-the-safest-path-in-a-grid/"
+      },
+      {
+        "title": "2528. 最大化城市的最小电量",
+        "titleSlug": "maximize-the-minimum-powered-city",
+        "url": "https://leetcode.cn/problems/maximize-the-minimum-powered-city/"
+      },
+      {
+        "title": "3600. 升级后最大生成树稳定性",
+        "titleSlug": "maximize-spanning-tree-stability-with-upgrades",
+        "url": "https://leetcode.cn/problems/maximize-spanning-tree-stability-with-upgrades/"
+      },
+      {
+        "title": "3449. 最大化游戏分数的最小值",
+        "titleSlug": "maximize-the-minimum-game-score",
+        "url": "https://leetcode.cn/problems/maximize-the-minimum-game-score/"
+      },
+      {
+        "title": "3464. 正方形上的点之间的最大距离",
+        "titleSlug": "maximize-the-distance-between-points-on-a-square",
+        "url": "https://leetcode.cn/problems/maximize-the-distance-between-points-on-a-square/"
+      },
+      {
+        "title": "1102. 得分最高的路径",
+        "titleSlug": "path-with-maximum-minimum-value",
+        "url": "https://leetcode.cn/problems/path-with-maximum-minimum-value/"
+      },
+      {
+        "title": "1231. 分享巧克力",
+        "titleSlug": "divide-chocolate",
+        "url": "https://leetcode.cn/problems/divide-chocolate/"
+      }
+    ]
+  },
+  {
+    "name": "二、二分答案 / §2.6 第 K 小/大",
+    "count": 17,
+    "problems_title_slugs": "kth-smallest-number-in-multiplication-table kth-smallest-element-in-a-sorted-matrix find-k-th-smallest-pair-distance nth-magical-number ugly-number-iii preimage-size-of-factorial-zeroes-function find-k-pairs-with-smallest-sums find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows k-th-smallest-prime-fraction kth-smallest-amount-with-single-denomination-combination find-the-median-of-the-uniqueness-array kth-smallest-product-of-two-sorted-arrays find-the-k-sum-of-an-array range-sum-of-sorted-subarray-sums maximum-total-subarray-value-ii minimum-threshold-for-inversion-pairs-count kth-smallest-subarray-sum",
+    "problems": [
+      {
+        "title": "668. 乘法表中第 K 小的数",
+        "titleSlug": "kth-smallest-number-in-multiplication-table",
+        "url": "https://leetcode.cn/problems/kth-smallest-number-in-multiplication-table/"
+      },
+      {
+        "title": "378. 有序矩阵中第 K 小的元素",
+        "titleSlug": "kth-smallest-element-in-a-sorted-matrix",
+        "url": "https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/"
+      },
+      {
+        "title": "719. 找出第 K 小的数对距离",
+        "titleSlug": "find-k-th-smallest-pair-distance",
+        "url": "https://leetcode.cn/problems/find-k-th-smallest-pair-distance/"
+      },
+      {
+        "title": "878. 第 N 个神奇数字",
+        "titleSlug": "nth-magical-number",
+        "url": "https://leetcode.cn/problems/nth-magical-number/"
+      },
+      {
+        "title": "1201. 丑数 III",
+        "titleSlug": "ugly-number-iii",
+        "url": "https://leetcode.cn/problems/ugly-number-iii/"
+      },
+      {
+        "title": "793. 阶乘函数后 K 个零",
+        "titleSlug": "preimage-size-of-factorial-zeroes-function",
+        "url": "https://leetcode.cn/problems/preimage-size-of-factorial-zeroes-function/"
+      },
+      {
+        "title": "373. 查找和最小的 K 对数字",
+        "titleSlug": "find-k-pairs-with-smallest-sums",
+        "url": "https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/"
+      },
+      {
+        "title": "1439. 有序矩阵中的第 k 个最小数组和",
+        "titleSlug": "find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows",
+        "url": "https://leetcode.cn/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/"
+      },
+      {
+        "title": "786. 第 K 个最小的质数分数",
+        "titleSlug": "k-th-smallest-prime-fraction",
+        "url": "https://leetcode.cn/problems/k-th-smallest-prime-fraction/"
+      },
+      {
+        "title": "3116. 单面值组合的第 K 小金额",
+        "titleSlug": "kth-smallest-amount-with-single-denomination-combination",
+        "url": "https://leetcode.cn/problems/kth-smallest-amount-with-single-denomination-combination/"
+      },
+      {
+        "title": "3134. 找出唯一性数组的中位数",
+        "titleSlug": "find-the-median-of-the-uniqueness-array",
+        "url": "https://leetcode.cn/problems/find-the-median-of-the-uniqueness-array/"
+      },
+      {
+        "title": "2040. 两个有序数组的第 K 小乘积",
+        "titleSlug": "kth-smallest-product-of-two-sorted-arrays",
+        "url": "https://leetcode.cn/problems/kth-smallest-product-of-two-sorted-arrays/"
+      },
+      {
+        "title": "2386. 找出数组的第 K 大和",
+        "titleSlug": "find-the-k-sum-of-an-array",
+        "url": "https://leetcode.cn/problems/find-the-k-sum-of-an-array/"
+      },
+      {
+        "title": "1508. 子数组和排序后的区间和",
+        "titleSlug": "range-sum-of-sorted-subarray-sums",
+        "url": "https://leetcode.cn/problems/range-sum-of-sorted-subarray-sums/"
+      },
+      {
+        "title": "3691. 最大子数组总值 II",
+        "titleSlug": "maximum-total-subarray-value-ii",
+        "url": "https://leetcode.cn/problems/maximum-total-subarray-value-ii/"
+      },
+      {
+        "title": "3520. 逆序对计数的最小阈值",
+        "titleSlug": "minimum-threshold-for-inversion-pairs-count",
+        "url": "https://leetcode.cn/problems/minimum-threshold-for-inversion-pairs-count/"
+      },
+      {
+        "title": "1918. 第 K 小的子数组和",
+        "titleSlug": "kth-smallest-subarray-sum",
+        "url": "https://leetcode.cn/problems/kth-smallest-subarray-sum/"
+      }
+    ]
+  },
+  {
+    "name": "三、三分法",
+    "count": 1,
+    "problems_title_slugs": "best-position-for-a-service-centre",
+    "problems": [
+      {
+        "title": "1515. 服务中心的最佳位置",
+        "titleSlug": "best-position-for-a-service-centre",
+        "url": "https://leetcode.cn/problems/best-position-for-a-service-centre/"
+      }
+    ]
+  },
+  {
+    "name": "四、其他",
+    "count": 25,
+    "problems_title_slugs": "sqrtx search-a-2d-matrix first-bad-version guess-number-higher-or-lower find-peak-element find-a-peak-element-ii peak-index-in-a-mountain-array find-in-mountain-array find-minimum-in-rotated-sorted-array find-minimum-in-rotated-sorted-array-ii search-in-rotated-sorted-array search-in-rotated-sorted-array-ii count-complete-tree-nodes kth-missing-positive-number single-element-in-a-sorted-array median-of-two-sorted-arrays fixed-point search-in-a-sorted-array-of-unknown-size number-of-equal-numbers-blocks missing-element-in-sorted-array find-smallest-common-element-in-all-rows leftmost-column-with-at-least-a-one find-the-index-of-the-large-integer median-of-a-row-wise-sorted-matrix smallest-rectangle-enclosing-black-pixels",
+    "problems": [
+      {
+        "title": "69. x 的平方根",
+        "titleSlug": "sqrtx",
+        "url": "https://leetcode.cn/problems/sqrtx/"
+      },
+      {
+        "title": "74. 搜索二维矩阵",
+        "titleSlug": "search-a-2d-matrix",
+        "url": "https://leetcode.cn/problems/search-a-2d-matrix/"
+      },
+      {
+        "title": "278. 第一个错误的版本",
+        "titleSlug": "first-bad-version",
+        "url": "https://leetcode.cn/problems/first-bad-version/"
+      },
+      {
+        "title": "374. 猜数字大小",
+        "titleSlug": "guess-number-higher-or-lower",
+        "url": "https://leetcode.cn/problems/guess-number-higher-or-lower/"
+      },
+      {
+        "title": "162. 寻找峰值",
+        "titleSlug": "find-peak-element",
+        "url": "https://leetcode.cn/problems/find-peak-element/"
+      },
+      {
+        "title": "1901. 寻找峰值 II",
+        "titleSlug": "find-a-peak-element-ii",
+        "url": "https://leetcode.cn/problems/find-a-peak-element-ii/"
+      },
+      {
+        "title": "852. 山脉数组的峰顶索引",
+        "titleSlug": "peak-index-in-a-mountain-array",
+        "url": "https://leetcode.cn/problems/peak-index-in-a-mountain-array/"
+      },
+      {
+        "title": "1095. 山脉数组中查找目标值",
+        "titleSlug": "find-in-mountain-array",
+        "url": "https://leetcode.cn/problems/find-in-mountain-array/"
+      },
+      {
+        "title": "153. 寻找旋转排序数组中的最小值",
+        "titleSlug": "find-minimum-in-rotated-sorted-array",
+        "url": "https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/"
+      },
+      {
+        "title": "154. 寻找旋转排序数组中的最小值 II",
+        "titleSlug": "find-minimum-in-rotated-sorted-array-ii",
+        "url": "https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/"
+      },
+      {
+        "title": "33. 搜索旋转排序数组",
+        "titleSlug": "search-in-rotated-sorted-array",
+        "url": "https://leetcode.cn/problems/search-in-rotated-sorted-array/"
+      },
+      {
+        "title": "81. 搜索旋转排序数组 II",
+        "titleSlug": "search-in-rotated-sorted-array-ii",
+        "url": "https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/"
+      },
+      {
+        "title": "222. 完全二叉树的节点个数",
+        "titleSlug": "count-complete-tree-nodes",
+        "url": "https://leetcode.cn/problems/count-complete-tree-nodes/"
+      },
+      {
+        "title": "1539. 第 k 个缺失的正整数",
+        "titleSlug": "kth-missing-positive-number",
+        "url": "https://leetcode.cn/problems/kth-missing-positive-number/"
+      },
+      {
+        "title": "540. 有序数组中的单一元素",
+        "titleSlug": "single-element-in-a-sorted-array",
+        "url": "https://leetcode.cn/problems/single-element-in-a-sorted-array/"
+      },
+      {
+        "title": "4. 寻找两个正序数组的中位数",
+        "titleSlug": "median-of-two-sorted-arrays",
+        "url": "https://leetcode.cn/problems/median-of-two-sorted-arrays/"
+      },
+      {
+        "title": "1064. 不动点",
+        "titleSlug": "fixed-point",
+        "url": "https://leetcode.cn/problems/fixed-point/"
+      },
+      {
+        "title": "702. 搜索长度未知的有序数组",
+        "titleSlug": "search-in-a-sorted-array-of-unknown-size",
+        "url": "https://leetcode.cn/problems/search-in-a-sorted-array-of-unknown-size/"
+      },
+      {
+        "title": "2936. 包含相等值数字块的数量",
+        "titleSlug": "number-of-equal-numbers-blocks",
+        "url": "https://leetcode.cn/problems/number-of-equal-numbers-blocks/"
+      },
+      {
+        "title": "1060. 有序数组中的缺失元素",
+        "titleSlug": "missing-element-in-sorted-array",
+        "url": "https://leetcode.cn/problems/missing-element-in-sorted-array/"
+      },
+      {
+        "title": "1198. 找出所有行中最小公共元素",
+        "titleSlug": "find-smallest-common-element-in-all-rows",
+        "url": "https://leetcode.cn/problems/find-smallest-common-element-in-all-rows/"
+      },
+      {
+        "title": "1428. 至少有一个 1 的最左端列",
+        "titleSlug": "leftmost-column-with-at-least-a-one",
+        "url": "https://leetcode.cn/problems/leftmost-column-with-at-least-a-one/"
+      },
+      {
+        "title": "1533. 找到最大整数的索引",
+        "titleSlug": "find-the-index-of-the-large-integer",
+        "url": "https://leetcode.cn/problems/find-the-index-of-the-large-integer/"
+      },
+      {
+        "title": "2387. 行排序矩阵的中位数",
+        "titleSlug": "median-of-a-row-wise-sorted-matrix",
+        "url": "https://leetcode.cn/problems/median-of-a-row-wise-sorted-matrix/"
+      },
+      {
+        "title": "302. 包含全部黑色像素的最小矩形",
+        "titleSlug": "smallest-rectangle-enclosing-black-pixels",
+        "url": "https://leetcode.cn/problems/smallest-rectangle-enclosing-black-pixels/"
+      }
+    ]
+  }
+]

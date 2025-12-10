@@ -1,1 +1,968 @@
-<html><head><meta charset="utf-8"/></head><body><h2>一、图的遍历</h2><h3>§1.1 深度优先搜索（DFS）</h3><ul><li><a href="https://leetcode.cn/problems/number-of-provinces/">547. 省份数量</a></li><li><a href="https://leetcode.cn/problems/find-if-path-exists-in-graph/">1971. 寻找图中是否存在路径</a></li><li><a href="https://leetcode.cn/problems/all-paths-from-source-to-target/">797. 所有可能的路径</a>1383</li><li><a href="https://leetcode.cn/problems/jump-game-iii/">1306. 跳跃游戏 III</a>1397</li><li><a href="https://leetcode.cn/problems/keys-and-rooms/">841. 钥匙和房间</a>1412</li><li><a href="https://leetcode.cn/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/">2316. 统计无向图中无法互相到达点对数</a>1604</li><li><a href="https://leetcode.cn/problems/number-of-operations-to-make-network-connected/">1319. 连通网络的操作次数</a>1633</li><li><a href="https://leetcode.cn/problems/minimum-score-of-a-path-between-two-cities/">2492. 两个城市间路径的最小分数</a>1680</li><li><a href="https://leetcode.cn/problems/remove-methods-from-project/">3310. 移除可疑的方法</a>1711</li><li><a href="https://leetcode.cn/problems/count-the-number-of-complete-components/">2685. 统计完全连通分量的数量</a>1769</li><li><a href="https://leetcode.cn/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/">2192. 有向无环图中一个节点的所有祖先</a>1788</li><li><a href="https://leetcode.cn/problems/maximize-amount-after-two-days-of-conversions/">3387. 两天自由外汇交易后的最大货币数</a>1788</li><li><a href="https://leetcode.cn/problems/minimize-malware-spread/">924. 尽量减少恶意软件的传播</a>1869</li><li><a href="https://leetcode.cn/problems/detonate-the-maximum-bombs/">2101. 引爆最多的炸弹</a>1880</li><li><a href="https://leetcode.cn/problems/accounts-merge/">721. 账户合并</a></li><li><a href="https://leetcode.cn/problems/course-schedule/">207. 课程表</a>三色标记法判环</li><li><a href="https://leetcode.cn/problems/find-eventual-safe-states/">802. 找到最终的安全状态</a>1962</li><li><a href="https://leetcode.cn/problems/maximize-alternating-sum-using-swaps/">3695. 交换元素后的最大交替和</a>1984</li><li><a href="https://leetcode.cn/problems/minimize-malware-spread-ii/">928. 尽量减少恶意软件的传播 II</a>1985</li><li><a href="https://leetcode.cn/problems/find-all-people-with-secret/">2092. 找出知晓秘密的所有专家</a>2004</li><li><a href="https://leetcode.cn/problems/minimum-cost-walk-in-weighted-graph/">3108. 带权图里旅途的最小代价</a>2109</li><li><a href="https://leetcode.cn/problems/chuan-di-xin-xi/">LCP 07. 传递信息</a></li><li><a href="https://leetcode.cn/problems/graph-valid-tree/">261. 以图判树</a>（会员题）</li><li><a href="https://leetcode.cn/problems/number-of-connected-components-in-an-undirected-graph/">323. 无向图中连通分量的数目</a>（会员题）</li></ul><ul><li><a href="https://leetcode.cn/problems/maximum-candies-you-can-get-from-boxes/">1298. 你能从盒子里获得的最大糖果数</a>1825</li></ul><h3>§1.2 广度优先搜索（BFS）</h3><ul><li><a href="https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-i/">3243. 新增道路查询后的最短距离 I</a>1568</li><li><a href="https://leetcode.cn/problems/get-watched-videos-by-your-friends/">1311. 获取你好友已观看的视频</a>1653</li><li><a href="https://leetcode.cn/problems/count-the-number-of-houses-at-a-certain-distance-i/">3015. 按距离统计房屋对数目 I</a>1658</li><li><a href="https://leetcode.cn/problems/shortest-path-with-alternating-colors/">1129. 颜色交替的最短路径</a>1780</li><li><a href="https://leetcode.cn/problems/the-time-when-the-network-becomes-idle/">2039. 网络空闲的时刻</a>1865</li><li><a href="https://leetcode.cn/problems/shortest-cycle-in-a-graph/">2608. 图中的最短环</a>1904</li><li><a href="https://leetcode.cn/problems/bus-routes/">815. 公交路线</a>1964</li></ul><h3>§1.3 图论建模 + BFS 最短路</h3><ul><li><a href="https://leetcode.cn/problems/minimum-genetic-mutation/">433. 最小基因变化</a></li><li><a href="https://leetcode.cn/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/">1284. 转化为全零矩阵的最少反转次数</a>1811</li><li><a href="https://leetcode.cn/problems/sliding-puzzle/">773. 滑动谜题</a>1815</li><li><a href="https://leetcode.cn/problems/open-the-lock/">752. 打开转盘锁</a>1878</li><li><a href="https://leetcode.cn/problems/split-and-merge-array-transformation/">3690. 拆分合并数组</a>1982</li><li><a href="https://leetcode.cn/problems/remove-invalid-parentheses/">301. 删除无效的括号</a></li><li><a href="https://leetcode.cn/problems/freedom-trail/">514. 自由之路</a></li><li><a href="https://leetcode.cn/problems/shortest-path-visiting-all-nodes/">847. 访问所有节点的最短路径</a>2201</li><li><a href="https://leetcode.cn/problems/k-similar-strings/">854. 相似度为 K 的字符串</a>2377</li><li><a href="https://leetcode.cn/problems/word-ladder/">127. 单词接龙</a>双向广搜</li><li><a href="https://leetcode.cn/problems/zuma-game/">488. 祖玛游戏</a></li><li><a href="https://leetcode.cn/problems/minimum-knight-moves/">1197. 进击的骑士</a>（会员题）</li><li><a href="https://leetcode.cn/problems/maximum-hamming-distances/">3141. 最大汉明距离</a>（会员题）</li></ul><ul><li><a href="https://leetcode.cn/problems/minimum-number-of-operations-to-make-x-and-y-equal/">2998. 使 X 和 Y 相等的最少操作次数</a>1795</li><li><a href="https://leetcode.cn/problems/jump-game-iv/">1345. 跳跃游戏 IV</a>1810</li><li><a href="https://leetcode.cn/problems/minimum-operations-to-convert-number/">2059. 转化数字的最小运算数</a>1850</li><li><a href="https://leetcode.cn/problems/minimum-jumps-to-reach-home/">1654. 到家的最少跳跃次数</a>2124</li><li><a href="https://leetcode.cn/problems/minimum-jumps-to-reach-end-via-prime-teleportation/">3629. 通过质数传送到达终点的最少跳跃次数</a>2139</li><li><a href="https://leetcode.cn/problems/zui-xiao-tiao-yue-ci-shu/">LCP 09. 最小跳跃次数</a></li></ul><h2>二、拓扑排序</h2><h3>§2.1 拓扑排序</h3><ul><li><a href="https://leetcode.cn/problems/course-schedule-ii/">210. 课程表 II</a></li><li><a href="https://leetcode.cn/problems/find-all-possible-recipes-from-given-supplies/">2115. 从给定原材料中找到所有可以做出的菜</a>1679</li><li><a href="https://leetcode.cn/problems/build-a-matrix-with-conditions/">2392. 给定条件下构造矩阵</a>1961</li><li><a href="https://leetcode.cn/problems/find-eventual-safe-states/">802. 找到最终的安全状态</a>1962</li><li><a href="https://leetcode.cn/problems/strange-printer-ii/">1591. 奇怪的打印机 II</a>2291</li><li><a href="https://leetcode.cn/problems/sort-items-by-groups-respecting-dependencies/">1203. 项目管理</a>2419</li><li><a href="https://leetcode.cn/problems/collect-coins-in-a-tree/">2603. 收集树中金币</a>2712</li><li><a href="https://leetcode.cn/problems/Jf1JuT/">LCR 114. 火星词典</a></li><li><a href="https://leetcode.cn/problems/sequence-reconstruction/">444. 序列重建</a>（会员题）拓扑序是否唯一</li><li><a href="https://leetcode.cn/problems/apply-substitutions/">3481. 应用替换</a>（会员题）也可以记忆化搜索</li><li><a href="https://leetcode.cn/problems/alien-dictionary/">269. 火星词典</a>（会员题）</li><li><a href="https://leetcode.cn/problems/all-paths-from-source-lead-to-destination/">1059. 从始点到终点的所有路径</a>（会员题）</li></ul><ul><li><a href="https://leetcode.cn/problems/minimum-height-trees/">310. 最小高度树</a></li><li><a href="https://leetcode.cn/problems/validate-binary-tree-nodes/">1361. 验证二叉树</a></li></ul><h3>§2.2 在拓扑序上 DP</h3><ul><li><a href="https://leetcode.cn/problems/loud-and-rich/">851. 喧闹和富有</a>1783</li><li><a href="https://leetcode.cn/problems/parallel-courses-iii/">2050. 并行课程 III</a>2084</li><li><a href="https://leetcode.cn/problems/network-recovery-pathways/">3620. 恢复网络路径</a></li><li><a href="https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/">1857. 有向图中最大颜色值</a>2313</li><li><a href="https://leetcode.cn/problems/parallel-courses/">1136. 并行课程</a>（会员题）</li></ul><h3>§2.3 基环树</h3><ul><li><a href="https://leetcode.cn/problems/find-closest-node-to-given-two-nodes/">2359. 找到离给定两个节点最近的节点</a>1715</li><li><a href="https://leetcode.cn/problems/longest-cycle-in-a-graph/">2360. 图中的最长环</a>1897</li><li><a href="https://leetcode.cn/problems/redundant-connection/">684. 冗余连接</a>做法不止一种</li><li><a href="https://leetcode.cn/problems/redundant-connection-ii/">685. 冗余连接 II</a></li><li><a href="https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph/">2876. 有向图访问计数</a>2210</li><li><a href="https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/">2127. 参加会议的最多员工数</a>2449</li><li><a href="https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-passing-game">2836. 在传球游戏中最大化函数值</a>2769 做法不止一种</li><li><a href="https://leetcode.cn/problems/Za25hA/">LCP 21. 追逐游戏</a></li><li><a href="https://leetcode.cn/problems/distance-to-a-cycle-in-undirected-graph/">2204. 无向图中到环的距离</a>（会员题）</li></ul><ul><li><a href="https://leetcode.cn/problems/find-the-duplicate-number/">287. 寻找重复数</a></li></ul><h2>三、最短路</h2><h3>§3.1 单源最短路：Dijkstra 算法</h3><ul><li><a href="https://leetcode.cn/problems/network-delay-time/">743. 网络延迟时间</a></li><li><a href="https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-i/">3341. 到达最后一个房间的最少时间 I</a>1721 网格图</li><li><a href="https://leetcode.cn/problems/minimum-time-to-visit-disappearing-nodes/">3112. 访问消失节点的最少时间</a>1757 理解原理</li><li><a href="https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/">2642. 设计可以求最短路径的图类</a>1811</li><li><a href="https://leetcode.cn/problems/minimum-time-to-reach-destination-in-directed-graph/">3604. 有向图中到达终点的最少时间</a>1845</li><li><a href="https://leetcode.cn/problems/path-with-maximum-probability/">1514. 概率最大的路径</a>1846</li><li><a href="https://leetcode.cn/problems/minimum-cost-path-with-edge-reversals/">3650. 边反转的最小路径总成本</a>1854</li><li><a href="https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-ii/">3342. 到达最后一个房间的最少时间 II</a>1862 网格图</li><li><a href="https://leetcode.cn/problems/path-with-minimum-effort/">1631. 最小体力消耗路径</a>1948 网格图 做法不止一种</li><li><a href="https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/">1786. 从第一个节点出发到最后一个节点的受限路径数</a>2079</li><li><a href="https://leetcode.cn/problems/find-edges-in-shortest-paths/">3123. 最短路径中的边</a>2093</li><li><a href="https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/">1976. 到达目的地的方案数</a>2095</li><li><a href="https://leetcode.cn/problems/swim-in-rising-water/">778. 水位上升的泳池中游泳</a>2097 网格图 做法不止一种</li><li><a href="https://leetcode.cn/problems/minimum-cost-of-a-path-with-special-roads/">2662. 前往目标的最小代价</a>2154</li><li><a href="https://leetcode.cn/problems/digit-operations-to-make-two-integers-equal/">3377. 使两个整数相等的数位操作</a>2186</li><li><a href="https://leetcode.cn/problems/second-minimum-time-to-reach-destination/">2045. 到达目的地的第二短时间</a>2202 也可以 BFS</li><li><a href="https://leetcode.cn/problems/minimize-the-maximum-edge-weight-of-graph/">3419. 图的最大边权的最小值</a>2243 做法不止一种</li><li><a href="https://leetcode.cn/problems/reachable-nodes-in-subdivided-graph/">882. 细分图中的可到达节点</a>2328</li><li><a href="https://leetcode.cn/problems/minimum-weighted-subgraph-with-the-required-paths/">2203. 得到要求路径的最小带权子图</a>2364</li><li><a href="https://leetcode.cn/problems/minimum-time-to-visit-a-cell-in-a-grid/">2577. 在网格图中访问一个格子的最少时间</a>2382 网格图</li><li><a href="https://leetcode.cn/problems/race-car/">818. 赛车</a>2392</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-reach-destination-in-time/">1928. 规定时间内到达终点的最小花费</a>2413</li><li><a href="https://leetcode.cn/problems/cheapest-flights-within-k-stops/">787. K 站中转内最便宜的航班</a>类似 1928 题</li><li><a href="https://leetcode.cn/problems/modify-graph-edge-weights/">2699. 修改图中的边权</a>2874</li><li><a href="https://leetcode.cn/problems/minimum-path-cost-in-a-hidden-grid/">1810. 隐藏网格下的最小消耗路径</a>（会员题）</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-reach-city-with-discounts/">2093. 前往目标城市的最小费用</a>（会员题）</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-buy-apples/">2473. 购买苹果的最低成本</a>（会员题）</li><li><a href="https://leetcode.cn/problems/find-the-closest-marked-node/">2737. 找到最近的标记节点</a>（会员题）</li></ul><ul><li><a href="https://leetcode.cn/problems/DFPeFJ/">LCP 35. 电动车游城市</a></li><li><a href="https://leetcode.cn/problems/partition-array-to-minimize-xor/">3599. 划分数组得到最小 XOR</a>做法不止一种</li><li><a href="https://leetcode.cn/problems/minimum-time-to-transport-all-individuals/">3594. 所有人渡河所需的最短时间</a>2604</li><li><a href="https://leetcode.cn/problems/find-shortest-path-with-k-hops/">2714. 找到 K 次跨越的最短路径</a>（会员题）</li></ul><ul><li><a href="https://leetcode.cn/problems/minimum-time-to-complete-all-tasks/">2589. 完成所有任务的最少时间</a>2381 做法不止一种</li></ul><h3>§3.2 全源最短路：Floyd 算法</h3><ul><li><a href="https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/">2642. 设计可以求最短路径的图类</a>1811 动态加边</li><li><a href="https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/">1334. 阈值距离内邻居最少的城市</a>1855</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-convert-string-i/">2976. 转换字符串的最小成本 I</a>1882</li><li><a href="https://leetcode.cn/problems/number-of-possible-sets-of-closing-branches/">2959. 关闭分部的可行集合数目</a>2077</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-convert-string-ii/">2977. 转换字符串的最小成本 II</a>2696</li></ul><ul><li><a href="https://leetcode.cn/problems/course-schedule-iv/">1462. 课程表 IV</a>1693</li><li><a href="https://leetcode.cn/problems/detonate-the-maximum-bombs/">2101. 引爆最多的炸弹</a></li></ul><h2>四、最小生成树</h2><ul><li><a href="https://leetcode.cn/problems/min-cost-to-connect-all-points/">1584. 连接所有点的最小费用</a>1858</li><li><a href="https://leetcode.cn/problems/maximize-spanning-tree-stability-with-upgrades/">3600. 升级后最大生成树稳定性</a>2301 做法不止一种</li><li><a href="https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/">1489. 找到最小生成树里的关键边和伪关键边</a>2572</li><li><a href="https://leetcode.cn/problems/connecting-cities-with-minimum-cost/">1135. 最低成本连通所有城市</a>（会员题）</li><li><a href="https://leetcode.cn/problems/optimize-water-distribution-in-a-village/">1168. 水资源分配优化</a>（会员题）</li></ul><ul><li><a href="https://leetcode.cn/problems/minimum-cost-for-cutting-cake-ii/">3219. 切蛋糕的最小总开销 II</a></li></ul><h2>五、欧拉路径/欧拉回路</h2><ul><li><a href="https://leetcode.cn/problems/reconstruct-itinerary/">332. 重新安排行程</a></li><li><a href="https://leetcode.cn/problems/cracking-the-safe/">753. 破解保险箱</a>2274</li><li><a href="https://leetcode.cn/problems/valid-arrangement-of-pairs/">2097. 合法重新排列数对</a>2651</li></ul><h2>六、强连通分量/双连通分量</h2><ul><li><a href="https://leetcode.cn/problems/critical-connections-in-a-network/">1192. 查找集群内的关键连接</a>2085</li><li><a href="https://leetcode.cn/problems/minimum-number-of-days-to-disconnect-island/">1568. 使陆地分离的最少天数</a>2209</li><li><a href="https://leetcode.cn/problems/s5kipK/">LCP 54. 夺回据点</a></li><li><a href="https://leetcode.cn/problems/minimum-runes-to-add-to-cast-spell/">3383. 施法所需最低符文数量</a>（会员题）</li></ul><h2>七、二分图染色</h2><ul><li><a href="https://leetcode.cn/problems/is-graph-bipartite/">785. 判断二分图</a>1625</li><li><a href="https://leetcode.cn/problems/possible-bipartition/">886. 可能的二分法</a>1795</li><li><a href="https://leetcode.cn/problems/maximum-partition-factor/">3710. 最大划分因子</a></li></ul><h2>八、网络流</h2><ul><li><a href="https://leetcode.cn/problems/maximum-compatibility-score-sum/">1947. 最大兼容性评分和</a>1704 一对一</li><li><a href="https://leetcode.cn/problems/minimum-time-to-break-locks-i/">3376. 破解锁的最少时间 I</a>1793 一对一</li><li><a href="https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid/">2850. 将石头分散到网格图的最少移动次数</a>2001 一对多</li><li><a href="https://leetcode.cn/problems/minimum-xor-sum-of-two-arrays/">1879. 两个数组最小的异或值之和</a>2145 一对一</li><li><a href="https://leetcode.cn/problems/maximum-students-taking-exam/">1349. 参加考试的最大学生数</a>2386 二分图最大独立集</li><li><a href="https://leetcode.cn/problems/maximum-and-sum-of-array/">2172. 数组的最大与和</a>2392 多对一</li><li><a href="https://leetcode.cn/problems/select-cells-in-grid-with-maximum-score/">3276. 选择矩阵中单元格的最大得分</a>2403</li><li><a href="https://leetcode.cn/problems/minimum-cost-to-connect-two-groups-of-points/">1595. 连通两组点的最小成本</a>2538 带权二分图最小边覆盖</li><li><a href="https://leetcode.cn/problems/maximum-value-sum-by-placing-three-rooks-ii/">3257. 放三个车的价值之和最大 II</a>2553</li><li><a href="https://leetcode.cn/problems/broken-board-dominoes/">LCP 04. 覆盖</a>二分图最大匹配·模板题</li><li><a href="https://leetcode.cn/problems/7rLGCR/">LCP 38. 守卫城堡</a>最小割</li><li><a href="https://leetcode.cn/problems/maximum-number-of-accepted-invitations/">1820. 最多邀请的个数</a>（会员题）二分图最大匹配·模板题</li><li><a href="https://leetcode.cn/problems/minimum-time-to-kill-all-monsters/">2403. 杀死所有怪物的最短时间</a>（会员题）同 3376 题</li><li><a href="https://leetcode.cn/problems/minimum-time-to-break-locks-ii/">3385. 破解锁的最少时间 II</a>（会员题）同 3376 题</li><li><a href="https://leetcode.cn/problems/campus-bikes-ii/">1066. 校园自行车分配 II</a>（会员题）一对一，但不是完美匹配</li><li><a href="https://leetcode.cn/problems/minimum-operations-to-remove-adjacent-ones-in-matrix/">2123. 使矩阵中的 1 互不相邻的最小操作数</a>（会员题）二分图最大独立集</li></ul><ul><li><a href="https://leetcode.cn/problems/minimum-total-distance-traveled/">2463. 最小移动总距离</a>做到</li></ul><h2>九、其他</h2><ul><li><a href="https://leetcode.cn/problems/flower-planting-with-no-adjacent/">1042. 不邻接植花</a>1712</li><li><a href="https://leetcode.cn/problems/minimum-degree-of-a-connected-trio-in-a-graph/">1761. 一个图中连通三元组的最小度数</a>2005</li><li><a href="https://leetcode.cn/problems/add-edges-to-make-degrees-of-all-nodes-even/">2508. 添加边使所有节点度数都为偶数</a>2060</li><li><a href="https://leetcode.cn/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/">1579. 保证图可完全遍历</a>2132</li><li><a href="https://leetcode.cn/problems/maximum-path-quality-of-a-graph/">2065. 最大化一张图中的路径价值</a>2178</li><li><a href="https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths/">1697. 检查边长度限制的路径是否存在</a>2300</li><li><a href="https://leetcode.cn/problems/maximum-score-of-a-node-sequence/">2242. 节点序列的最大得分</a>2304</li><li><a href="https://leetcode.cn/problems/divide-nodes-into-the-maximum-number-of-groups/">2493. 将节点分成尽可能多的组</a>2415</li><li><a href="https://leetcode.cn/problems/count-pairs-of-nodes/">1782. 统计点对的数目</a>2457</li><li><a href="https://leetcode.cn/problems/minimum-operations-to-equalize-binary-string/">3666. 使二进制字符串全为 1 的最少操作次数</a>2477 进阶 BFS / Gale-Ryser 定理</li><li><a href="https://leetcode.cn/problems/minimum-reverse-operations/">2612. 最少翻转操作数</a>2824 进阶 BFS</li><li><a href="https://leetcode.cn/problems/frequencies-of-shortest-supersequences/">3435. 最短公共超序列的字母出现频率</a>3028</li><li><a href="https://leetcode.cn/problems/count-the-repetitions/">466. 统计重复个数</a>做到</li><li><a href="https://leetcode.cn/problems/you-le-yuan-de-you-lan-ji-hua/">LCP 16. 游乐园的游览计划</a></li><li><a href="https://leetcode.cn/problems/find-the-celebrity/">277. 搜寻名人</a>（会员题）</li><li><a href="https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths-ii/">1724. 检查边长度限制的路径是否存在 II</a>（会员题）</li><li><a href="https://leetcode.cn/problems/paths-in-maze-that-lead-to-same-room/">2077. 殊途同归</a>（会员题）三元环计数</li><li><a href="https://leetcode.cn/problems/determine-if-a-simple-graph-exists/">3656. 判断是否存在简单图</a>（会员题）Erdős–Gallai 定理</li></ul><h2>十、树上算法</h2><h2>关联题单</h2><h2>算法题单</h2></body></html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+ </head>
+ <body>
+  <h2>
+   一、图的遍历
+  </h2>
+  <h3>
+   §1.1 深度优先搜索（DFS）
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-provinces/">
+     547. 省份数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-if-path-exists-in-graph/">
+     1971. 寻找图中是否存在路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/all-paths-from-source-to-target/">
+     797. 所有可能的路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/jump-game-iii/">
+     1306. 跳跃游戏 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/keys-and-rooms/">
+     841. 钥匙和房间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/">
+     2316. 统计无向图中无法互相到达点对数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-operations-to-make-network-connected/">
+     1319. 连通网络的操作次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-score-of-a-path-between-two-cities/">
+     2492. 两个城市间路径的最小分数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/remove-methods-from-project/">
+     3310. 移除可疑的方法
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-the-number-of-complete-components/">
+     2685. 统计完全连通分量的数量
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/">
+     2192. 有向无环图中一个节点的所有祖先
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-amount-after-two-days-of-conversions/">
+     3387. 两天自由外汇交易后的最大货币数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimize-malware-spread/">
+     924. 尽量减少恶意软件的传播
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/detonate-the-maximum-bombs/">
+     2101. 引爆最多的炸弹
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/accounts-merge/">
+     721. 账户合并
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/course-schedule/">
+     207. 课程表
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-eventual-safe-states/">
+     802. 找到最终的安全状态
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-alternating-sum-using-swaps/">
+     3695. 交换元素后的最大交替和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimize-malware-spread-ii/">
+     928. 尽量减少恶意软件的传播 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-all-people-with-secret/">
+     2092. 找出知晓秘密的所有专家
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-walk-in-weighted-graph/">
+     3108. 带权图里旅途的最小代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/chuan-di-xin-xi/">
+     LCP 07. 传递信息
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/graph-valid-tree/">
+     261. 以图判树
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-connected-components-in-an-undirected-graph/">
+     323. 无向图中连通分量的数目
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-candies-you-can-get-from-boxes/">
+     1298. 你能从盒子里获得的最大糖果数
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §1.2 广度优先搜索（BFS）
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-distance-after-road-addition-queries-i/">
+     3243. 新增道路查询后的最短距离 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/get-watched-videos-by-your-friends/">
+     1311. 获取你好友已观看的视频
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-the-number-of-houses-at-a-certain-distance-i/">
+     3015. 按距离统计房屋对数目 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-path-with-alternating-colors/">
+     1129. 颜色交替的最短路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/the-time-when-the-network-becomes-idle/">
+     2039. 网络空闲的时刻
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-cycle-in-a-graph/">
+     2608. 图中的最短环
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/bus-routes/">
+     815. 公交路线
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §1.3 图论建模 + BFS 最短路
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-genetic-mutation/">
+     433. 最小基因变化
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/">
+     1284. 转化为全零矩阵的最少反转次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sliding-puzzle/">
+     773. 滑动谜题
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/open-the-lock/">
+     752. 打开转盘锁
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/split-and-merge-array-transformation/">
+     3690. 拆分合并数组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/remove-invalid-parentheses/">
+     301. 删除无效的括号
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/freedom-trail/">
+     514. 自由之路
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/shortest-path-visiting-all-nodes/">
+     847. 访问所有节点的最短路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/k-similar-strings/">
+     854. 相似度为 K 的字符串
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/word-ladder/">
+     127. 单词接龙
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/zuma-game/">
+     488. 祖玛游戏
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-knight-moves/">
+     1197. 进击的骑士
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-hamming-distances/">
+     3141. 最大汉明距离
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-operations-to-make-x-and-y-equal/">
+     2998. 使 X 和 Y 相等的最少操作次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/jump-game-iv/">
+     1345. 跳跃游戏 IV
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-operations-to-convert-number/">
+     2059. 转化数字的最小运算数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-jumps-to-reach-home/">
+     1654. 到家的最少跳跃次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-jumps-to-reach-end-via-prime-teleportation/">
+     3629. 通过质数传送到达终点的最少跳跃次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/zui-xiao-tiao-yue-ci-shu/">
+     LCP 09. 最小跳跃次数
+    </a>
+   </li>
+  </ul>
+  <h2>
+   二、拓扑排序
+  </h2>
+  <h3>
+   §2.1 拓扑排序
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/course-schedule-ii/">
+     210. 课程表 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-all-possible-recipes-from-given-supplies/">
+     2115. 从给定原材料中找到所有可以做出的菜
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/build-a-matrix-with-conditions/">
+     2392. 给定条件下构造矩阵
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-eventual-safe-states/">
+     802. 找到最终的安全状态
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/strange-printer-ii/">
+     1591. 奇怪的打印机 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sort-items-by-groups-respecting-dependencies/">
+     1203. 项目管理
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/collect-coins-in-a-tree/">
+     2603. 收集树中金币
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/Jf1JuT/">
+     LCR 114. 火星词典
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/sequence-reconstruction/">
+     444. 序列重建
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/apply-substitutions/">
+     3481. 应用替换
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/alien-dictionary/">
+     269. 火星词典
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/all-paths-from-source-lead-to-destination/">
+     1059. 从始点到终点的所有路径
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-height-trees/">
+     310. 最小高度树
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/validate-binary-tree-nodes/">
+     1361. 验证二叉树
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §2.2 在拓扑序上 DP
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/loud-and-rich/">
+     851. 喧闹和富有
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/parallel-courses-iii/">
+     2050. 并行课程 III
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/network-recovery-pathways/">
+     3620. 恢复网络路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/">
+     1857. 有向图中最大颜色值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/parallel-courses/">
+     1136. 并行课程
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §2.3 基环树
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/find-closest-node-to-given-two-nodes/">
+     2359. 找到离给定两个节点最近的节点
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/longest-cycle-in-a-graph/">
+     2360. 图中的最长环
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/redundant-connection/">
+     684. 冗余连接
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/redundant-connection-ii/">
+     685. 冗余连接 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph/">
+     2876. 有向图访问计数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/">
+     2127. 参加会议的最多员工数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-passing-game">
+     2836. 在传球游戏中最大化函数值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/Za25hA/">
+     LCP 21. 追逐游戏
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/distance-to-a-cycle-in-undirected-graph/">
+     2204. 无向图中到环的距离
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-duplicate-number/">
+     287. 寻找重复数
+    </a>
+   </li>
+  </ul>
+  <h2>
+   三、最短路
+  </h2>
+  <h3>
+   §3.1 单源最短路：Dijkstra 算法
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/network-delay-time/">
+     743. 网络延迟时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-i/">
+     3341. 到达最后一个房间的最少时间 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-visit-disappearing-nodes/">
+     3112. 访问消失节点的最少时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/">
+     2642. 设计可以求最短路径的图类
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-reach-destination-in-directed-graph/">
+     3604. 有向图中到达终点的最少时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/path-with-maximum-probability/">
+     1514. 概率最大的路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-path-with-edge-reversals/">
+     3650. 边反转的最小路径总成本
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-minimum-time-to-reach-last-room-ii/">
+     3342. 到达最后一个房间的最少时间 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/path-with-minimum-effort/">
+     1631. 最小体力消耗路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/">
+     1786. 从第一个节点出发到最后一个节点的受限路径数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-edges-in-shortest-paths/">
+     3123. 最短路径中的边
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/">
+     1976. 到达目的地的方案数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/swim-in-rising-water/">
+     778. 水位上升的泳池中游泳
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-of-a-path-with-special-roads/">
+     2662. 前往目标的最小代价
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/digit-operations-to-make-two-integers-equal/">
+     3377. 使两个整数相等的数位操作
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/second-minimum-time-to-reach-destination/">
+     2045. 到达目的地的第二短时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimize-the-maximum-edge-weight-of-graph/">
+     3419. 图的最大边权的最小值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/reachable-nodes-in-subdivided-graph/">
+     882. 细分图中的可到达节点
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-weighted-subgraph-with-the-required-paths/">
+     2203. 得到要求路径的最小带权子图
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-visit-a-cell-in-a-grid/">
+     2577. 在网格图中访问一个格子的最少时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/race-car/">
+     818. 赛车
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-reach-destination-in-time/">
+     1928. 规定时间内到达终点的最小花费
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/cheapest-flights-within-k-stops/">
+     787. K 站中转内最便宜的航班
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/modify-graph-edge-weights/">
+     2699. 修改图中的边权
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-path-cost-in-a-hidden-grid/">
+     1810. 隐藏网格下的最小消耗路径
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-reach-city-with-discounts/">
+     2093. 前往目标城市的最小费用
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-buy-apples/">
+     2473. 购买苹果的最低成本
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-closest-marked-node/">
+     2737. 找到最近的标记节点
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/DFPeFJ/">
+     LCP 35. 电动车游城市
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/partition-array-to-minimize-xor/">
+     3599. 划分数组得到最小 XOR
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-transport-all-individuals/">
+     3594. 所有人渡河所需的最短时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-shortest-path-with-k-hops/">
+     2714. 找到 K 次跨越的最短路径
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-complete-all-tasks/">
+     2589. 完成所有任务的最少时间
+    </a>
+   </li>
+  </ul>
+  <h3>
+   §3.2 全源最短路：Floyd 算法
+  </h3>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/">
+     2642. 设计可以求最短路径的图类
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/">
+     1334. 阈值距离内邻居最少的城市
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-convert-string-i/">
+     2976. 转换字符串的最小成本 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/number-of-possible-sets-of-closing-branches/">
+     2959. 关闭分部的可行集合数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-convert-string-ii/">
+     2977. 转换字符串的最小成本 II
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/course-schedule-iv/">
+     1462. 课程表 IV
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/detonate-the-maximum-bombs/">
+     2101. 引爆最多的炸弹
+    </a>
+   </li>
+  </ul>
+  <h2>
+   四、最小生成树
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/min-cost-to-connect-all-points/">
+     1584. 连接所有点的最小费用
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximize-spanning-tree-stability-with-upgrades/">
+     3600. 升级后最大生成树稳定性
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/">
+     1489. 找到最小生成树里的关键边和伪关键边
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/connecting-cities-with-minimum-cost/">
+     1135. 最低成本连通所有城市
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/optimize-water-distribution-in-a-village/">
+     1168. 水资源分配优化
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-for-cutting-cake-ii/">
+     3219. 切蛋糕的最小总开销 II
+    </a>
+   </li>
+  </ul>
+  <h2>
+   五、欧拉路径/欧拉回路
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/reconstruct-itinerary/">
+     332. 重新安排行程
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/cracking-the-safe/">
+     753. 破解保险箱
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/valid-arrangement-of-pairs/">
+     2097. 合法重新排列数对
+    </a>
+   </li>
+  </ul>
+  <h2>
+   六、强连通分量/双连通分量
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/critical-connections-in-a-network/">
+     1192. 查找集群内的关键连接
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-number-of-days-to-disconnect-island/">
+     1568. 使陆地分离的最少天数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/s5kipK/">
+     LCP 54. 夺回据点
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-runes-to-add-to-cast-spell/">
+     3383. 施法所需最低符文数量
+    </a>
+   </li>
+  </ul>
+  <h2>
+   七、二分图染色
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/is-graph-bipartite/">
+     785. 判断二分图
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/possible-bipartition/">
+     886. 可能的二分法
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-partition-factor/">
+     3710. 最大划分因子
+    </a>
+   </li>
+  </ul>
+  <h2>
+   八、网络流
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-compatibility-score-sum/">
+     1947. 最大兼容性评分和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-break-locks-i/">
+     3376. 破解锁的最少时间 I
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid/">
+     2850. 将石头分散到网格图的最少移动次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-xor-sum-of-two-arrays/">
+     1879. 两个数组最小的异或值之和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-students-taking-exam/">
+     1349. 参加考试的最大学生数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-and-sum-of-array/">
+     2172. 数组的最大与和
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/select-cells-in-grid-with-maximum-score/">
+     3276. 选择矩阵中单元格的最大得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-cost-to-connect-two-groups-of-points/">
+     1595. 连通两组点的最小成本
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-value-sum-by-placing-three-rooks-ii/">
+     3257. 放三个车的价值之和最大 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/broken-board-dominoes/">
+     LCP 04. 覆盖
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/7rLGCR/">
+     LCP 38. 守卫城堡
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-number-of-accepted-invitations/">
+     1820. 最多邀请的个数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-kill-all-monsters/">
+     2403. 杀死所有怪物的最短时间
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-time-to-break-locks-ii/">
+     3385. 破解锁的最少时间 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/campus-bikes-ii/">
+     1066. 校园自行车分配 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-operations-to-remove-adjacent-ones-in-matrix/">
+     2123. 使矩阵中的 1 互不相邻的最小操作数
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-total-distance-traveled/">
+     2463. 最小移动总距离
+    </a>
+   </li>
+  </ul>
+  <h2>
+   九、其他
+  </h2>
+  <ul>
+   <li>
+    <a href="https://leetcode.cn/problems/flower-planting-with-no-adjacent/">
+     1042. 不邻接植花
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-degree-of-a-connected-trio-in-a-graph/">
+     1761. 一个图中连通三元组的最小度数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/add-edges-to-make-degrees-of-all-nodes-even/">
+     2508. 添加边使所有节点度数都为偶数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/">
+     1579. 保证图可完全遍历
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-path-quality-of-a-graph/">
+     2065. 最大化一张图中的路径价值
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths/">
+     1697. 检查边长度限制的路径是否存在
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/maximum-score-of-a-node-sequence/">
+     2242. 节点序列的最大得分
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/divide-nodes-into-the-maximum-number-of-groups/">
+     2493. 将节点分成尽可能多的组
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-pairs-of-nodes/">
+     1782. 统计点对的数目
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-operations-to-equalize-binary-string/">
+     3666. 使二进制字符串全为 1 的最少操作次数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/minimum-reverse-operations/">
+     2612. 最少翻转操作数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/frequencies-of-shortest-supersequences/">
+     3435. 最短公共超序列的字母出现频率
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/count-the-repetitions/">
+     466. 统计重复个数
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/you-le-yuan-de-you-lan-ji-hua/">
+     LCP 16. 游乐园的游览计划
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/find-the-celebrity/">
+     277. 搜寻名人
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths-ii/">
+     1724. 检查边长度限制的路径是否存在 II
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/paths-in-maze-that-lead-to-same-room/">
+     2077. 殊途同归
+    </a>
+   </li>
+   <li>
+    <a href="https://leetcode.cn/problems/determine-if-a-simple-graph-exists/">
+     3656. 判断是否存在简单图
+    </a>
+   </li>
+  </ul>
+  <h2>
+   十、树上算法
+  </h2>
+  <h2>
+   关联题单
+  </h2>
+  <h2>
+   算法题单
+  </h2>
+ </body>
+</html>

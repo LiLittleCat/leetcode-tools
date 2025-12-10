@@ -1,0 +1,644 @@
+[
+  {
+    "name": "一、基础题",
+    "count": 21,
+    "problems_title_slugs": "smallest-number-with-all-set-bits number-of-bit-changes-to-make-two-integers-equal sort-integers-by-the-number-of-1-bits hamming-distance minimum-bit-flips-to-convert-number number-of-steps-to-reduce-a-number-to-zero number-complement complement-of-base-10-integer binary-gap find-the-k-or-of-an-array binary-number-with-alternating-bits find-the-prefix-common-array-of-two-arrays insert-into-bits-lcci power-of-two power-of-four number-of-1-bits counting-bits number-of-even-and-odd-bits keep-multiplying-found-values-by-two generate-binary-strings-without-adjacent-zeros split-and-merge-array-transformation",
+    "problems": [
+      {
+        "title": "3370. 仅含置位位的最小整数",
+        "titleSlug": "smallest-number-with-all-set-bits",
+        "url": "https://leetcode.cn/problems/smallest-number-with-all-set-bits/"
+      },
+      {
+        "title": "3226. 使两个整数相等的位更改次数",
+        "titleSlug": "number-of-bit-changes-to-make-two-integers-equal",
+        "url": "https://leetcode.cn/problems/number-of-bit-changes-to-make-two-integers-equal/"
+      },
+      {
+        "title": "1356. 根据数字二进制下 1 的数目排序",
+        "titleSlug": "sort-integers-by-the-number-of-1-bits",
+        "url": "https://leetcode.cn/problems/sort-integers-by-the-number-of-1-bits/"
+      },
+      {
+        "title": "461. 汉明距离",
+        "titleSlug": "hamming-distance",
+        "url": "https://leetcode.cn/problems/hamming-distance/"
+      },
+      {
+        "title": "2220. 转换数字的最少位翻转次数",
+        "titleSlug": "minimum-bit-flips-to-convert-number",
+        "url": "https://leetcode.cn/problems/minimum-bit-flips-to-convert-number/"
+      },
+      {
+        "title": "1342. 将数字变成 0 的操作次数",
+        "titleSlug": "number-of-steps-to-reduce-a-number-to-zero",
+        "url": "https://leetcode.cn/problems/number-of-steps-to-reduce-a-number-to-zero/"
+      },
+      {
+        "title": "476. 数字的补数",
+        "titleSlug": "number-complement",
+        "url": "https://leetcode.cn/problems/number-complement/"
+      },
+      {
+        "title": "1009. 十进制整数的反码",
+        "titleSlug": "complement-of-base-10-integer",
+        "url": "https://leetcode.cn/problems/complement-of-base-10-integer/"
+      },
+      {
+        "title": "868. 二进制间距",
+        "titleSlug": "binary-gap",
+        "url": "https://leetcode.cn/problems/binary-gap/"
+      },
+      {
+        "title": "2917. 找出数组中的 K-or 值",
+        "titleSlug": "find-the-k-or-of-an-array",
+        "url": "https://leetcode.cn/problems/find-the-k-or-of-an-array/"
+      },
+      {
+        "title": "693. 交替位二进制数",
+        "titleSlug": "binary-number-with-alternating-bits",
+        "url": "https://leetcode.cn/problems/binary-number-with-alternating-bits/"
+      },
+      {
+        "title": "2657. 找到两个数组的前缀公共数组",
+        "titleSlug": "find-the-prefix-common-array-of-two-arrays",
+        "url": "https://leetcode.cn/problems/find-the-prefix-common-array-of-two-arrays/"
+      },
+      {
+        "title": "面试题 05.01. 插入",
+        "titleSlug": "insert-into-bits-lcci",
+        "url": "https://leetcode.cn/problems/insert-into-bits-lcci/"
+      },
+      {
+        "title": "231. 2 的幂",
+        "titleSlug": "power-of-two",
+        "url": "https://leetcode.cn/problems/power-of-two/"
+      },
+      {
+        "title": "342. 4 的幂",
+        "titleSlug": "power-of-four",
+        "url": "https://leetcode.cn/problems/power-of-four/"
+      },
+      {
+        "title": "191. 位 1 的个数",
+        "titleSlug": "number-of-1-bits",
+        "url": "https://leetcode.cn/problems/number-of-1-bits/"
+      },
+      {
+        "title": "338. 比特位计数",
+        "titleSlug": "counting-bits",
+        "url": "https://leetcode.cn/problems/counting-bits/"
+      },
+      {
+        "title": "2595. 奇偶位数",
+        "titleSlug": "number-of-even-and-odd-bits",
+        "url": "https://leetcode.cn/problems/number-of-even-and-odd-bits/"
+      },
+      {
+        "title": "2154. 将找到的值乘以 2",
+        "titleSlug": "keep-multiplying-found-values-by-two",
+        "url": "https://leetcode.cn/problems/keep-multiplying-found-values-by-two/"
+      },
+      {
+        "title": "3211. 生成不含相邻零的二进制字符串",
+        "titleSlug": "generate-binary-strings-without-adjacent-zeros",
+        "url": "https://leetcode.cn/problems/generate-binary-strings-without-adjacent-zeros/"
+      },
+      {
+        "title": "3690. 拆分合并数组",
+        "titleSlug": "split-and-merge-array-transformation",
+        "url": "https://leetcode.cn/problems/split-and-merge-array-transformation/"
+      }
+    ]
+  },
+  {
+    "name": "二、异或（XOR）的性质",
+    "count": 17,
+    "problems_title_slugs": "xor-operation-in-an-array decode-xored-array find-the-original-array-of-prefix-xor xor-queries-of-a-subarray neighboring-bitwise-xor maximum-xor-for-each-query minimum-number-of-operations-to-make-array-xor-equal-to-k count-triplets-that-can-form-two-arrays-of-equal-xor minimize-xor find-xor-beauty-of-array maximum-xor-after-operations count-the-number-of-beautiful-subarrays substring-xor-queries decode-xored-permutation count-pairs-of-points-with-distance-k count-pairs-with-xor-in-a-range count-triplets-with-even-xor-set-bits-ii",
+    "problems": [
+      {
+        "title": "1486. 数组异或操作",
+        "titleSlug": "xor-operation-in-an-array",
+        "url": "https://leetcode.cn/problems/xor-operation-in-an-array/"
+      },
+      {
+        "title": "1720. 解码异或后的数组",
+        "titleSlug": "decode-xored-array",
+        "url": "https://leetcode.cn/problems/decode-xored-array/"
+      },
+      {
+        "title": "2433. 找出前缀异或的原始数组",
+        "titleSlug": "find-the-original-array-of-prefix-xor",
+        "url": "https://leetcode.cn/problems/find-the-original-array-of-prefix-xor/"
+      },
+      {
+        "title": "1310. 子数组异或查询",
+        "titleSlug": "xor-queries-of-a-subarray",
+        "url": "https://leetcode.cn/problems/xor-queries-of-a-subarray/"
+      },
+      {
+        "title": "2683. 相邻值的按位异或",
+        "titleSlug": "neighboring-bitwise-xor",
+        "url": "https://leetcode.cn/problems/neighboring-bitwise-xor/"
+      },
+      {
+        "title": "1829. 每个查询的最大异或值",
+        "titleSlug": "maximum-xor-for-each-query",
+        "url": "https://leetcode.cn/problems/maximum-xor-for-each-query/"
+      },
+      {
+        "title": "2997. 使数组异或和等于 K 的最少操作次数",
+        "titleSlug": "minimum-number-of-operations-to-make-array-xor-equal-to-k",
+        "url": "https://leetcode.cn/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/"
+      },
+      {
+        "title": "1442. 形成两个异或相等数组的三元组数目",
+        "titleSlug": "count-triplets-that-can-form-two-arrays-of-equal-xor",
+        "url": "https://leetcode.cn/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/"
+      },
+      {
+        "title": "2429. 最小异或",
+        "titleSlug": "minimize-xor",
+        "url": "https://leetcode.cn/problems/minimize-xor/"
+      },
+      {
+        "title": "2527. 查询数组异或美丽值",
+        "titleSlug": "find-xor-beauty-of-array",
+        "url": "https://leetcode.cn/problems/find-xor-beauty-of-array/"
+      },
+      {
+        "title": "2317. 操作后的最大异或和",
+        "titleSlug": "maximum-xor-after-operations",
+        "url": "https://leetcode.cn/problems/maximum-xor-after-operations/"
+      },
+      {
+        "title": "2588. 统计美丽子数组数目",
+        "titleSlug": "count-the-number-of-beautiful-subarrays",
+        "url": "https://leetcode.cn/problems/count-the-number-of-beautiful-subarrays/"
+      },
+      {
+        "title": "2564. 子字符串异或查询",
+        "titleSlug": "substring-xor-queries",
+        "url": "https://leetcode.cn/problems/substring-xor-queries/"
+      },
+      {
+        "title": "1734. 解码异或后的排列",
+        "titleSlug": "decode-xored-permutation",
+        "url": "https://leetcode.cn/problems/decode-xored-permutation/"
+      },
+      {
+        "title": "2857. 统计距离为 k 的点对",
+        "titleSlug": "count-pairs-of-points-with-distance-k",
+        "url": "https://leetcode.cn/problems/count-pairs-of-points-with-distance-k/"
+      },
+      {
+        "title": "1803. 统计异或值在范围内的数对有多少",
+        "titleSlug": "count-pairs-with-xor-in-a-range",
+        "url": "https://leetcode.cn/problems/count-pairs-with-xor-in-a-range/"
+      },
+      {
+        "title": "3215. 用偶数异或设置位计数三元组 II",
+        "titleSlug": "count-triplets-with-even-xor-set-bits-ii",
+        "url": "https://leetcode.cn/problems/count-triplets-with-even-xor-set-bits-ii/"
+      }
+    ]
+  },
+  {
+    "name": "三、与或（AND/OR）的性质",
+    "count": 10,
+    "problems_title_slugs": "check-if-bitwise-or-has-trailing-zeros minimum-flips-to-make-a-or-b-equal-to-c longest-subarray-with-maximum-bitwise-and split-array-into-maximum-number-of-subarrays longest-nice-subarray maximum-or minimum-array-end minimum-cost-walk-in-weighted-graph minimum-sum-of-values-by-dividing-array maximum-number-that-makes-result-of-bitwise-and-zero",
+    "problems": [
+      {
+        "title": "2980. 检查按位或是否存在尾随零",
+        "titleSlug": "check-if-bitwise-or-has-trailing-zeros",
+        "url": "https://leetcode.cn/problems/check-if-bitwise-or-has-trailing-zeros/"
+      },
+      {
+        "title": "1318. 或运算的最小翻转次数",
+        "titleSlug": "minimum-flips-to-make-a-or-b-equal-to-c",
+        "url": "https://leetcode.cn/problems/minimum-flips-to-make-a-or-b-equal-to-c/"
+      },
+      {
+        "title": "2419. 按位与最大的最长子数组",
+        "titleSlug": "longest-subarray-with-maximum-bitwise-and",
+        "url": "https://leetcode.cn/problems/longest-subarray-with-maximum-bitwise-and/"
+      },
+      {
+        "title": "2871. 将数组分割成最多数目的子数组",
+        "titleSlug": "split-array-into-maximum-number-of-subarrays",
+        "url": "https://leetcode.cn/problems/split-array-into-maximum-number-of-subarrays/"
+      },
+      {
+        "title": "2401. 最长优雅子数组",
+        "titleSlug": "longest-nice-subarray",
+        "url": "https://leetcode.cn/problems/longest-nice-subarray/"
+      },
+      {
+        "title": "2680. 最大或值",
+        "titleSlug": "maximum-or",
+        "url": "https://leetcode.cn/problems/maximum-or/"
+      },
+      {
+        "title": "3133. 数组最后一个元素的最小值",
+        "titleSlug": "minimum-array-end",
+        "url": "https://leetcode.cn/problems/minimum-array-end/"
+      },
+      {
+        "title": "3108. 带权图里旅途的最小代价",
+        "titleSlug": "minimum-cost-walk-in-weighted-graph",
+        "url": "https://leetcode.cn/problems/minimum-cost-walk-in-weighted-graph/"
+      },
+      {
+        "title": "3117. 划分数组得到最小的值之和",
+        "titleSlug": "minimum-sum-of-values-by-dividing-array",
+        "url": "https://leetcode.cn/problems/minimum-sum-of-values-by-dividing-array/"
+      },
+      {
+        "title": "3125. 使得按位与结果为 0 的最大数字",
+        "titleSlug": "maximum-number-that-makes-result-of-bitwise-and-zero",
+        "url": "https://leetcode.cn/problems/maximum-number-that-makes-result-of-bitwise-and-zero/"
+      }
+    ]
+  },
+  {
+    "name": "三、与或（AND/OR）的性质 / AND/OR LogTrick",
+    "count": 6,
+    "problems_title_slugs": "find-subarray-with-bitwise-or-closest-to-k find-a-value-of-a-mysterious-function-closest-to-target shortest-subarray-with-or-at-least-k-ii smallest-subarrays-with-maximum-bitwise-or number-of-subarrays-with-and-value-of-k bitwise-ors-of-subarrays",
+    "problems": [
+      {
+        "title": "3171. 找到按位或最接近 K 的子数组",
+        "titleSlug": "find-subarray-with-bitwise-or-closest-to-k",
+        "url": "https://leetcode.cn/problems/find-subarray-with-bitwise-or-closest-to-k/"
+      },
+      {
+        "title": "1521. 找到最接近目标值的函数值",
+        "titleSlug": "find-a-value-of-a-mysterious-function-closest-to-target",
+        "url": "https://leetcode.cn/problems/find-a-value-of-a-mysterious-function-closest-to-target/"
+      },
+      {
+        "title": "3097. 或值至少为 K 的最短子数组 II",
+        "titleSlug": "shortest-subarray-with-or-at-least-k-ii",
+        "url": "https://leetcode.cn/problems/shortest-subarray-with-or-at-least-k-ii/"
+      },
+      {
+        "title": "2411. 按位或最大的最小子数组长度",
+        "titleSlug": "smallest-subarrays-with-maximum-bitwise-or",
+        "url": "https://leetcode.cn/problems/smallest-subarrays-with-maximum-bitwise-or/"
+      },
+      {
+        "title": "3209. 子数组按位与值为 K 的数目",
+        "titleSlug": "number-of-subarrays-with-and-value-of-k",
+        "url": "https://leetcode.cn/problems/number-of-subarrays-with-and-value-of-k/"
+      },
+      {
+        "title": "898. 子数组按位或操作",
+        "titleSlug": "bitwise-ors-of-subarrays",
+        "url": "https://leetcode.cn/problems/bitwise-ors-of-subarrays/"
+      }
+    ]
+  },
+  {
+    "name": "三、与或（AND/OR）的性质 / GCD LogTrick",
+    "count": 5,
+    "problems_title_slugs": "number-of-subarrays-with-gcd-equal-to-k minimum-number-of-operations-to-make-all-array-elements-equal-to-1 minimum-stability-factor-of-array maximize-subarray-gcd-score maximum-gcd-sum-of-a-subarray",
+    "problems": [
+      {
+        "title": "2447. 最大公因数等于 K 的子数组数目",
+        "titleSlug": "number-of-subarrays-with-gcd-equal-to-k",
+        "url": "https://leetcode.cn/problems/number-of-subarrays-with-gcd-equal-to-k/"
+      },
+      {
+        "title": "2654. 使数组所有元素变成 1 的最少操作次数",
+        "titleSlug": "minimum-number-of-operations-to-make-all-array-elements-equal-to-1",
+        "url": "https://leetcode.cn/problems/minimum-number-of-operations-to-make-all-array-elements-equal-to-1/"
+      },
+      {
+        "title": "3605. 数组的最小稳定性因子",
+        "titleSlug": "minimum-stability-factor-of-array",
+        "url": "https://leetcode.cn/problems/minimum-stability-factor-of-array/"
+      },
+      {
+        "title": "3574. 最大子数组 GCD 分数",
+        "titleSlug": "maximize-subarray-gcd-score",
+        "url": "https://leetcode.cn/problems/maximize-subarray-gcd-score/"
+      },
+      {
+        "title": "2941. 子数组的最大 GCD-Sum",
+        "titleSlug": "maximum-gcd-sum-of-a-subarray",
+        "url": "https://leetcode.cn/problems/maximum-gcd-sum-of-a-subarray/"
+      }
+    ]
+  },
+  {
+    "name": "四、拆位 / 贡献法",
+    "count": 8,
+    "problems_title_slugs": "total-hamming-distance sum-of-all-subset-xor-totals bitwise-xor-of-all-pairings largest-combination-with-bitwise-and-greater-than-zero find-xor-sum-of-all-pairs-bitwise-and bitwise-or-of-even-numbers-in-an-array bitwise-or-of-all-subsequence-sums sum-of-digit-differences-of-all-pairs",
+    "problems": [
+      {
+        "title": "477. 汉明距离总和",
+        "titleSlug": "total-hamming-distance",
+        "url": "https://leetcode.cn/problems/total-hamming-distance/"
+      },
+      {
+        "title": "1863. 找出所有子集的异或总和再求和",
+        "titleSlug": "sum-of-all-subset-xor-totals",
+        "url": "https://leetcode.cn/problems/sum-of-all-subset-xor-totals/"
+      },
+      {
+        "title": "2425. 所有数对的异或和",
+        "titleSlug": "bitwise-xor-of-all-pairings",
+        "url": "https://leetcode.cn/problems/bitwise-xor-of-all-pairings/"
+      },
+      {
+        "title": "2275. 按位与结果大于零的最长组合",
+        "titleSlug": "largest-combination-with-bitwise-and-greater-than-zero",
+        "url": "https://leetcode.cn/problems/largest-combination-with-bitwise-and-greater-than-zero/"
+      },
+      {
+        "title": "1835. 所有数对按位与结果的异或和",
+        "titleSlug": "find-xor-sum-of-all-pairs-bitwise-and",
+        "url": "https://leetcode.cn/problems/find-xor-sum-of-all-pairs-bitwise-and/"
+      },
+      {
+        "title": "3688. 偶数的按位或运算",
+        "titleSlug": "bitwise-or-of-even-numbers-in-an-array",
+        "url": "https://leetcode.cn/problems/bitwise-or-of-even-numbers-in-an-array/"
+      },
+      {
+        "title": "2505. 所有子序列和的按位或",
+        "titleSlug": "bitwise-or-of-all-subsequence-sums",
+        "url": "https://leetcode.cn/problems/bitwise-or-of-all-subsequence-sums/"
+      },
+      {
+        "title": "3153. 所有数对中数位不同之和",
+        "titleSlug": "sum-of-digit-differences-of-all-pairs",
+        "url": "https://leetcode.cn/problems/sum-of-digit-differences-of-all-pairs/"
+      }
+    ]
+  },
+  {
+    "name": "五、试填法",
+    "count": 7,
+    "problems_title_slugs": "maximum-xor-of-two-numbers-in-an-array maximum-strong-pair-xor-ii maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k find-products-of-elements-of-big-array minimize-or-of-remaining-elements-using-operations find-the-maximum-sequence-value-of-array maximum-sized-array",
+    "problems": [
+      {
+        "title": "421. 数组中两个数的最大异或值",
+        "titleSlug": "maximum-xor-of-two-numbers-in-an-array",
+        "url": "https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array/"
+      },
+      {
+        "title": "2935. 找出强数对的最大异或值 II",
+        "titleSlug": "maximum-strong-pair-xor-ii",
+        "url": "https://leetcode.cn/problems/maximum-strong-pair-xor-ii/"
+      },
+      {
+        "title": "3007. 价值和小于等于 K 的最大数字",
+        "titleSlug": "maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k",
+        "url": "https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/"
+      },
+      {
+        "title": "3145. 大数组元素的乘积",
+        "titleSlug": "find-products-of-elements-of-big-array",
+        "url": "https://leetcode.cn/problems/find-products-of-elements-of-big-array/"
+      },
+      {
+        "title": "3022. 给定操作次数内使剩余元素的或值最小",
+        "titleSlug": "minimize-or-of-remaining-elements-using-operations",
+        "url": "https://leetcode.cn/problems/minimize-or-of-remaining-elements-using-operations/"
+      },
+      {
+        "title": "3287. 求出数组中最大序列值",
+        "titleSlug": "find-the-maximum-sequence-value-of-array",
+        "url": "https://leetcode.cn/problems/find-the-maximum-sequence-value-of-array/"
+      },
+      {
+        "title": "3344. 最大尺寸数组",
+        "titleSlug": "maximum-sized-array",
+        "url": "https://leetcode.cn/problems/maximum-sized-array/"
+      }
+    ]
+  },
+  {
+    "name": "六、恒等式",
+    "count": 2,
+    "problems_title_slugs": "find-xor-sum-of-all-pairs-bitwise-and number-of-excellent-pairs",
+    "problems": [
+      {
+        "title": "1835. 所有数对按位与结果的异或和",
+        "titleSlug": "find-xor-sum-of-all-pairs-bitwise-and",
+        "url": "https://leetcode.cn/problems/find-xor-sum-of-all-pairs-bitwise-and/"
+      },
+      {
+        "title": "2354. 优质数对的数目",
+        "titleSlug": "number-of-excellent-pairs",
+        "url": "https://leetcode.cn/problems/number-of-excellent-pairs/"
+      }
+    ]
+  },
+  {
+    "name": "七、线性基",
+    "count": 2,
+    "problems_title_slugs": "maximum-xor-of-subsequences partition-array-for-maximum-xor-and-and",
+    "problems": [
+      {
+        "title": "3681. 子序列最大 XOR 值",
+        "titleSlug": "maximum-xor-of-subsequences",
+        "url": "https://leetcode.cn/problems/maximum-xor-of-subsequences/"
+      },
+      {
+        "title": "3630. 划分数组得到最大异或运算和与运算之和",
+        "titleSlug": "partition-array-for-maximum-xor-and-and",
+        "url": "https://leetcode.cn/problems/partition-array-for-maximum-xor-and-and/"
+      }
+    ]
+  },
+  {
+    "name": "八、思维题",
+    "count": 14,
+    "problems_title_slugs": "apply-bitwise-operations-to-make-strings-equal minimum-numbers-of-function-calls-to-make-target-array minimum-operations-to-reduce-an-integer-to-0 construct-the-minimum-bitwise-array-ii minimum-impossible-or maximum-k-to-sort-a-permutation cycle-length-queries-in-a-tree maximum-xor-product minimum-operations-to-make-the-integer-zero minimum-operations-to-form-subsequence-with-target-sum apply-operations-on-array-to-maximize-sum-of-squares chalkboard-xor-game guess-the-number-using-bitwise-questions-i guess-the-number-using-bitwise-questions-ii",
+    "problems": [
+      {
+        "title": "2546. 执行逐位运算使字符串相等",
+        "titleSlug": "apply-bitwise-operations-to-make-strings-equal",
+        "url": "https://leetcode.cn/problems/apply-bitwise-operations-to-make-strings-equal/"
+      },
+      {
+        "title": "1558. 得到目标数组的最少函数调用次数",
+        "titleSlug": "minimum-numbers-of-function-calls-to-make-target-array",
+        "url": "https://leetcode.cn/problems/minimum-numbers-of-function-calls-to-make-target-array/"
+      },
+      {
+        "title": "2571. 将整数减少到零需要的最少操作数",
+        "titleSlug": "minimum-operations-to-reduce-an-integer-to-0",
+        "url": "https://leetcode.cn/problems/minimum-operations-to-reduce-an-integer-to-0/"
+      },
+      {
+        "title": "3315. 构造最小位运算数组 II",
+        "titleSlug": "construct-the-minimum-bitwise-array-ii",
+        "url": "https://leetcode.cn/problems/construct-the-minimum-bitwise-array-ii/"
+      },
+      {
+        "title": "2568. 最小无法得到的或值",
+        "titleSlug": "minimum-impossible-or",
+        "url": "https://leetcode.cn/problems/minimum-impossible-or/"
+      },
+      {
+        "title": "3644. 排序排列",
+        "titleSlug": "maximum-k-to-sort-a-permutation",
+        "url": "https://leetcode.cn/problems/maximum-k-to-sort-a-permutation/"
+      },
+      {
+        "title": "2509. 查询树中环的长度",
+        "titleSlug": "cycle-length-queries-in-a-tree",
+        "url": "https://leetcode.cn/problems/cycle-length-queries-in-a-tree/"
+      },
+      {
+        "title": "2939. 最大异或乘积",
+        "titleSlug": "maximum-xor-product",
+        "url": "https://leetcode.cn/problems/maximum-xor-product/"
+      },
+      {
+        "title": "2749. 得到整数零需要执行的最少操作数",
+        "titleSlug": "minimum-operations-to-make-the-integer-zero",
+        "url": "https://leetcode.cn/problems/minimum-operations-to-make-the-integer-zero/"
+      },
+      {
+        "title": "2835. 使子序列的和等于目标的最少操作次数",
+        "titleSlug": "minimum-operations-to-form-subsequence-with-target-sum",
+        "url": "https://leetcode.cn/problems/minimum-operations-to-form-subsequence-with-target-sum/"
+      },
+      {
+        "title": "2897. 对数组执行操作使平方和最大",
+        "titleSlug": "apply-operations-on-array-to-maximize-sum-of-squares",
+        "url": "https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares/"
+      },
+      {
+        "title": "810. 黑板异或游戏",
+        "titleSlug": "chalkboard-xor-game",
+        "url": "https://leetcode.cn/problems/chalkboard-xor-game/"
+      },
+      {
+        "title": "3064. 使用按位查询猜测数字 I",
+        "titleSlug": "guess-the-number-using-bitwise-questions-i",
+        "url": "https://leetcode.cn/problems/guess-the-number-using-bitwise-questions-i/"
+      },
+      {
+        "title": "3094. 使用按位查询猜测数字 II",
+        "titleSlug": "guess-the-number-using-bitwise-questions-ii",
+        "url": "https://leetcode.cn/problems/guess-the-number-using-bitwise-questions-ii/"
+      }
+    ]
+  },
+  {
+    "name": "九、其他",
+    "count": 21,
+    "problems_title_slugs": "single-number single-number-iii find-missing-and-repeated-values single-number-ii set-mismatch reverse-bits sum-of-two-integers bitwise-and-of-numbers-range range-product-queries-of-powers concatenation-of-consecutive-binary-numbers find-elements-in-a-contaminated-binary-tree gray-code circular-permutation-in-binary-representation triples-with-bitwise-and-equal-to-zero find-the-k-th-character-in-string-game-ii minimum-one-bit-operations-to-make-integers-zero number-of-unique-xor-triplets-ii ryfUiz ip-to-cidr once-twice maximum-hamming-distances",
+    "problems": [
+      {
+        "title": "136. 只出现一次的数字",
+        "titleSlug": "single-number",
+        "url": "https://leetcode.cn/problems/single-number/"
+      },
+      {
+        "title": "260. 只出现一次的数字 III",
+        "titleSlug": "single-number-iii",
+        "url": "https://leetcode.cn/problems/single-number-iii/"
+      },
+      {
+        "title": "2965. 找出缺失和重复的数字",
+        "titleSlug": "find-missing-and-repeated-values",
+        "url": "https://leetcode.cn/problems/find-missing-and-repeated-values/"
+      },
+      {
+        "title": "137. 只出现一次的数字 II",
+        "titleSlug": "single-number-ii",
+        "url": "https://leetcode.cn/problems/single-number-ii/"
+      },
+      {
+        "title": "645. 错误的集合",
+        "titleSlug": "set-mismatch",
+        "url": "https://leetcode.cn/problems/set-mismatch/"
+      },
+      {
+        "title": "190. 颠倒二进制位",
+        "titleSlug": "reverse-bits",
+        "url": "https://leetcode.cn/problems/reverse-bits/"
+      },
+      {
+        "title": "371. 两整数之和",
+        "titleSlug": "sum-of-two-integers",
+        "url": "https://leetcode.cn/problems/sum-of-two-integers/"
+      },
+      {
+        "title": "201. 数字范围按位与",
+        "titleSlug": "bitwise-and-of-numbers-range",
+        "url": "https://leetcode.cn/problems/bitwise-and-of-numbers-range/"
+      },
+      {
+        "title": "2438. 二的幂数组中查询范围内的乘积",
+        "titleSlug": "range-product-queries-of-powers",
+        "url": "https://leetcode.cn/problems/range-product-queries-of-powers/"
+      },
+      {
+        "title": "1680. 连接连续二进制数字",
+        "titleSlug": "concatenation-of-consecutive-binary-numbers",
+        "url": "https://leetcode.cn/problems/concatenation-of-consecutive-binary-numbers/"
+      },
+      {
+        "title": "1261. 在受污染的二叉树中查找元素",
+        "titleSlug": "find-elements-in-a-contaminated-binary-tree",
+        "url": "https://leetcode.cn/problems/find-elements-in-a-contaminated-binary-tree/"
+      },
+      {
+        "title": "89. 格雷编码",
+        "titleSlug": "gray-code",
+        "url": "https://leetcode.cn/problems/gray-code/"
+      },
+      {
+        "title": "1238. 循环码排列",
+        "titleSlug": "circular-permutation-in-binary-representation",
+        "url": "https://leetcode.cn/problems/circular-permutation-in-binary-representation/"
+      },
+      {
+        "title": "982. 按位与为零的三元组",
+        "titleSlug": "triples-with-bitwise-and-equal-to-zero",
+        "url": "https://leetcode.cn/problems/triples-with-bitwise-and-equal-to-zero/"
+      },
+      {
+        "title": "3307. 找出第 K 个字符 II",
+        "titleSlug": "find-the-k-th-character-in-string-game-ii",
+        "url": "https://leetcode.cn/problems/find-the-k-th-character-in-string-game-ii/"
+      },
+      {
+        "title": "1611. 使整数变为 0 的最少操作次数",
+        "titleSlug": "minimum-one-bit-operations-to-make-integers-zero",
+        "url": "https://leetcode.cn/problems/minimum-one-bit-operations-to-make-integers-zero/"
+      },
+      {
+        "title": "3514. 不同 XOR 三元组的数目 II",
+        "titleSlug": "number-of-unique-xor-triplets-ii",
+        "url": "https://leetcode.cn/problems/number-of-unique-xor-triplets-ii/"
+      },
+      {
+        "title": "LCP 81. 与非的谜题",
+        "titleSlug": "ryfUiz",
+        "url": "https://leetcode.cn/problems/ryfUiz/"
+      },
+      {
+        "title": "751. IP 到 CIDR",
+        "titleSlug": "ip-to-cidr",
+        "url": "https://leetcode.cn/problems/ip-to-cidr/"
+      },
+      {
+        "title": "3595. 一次或两次",
+        "titleSlug": "once-twice",
+        "url": "https://leetcode.cn/problems/once-twice/"
+      },
+      {
+        "title": "3141. 最大汉明距离",
+        "titleSlug": "maximum-hamming-distances",
+        "url": "https://leetcode.cn/problems/maximum-hamming-distances/"
+      }
+    ]
+  }
+]

@@ -9,18 +9,18 @@ import requests
 import json
 import re
 import argparse
-from typing import Optional, List, Dict, Tuple
-from dataclasses import dataclass
-from collections import defaultdict
+from typing import Optional, List, Dict, Any
 from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 from leetcode_favorite import LeetCodeClient
+import parse_html as html_parser
 
 
 LEETCODE_DISCUSS_PRE_URL = "https://leetcode.cn/circle/discuss/"
 
 # 本地保存目录
 LOCAL_HTML_DIR = os.path.join(os.path.dirname(__file__), "discuss_html")
+LOCAL_JSON_DIR = os.path.join(os.path.dirname(__file__), "discuss_json")
 
 DISCUSSION_URL_MAP = {
     "0viNMK": {
@@ -79,13 +79,6 @@ PROBLEM_CATEGORIES = [
     for discuss_id, info in DISCUSSION_URL_MAP.items()
 ]
 
-
-@dataclass
-class ProblemInfo:
-    """题目信息"""
-    title: str
-    slug: str
-    is_premium: bool = False
 
 
 def fetch_discussion_html(discuss_id: str) -> Optional[str]:
@@ -175,6 +168,17 @@ def extract_heading_and_list_elements(html_content: str) -> str:
     return str(new_soup.prettify())
 
 
+def save_json_from_html_content(simplified_html: str, filename: str) -> List[Dict[str, Any]]:
+    """使用 parse_html 解析精简 HTML 并保存为 JSON。"""
+    os.makedirs(LOCAL_JSON_DIR, exist_ok=True)
+    data = html_parser.parse_html_content(simplified_html)
+    json_path = os.path.join(LOCAL_JSON_DIR, f"{filename}.json")
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f"解析结果已保存到: {json_path}")
+    return data
+
+
 def fetch_and_save_discussion_html(discuss_id: str, filename: str) -> bool:
     """
     获取讨论页面 HTML 并保存到本地
@@ -192,13 +196,14 @@ def fetch_and_save_discussion_html(discuss_id: str, filename: str) -> bool:
     
     # 提取精简内容
     simplified_html = extract_heading_and_list_elements(html_content)
-    
+
     # 保存精简 HTML
     filepath = os.path.join(LOCAL_HTML_DIR, f"{filename}.html")
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(simplified_html)
-    
+
     print(f"精简 HTML 已保存到: {filepath}")
+    save_json_from_html_content(simplified_html, filename)
     return True
 
 
@@ -216,333 +221,55 @@ def fetch_all_discussions() -> None:
     print(f"\n完成: 成功 {success_count}/{len(DISCUSSION_URL_MAP)} 个")
 
 
-def parse_section_title(title: str) -> Tuple[str, str]:
-    """
-    解析标题，提取序号和名称
-    :param title: 原始标题，如 "一、定长...", "§1.1 基础"
-    :return: (序号, 名称)，即 ("1", "定长...") 或 ("1.1", "基础")
-    """
-    if not title:
-        return "", ""
-    
-    # 清理 zero-width spaces 等不可见字符
-    title = title.strip()
-        
-    # 1. 处理 § 格式 (§1.1 基础)
-    match = re.match(r'^§([\d.]+)\s*(.*)', title)
-    if match:
-        return match.group(1), match.group(2)
-        
-    # 2. 处理中文数字格式 (一、定长...)
-    cn_nums = "一二三四五六七八九十"
-    match = re.match(rf'^([{cn_nums}]+)、\s*(.*)', title)
-    if match:
-        cn_num = match.group(1)
-        name = match.group(2)
-        
-        # 中文数字转阿拉伯数字
-        val = 0
-        if cn_num == '十':
-            val = 10
-        elif cn_num.startswith('十'):
-            # 十一, 十二...
-            val = 10 + ("一二三四五六七八九十".index(cn_num[1]) + 1)
-        elif cn_num.endswith('十') and len(cn_num) == 2:
-             # 二十, 三十...
-            val = ("一二三四五六七八九十".index(cn_num[0]) + 1) * 10
-        elif len(cn_num) == 1:
-            val = "一二三四五六七八九十".index(cn_num) + 1
-            
-        if val > 0:
-            return str(val), name
-        
-    return "", title
-
-
-def compact_name_parts(name_parts: List[str], max_length: int = 30, min_part_len: int = 4) -> str:
-    """
-    拼接名称，并在超长时按各部分均匀缩减
-    :param name_parts: 组成名称的各段
-    :param max_length: 允许的最大总长度
-    :param min_part_len: 每段的最小保留长度
-    :return: 缩减后的名称
-    """
-    parts = [p.strip() for p in name_parts if p and p.strip()]
-    if not parts:
-        return "未分类"
-
-    total_len = sum(len(p) for p in parts) + (len(parts) - 1)
-    if total_len <= max_length:
-        return "-".join(parts)
-
-    parts = parts[:]  # copy before mutation
-    # 轮询式缩减，每段尽量少砍一点，保持可读性
-    while True:
-        total_len = sum(len(p) for p in parts) + (len(parts) - 1)
-        if total_len <= max_length:
-            break
-
-        reduced = False
-        for i, p in enumerate(parts):
-            if len(p) > min_part_len and total_len > max_length:
-                parts[i] = p[:-1]
-                total_len -= 1
-                reduced = True
-
-        if not reduced:  # 所有段都到达最小长度，最后做硬截断兜底
-            joined = "-".join(parts)
-            return joined[:max_length]
-
-    return "-".join(parts)
-
-
-def extract_slug_from_href(href: str) -> Optional[str]:
-    """
-    从链接中提取题目 slug
-    :param href: 题目链接
-    :return: 题目 slug
-    """
-    if not href or 'problems' not in href:
-        return None
-    
-    # 匹配 /problems/xxx/ 或 /problems/xxx
-    match = re.search(r'/problems/([^/?#]+)', href)
-    if match:
-        return match.group(1)
-    return None
-
-
-def parse_html_to_categories(html_filepath: str, root_title: str, category_index: int) -> List[Tuple[str, List[ProblemInfo]]]:
-    """
-    解析 HTML 文件，提取分类和题目信息
-    :param html_filepath: HTML 文件路径
-    :param root_title: 根分类标题（如 "滑动窗口与双指针"）
-    :param category_index: 分类在列表中的序号（一级序号）
-    :return: [(分类名称, 题目列表), ...]
-    """
-    if not os.path.exists(html_filepath):
-        print(f"文件不存在: {html_filepath}")
+def load_category_from_json(filename: str) -> List[Dict[str, Any]]:
+    """从保存的 JSON 中加载分类信息。"""
+    path = os.path.join(LOCAL_JSON_DIR, f"{filename}.json")
+    if not os.path.exists(path):
+        print(f"JSON 文件不存在: {path}")
         return []
-    
-    with open(html_filepath, 'r', encoding='utf-8') as f:
-        html_content = f.read()
-    
-    soup = BeautifulSoup(html_content, 'html.parser')
-    body = soup.find('body')
-    if not body:
-        return []
-    
-    results = []
-    h2_seq = 0
-    h3_seq_map: Dict[int, int] = defaultdict(int)  # per h2
-    h4_seq_map: Dict[Tuple[int, int], int] = defaultdict(int)  # per (h2, h3)
-    
-    # 遍历所有元素，构建层级结构
-    current_h2 = ""  # 当前 h2 标题（如 "一、定长滑动窗口"）
-    current_h2_idx = 0
-    current_h2_name = ""
-    current_h3 = ""  # 当前 h3 标题（如 "§1.1 基础"）
-    current_h3_idx = 0
-    current_h3_name = ""
-    current_h4 = ""  # 当前 h4 标题
-    current_h4_idx = 0
-    current_h4_name = ""
-    
-    for element in body.children:
-        if not hasattr(element, 'name') or not element.name:
-            continue
-        
-        if element.name == 'h2':
-            current_h2 = element.get_text(strip=True)
-            h2_seq += 1
-            _, current_h2_name = parse_section_title(current_h2)
-            current_h2_idx = h2_seq  # 一级内的二级序号使用顺序
-            current_h3 = ""  # 重置 h3
-            current_h3_idx = 0
-            current_h3_name = ""
-            current_h4 = ""
-            current_h4_idx = 0
-            current_h4_name = ""
-            h3_seq_map[current_h2_idx] = 0
-            h4_seq_map[(current_h2_idx, 0)] = 0
-            
-        elif element.name == 'h3':
-            current_h3 = element.get_text(strip=True)
-            _, current_h3_name = parse_section_title(current_h3)
-            h3_seq_map[current_h2_idx] += 1
-            current_h3_idx = h3_seq_map[current_h2_idx]
-            current_h4 = ""
-            current_h4_idx = 0
-            current_h4_name = ""
-            h4_seq_map[(current_h2_idx, current_h3_idx)] = 0
-
-        elif element.name == 'h4':
-            current_h4 = element.get_text(strip=True)
-            _, current_h4_name = parse_section_title(current_h4)
-            key = (current_h2_idx, current_h3_idx)
-            h4_seq_map[key] += 1
-            current_h4_idx = h4_seq_map[key]
-            
-        elif element.name == 'ul':
-            # 收集这个 ul 中的所有题目
-            problems = []
-            for li in element.find_all('li', recursive=False):
-                a_tag = li.find('a')
-                if a_tag:
-                    href = a_tag.get('href', '')
-                    slug = extract_slug_from_href(href)
-                    if slug:
-                        title = a_tag.get_text(strip=True)
-                        # 检查是否是会员题
-                        li_text = li.get_text()
-                        is_premium = '会员题' in li_text or '🔒' in li_text
-                        problems.append(ProblemInfo(
-                            title=title,
-                            slug=slug,
-                            is_premium=is_premium
-                        ))
-            
-            if problems:
-                h2_idx = current_h2_idx
-                h2_name = current_h2_name
-                h3_idx = current_h3_idx
-                h3_name = current_h3_name
-                h4_idx = current_h4_idx
-                h4_name = current_h4_name
-                
-                number_parts = [str(category_index)] if category_index else []
-                if h2_idx:
-                    number_parts.append(str(h2_idx))
-                if h3_idx:
-                    number_parts.append(str(h3_idx))
-                if h4_idx:
-                    number_parts.append(str(h4_idx))
-                number_str = ".".join(number_parts) if number_parts else ""
-                
-                name_parts = [number_str] if number_str else []
-                h2_display = None
-                
-                if h4_idx or h4_name:
-                    # 有 h4： 序号-h2-h3-h4（若无 h3 则跳过 h3）
-                    h2_display = h2_name or current_h2
-                    h3_display = h3_name or current_h3
-                    h4_display = h4_name or current_h4
-                    if h2_display:
-                        name_parts.append(h2_display)
-                    if h3_display:
-                        name_parts.append(h3_display)
-                    if h4_display:
-                        name_parts.append(h4_display)
-                elif h3_idx or h3_name:
-                    # 有 h3： 序号-h2-h3
-                    h2_display = h2_name or current_h2
-                    h3_display = h3_name or current_h3
-                    if h2_display:
-                        name_parts.append(h2_display)
-                    if h3_display:
-                        name_parts.append(h3_display)
-                else:
-                    # 无 h3：序号-分类-h2
-                    if root_title:
-                        name_parts.append(root_title)
-                    h2_display = h2_name or current_h2
-                    if h2_display:
-                        name_parts.append(h2_display)
-                
-                # 拼接名称（超长时按各段均匀缩减）
-                full_name = compact_name_parts(name_parts, max_length=30)
-                # 如果仍然超长，优先去掉 h2 以保留更深层的标题
-                if len(full_name) > 30 and h2_display:
-                    name_parts_no_h2 = [p for p in name_parts if p != h2_display]
-                    if name_parts_no_h2:
-                        full_name = compact_name_parts(name_parts_no_h2, max_length=30)
-                
-                # 检查是否已存在相同名称的分类，如果有则合并
-                existing = None
-                for i, (name, probs) in enumerate(results):
-                    if name == full_name:
-                        existing = i
-                        break
-                
-                if existing is not None:
-                    # 合并题目
-                    existing_slugs = {p.slug for p in results[existing][1]}
-                    for p in problems:
-                        if p.slug not in existing_slugs:
-                            results[existing][1].append(p)
-                else:
-                    results.append((full_name, problems))
-    
-    return results
-
-
-def load_category_from_html(filename: str, title: str, category_index: int) -> List[Tuple[str, List[ProblemInfo]]]:
-    """
-    从本地 HTML 文件加载分类信息
-    :param filename: 文件名（不含扩展名）
-    :param title: 分类标题
-    :param category_index: 分类序号
-    :return: [(分类名称, 题目列表), ...]
-    """
-    filepath = os.path.join(LOCAL_HTML_DIR, f"{filename}.html")
-    return parse_html_to_categories(filepath, title, category_index)
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 def create_favorite_from_category(
     client: LeetCodeClient,
-    category_name: str,
-    problems: List[ProblemInfo],
+    category: Dict[str, Any],
     dry_run: bool = False
 ) -> Optional[str]:
     """
-    从分类创建题单
-    :param client: LeetCode 客户端
-    :param category_name: 分类名称
-    :param problems: 题目列表
-    :param dry_run: 是否为试运行
-    :return: 题单 slug
+    使用 JSON 分类数据创建题单。
     """
-    # 过滤掉会员题
-    problems = [p for p in problems if not p.is_premium]
-    
+    favorite_name = category.get("name") or "未命名题单"
+    problems: List[Dict[str, str]] = category.get("problems", [])
+
     if not problems:
-        print(f"分类 [{category_name}] 没有非会员题目，跳过")
+        print(f"分类 [{favorite_name}] 没有题目，跳过")
         return None
-    
-    # 构建题单名称
-    favorite_name = category_name
-    
-    # 再次确保不超过30字符
-    if len(favorite_name) > 30:
-        favorite_name = favorite_name[:27] + "..."
-    
+
     if dry_run:
         print(f"[试运行] 将创建题单: {favorite_name}")
         print(f"  包含 {len(problems)} 道题目:")
         for i, p in enumerate(problems[:5], 1):
-            print(f"    {i}. {p.title} ({p.slug})")
+            print(f"    {i}. {p.get('title', '')} ({p.get('titleSlug', '')})")
         if len(problems) > 5:
             print(f"    ... 还有 {len(problems) - 5} 道题目")
         return None
-    
-    # 实际创建题单
+
     print(f"正在创建题单: {favorite_name}")
-    
-    favorite_slug = client.create_favorite_list(favorite_name, is_public=False, description=f"题单: {category_name}")
-    
+
+    favorite_slug = client.create_favorite_list(favorite_name, is_public=False, description=f"题单: {favorite_name}")
+
     if not favorite_slug:
         print(f"创建题单失败: {favorite_name}")
         return None
-    
+
     print(f"题单创建成功: {favorite_name} (slug: {favorite_slug})")
-    
-    # 获取题目 slugs
-    slugs = [p.slug for p in problems]
-    
-    # 分批添加，每批最多 50 个
+
+    slugs = [p.get("titleSlug") for p in problems if p.get("titleSlug")]
+
     batch_size = 50
     total_added = 0
-    
+
     for i in range(0, len(slugs), batch_size):
         batch = slugs[i:i + batch_size]
         if client.batch_add_questions_to_favorite(favorite_slug, batch):
@@ -550,7 +277,7 @@ def create_favorite_from_category(
             print(f"  已添加 {total_added}/{len(slugs)} 道题目")
         else:
             print(f"  批量添加失败，当前位置: {i}")
-    
+
     print(f"完成: 共添加 {total_added} 道题目到题单 [{favorite_name}]")
     return favorite_slug
 
@@ -608,50 +335,49 @@ def interactive_mode(client: LeetCodeClient):
                 cat_index = int(cat_input) - 1
                 if 0 <= cat_index < len(PROBLEM_CATEGORIES):
                     discuss_id, filename, title = PROBLEM_CATEGORIES[cat_index]
-                    
-                    # 从 HTML 文件加载分类
-                    categories = load_category_from_html(filename, title, cat_index + 1)
-                    
+
+                    categories = load_category_from_json(filename)
+
                     if not categories:
-                        print(f"未找到分类数据，请先使用选项 1 获取 HTML")
+                        print(f"未找到分类数据，请先使用选项 1 获取 HTML/JSON")
                         continue
-                    
+
                     print(f"\n找到 {len(categories)} 个子分类:")
                     total_problems = 0
-                    for i, (name, problems) in enumerate(categories, 1):
-                        non_premium = [p for p in problems if not p.is_premium]
-                        total_problems += len(non_premium)
-                        print(f"{i:3}. {name}")
-                    
+                    for i, cat in enumerate(categories, 1):
+                        probs = cat.get("problems", [])
+                        total_problems += len(probs)
+                        print(f"{i:3}. {cat.get('name')}")
+
                     confirm = input(f"\n将创建 {len(categories)} 个题单（共 {total_problems} 道题），确认？(y/n): ").strip().lower()
                     if confirm == 'y':
-                        for name, problems in categories:
-                            create_favorite_from_category(client, name, problems)
+                        for cat in categories:
+                            create_favorite_from_category(client, cat)
                 else:
                     print("无效的分类编号")
             except ValueError:
                 print("请输入有效的数字")
-                
+
         elif choice == '4':
             # 创建所有分类的子题单
             print("\n统计所有分类的子题单...")
-            
+
             all_categories = []
             for idx, (discuss_id, filename, title) in enumerate(PROBLEM_CATEGORIES):
-                categories = load_category_from_html(filename, title, idx + 1)
+                categories = load_category_from_json(filename)
                 all_categories.extend(categories)
-            
+
             if not all_categories:
-                print("未找到任何分类数据，请先使用选项 2 获取所有 HTML")
+                print("未找到任何分类数据，请先使用选项 2 获取所有 HTML/JSON")
                 continue
-            
-            total_problems = sum(len([p for p in probs if not p.is_premium]) for _, probs in all_categories)
+
+            total_problems = sum(len(cat.get("problems", [])) for cat in all_categories)
             print(f"\n找到 {len(all_categories)} 个子分类，共 {total_problems} 道题")
-            
+
             confirm = input(f"\n将创建 {len(all_categories)} 个题单，确认？(y/n): ").strip().lower()
             if confirm == 'y':
-                for name, problems in all_categories:
-                    create_favorite_from_category(client, name, problems)
+                for cat in all_categories:
+                    create_favorite_from_category(client, cat)
                     
         else:
             print("无效的选项")
