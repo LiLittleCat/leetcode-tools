@@ -228,7 +228,7 @@ def parse_section_title(title: str) -> Tuple[str, str]:
         
     # 2. 处理中文数字格式 (一、定长...)
     cn_nums = "一二三四五六七八九十"
-    match = re.match(r'^([' + cn_nums + ']+)、\s*(.*)', title)
+    match = re.match(rf'^([{cn_nums}]+)、\s*(.*)', title)
     if match:
         cn_num = match.group(1)
         name = match.group(2)
@@ -407,8 +407,8 @@ def create_favorite_from_category(
         print(f"分类 [{category_name}] 没有非会员题目，跳过")
         return None
     
-    # 构建题单名称（已经在 parse_html_to_categories 中处理过了）
-    favorite_name = category_name
+    # 构建题单名称，前缀 0x3f 便于统一删除
+    favorite_name = f"0x3f{category_name}"
     
     # 再次确保不超过30字符
     if len(favorite_name) > 30:
@@ -426,15 +426,10 @@ def create_favorite_from_category(
     # 实际创建题单
     print(f"正在创建题单: {favorite_name}")
     
-    result = client.create_favorite_list(favorite_name, is_public=False, description=f"0x3f题单: {category_name}")
+    favorite_slug = client.create_favorite_list(favorite_name, is_public=False, description=f"0x3f题单: {category_name}")
     
-    if not result:
-        print(f"创建题单失败: {favorite_name}")
-        return None
-    
-    favorite_slug = result.get('slug')
     if not favorite_slug:
-        print(f"创建题单成功但获取 slug 失败")
+        print(f"创建题单失败: {favorite_name}")
         return None
     
     print(f"题单创建成功: {favorite_name} (slug: {favorite_slug})")
@@ -562,7 +557,8 @@ def interactive_mode(client: LeetCodeClient):
                     for i, (name, problems) in enumerate(categories, 1):
                         non_premium = [p for p in problems if not p.is_premium]
                         total_problems += len(non_premium)
-                        print(f"{i:3}. {name}({len(non_premium)})")
+                        display_name = f"0x3f{name}"
+                        print(f"{i:3}. {display_name}")
                     
                     confirm = input(f"\n将创建 {len(categories)} 个题单（共 {total_problems} 道题），确认？(y/n): ").strip().lower()
                     if confirm == 'y':
