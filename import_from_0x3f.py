@@ -1,0 +1,660 @@
+"""
+从 LeetCode 讨论页面拉取 0x3f 的题单数据并创建 LeetCode 题单
+
+数据来源: https://leetcode.cn/circle/discuss/
+"""
+
+import os
+import requests
+import json
+import re
+import argparse
+from typing import Optional, List, Dict, Tuple
+from dataclasses import dataclass
+from dotenv import load_dotenv
+from bs4 import BeautifulSoup
+from leetcode_favorite import LeetCodeClient
+
+
+LEETCODE_DISCUSS_PRE_URL = "https://leetcode.cn/circle/discuss/"
+
+# 本地保存目录
+LOCAL_HTML_DIR = os.path.join(os.path.dirname(__file__), "discuss_html")
+
+DISCUSSION_URL_MAP = {
+    "0viNMK": {
+        "filename": "sliding_window",
+        "title": "滑动窗口与双指针"
+    },
+    "SqopEo": {
+        "filename": "binary_search",
+        "title": "二分查找"
+    },
+    "9oZFK9": {
+        "filename": "monotonic_stack",
+        "title": "单调栈"
+    },
+    "YiXPXW": {
+        "filename": "grid",
+        "title": "网格图"
+    },
+    "dHn9Vk": {
+        "filename": "bitwise_operations",
+        "title": "位运算"
+    },
+    "01LUak": {
+        "filename": "graph",
+        "title": "图论"
+    },
+    "tXLS3i": {
+        "filename": "dynamic_programming",
+        "title": "DP"
+    },
+    "mOr1u6": {
+        "filename": "data_structure",
+        "title": "数据结构"
+    },
+    "IYT3ss": {
+        "filename": "math",
+        "title": "数学算法"
+    },
+    "g6KTKL": {
+        "filename": "greedy",
+        "title": "贪心与思维"
+    },
+    "K0n2gO": {
+        "filename": "trees",
+        "title": "链表、树与回溯"
+    },
+    "SJFwQI": {
+        "filename": "string",
+        "title": "字符串"
+    },
+}
+
+# 分类列表：(discuss_id, filename, title)
+PROBLEM_CATEGORIES = [
+    (discuss_id, info["filename"], info["title"]) 
+    for discuss_id, info in DISCUSSION_URL_MAP.items()
+]
+
+
+@dataclass
+class ProblemInfo:
+    """题目信息"""
+    title: str
+    slug: str
+    is_premium: bool = False
+
+
+def fetch_discussion_html(discuss_id: str) -> Optional[str]:
+    """
+    从 LeetCode 获取讨论页面的 HTML
+    :param discuss_id: 讨论 ID，如 "0viNMK"
+    :return: HTML 内容
+    """
+    url = f"{LEETCODE_DISCUSS_PRE_URL}{discuss_id}"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+    }
+    
+    try:
+        print(f"正在获取: {url}")
+        response = requests.get(url, headers=headers, timeout=30)
+        response.raise_for_status()
+        return response.text
+    except requests.RequestException as e:
+        print(f"获取讨论页面失败: {e}")
+        return None
+
+
+def extract_heading_and_list_elements(html_content: str) -> str:
+    """
+    从 HTML 中提取 h1, h2, h3, ul, li 元素
+    :param html_content: 原始 HTML 内容
+    :return: 提取后的精简 HTML
+    """
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    # 创建新的 HTML 文档
+    new_soup = BeautifulSoup("<html><head><meta charset='utf-8'></head><body></body></html>", 'html.parser')
+    body = new_soup.find('body')
+    
+    # 查找文章内容区域
+    # 优先查找 'break-words' (常见于动态渲染的 LeetCode 讨论页)
+    content_area = soup.find('div', class_=re.compile(r'break-words', re.I))
+    if not content_area:
+        content_area = soup.find('div', class_=re.compile(r'content|article|post|topic', re.I))
+    if not content_area:
+        content_area = soup
+    
+    # 提取所有 h1, h2, h3, ul, ol, li 元素
+    allowed_tags = ['h1', 'h2', 'h3', 'ul', 'ol', 'li', 'a', 'p']
+    
+    def clone_element(element, parent):
+        """递归克隆元素，只保留允许的标签"""
+        if element.name in allowed_tags:
+            # 过滤掉不包含题目链接的 li 元素
+            if element.name == 'li':
+                has_problem_link = False
+                for a_tag in element.find_all('a'):
+                    href = a_tag.get('href', '')
+                    if href and 'problems' in href:
+                        has_problem_link = True
+                        break
+                if not has_problem_link:
+                    return
+
+            new_tag = new_soup.new_tag(element.name)
+            # 保留 href 属性
+            if element.name == 'a' and element.get('href'):
+                new_tag['href'] = element.get('href')
+            
+            for child in element.children:
+                if hasattr(child, 'name') and child.name:
+                    clone_element(child, new_tag)
+                elif child.string:
+                    new_tag.append(child.string.strip())
+            
+            if new_tag.get_text(strip=True):  # 只添加有内容的元素
+                parent.append(new_tag)
+    
+    # 查找所有标题和列表
+    for tag in content_area.find_all(['h1', 'h2', 'h3', 'ul', 'ol']):
+        clone_element(tag, body)
+    
+    return str(new_soup.prettify())
+
+
+def fetch_and_save_discussion_html(discuss_id: str, filename: str) -> bool:
+    """
+    获取讨论页面 HTML 并保存到本地
+    :param discuss_id: 讨论 ID
+    :param filename: 保存的文件名（不含扩展名）
+    :return: 是否成功
+    """
+    # 确保目录存在
+    os.makedirs(LOCAL_HTML_DIR, exist_ok=True)
+    
+    # 获取 HTML
+    html_content = fetch_discussion_html(discuss_id)
+    if not html_content:
+        return False
+    
+    # 提取精简内容
+    simplified_html = extract_heading_and_list_elements(html_content)
+    
+    # 保存精简 HTML
+    filepath = os.path.join(LOCAL_HTML_DIR, f"{filename}.html")
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(simplified_html)
+    
+    print(f"精简 HTML 已保存到: {filepath}")
+    return True
+
+
+def fetch_all_discussions() -> None:
+    """
+    获取所有讨论页面并保存
+    """
+    print(f"\n将获取 {len(DISCUSSION_URL_MAP)} 个讨论页面...")
+    
+    success_count = 0
+    for discuss_id, info in DISCUSSION_URL_MAP.items():
+        if fetch_and_save_discussion_html(discuss_id, info["filename"]):
+            success_count += 1
+    
+    print(f"\n完成: 成功 {success_count}/{len(DISCUSSION_URL_MAP)} 个")
+
+
+def parse_section_title(title: str) -> Tuple[str, str]:
+    """
+    解析标题，提取序号和名称
+    :param title: 原始标题，如 "一、定长...", "§1.1 基础"
+    :return: (序号, 名称)，即 ("1", "定长...") 或 ("1.1", "基础")
+    """
+    if not title:
+        return "", ""
+    
+    # 清理 zero-width spaces 等不可见字符
+    title = title.strip()
+        
+    # 1. 处理 § 格式 (§1.1 基础)
+    match = re.match(r'^§([\d.]+)\s*(.*)', title)
+    if match:
+        return match.group(1), match.group(2)
+        
+    # 2. 处理中文数字格式 (一、定长...)
+    cn_nums = "一二三四五六七八九十"
+    match = re.match(r'^([' + cn_nums + ']+)、\s*(.*)', title)
+    if match:
+        cn_num = match.group(1)
+        name = match.group(2)
+        
+        # 中文数字转阿拉伯数字
+        val = 0
+        if cn_num == '十':
+            val = 10
+        elif cn_num.startswith('十'):
+            # 十一, 十二...
+            val = 10 + ("一二三四五六七八九十".index(cn_num[1]) + 1)
+        elif cn_num.endswith('十') and len(cn_num) == 2:
+             # 二十, 三十...
+            val = ("一二三四五六七八九十".index(cn_num[0]) + 1) * 10
+        elif len(cn_num) == 1:
+            val = "一二三四五六七八九十".index(cn_num) + 1
+            
+        if val > 0:
+            return str(val), name
+        
+    return "", title
+
+
+def extract_slug_from_href(href: str) -> Optional[str]:
+    """
+    从链接中提取题目 slug
+    :param href: 题目链接
+    :return: 题目 slug
+    """
+    if not href or 'problems' not in href:
+        return None
+    
+    # 匹配 /problems/xxx/ 或 /problems/xxx
+    match = re.search(r'/problems/([^/?#]+)', href)
+    if match:
+        return match.group(1)
+    return None
+
+
+def parse_html_to_categories(html_filepath: str, root_title: str) -> List[Tuple[str, List[ProblemInfo]]]:
+    """
+    解析 HTML 文件，提取分类和题目信息
+    :param html_filepath: HTML 文件路径
+    :param root_title: 根分类标题（如 "滑动窗口与双指针"）
+    :return: [(分类名称, 题目列表), ...]
+    """
+    if not os.path.exists(html_filepath):
+        print(f"文件不存在: {html_filepath}")
+        return []
+    
+    with open(html_filepath, 'r', encoding='utf-8') as f:
+        html_content = f.read()
+    
+    soup = BeautifulSoup(html_content, 'html.parser')
+    body = soup.find('body')
+    if not body:
+        return []
+    
+    results = []
+    
+    # 遍历所有元素，构建层级结构
+    current_h2 = ""  # 当前 h2 标题（如 "一、定长滑动窗口"）
+    current_h3 = ""  # 当前 h3 标题（如 "§1.1 基础"）
+    
+    for element in body.children:
+        if not hasattr(element, 'name') or not element.name:
+            continue
+        
+        if element.name == 'h2':
+            current_h2 = element.get_text(strip=True)
+            current_h3 = ""  # 重置 h3
+            
+        elif element.name == 'h3':
+            current_h3 = element.get_text(strip=True)
+            
+        elif element.name == 'ul':
+            # 收集这个 ul 中的所有题目
+            problems = []
+            for li in element.find_all('li', recursive=False):
+                a_tag = li.find('a')
+                if a_tag:
+                    href = a_tag.get('href', '')
+                    slug = extract_slug_from_href(href)
+                    if slug:
+                        title = a_tag.get_text(strip=True)
+                        # 检查是否是会员题
+                        li_text = li.get_text()
+                        is_premium = '会员题' in li_text or '🔒' in li_text
+                        problems.append(ProblemInfo(
+                            title=title,
+                            slug=slug,
+                            is_premium=is_premium
+                        ))
+            
+            if problems:
+                # 获取序号和名称
+                h2_idx, h2_name = parse_section_title(current_h2)
+                h3_idx, h3_name = parse_section_title(current_h3)
+                
+                name_parts = []
+                
+                # 1. Root Title (前2字)
+                if root_title:
+                    name_parts.append(root_title[:2] if len(root_title) > 2 else root_title)
+                
+                # 2. Index + Name
+                # 优先使用 H3 (如 "1.1基础")
+                if current_h3 and h3_idx:
+                     short_h2 = h2_name[:3] if len(h2_name) > 3 else h2_name
+                     name_parts.append(f"{short_h2}-{h3_idx}{h3_name}")
+                # 其次使用 H2 (如 "5三指针")
+                elif h2_idx:
+                     name_parts.append(f"{h2_idx}{h2_name}")
+                # Fallback: 没有序号时，只使用名称
+                else:
+                     if current_h3:
+                         name_parts.append(h3_name)
+                     else:
+                         name_parts.append(h2_name)
+                
+                # 拼接名称
+                full_name = "-".join(name_parts) if name_parts else "未分类"
+                
+                # 确保不超过30字符 (保留更多内容，因为去掉了冗余文字)
+                if len(full_name) > 30:
+                    full_name = full_name[:30]
+                
+                # 检查是否已存在相同名称的分类，如果有则合并
+                existing = None
+                for i, (name, probs) in enumerate(results):
+                    if name == full_name:
+                        existing = i
+                        break
+                
+                if existing is not None:
+                    # 合并题目
+                    existing_slugs = {p.slug for p in results[existing][1]}
+                    for p in problems:
+                        if p.slug not in existing_slugs:
+                            results[existing][1].append(p)
+                else:
+                    results.append((full_name, problems))
+    
+    return results
+
+
+def load_category_from_html(filename: str, title: str) -> List[Tuple[str, List[ProblemInfo]]]:
+    """
+    从本地 HTML 文件加载分类信息
+    :param filename: 文件名（不含扩展名）
+    :param title: 分类标题
+    :return: [(分类名称, 题目列表), ...]
+    """
+    filepath = os.path.join(LOCAL_HTML_DIR, f"{filename}.html")
+    return parse_html_to_categories(filepath, title)
+
+
+def create_favorite_from_category(
+    client: LeetCodeClient,
+    category_name: str,
+    problems: List[ProblemInfo],
+    dry_run: bool = False
+) -> Optional[str]:
+    """
+    从分类创建题单
+    :param client: LeetCode 客户端
+    :param category_name: 分类名称
+    :param problems: 题目列表
+    :param dry_run: 是否为试运行
+    :return: 题单 slug
+    """
+    # 过滤掉会员题
+    problems = [p for p in problems if not p.is_premium]
+    
+    if not problems:
+        print(f"分类 [{category_name}] 没有非会员题目，跳过")
+        return None
+    
+    # 构建题单名称（已经在 parse_html_to_categories 中处理过了）
+    favorite_name = category_name
+    
+    # 再次确保不超过30字符
+    if len(favorite_name) > 30:
+        favorite_name = favorite_name[:27] + "..."
+    
+    if dry_run:
+        print(f"[试运行] 将创建题单: {favorite_name}")
+        print(f"  包含 {len(problems)} 道题目:")
+        for i, p in enumerate(problems[:5], 1):
+            print(f"    {i}. {p.title} ({p.slug})")
+        if len(problems) > 5:
+            print(f"    ... 还有 {len(problems) - 5} 道题目")
+        return None
+    
+    # 实际创建题单
+    print(f"正在创建题单: {favorite_name}")
+    
+    result = client.create_favorite_list(favorite_name, is_public=False, description=f"0x3f题单: {category_name}")
+    
+    if not result:
+        print(f"创建题单失败: {favorite_name}")
+        return None
+    
+    favorite_slug = result.get('slug')
+    if not favorite_slug:
+        print(f"创建题单成功但获取 slug 失败")
+        return None
+    
+    print(f"题单创建成功: {favorite_name} (slug: {favorite_slug})")
+    
+    # 获取题目 slugs
+    slugs = [p.slug for p in problems]
+    
+    # 分批添加，每批最多 50 个
+    batch_size = 50
+    total_added = 0
+    
+    for i in range(0, len(slugs), batch_size):
+        batch = slugs[i:i + batch_size]
+        if client.batch_add_questions_to_favorite(favorite_slug, batch):
+            total_added += len(batch)
+            print(f"  已添加 {total_added}/{len(slugs)} 道题目")
+        else:
+            print(f"  批量添加失败，当前位置: {i}")
+    
+    print(f"完成: 共添加 {total_added} 道题目到题单 [{favorite_name}]")
+    return favorite_slug
+
+
+def display_available_categories():
+    """显示可用的分类列表"""
+    print("\n可用的题单分类:")
+    print("-" * 50)
+    for i, (discuss_id, filename, title) in enumerate(PROBLEM_CATEGORIES, 1):
+        print(f"{i:2}. {title} ({filename})")
+    print("-" * 50)
+
+
+def delete_all_0x3f_favorites(client: LeetCodeClient) -> None:
+    """
+    删除所有以 0x3f 开头的题单
+    :param client: LeetCode 客户端
+    """
+    print("\n正在获取题单列表...")
+    created_favorites, _ = client.get_favorite_lists()
+    
+    # 筛选出以 0x3f 开头的题单
+    favorites_to_delete = [f for f in created_favorites if f['name'].startswith('0x3f')]
+    
+    if not favorites_to_delete:
+        print("没有找到以 '0x3f' 开头的题单")
+        return
+    
+    print(f"\n找到 {len(favorites_to_delete)} 个以 '0x3f' 开头的题单:")
+    for i, f in enumerate(favorites_to_delete, 1):
+        print(f"  {i}. {f['name']} (slug: {f['slug']})")
+    
+    confirm = input(f"\n确认要删除这 {len(favorites_to_delete)} 个题单吗？(y/n): ").strip().lower()
+    if confirm != 'y':
+        print("取消删除操作")
+        return
+    
+    success_count = 0
+    fail_count = 0
+    
+    for f in favorites_to_delete:
+        if client.delete_favorite(f['slug']):
+            print(f"✓ 已删除: {f['name']}")
+            success_count += 1
+        else:
+            print(f"✗ 删除失败: {f['name']}")
+            fail_count += 1
+    
+    print(f"\n删除完成: 成功 {success_count} 个, 失败 {fail_count} 个")
+
+
+def interactive_mode(client: LeetCodeClient):
+    """
+    交互模式
+    :param client: LeetCode 客户端
+    """
+    while True:
+        display_available_categories()
+        print("\n操作选项:")
+        print("1. 获取讨论页面 HTML（单个）")
+        print("2. 获取所有讨论页面 HTML")
+        print("3. 创建指定分类的子题单")
+        print("4. 创建所有分类的子题单")
+        print("5. 删除所有 0x3f 题单")
+        print("q. 退出")
+        
+        choice = input("\n请选择操作: ").strip().lower()
+        
+        if choice == 'q':
+            break
+        
+        if choice == '1':
+            # 获取单个讨论页面 HTML
+            cat_input = input("\n请输入分类编号 (1-12): ").strip()
+            try:
+                cat_index = int(cat_input) - 1
+                if 0 <= cat_index < len(PROBLEM_CATEGORIES):
+                    discuss_id, filename, title = PROBLEM_CATEGORIES[cat_index]
+                    fetch_and_save_discussion_html(discuss_id, filename)
+                else:
+                    print("无效的分类编号")
+            except ValueError:
+                print("请输入有效的数字")
+                
+        elif choice == '2':
+            # 获取所有讨论页面 HTML
+            fetch_all_discussions()
+            
+        elif choice == '3':
+            # 创建指定分类的子题单
+            cat_input = input("\n请输入分类编号 (1-12): ").strip()
+            try:
+                cat_index = int(cat_input) - 1
+                if 0 <= cat_index < len(PROBLEM_CATEGORIES):
+                    discuss_id, filename, title = PROBLEM_CATEGORIES[cat_index]
+                    
+                    # 从 HTML 文件加载分类
+                    categories = load_category_from_html(filename, title)
+                    
+                    if not categories:
+                        print(f"未找到分类数据，请先使用选项 1 获取 HTML")
+                        continue
+                    
+                    print(f"\n找到 {len(categories)} 个子分类:")
+                    total_problems = 0
+                    for i, (name, problems) in enumerate(categories, 1):
+                        non_premium = [p for p in problems if not p.is_premium]
+                        total_problems += len(non_premium)
+                        print(f"{i:3}. {name}({len(non_premium)})")
+                    
+                    confirm = input(f"\n将创建 {len(categories)} 个题单（共 {total_problems} 道题），确认？(y/n): ").strip().lower()
+                    if confirm == 'y':
+                        for name, problems in categories:
+                            create_favorite_from_category(client, name, problems)
+                else:
+                    print("无效的分类编号")
+            except ValueError:
+                print("请输入有效的数字")
+                
+        elif choice == '4':
+            # 创建所有分类的子题单
+            print("\n统计所有分类的子题单...")
+            
+            all_categories = []
+            for discuss_id, filename, title in PROBLEM_CATEGORIES:
+                categories = load_category_from_html(filename, title)
+                all_categories.extend(categories)
+            
+            if not all_categories:
+                print("未找到任何分类数据，请先使用选项 2 获取所有 HTML")
+                continue
+            
+            total_problems = sum(len([p for p in probs if not p.is_premium]) for _, probs in all_categories)
+            print(f"\n找到 {len(all_categories)} 个子分类，共 {total_problems} 道题")
+            
+            confirm = input(f"\n将创建 {len(all_categories)} 个题单，确认？(y/n): ").strip().lower()
+            if confirm == 'y':
+                for name, problems in all_categories:
+                    create_favorite_from_category(client, name, problems)
+                    
+        elif choice == '5':
+            # 删除所有 0x3f 题单
+            delete_all_0x3f_favorites(client)
+            
+        else:
+            print("无效的选项")
+
+
+def main():
+    parser = argparse.ArgumentParser(description='从 LeetCode 讨论页面导入 0x3f 的题单数据')
+    parser.add_argument('--fetch-all', action='store_true', help='获取所有讨论页面 HTML')
+    parser.add_argument('--fetch', type=int, help='获取指定分类的讨论页面 HTML (1-12)')
+    args = parser.parse_args()
+    
+    # 加载环境变量
+    env_path = os.path.join(os.path.dirname(__file__), '.env')
+    load_dotenv(env_path)
+    
+    csrf_token = os.getenv('csrftoken')
+    session_id = os.getenv('LEETCODE_SESSION')
+    
+    if args.fetch_all:
+        fetch_all_discussions()
+    elif args.fetch:
+        if 1 <= args.fetch <= len(PROBLEM_CATEGORIES):
+            discuss_id, filename, title = PROBLEM_CATEGORIES[args.fetch - 1]
+            fetch_and_save_discussion_html(discuss_id, filename)
+        else:
+            print(f"无效的分类编号: {args.fetch}")
+    else:
+        if not csrf_token or not session_id:
+            print("\n提示：如需删除题单功能，请在 .env 文件中配置：")
+            print("csrftoken=你的csrftoken")
+            print("LEETCODE_SESSION=你的LEETCODE_SESSION")
+            print("\n当前仅支持获取讨论页面 HTML")
+            
+            # 直接获取 HTML 不需要登录
+            print("\n选择要获取的讨论页面:")
+            print("a. 获取所有讨论页面")
+            print("或输入分类编号 (1-12)")
+            
+            display_available_categories()
+            
+            fetch_input = input("\n请选择: ").strip().lower()
+            
+            if fetch_input == 'a':
+                fetch_all_discussions()
+            else:
+                try:
+                    cat_index = int(fetch_input) - 1
+                    if 0 <= cat_index < len(PROBLEM_CATEGORIES):
+                        discuss_id, filename, title = PROBLEM_CATEGORIES[cat_index]
+                        fetch_and_save_discussion_html(discuss_id, filename)
+                    else:
+                        print("无效的分类编号")
+                except ValueError:
+                    print("请输入有效的选项")
+        else:
+            client = LeetCodeClient(csrf_token, session_id)
+            interactive_mode(client)
+
+
+if __name__ == "__main__":
+    main()
