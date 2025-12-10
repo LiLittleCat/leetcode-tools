@@ -61,7 +61,7 @@ def _collect_problems_from_ul(ul_tag) -> List[Dict[str, str]]:
 def parse_html_content(html_content: str) -> List[Dict[str, Any]]:
     """
     解析 HTML 字符串，返回题单列表。
-    每个元素形如 {"name": "...", "problems": [{title, titleSlug, url}, ...]}。
+    每个元素形如 {"name": "...", "count": n, "problems_title_slugs": "...", "problems": [{title, titleSlug, url}, ...]}。
     """
     soup = BeautifulSoup(html_content, "html.parser")
     body = soup.find("body")
@@ -87,7 +87,18 @@ def parse_html_content(html_content: str) -> List[Dict[str, Any]]:
                 name_parts.append(headings[level])  # type: ignore[arg-type]
 
         group_name = " / ".join(name_parts) if name_parts else "未命名题单"
-        result.append({"name": group_name, "problems": pending_problems})
+
+        slugs = [p.get("titleSlug", "").strip() for p in pending_problems if p.get("titleSlug")]
+        slugs_joined = " ".join(slugs)
+
+        result.append(
+            {
+                "name": group_name,
+                "count": len(pending_problems),
+                "problems_title_slugs": slugs_joined,
+                "problems": pending_problems,
+            }
+        )
         pending_problems = []
 
     # 顺序遍历 body 直接子元素，保持文档流顺序
