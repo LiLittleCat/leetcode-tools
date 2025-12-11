@@ -26,6 +26,7 @@ import parse_html as html_parser  # noqa: E402
 
 
 LEETCODE_DISCUSS_PRE_URL = "https://leetcode.cn/circle/discuss/"
+FAVORITE_NAME_ORDERED_PATH = BASE_DIR / "favorite_name_ordered.json"
 
 # 本地保存目录
 LOCAL_HTML_DIR = BASE_DIR / "discuss_html"
@@ -258,15 +259,60 @@ def load_category_from_json(filename: str) -> List[Dict[str, Any]]:
         return json.load(f)
 
 
+def load_name_mapping() -> Dict[str, str]:
+    """
+    读取 favorite_name_ordered.json，返回 {old: new} 映射，只保留 new 有值的条目。
+    """
+    if not FAVORITE_NAME_ORDERED_PATH.exists():
+        print(f"未找到名称映射文件: {FAVORITE_NAME_ORDERED_PATH}")
+        return {}
+
+    try:
+        with open(FAVORITE_NAME_ORDERED_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except json.JSONDecodeError:
+        print("favorite_name_ordered.json 格式错误，跳过名称映射")
+        return {}
+
+    mapping: Dict[str, str] = {}
+    if isinstance(data, list):
+        for item in data:
+            if isinstance(item, dict) and "old" in item:
+                old_name = str(item["old"])
+                new_name = str(item.get("new", "") or "").strip()
+                if new_name:
+                    mapping[old_name] = new_name
+    elif isinstance(data, dict):
+        for old_name, new_name in data.items():
+            new_str = str(new_name or "").strip()
+            if new_str:
+                mapping[str(old_name)] = new_str
+    else:
+        print("favorite_name_ordered.json 内容格式不支持，跳过名称映射")
+
+    return mapping
+
+
+def resolve_favorite_name(original_name: str, name_mapping: Dict[str, str]) -> str:
+    """
+    根据映射获取新的题单名称；找不到映射时返回原名。
+    """
+    if not name_mapping:
+        return original_name
+    return name_mapping.get(original_name, original_name)
+
+
 def create_favorite_from_category(
     client: LeetCodeClient,
     category: Dict[str, Any],
+    name_mapping: Optional[Dict[str, str]] = None,
     dry_run: bool = False
 ) -> Optional[str]:
     """
     使用 JSON 分类数据创建题单。
     """
-    favorite_name = category.get("name") or "未命名题单"
+    original_name = category.get("name") or "未命名题单"
+    favorite_name = resolve_favorite_name(original_name, name_mapping or {})
     problems: List[Dict[str, str]] = category.get("problems", [])
 
     if not problems:
@@ -275,6 +321,8 @@ def create_favorite_from_category(
 
     if dry_run:
         print(f"[试运行] 将创建题单: {favorite_name}")
+        if favorite_name != original_name:
+            print(f"  使用映射名称: {original_name} -> {favorite_name}")
         print(f"  包含 {len(problems)} 道题目:")
         for i, p in enumerate(problems[:5], 1):
             print(f"    {i}. {p.get('title', '')} ({p.get('titleSlug', '')})")
@@ -282,6 +330,8 @@ def create_favorite_from_category(
             print(f"    ... 还有 {len(problems) - 5} 道题目")
         return None
 
+    if favorite_name != original_name:
+        print(f"使用映射名称: {original_name} -> {favorite_name}")
     print(f"正在创建题单: {favorite_name}")
 
     favorite_slug = client.create_favorite_list(favorite_name, is_public=False, description=f"题单: {favorite_name}")
@@ -369,17 +419,19 @@ def interactive_mode(client: LeetCodeClient):
                         print(f"未找到分类数据，请先使用选项 1 获取 HTML/JSON")
                         continue
 
+                    name_mapping = load_name_mapping()
                     print(f"\n找到 {len(categories)} 个子分类:")
                     total_problems = 0
                     for i, cat in enumerate(categories, 1):
                         probs = cat.get("problems", [])
                         total_problems += len(probs)
-                        print(f"{i:3}. {cat.get('name')}")
+                        display_name = resolve_favorite_name(cat.get("name") or "", name_mapping)
+                        print(f"{i:3}. {display_name}")
 
                     confirm = input(f"\n将创建 {len(categories)} 个题单（共 {total_problems} 道题），确认？(y/n): ").strip().lower()
                     if confirm == 'y':
                         for cat in categories:
-                            create_favorite_from_category(client, cat)
+                            create_favorite_from_category(client, cat, name_mapping=name_mapping)
                 else:
                     print("无效的分类编号")
             except ValueError:
@@ -398,13 +450,14 @@ def interactive_mode(client: LeetCodeClient):
                 print("未找到任何分类数据，请先使用选项 2 获取所有 HTML/JSON")
                 continue
 
+            name_mapping = load_name_mapping()
             total_problems = sum(len(cat.get("problems", [])) for cat in all_categories)
             print(f"\n找到 {len(all_categories)} 个子分类，共 {total_problems} 道题")
 
             confirm = input(f"\n将创建 {len(all_categories)} 个题单，确认？(y/n): ").strip().lower()
             if confirm == 'y':
                 for cat in all_categories:
-                    create_favorite_from_category(client, cat)
+                    create_favorite_from_category(client, cat, name_mapping=name_mapping)
                     
         else:
             print("无效的选项")
