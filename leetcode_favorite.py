@@ -55,6 +55,7 @@ def generate_favorite_list_file(
     favorite_infos: List[Dict[str, str]],
     category_name: str,
     output_filename: str = "favorite_list.md",
+    merge_mode: str = "upsert",
 ) -> None:
     """生成题单列表文件。
 
@@ -87,7 +88,37 @@ def generate_favorite_list_file(
         new_entries.append(entry)
 
     merged_data = dict(existing_data)
-    merged_data[category_name] = new_entries
+
+    if merge_mode not in {"replace", "upsert"}:
+        raise ValueError("merge_mode must be 'replace' or 'upsert'")
+
+    if merge_mode == "replace":
+        merged_data[category_name] = new_entries
+    else:
+        def key_for_entry(entry: Dict[str, str]) -> str:
+            url = entry.get("url") or ""
+            m_env = re.search(r"(?:\?|&)envId=([^&]+)", url)
+            if m_env:
+                return f"env:{m_env.group(1)}"
+            return f"name:{entry.get('name', '').strip()}"
+
+        existing_entries = merged_data.get(category_name, [])
+        index: Dict[str, Dict[str, str]] = {}
+        order: List[str] = []
+
+        for e in existing_entries:
+            k = key_for_entry(e)
+            if k not in index:
+                order.append(k)
+            index[k] = dict(e)
+
+        for e in new_entries:
+            k = key_for_entry(e)
+            if k not in index:
+                order.append(k)
+            index[k] = dict(e)
+
+        merged_data[category_name] = [index[k] for k in order if k in index]
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     lines: List[str] = ["# LeetCode 题单列表", "", f"更新时间: {now}", ""]
@@ -1166,6 +1197,7 @@ def view_and_operate_public_favorites(client: LeetCodeClient, user_slug: str, op
                                 generate_favorite_list_file(
                                     [{"name": selected_favorite['name'], "slug": new_slug, "first_problem_slug": first_problem_slug}],
                                     category_name="复制题单",
+                                    merge_mode="upsert",
                                 )
                                 break
                     else:
@@ -1238,6 +1270,7 @@ def quick_create_favorite(client: LeetCodeClient) -> None:
         generate_favorite_list_file(
             [{"name": title, "slug": favorite_slug, "first_problem_slug": first_problem_slug}],
             category_name="快速创建题单",
+            merge_mode="upsert",
         )
         # 显示题单内容
         response = client.get_favorite_questions(favorite_slug)
@@ -1245,6 +1278,40 @@ def quick_create_favorite(client: LeetCodeClient) -> None:
             display_questions(response['questions'], response['totalLength'])
     else:
         print("批量添加题目失败")
+
+
+def export_all_favorites_to_md(client: LeetCodeClient, all_favorites: List[dict]) -> None:
+    """遍历所有题单，写入 favorite_list.md。
+
+    - 覆盖分类：我创建的题单 / 我收藏的题单
+    - 其它分类内容保留
+    """
+    created_infos: List[Dict[str, str]] = []
+    collected_infos: List[Dict[str, str]] = []
+
+    total = len(all_favorites)
+    for idx, fav in enumerate(all_favorites, 1):
+        slug = (fav.get('slug') or '').strip()
+        name = (fav.get('name') or '').strip() or '未命名'
+
+        first_problem_slug = ""
+        if slug:
+            try:
+                resp = client.get_favorite_questions(slug, skip=0, limit=1)
+                if resp and resp.get('questions'):
+                    first_problem_slug = resp['questions'][0].get('titleSlug', '')
+            except Exception as e:
+                print(f"获取题单第一题失败 ({idx}/{total}) {name}: {e}")
+
+        info = {"name": name, "slug": slug, "first_problem_slug": first_problem_slug}
+        if fav.get('is_created'):
+            created_infos.append(info)
+        else:
+            collected_infos.append(info)
+
+    # 覆盖两个分类段，保留文件中的其它分类
+    generate_favorite_list_file(created_infos, category_name="我创建的题单", merge_mode="replace")
+    generate_favorite_list_file(collected_infos, category_name="我收藏的题单", merge_mode="replace")
 
 def main():
     # 加载 .env 文件中的配置
@@ -1331,6 +1398,7 @@ def main():
                         generate_favorite_list_file(
                             [{"name": favorite_name, "slug": favorite_slug, "first_problem_slug": first_problem_slug}],
                             category_name="创建题单",
+                            merge_mode="upsert",
                         )
                     break
                 break
@@ -1379,6 +1447,11 @@ def main():
                 all_favorites = get_all_favorites()
                 if all_favorites:
                     display_favorites(all_favorites)
+
+                # 选 3（查看题单）时，先遍历导出所有题单到 md
+                if choice == '3' and all_favorites:
+                    print("\n正在导出所有题单到 favorite_list.md（会遍历每个题单取第一题）...")
+                    export_all_favorites_to_md(client, all_favorites)
                 
                 while True:
                     try:
@@ -1394,6 +1467,21 @@ def main():
                             if choice == '3':  # 查看题单
                                 while True:
                                     response = client.get_favorite_questions(selected_favorite['slug'])
+                                    first_problem_slug = ""
+                                    if response and response.get('questions'):
+                                        first_problem_slug = response['questions'][0].get('titleSlug', '')
+
+                                    category_name = "我创建的题单" if selected_favorite.get('is_created') else "我收藏的题单"
+                                    generate_favorite_list_file(
+                                        [{
+                                            "name": selected_favorite['name'],
+                                            "slug": selected_favorite['slug'],
+                                            "first_problem_slug": first_problem_slug,
+                                        }],
+                                        category_name=category_name,
+                                        merge_mode="upsert",
+                                    )
+
                                     if not response or not response['questions']:
                                         print("题单中没有题目")
                                         break
