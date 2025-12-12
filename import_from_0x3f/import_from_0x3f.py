@@ -307,9 +307,10 @@ def create_favorite_from_category(
     category: Dict[str, Any],
     name_mapping: Optional[Dict[str, str]] = None,
     dry_run: bool = False
-) -> Optional[str]:
+) -> Optional[Dict[str, str]]:
     """
     使用 JSON 分类数据创建题单。
+    返回包含题单信息的字典，包括 name, slug, first_problem_slug
     """
     original_name = category.get("name") or "未命名题单"
     favorite_name = resolve_favorite_name(original_name, name_mapping or {})
@@ -356,7 +357,114 @@ def create_favorite_from_category(
             print(f"  批量添加失败，当前位置: {i}")
 
     print(f"完成: 共添加 {total_added} 道题目到题单 [{favorite_name}]")
-    return favorite_slug
+    
+    # 返回题单信息
+    first_problem_slug = problems[0].get("titleSlug", "") if problems else ""
+    return {
+        "name": favorite_name,
+        "slug": favorite_slug,
+        "first_problem_slug": first_problem_slug
+    }
+
+
+def _parse_markdown_favorite_list(content: str) -> Dict[str, List[Dict[str, str]]]:
+    """Parse a markdown file with sections like:
+
+    ## Category
+    - [Name](url)
+    - Name
+    """
+    data: Dict[str, List[Dict[str, str]]] = {}
+    current_category: Optional[str] = None
+
+    for raw_line in content.splitlines():
+        line = raw_line.strip()
+        if line.startswith("## "):
+            current_category = line[3:].strip()
+            if current_category:
+                data.setdefault(current_category, [])
+            continue
+
+        if not current_category:
+            continue
+
+        if not line.startswith("-"):
+            continue
+
+        # - [Name](url)
+        m = re.match(r"^-\s*\[(?P<name>[^\]]+)\]\((?P<url>[^\)]+)\)\s*$", line)
+        if m:
+            data[current_category].append({"name": m.group("name"), "url": m.group("url")})
+            continue
+
+        # - Name
+        m2 = re.match(r"^-\s*(?P<name>.+?)\s*$", line)
+        if m2:
+            data[current_category].append({"name": m2.group("name")})
+
+    return data
+
+
+def generate_favorite_list_file(
+    favorite_infos: List[Dict[str, str]],
+    category_names: List[str],
+    output_filename: str = "favorite_list.md",
+) -> None:
+    """生成题单列表文件。
+
+    - 同一分类覆盖（分类名相同）
+    - 不同分类追加
+    - 链接使用题单第一题，并包含 envType/envId（envId=题单 slug）
+    """
+    output_path = BASE_DIR / output_filename
+
+    existing_data: Dict[str, List[Dict[str, str]]] = {}
+    if output_path.exists():
+        try:
+            existing_data = _parse_markdown_favorite_list(output_path.read_text(encoding="utf-8"))
+        except Exception as e:
+            print(f"读取现有题单列表文件失败: {e}，将覆盖")
+            existing_data = {}
+
+    new_data: Dict[str, List[Dict[str, str]]] = {}
+    for i, fav_info in enumerate(favorite_infos):
+        if not fav_info:
+            continue
+        category_name = category_names[i] if i < len(category_names) else "其他"
+
+        name = (fav_info.get("name") or "").strip() or "未命名"
+        slug = (fav_info.get("slug") or "").strip()
+        first_problem_slug = (fav_info.get("first_problem_slug") or "").strip()
+
+        entry: Dict[str, str] = {"name": name}
+        if slug and first_problem_slug:
+            entry["url"] = (
+                f"https://leetcode.cn/problems/{first_problem_slug}/"
+                f"?envType=problem-list-v2&envId={slug}"
+            )
+
+        new_data.setdefault(category_name, []).append(entry)
+
+    merged_data = dict(existing_data)
+    merged_data.update(new_data)  # 新数据覆盖同分类
+
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    lines: List[str] = ["# LeetCode 题单列表", "", f"更新时间: {now}", ""]
+
+    for category_name in sorted(merged_data.keys()):
+        lines.append(f"## {category_name}")
+        lines.append("")
+        for entry in merged_data[category_name]:
+            n = entry.get("name", "未命名")
+            url = entry.get("url")
+            if url:
+                lines.append(f"- [{n}]({url})")
+            else:
+                lines.append(f"- {n}")
+        lines.append("")
+
+    output_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    print(f"题单列表已保存到: {output_path}")
 
 
 def display_available_categories():
@@ -430,8 +538,14 @@ def interactive_mode(client: LeetCodeClient):
 
                     confirm = input(f"\n将创建 {len(categories)} 个题单（共 {total_problems} 道题），确认？(y/n): ").strip().lower()
                     if confirm == 'y':
+                        favorite_infos = []
+                        category_names = []
                         for cat in categories:
-                            create_favorite_from_category(client, cat, name_mapping=name_mapping)
+                            result = create_favorite_from_category(client, cat, name_mapping=name_mapping)
+                            favorite_infos.append(result)
+                            category_names.append(title)
+                        # 生成题单列表文件
+                        generate_favorite_list_file(favorite_infos, category_names)
                 else:
                     print("无效的分类编号")
             except ValueError:
@@ -456,8 +570,16 @@ def interactive_mode(client: LeetCodeClient):
 
             confirm = input(f"\n将创建 {len(all_categories)} 个题单，确认？(y/n): ").strip().lower()
             if confirm == 'y':
-                for cat in all_categories:
-                    create_favorite_from_category(client, cat, name_mapping=name_mapping)
+                favorite_infos = []
+                category_names = []
+                for idx, (discuss_id, filename, title) in enumerate(PROBLEM_CATEGORIES):
+                    categories = load_category_from_json(filename)
+                    for cat in categories:
+                        result = create_favorite_from_category(client, cat, name_mapping=name_mapping)
+                        favorite_infos.append(result)
+                        category_names.append(title)
+                # 生成题单列表文件
+                generate_favorite_list_file(favorite_infos, category_names)
                     
         else:
             print("无效的选项")

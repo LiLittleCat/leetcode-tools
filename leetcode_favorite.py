@@ -2,11 +2,110 @@ import requests
 import json
 import os
 import re
-from typing import Optional, List, Dict, TypedDict
+from pathlib import Path
+from typing import Optional, List, Dict, TypedDict, Any
 from dataclasses import dataclass
 from datetime import datetime
 from prettytable import PrettyTable
 from dotenv import load_dotenv
+
+
+BASE_DIR = Path(__file__).resolve().parent
+
+
+def _parse_markdown_favorite_list(content: str) -> Dict[str, List[Dict[str, str]]]:
+    """Parse a markdown file with sections like:
+
+    ## Category
+    - [Name](url)
+    - Name
+    """
+    data: Dict[str, List[Dict[str, str]]] = {}
+    current_category: Optional[str] = None
+
+    for raw_line in content.splitlines():
+        line = raw_line.strip()
+        if line.startswith("## "):
+            current_category = line[3:].strip()
+            if current_category:
+                data.setdefault(current_category, [])
+            continue
+
+        if not current_category:
+            continue
+
+        if not line.startswith("-"):
+            continue
+
+        # - [Name](url)
+        m = re.match(r"^-\s*\[(?P<name>[^\]]+)\]\((?P<url>[^\)]+)\)\s*$", line)
+        if m:
+            data[current_category].append({"name": m.group("name"), "url": m.group("url")})
+            continue
+
+        # - Name
+        m2 = re.match(r"^-\s*(?P<name>.+?)\s*$", line)
+        if m2:
+            data[current_category].append({"name": m2.group("name")})
+
+    return data
+
+
+def generate_favorite_list_file(
+    favorite_infos: List[Dict[str, str]],
+    category_name: str,
+    output_filename: str = "favorite_list.md",
+) -> None:
+    """生成题单列表文件。
+
+    - 同一分类覆盖（category_name 相同）
+    - 不同分类追加
+    - 链接使用题单第一题，并包含 envType/envId（envId=题单 slug）
+    """
+    output_path = BASE_DIR / output_filename
+
+    existing_data: Dict[str, List[Dict[str, str]]] = {}
+    if output_path.exists():
+        try:
+            existing_data = _parse_markdown_favorite_list(output_path.read_text(encoding="utf-8"))
+        except Exception as e:
+            print(f"读取现有题单列表文件失败: {e}，将覆盖")
+            existing_data = {}
+
+    new_entries: List[Dict[str, str]] = []
+    for info in favorite_infos:
+        name = (info.get("name") or "").strip() or "未命名"
+        slug = (info.get("slug") or "").strip()
+        first_problem_slug = (info.get("first_problem_slug") or "").strip()
+
+        entry: Dict[str, str] = {"name": name}
+        if slug and first_problem_slug:
+            entry["url"] = (
+                f"https://leetcode.cn/problems/{first_problem_slug}/"
+                f"?envType=problem-list-v2&envId={slug}"
+            )
+        new_entries.append(entry)
+
+    merged_data = dict(existing_data)
+    merged_data[category_name] = new_entries
+
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    lines: List[str] = ["# LeetCode 题单列表", "", f"更新时间: {now}", ""]
+
+    for cat in sorted(merged_data.keys()):
+        lines.append(f"## {cat}")
+        lines.append("")
+        for entry in merged_data[cat]:
+            n = entry.get("name", "未命名")
+            url = entry.get("url")
+            if url:
+                lines.append(f"- [{n}]({url})")
+            else:
+                lines.append(f"- {n}")
+        lines.append("")
+
+    output_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    print(f"题单列表已保存到: {output_path}")
 
 class FavoriteInfo(TypedDict):
     coverUrl: Optional[str]
@@ -1059,6 +1158,15 @@ def view_and_operate_public_favorites(client: LeetCodeClient, user_slug: str, op
                             new_slug = client.fork_favorite(selected_favorite['slug'])
                             if new_slug:
                                 print(f"成功复制题单，新题单的 slug 为: {new_slug}")
+                                # 写出题单名称 + 链接（复制后的题单名仍使用原名）
+                                first_problem_slug = ""
+                                resp = client.get_favorite_questions(new_slug)
+                                if resp and resp.get('questions'):
+                                    first_problem_slug = resp['questions'][0].get('titleSlug', '')
+                                generate_favorite_list_file(
+                                    [{"name": selected_favorite['name'], "slug": new_slug, "first_problem_slug": first_problem_slug}],
+                                    category_name="复制题单",
+                                )
                                 break
                     else:
                         print("无效的题单编号，请重新输入")
@@ -1125,6 +1233,12 @@ def quick_create_favorite(client: LeetCodeClient) -> None:
     # 批量添加题目
     if client.batch_add_questions_to_favorite(favorite_slug, slugs):
         print(f"成功批量添加 {len(slugs)} 个题目到题单")
+        # 写出题单名称 + 链接（使用第一题）
+        first_problem_slug = slugs[0] if slugs else ""
+        generate_favorite_list_file(
+            [{"name": title, "slug": favorite_slug, "first_problem_slug": first_problem_slug}],
+            category_name="快速创建题单",
+        )
         # 显示题单内容
         response = client.get_favorite_questions(favorite_slug)
         if response:
@@ -1205,8 +1319,19 @@ def main():
                     favorite_slug = client.create_favorite_list(favorite_name, is_public, description)
                     if favorite_slug:
                         print(f"\n成功创建题单: {favorite_name}")
+                        first_problem_slug = ""
                         if get_yes_no_input("\n是否现在添加题目？"):
                             add_questions_to_favorite(client, favorite_slug, favorite_name)
+                            # 添加后再读取题单内容，取第一题 slug
+                            resp = client.get_favorite_questions(favorite_slug)
+                            if resp and resp.get('questions'):
+                                first_problem_slug = resp['questions'][0].get('titleSlug', '')
+
+                        # 写出题单名称 + 链接（若题单暂时无题目，则只写名称）
+                        generate_favorite_list_file(
+                            [{"name": favorite_name, "slug": favorite_slug, "first_problem_slug": first_problem_slug}],
+                            category_name="创建题单",
+                        )
                     break
                 break
 
