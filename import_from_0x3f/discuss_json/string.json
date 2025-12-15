@@ -321,8 +321,8 @@
   },
   {
     "name": "12 字符串 / 七、AC 自动机",
-    "count": 6,
-    "problems_title_slugs": "stream-of-characters multi-search-lcci string-matching-in-an-array construct-string-with-minimum-cost length-of-the-longest-valid-substring minimum-number-of-valid-strings-to-form-target-ii",
+    "count": 7,
+    "problems_title_slugs": "stream-of-characters multi-search-lcci string-matching-in-an-array construct-string-with-minimum-cost length-of-the-longest-valid-substring minimum-number-of-valid-strings-to-form-target-ii convert-number-words-to-digits",
     "problems": [
       {
         "title": "1032. 字符流",
@@ -353,6 +353,11 @@
         "title": "3292. 形成目标字符串需要的最少字符串数 II",
         "titleSlug": "minimum-number-of-valid-strings-to-form-target-ii",
         "url": "https://leetcode.cn/problems/minimum-number-of-valid-strings-to-form-target-ii/"
+      },
+      {
+        "title": "3758. 将数字词转换为数字",
+        "titleSlug": "convert-number-words-to-digits",
+        "url": "https://leetcode.cn/problems/convert-number-words-to-digits/"
       }
     ]
   },

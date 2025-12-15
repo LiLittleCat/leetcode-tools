@@ -3026,8 +3026,8 @@
   },
   {
     "name": "7 动态规划 / 十二、树形 DP / §12.4 换根 DP",
-    "count": 6,
-    "problems_title_slugs": "sum-of-distances-in-tree count-number-of-possible-root-nodes minimum-edge-reversals-so-every-node-is-reachable minimum-height-trees time-taken-to-mark-all-nodes maximize-the-number-of-target-nodes-after-connecting-trees-i",
+    "count": 7,
+    "problems_title_slugs": "sum-of-distances-in-tree count-number-of-possible-root-nodes maximum-subgraph-score-in-a-tree minimum-edge-reversals-so-every-node-is-reachable minimum-height-trees time-taken-to-mark-all-nodes maximize-the-number-of-target-nodes-after-connecting-trees-i",
     "problems": [
       {
         "title": "834. 树中距离之和",
@@ -3038,6 +3038,11 @@
         "title": "2581. 统计可能的树根数目",
         "titleSlug": "count-number-of-possible-root-nodes",
         "url": "https://leetcode.cn/problems/count-number-of-possible-root-nodes/"
+      },
+      {
+        "title": "3772. 子图的最大得分",
+        "titleSlug": "maximum-subgraph-score-in-a-tree",
+        "url": "https://leetcode.cn/problems/maximum-subgraph-score-in-a-tree/"
       },
       {
         "title": "2858. 可以到达每一个节点的最少边反转次数",
