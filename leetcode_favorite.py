@@ -301,6 +301,8 @@ class LeetCodeClient:
             "isPublicFavorite": is_public
         }
 
+        print(variables)
+
         try:
             response = requests.post(
                 self.base_url,
