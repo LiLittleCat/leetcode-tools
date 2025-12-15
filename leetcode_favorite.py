@@ -13,6 +13,23 @@ from dotenv import load_dotenv
 BASE_DIR = Path(__file__).resolve().parent
 
 
+_FAVORITE_LIST_WRITE_ALLOWED: Optional[bool] = None
+
+
+def _confirm_write_favorite_list(path: Path) -> bool:
+    """Ask once per run whether we should write favorite_list.md."""
+    global _FAVORITE_LIST_WRITE_ALLOWED
+    if _FAVORITE_LIST_WRITE_ALLOWED is not None:
+        return _FAVORITE_LIST_WRITE_ALLOWED
+
+    prompt = f"\n即将写入/更新题单列表文件: {path}\n确认写入吗？(Y/n): "
+    ans = input(prompt).strip().lower()
+    _FAVORITE_LIST_WRITE_ALLOWED = ans not in {"n", "no"}
+    if not _FAVORITE_LIST_WRITE_ALLOWED:
+        print("已取消写入 favorite_list.md")
+    return _FAVORITE_LIST_WRITE_ALLOWED
+
+
 def _parse_markdown_favorite_list(content: str) -> Dict[str, List[Dict[str, str]]]:
     """Parse a markdown file with sections like:
 
@@ -56,6 +73,8 @@ def generate_favorite_list_file(
     category_name: str,
     output_filename: str = "favorite_list.md",
     merge_mode: str = "upsert",
+    confirm: bool = True,
+    verbose: bool = False,
 ) -> None:
     """生成题单列表文件。
 
@@ -64,6 +83,9 @@ def generate_favorite_list_file(
     - 链接使用题单第一题，并包含 envType/envId（envId=题单 slug）
     """
     output_path = BASE_DIR / output_filename
+
+    if confirm and not _confirm_write_favorite_list(output_path):
+        return
 
     existing_data: Dict[str, List[Dict[str, str]]] = {}
     if output_path.exists():
@@ -136,7 +158,8 @@ def generate_favorite_list_file(
         lines.append("")
 
     output_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
-    print(f"题单列表已保存到: {output_path}")
+    if verbose:
+        print(f"题单列表已保存到: {output_path}")
 
 class FavoriteInfo(TypedDict):
     coverUrl: Optional[str]
@@ -1286,6 +1309,10 @@ def export_all_favorites_to_md(client: LeetCodeClient, all_favorites: List[dict]
     - 覆盖分类：我创建的题单 / 我收藏的题单
     - 其它分类内容保留
     """
+    # Ask up-front before doing a potentially expensive full export.
+    if not _confirm_write_favorite_list(BASE_DIR / "favorite_list.md"):
+        return
+
     created_infos: List[Dict[str, str]] = []
     collected_infos: List[Dict[str, str]] = []
 
@@ -1450,8 +1477,9 @@ def main():
 
                 # 选 3（查看题单）时，先遍历导出所有题单到 md
                 if choice == '3' and all_favorites:
-                    print("\n正在导出所有题单到 favorite_list.md（会遍历每个题单取第一题）...")
-                    export_all_favorites_to_md(client, all_favorites)
+                    if _confirm_write_favorite_list(BASE_DIR / "favorite_list.md"):
+                        print("\n正在导出所有题单到 favorite_list.md（会遍历每个题单取第一题）...")
+                        export_all_favorites_to_md(client, all_favorites)
                 
                 while True:
                     try:

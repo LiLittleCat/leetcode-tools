@@ -4,8 +4,10 @@
 数据来源: https://leetcode.cn/circle/discuss/
 """
 
+import datetime
 import os
 import sys
+import time
 import requests
 import json
 import re
@@ -27,6 +29,9 @@ import parse_html as html_parser  # noqa: E402
 
 LEETCODE_DISCUSS_PRE_URL = "https://leetcode.cn/circle/discuss/"
 FAVORITE_NAME_ORDERED_PATH = BASE_DIR / "favorite_name_ordered.json"
+
+
+_FAVORITE_LIST_WRITE_ALLOWED: Optional[bool] = None
 
 # 本地保存目录
 LOCAL_HTML_DIR = BASE_DIR / "discuss_html"
@@ -302,18 +307,38 @@ def resolve_favorite_name(original_name: str, name_mapping: Dict[str, str]) -> s
     return name_mapping.get(original_name, original_name)
 
 
+def _red(text: str) -> str:
+    # Basic ANSI red; most terminals support this (including Windows Terminal).
+    return f"\033[31m{text}\033[0m"
+
+
+def _confirm_write_favorite_list(path: Path) -> bool:
+    """Ask once per run whether we should write favorite_list.md."""
+    global _FAVORITE_LIST_WRITE_ALLOWED
+    if _FAVORITE_LIST_WRITE_ALLOWED is not None:
+        return _FAVORITE_LIST_WRITE_ALLOWED
+
+    ans = input(f"\n即将写入/更新题单列表文件: {path}\n确认写入吗？(Y/n): ").strip().lower()
+    _FAVORITE_LIST_WRITE_ALLOWED = ans not in {"n", "no"}
+    if not _FAVORITE_LIST_WRITE_ALLOWED:
+        print("已取消写入 favorite_list.md")
+    return _FAVORITE_LIST_WRITE_ALLOWED
+
+
 def create_favorite_from_category(
     client: LeetCodeClient,
     category: Dict[str, Any],
     name_mapping: Optional[Dict[str, str]] = None,
-    dry_run: bool = False
+    dry_run: bool = False,
+    delay_seconds: float = 0.8,
 ) -> Optional[Dict[str, str]]:
     """
     使用 JSON 分类数据创建题单。
     返回包含题单信息的字典，包括 name, slug, first_problem_slug
     """
     original_name = category.get("name") or "未命名题单"
-    favorite_name = resolve_favorite_name(original_name, name_mapping or {})
+    mapping = name_mapping or {}
+    favorite_name = resolve_favorite_name(original_name, mapping)
     problems: List[Dict[str, str]] = category.get("problems", [])
 
     if not problems:
@@ -331,7 +356,9 @@ def create_favorite_from_category(
             print(f"    ... 还有 {len(problems) - 5} 道题目")
         return None
 
-    if favorite_name != original_name:
+    if mapping and original_name not in mapping:
+        print(_red(f"[名称映射未命中] 将使用原始题单名: {original_name}"))
+    elif favorite_name != original_name:
         print(f"使用映射名称: {original_name} -> {favorite_name}")
     print(f"正在创建题单: {favorite_name}")
 
@@ -342,6 +369,10 @@ def create_favorite_from_category(
         return None
 
     print(f"题单创建成功: {favorite_name} (slug: {favorite_slug})")
+
+    # Small delay to reduce request rate.
+    if delay_seconds > 0:
+        time.sleep(delay_seconds)
 
     slugs = [p.get("titleSlug") for p in problems if p.get("titleSlug")]
 
@@ -355,6 +386,10 @@ def create_favorite_from_category(
             print(f"  已添加 {total_added}/{len(slugs)} 道题目")
         else:
             print(f"  批量添加失败，当前位置: {i}")
+
+        # Delay between batch requests.
+        if delay_seconds > 0 and i + batch_size < len(slugs):
+            time.sleep(delay_seconds)
 
     print(f"完成: 共添加 {total_added} 道题目到题单 [{favorite_name}]")
     
@@ -409,6 +444,8 @@ def generate_favorite_list_file(
     favorite_infos: List[Dict[str, str]],
     category_names: List[str],
     output_filename: str = "favorite_list.md",
+    confirm: bool = True,
+    verbose: bool = False,
 ) -> None:
     """生成题单列表文件。
 
@@ -417,6 +454,9 @@ def generate_favorite_list_file(
     - 链接使用题单第一题，并包含 envType/envId（envId=题单 slug）
     """
     output_path = BASE_DIR / output_filename
+
+    if confirm and not _confirm_write_favorite_list(output_path):
+        return
 
     existing_data: Dict[str, List[Dict[str, str]]] = {}
     if output_path.exists():
@@ -448,7 +488,7 @@ def generate_favorite_list_file(
     merged_data = dict(existing_data)
     merged_data.update(new_data)  # 新数据覆盖同分类
 
-    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     lines: List[str] = ["# LeetCode 题单列表", "", f"更新时间: {now}", ""]
 
     for category_name in sorted(merged_data.keys()):
@@ -464,7 +504,8 @@ def generate_favorite_list_file(
         lines.append("")
 
     output_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
-    print(f"题单列表已保存到: {output_path}")
+    if verbose:
+        print(f"题单列表已保存到: {output_path}")
 
 
 def display_available_categories():
@@ -541,7 +582,12 @@ def interactive_mode(client: LeetCodeClient):
                         favorite_infos = []
                         category_names = []
                         for cat in categories:
-                            result = create_favorite_from_category(client, cat, name_mapping=name_mapping)
+                            result = create_favorite_from_category(
+                                client,
+                                cat,
+                                name_mapping=name_mapping,
+                                delay_seconds=0.8,
+                            )
                             favorite_infos.append(result)
                             category_names.append(title)
                         # 生成题单列表文件
@@ -575,7 +621,12 @@ def interactive_mode(client: LeetCodeClient):
                 for idx, (discuss_id, filename, title) in enumerate(PROBLEM_CATEGORIES):
                     categories = load_category_from_json(filename)
                     for cat in categories:
-                        result = create_favorite_from_category(client, cat, name_mapping=name_mapping)
+                        result = create_favorite_from_category(
+                            client,
+                            cat,
+                            name_mapping=name_mapping,
+                            delay_seconds=0.8,
+                        )
                         favorite_infos.append(result)
                         category_names.append(title)
                 # 生成题单列表文件
