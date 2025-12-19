@@ -847,6 +847,49 @@ class LeetCodeClient:
             print(f"复制题单失败: {str(e)}")
             return None
 
+def parse_index_input(input_str: str) -> List[int]:
+    """
+    解析用户输入的索引，支持以下格式：
+    - 单个数字：1
+    - 多个数字（空格或逗号分隔）：1 2 3 或 1,2,3
+    - 范围：1-5
+    - 组合：1-3 5 7-9
+    :param input_str: 用户输入的字符串
+    :return: 解析后的索引列表（从0开始）
+    """
+    indices = set()
+    # 先按空格和逗号分割
+    parts = re.split(r'[,\s]+', input_str.strip())
+    
+    for part in parts:
+        if not part:
+            continue
+        # 检查是否是范围格式（如 1-5）
+        if '-' in part:
+            try:
+                start, end = part.split('-', 1)
+                start = int(start.strip())
+                end = int(end.strip())
+                if start > 0 and end > 0 and start <= end:
+                    # 转换为0-based索引
+                    indices.update(range(start - 1, end))
+                else:
+                    return []  # 无效范围
+            except ValueError:
+                return []  # 解析失败
+        else:
+            # 单个数字
+            try:
+                num = int(part.strip())
+                if num > 0:
+                    indices.add(num - 1)  # 转换为0-based索引
+                else:
+                    return []  # 无效数字
+            except ValueError:
+                return []  # 解析失败
+    
+    return sorted(list(indices))
+
 def format_time(time_str: Optional[str]) -> str:
     """
     格式化时间字符串
@@ -1439,36 +1482,57 @@ def main():
                     display_favorites(all_favorites)
 
                 while True:
-                    try:
-                        index_input = input("\n请输入要删除的题单编号（输入 q 返回，输入 a 删除所有题单）: ").strip().lower()
-                        if index_input == 'q':
+                    index_input = input("\n请输入要删除的题单编号（输入 q 返回，输入 a 删除所有题单）\n支持多种格式：单个(1)、多个(1 2 3)、范围(1-5)、组合(1-3 5 7-9): ").strip().lower()
+                    if index_input == 'q':
+                        break
+                        
+                    if index_input == 'a':  # 批量删除所有
+                        if get_yes_no_input("确认要删除/取消收藏所有题单吗？"):
+                            success_count = 0
+                            fail_count = 0
+                            for fav in all_favorites:
+                                if delete_favorite_list(client, fav, True):
+                                    success_count += 1
+                                else:
+                                    fail_count += 1
+                            print(f"\n批量删除完成，成功：{success_count} 个，失败：{fail_count} 个")
                             break
-                            
-                        if index_input == 'a':  # 批量删除
-                            if get_yes_no_input("确认要删除/取消收藏所有题单吗？"):
-                                success_count = 0
-                                fail_count = 0
-                                for fav in all_favorites:
-                                    if delete_favorite_list(client, fav, True):
-                                        success_count += 1
-                                    else:
-                                        fail_count += 1
-                                print(f"\n批量删除完成，成功：{success_count} 个，失败：{fail_count} 个")
-                                break
-                            continue
-                            
-                        # 删除单个题单
-                        index = int(index_input) - 1
-                        if 0 <= index < len(all_favorites):
-                            selected_favorite = all_favorites[index]
-                            print(f"\n已选择题单: {selected_favorite['name']}")
-                            if delete_favorite_list(client, selected_favorite):
-                                break
-                        else:
-                            print("无效的题单编号，请重新输入")
-                    except ValueError:
-                        print("请输入有效的数字")
                         continue
+                    
+                    # 解析索引
+                    indices = parse_index_input(index_input)
+                    if not indices:
+                        print("无效的输入格式，请重新输入")
+                        continue
+                    
+                    # 检查所有索引是否有效
+                    invalid_indices = [i for i in indices if i >= len(all_favorites)]
+                    if invalid_indices:
+                        print(f"无效的题单编号：{', '.join(str(i+1) for i in invalid_indices)}")
+                        continue
+                    
+                    # 显示将要删除的题单
+                    print("\n将要删除/取消收藏以下题单：")
+                    selected_favorites = [all_favorites[i] for i in indices]
+                    for fav in selected_favorites:
+                        fav_type = "📝 创建" if fav.get('is_created') else "⭐ 收藏"
+                        print(f"  - {fav_type} {fav['name']}")
+                    
+                    # 确认删除
+                    if not get_yes_no_input(f"\n确认要删除/取消收藏这 {len(selected_favorites)} 个题单吗？"):
+                        continue
+                    
+                    # 批量删除
+                    success_count = 0
+                    fail_count = 0
+                    for fav in selected_favorites:
+                        if delete_favorite_list(client, fav, True):
+                            success_count += 1
+                        else:
+                            fail_count += 1
+                    
+                    print(f"\n批量删除完成，成功：{success_count} 个，失败：{fail_count} 个")
+                    break
                 break
 
             elif choice in ['3', '4', '5']:  # 需要选择题单的操作
