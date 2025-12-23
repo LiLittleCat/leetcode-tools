@@ -30,6 +30,8 @@ import parse_html as html_parser  # noqa: E402
 LEETCODE_DISCUSS_PRE_URL = "https://leetcode.cn/circle/discuss/"
 FAVORITE_NAME_ORDERED_PATH = BASE_DIR / "favorite_name_ordered.json"
 
+# 默认延迟时间（秒），用于控制请求频率
+DEFAULT_DELAY_SECONDS = 0.8
 
 _FAVORITE_LIST_WRITE_ALLOWED: Optional[bool] = None
 
@@ -330,7 +332,7 @@ def create_favorite_from_category(
     category: Dict[str, Any],
     name_mapping: Optional[Dict[str, str]] = None,
     dry_run: bool = False,
-    delay_seconds: float = 0.8,
+    delay_seconds: float = DEFAULT_DELAY_SECONDS,
 ) -> Optional[Dict[str, str]]:
     """
     使用 JSON 分类数据创建题单。
@@ -586,7 +588,7 @@ def interactive_mode(client: LeetCodeClient):
                                 client,
                                 cat,
                                 name_mapping=name_mapping,
-                                delay_seconds=0.8,
+                                delay_seconds=DEFAULT_DELAY_SECONDS,
                             )
                             favorite_infos.append(result)
                             category_names.append(title)
@@ -625,7 +627,7 @@ def interactive_mode(client: LeetCodeClient):
                             client,
                             cat,
                             name_mapping=name_mapping,
-                            delay_seconds=0.8,
+                            delay_seconds=DEFAULT_DELAY_SECONDS,
                         )
                         favorite_infos.append(result)
                         category_names.append(title)

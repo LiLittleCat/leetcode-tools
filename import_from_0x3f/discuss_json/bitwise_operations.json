@@ -1,8 +1,8 @@
 [
   {
     "name": "5 位运算 / 一、基础题",
-    "count": 21,
-    "problems_title_slugs": "smallest-number-with-all-set-bits number-of-bit-changes-to-make-two-integers-equal sort-integers-by-the-number-of-1-bits hamming-distance minimum-bit-flips-to-convert-number number-of-steps-to-reduce-a-number-to-zero number-complement complement-of-base-10-integer binary-gap find-the-k-or-of-an-array binary-number-with-alternating-bits find-the-prefix-common-array-of-two-arrays insert-into-bits-lcci power-of-two power-of-four number-of-1-bits counting-bits number-of-even-and-odd-bits keep-multiplying-found-values-by-two generate-binary-strings-without-adjacent-zeros split-and-merge-array-transformation",
+    "count": 24,
+    "problems_title_slugs": "smallest-number-with-all-set-bits number-of-bit-changes-to-make-two-integers-equal sort-integers-by-the-number-of-1-bits hamming-distance minimum-bit-flips-to-convert-number number-of-steps-to-reduce-a-number-to-zero number-complement complement-of-base-10-integer binary-gap find-the-k-or-of-an-array binary-number-with-alternating-bits find-the-prefix-common-array-of-two-arrays insert-into-bits-lcci power-of-two power-of-four number-of-1-bits counting-bits number-of-even-and-odd-bits keep-multiplying-found-values-by-two generate-binary-strings-without-adjacent-zeros split-and-merge-array-transformation reverse-bits minimum-number-of-flips-to-reverse-binary-string sort-integers-by-binary-reflection",
     "problems": [
       {
         "title": "3370. 仅含置位位的最小整数",
@@ -108,13 +108,28 @@
         "title": "3690. 拆分合并数组",
         "titleSlug": "split-and-merge-array-transformation",
         "url": "https://leetcode.cn/problems/split-and-merge-array-transformation/"
+      },
+      {
+        "title": "190. 颠倒二进制位",
+        "titleSlug": "reverse-bits",
+        "url": "https://leetcode.cn/problems/reverse-bits/"
+      },
+      {
+        "title": "3750. 最少反转次数得到翻转二进制字符串",
+        "titleSlug": "minimum-number-of-flips-to-reverse-binary-string",
+        "url": "https://leetcode.cn/problems/minimum-number-of-flips-to-reverse-binary-string/"
+      },
+      {
+        "title": "3769. 二进制反射排序",
+        "titleSlug": "sort-integers-by-binary-reflection",
+        "url": "https://leetcode.cn/problems/sort-integers-by-binary-reflection/"
       }
     ]
   },
   {
     "name": "5 位运算 / 二、异或（XOR）的性质",
-    "count": 17,
-    "problems_title_slugs": "xor-operation-in-an-array decode-xored-array find-the-original-array-of-prefix-xor xor-queries-of-a-subarray neighboring-bitwise-xor maximum-xor-for-each-query minimum-number-of-operations-to-make-array-xor-equal-to-k count-triplets-that-can-form-two-arrays-of-equal-xor minimize-xor find-xor-beauty-of-array maximum-xor-after-operations count-the-number-of-beautiful-subarrays substring-xor-queries decode-xored-permutation count-pairs-of-points-with-distance-k count-pairs-with-xor-in-a-range count-triplets-with-even-xor-set-bits-ii",
+    "count": 18,
+    "problems_title_slugs": "xor-operation-in-an-array decode-xored-array find-the-original-array-of-prefix-xor xor-queries-of-a-subarray longest-subsequence-with-non-zero-bitwise-xor neighboring-bitwise-xor maximum-xor-for-each-query minimum-number-of-operations-to-make-array-xor-equal-to-k count-triplets-that-can-form-two-arrays-of-equal-xor minimize-xor find-xor-beauty-of-array maximum-xor-after-operations count-the-number-of-beautiful-subarrays substring-xor-queries decode-xored-permutation count-pairs-of-points-with-distance-k count-pairs-with-xor-in-a-range count-triplets-with-even-xor-set-bits-ii",
     "problems": [
       {
         "title": "1486. 数组异或操作",
@@ -135,6 +150,11 @@
         "title": "1310. 子数组异或查询",
         "titleSlug": "xor-queries-of-a-subarray",
         "url": "https://leetcode.cn/problems/xor-queries-of-a-subarray/"
+      },
+      {
+        "title": "3702. 按位异或非零的最长子序列",
+        "titleSlug": "longest-subsequence-with-non-zero-bitwise-xor",
+        "url": "https://leetcode.cn/problems/longest-subsequence-with-non-zero-bitwise-xor/"
       },
       {
         "title": "2683. 相邻值的按位异或",
@@ -531,8 +551,8 @@
   },
   {
     "name": "5 位运算 / 九、其他",
-    "count": 21,
-    "problems_title_slugs": "single-number single-number-iii find-missing-and-repeated-values single-number-ii set-mismatch reverse-bits sum-of-two-integers bitwise-and-of-numbers-range range-product-queries-of-powers concatenation-of-consecutive-binary-numbers find-elements-in-a-contaminated-binary-tree gray-code circular-permutation-in-binary-representation triples-with-bitwise-and-equal-to-zero find-the-k-th-character-in-string-game-ii minimum-one-bit-operations-to-make-integers-zero number-of-unique-xor-triplets-ii ryfUiz ip-to-cidr once-twice maximum-hamming-distances",
+    "count": 22,
+    "problems_title_slugs": "single-number single-number-iii find-missing-and-repeated-values single-number-ii set-mismatch sum-of-two-integers bitwise-and-of-numbers-range range-product-queries-of-powers concatenation-of-consecutive-binary-numbers find-elements-in-a-contaminated-binary-tree gray-code circular-permutation-in-binary-representation minimum-operations-to-make-binary-palindrome triples-with-bitwise-and-equal-to-zero elimination-game find-the-k-th-character-in-string-game-ii minimum-one-bit-operations-to-make-integers-zero number-of-unique-xor-triplets-ii ryfUiz ip-to-cidr once-twice maximum-hamming-distances",
     "problems": [
       {
         "title": "136. 只出现一次的数字",
@@ -558,11 +578,6 @@
         "title": "645. 错误的集合",
         "titleSlug": "set-mismatch",
         "url": "https://leetcode.cn/problems/set-mismatch/"
-      },
-      {
-        "title": "190. 颠倒二进制位",
-        "titleSlug": "reverse-bits",
-        "url": "https://leetcode.cn/problems/reverse-bits/"
       },
       {
         "title": "371. 两整数之和",
@@ -600,9 +615,19 @@
         "url": "https://leetcode.cn/problems/circular-permutation-in-binary-representation/"
       },
       {
+        "title": "3766. 将数字变成二进制回文数的最少操作",
+        "titleSlug": "minimum-operations-to-make-binary-palindrome",
+        "url": "https://leetcode.cn/problems/minimum-operations-to-make-binary-palindrome/"
+      },
+      {
         "title": "982. 按位与为零的三元组",
         "titleSlug": "triples-with-bitwise-and-equal-to-zero",
         "url": "https://leetcode.cn/problems/triples-with-bitwise-and-equal-to-zero/"
+      },
+      {
+        "title": "390. 消除游戏",
+        "titleSlug": "elimination-game",
+        "url": "https://leetcode.cn/problems/elimination-game/"
       },
       {
         "title": "3307. 找出第 K 个字符 II",

@@ -34,13 +34,8 @@
   {
     "name": "2 二分算法 / 一、二分查找 / §1.2 进阶",
     "count": 20,
-    "problems_title_slugs": "successful-pairs-of-spells-and-potions find-the-distance-value-between-two-arrays longest-subsequence-with-limited-sum compare-strings-by-frequency-of-the-smallest-character range-frequency-queries closest-equal-element-queries count-the-number-of-fair-pairs most-beautiful-item-for-each-query snapshot-array time-based-key-value-store implement-router find-k-closest-elements minimum-absolute-sum-difference online-election ju-qing-hong-fa-shi-jian shortest-distance-to-target-color minimum-relative-loss-after-buying-chocolates element-appearing-more-than-25-in-sorted-array closest-nodes-queries-in-a-binary-search-tree check-if-a-number-is-majority-element-in-a-sorted-array",
+    "problems_title_slugs": "find-the-distance-value-between-two-arrays longest-subsequence-with-limited-sum compare-strings-by-frequency-of-the-smallest-character successful-pairs-of-spells-and-potions range-frequency-queries closest-equal-element-queries count-the-number-of-fair-pairs most-beautiful-item-for-each-query snapshot-array time-based-key-value-store implement-router find-k-closest-elements minimum-absolute-sum-difference online-election ju-qing-hong-fa-shi-jian shortest-distance-to-target-color minimum-relative-loss-after-buying-chocolates element-appearing-more-than-25-in-sorted-array closest-nodes-queries-in-a-binary-search-tree check-if-a-number-is-majority-element-in-a-sorted-array",
     "problems": [
-      {
-        "title": "2300. 咒语和药水的成功对数",
-        "titleSlug": "successful-pairs-of-spells-and-potions",
-        "url": "https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/"
-      },
       {
         "title": "1385. 两个数组间的距离值",
         "titleSlug": "find-the-distance-value-between-two-arrays",
@@ -55,6 +50,11 @@
         "title": "1170. 比较字符串最小字母出现频次",
         "titleSlug": "compare-strings-by-frequency-of-the-smallest-character",
         "url": "https://leetcode.cn/problems/compare-strings-by-frequency-of-the-smallest-character/"
+      },
+      {
+        "title": "2300. 咒语和药水的成功对数",
+        "titleSlug": "successful-pairs-of-spells-and-potions",
+        "url": "https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/"
       },
       {
         "title": "2080. 区间内查询数字的频率",
