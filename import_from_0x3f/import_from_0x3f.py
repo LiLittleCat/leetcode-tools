@@ -31,7 +31,7 @@ LEETCODE_DISCUSS_PRE_URL = "https://leetcode.cn/circle/discuss/"
 FAVORITE_NAME_ORDERED_PATH = BASE_DIR / "favorite_name_ordered.json"
 
 # 默认延迟时间（秒），用于控制请求频率
-DEFAULT_DELAY_SECONDS = 0.8
+DEFAULT_DELAY_SECONDS = 1.0
 
 _FAVORITE_LIST_WRITE_ALLOWED: Optional[bool] = None
 
