@@ -551,8 +551,8 @@
   },
   {
     "name": "5 位运算 / 九、其他",
-    "count": 22,
-    "problems_title_slugs": "single-number single-number-iii find-missing-and-repeated-values single-number-ii set-mismatch sum-of-two-integers bitwise-and-of-numbers-range range-product-queries-of-powers concatenation-of-consecutive-binary-numbers find-elements-in-a-contaminated-binary-tree gray-code circular-permutation-in-binary-representation minimum-operations-to-make-binary-palindrome triples-with-bitwise-and-equal-to-zero elimination-game find-the-k-th-character-in-string-game-ii minimum-one-bit-operations-to-make-integers-zero number-of-unique-xor-triplets-ii ryfUiz ip-to-cidr once-twice maximum-hamming-distances",
+    "count": 23,
+    "problems_title_slugs": "single-number single-number-iii find-missing-and-repeated-values single-number-ii set-mismatch sum-of-two-integers bitwise-and-of-numbers-range range-product-queries-of-powers concatenation-of-consecutive-binary-numbers find-elements-in-a-contaminated-binary-tree gray-code circular-permutation-in-binary-representation minimum-operations-to-make-binary-palindrome last-remaining-integer-after-alternating-deletion-operations elimination-game triples-with-bitwise-and-equal-to-zero find-the-k-th-character-in-string-game-ii minimum-one-bit-operations-to-make-integers-zero number-of-unique-xor-triplets-ii ryfUiz ip-to-cidr once-twice maximum-hamming-distances",
     "problems": [
       {
         "title": "136. 只出现一次的数字",
@@ -620,14 +620,19 @@
         "url": "https://leetcode.cn/problems/minimum-operations-to-make-binary-palindrome/"
       },
       {
-        "title": "982. 按位与为零的三元组",
-        "titleSlug": "triples-with-bitwise-and-equal-to-zero",
-        "url": "https://leetcode.cn/problems/triples-with-bitwise-and-equal-to-zero/"
+        "title": "3782. 交替删除操作后最后剩下的整数",
+        "titleSlug": "last-remaining-integer-after-alternating-deletion-operations",
+        "url": "https://leetcode.cn/problems/last-remaining-integer-after-alternating-deletion-operations/"
       },
       {
         "title": "390. 消除游戏",
         "titleSlug": "elimination-game",
         "url": "https://leetcode.cn/problems/elimination-game/"
+      },
+      {
+        "title": "982. 按位与为零的三元组",
+        "titleSlug": "triples-with-bitwise-and-equal-to-zero",
+        "url": "https://leetcode.cn/problems/triples-with-bitwise-and-equal-to-zero/"
       },
       {
         "title": "3307. 找出第 K 个字符 II",

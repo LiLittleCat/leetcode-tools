@@ -1,8 +1,8 @@
 [
   {
     "name": "9 数学算法 / 一、数论 / §1.1 判断质数",
-    "count": 6,
-    "problems_title_slugs": "maximum-prime-difference prime-in-diagonal prime-number-of-set-bits-in-binary-representation sum-of-largest-prime-substrings most-frequent-prime prime-palindrome",
+    "count": 7,
+    "problems_title_slugs": "maximum-prime-difference prime-in-diagonal complete-prime-number prime-number-of-set-bits-in-binary-representation sum-of-largest-prime-substrings most-frequent-prime prime-palindrome",
     "problems": [
       {
         "title": "3115. 质数的最大距离",
@@ -13,6 +13,11 @@
         "title": "2614. 对角线上的质数",
         "titleSlug": "prime-in-diagonal",
         "url": "https://leetcode.cn/problems/prime-in-diagonal/"
+      },
+      {
+        "title": "3765. 完全质数",
+        "titleSlug": "complete-prime-number",
+        "url": "https://leetcode.cn/problems/complete-prime-number/"
       },
       {
         "title": "762. 二进制表示中质数个计算置位",
@@ -38,8 +43,8 @@
   },
   {
     "name": "9 数学算法 / 一、数论 / §1.2 预处理质数（筛质数）",
-    "count": 7,
-    "problems_title_slugs": "count-primes split-array-by-prime-indices check-if-any-element-has-prime-frequency prime-pairs-with-target-sum find-the-count-of-numbers-which-are-not-special closest-prime-numbers-in-range prime-subtraction-operation",
+    "count": 8,
+    "problems_title_slugs": "count-primes split-array-by-prime-indices check-if-any-element-has-prime-frequency prime-pairs-with-target-sum find-the-count-of-numbers-which-are-not-special largest-prime-from-consecutive-prime-sum closest-prime-numbers-in-range prime-subtraction-operation",
     "problems": [
       {
         "title": "204. 计数质数",
@@ -65,6 +70,11 @@
         "title": "3233. 统计不是特殊数字的数字数量",
         "titleSlug": "find-the-count-of-numbers-which-are-not-special",
         "url": "https://leetcode.cn/problems/find-the-count-of-numbers-which-are-not-special/"
+      },
+      {
+        "title": "3770. 可表示为连续质数和的最大质数",
+        "titleSlug": "largest-prime-from-consecutive-prime-sum",
+        "url": "https://leetcode.cn/problems/largest-prime-from-consecutive-prime-sum/"
       },
       {
         "title": "2523. 范围内最接近的两个质数",
@@ -256,8 +266,8 @@
   },
   {
     "name": "9 数学算法 / 一、数论 / §1.6 最大公约数（GCD）",
-    "count": 23,
-    "problems_title_slugs": "find-greatest-common-divisor-of-array gcd-of-odd-and-even-sums count-operations-to-obtain-zero x-of-a-kind-in-a-deck-of-cards greatest-common-divisor-of-strings minimum-deletions-to-make-array-divisible water-and-jug-problem minimum-number-of-operations-to-make-all-array-elements-equal-to-1 check-if-it-is-a-good-array max-points-on-a-line lexicographically-smallest-string-after-applying-operations make-k-subarray-sums-equal number-of-subarrays-with-gcd-equal-to-k check-if-point-is-reachable maximize-subarray-gcd-score sorted-gcd-pair-queries count-ways-to-choose-coprime-integers-from-rows number-of-different-subsequences-gcds sum-of-beautiful-subsequences minimum-split-into-subarrays-with-gcd-greater-than-one minimum-subarrays-in-a-valid-split maximum-gcd-sum-of-a-subarray insert-greatest-common-divisors-in-linked-list",
+    "count": 22,
+    "problems_title_slugs": "find-greatest-common-divisor-of-array gcd-of-odd-and-even-sums count-operations-to-obtain-zero x-of-a-kind-in-a-deck-of-cards greatest-common-divisor-of-strings minimum-deletions-to-make-array-divisible water-and-jug-problem minimum-number-of-operations-to-make-all-array-elements-equal-to-1 check-if-it-is-a-good-array lexicographically-smallest-string-after-applying-operations make-k-subarray-sums-equal number-of-subarrays-with-gcd-equal-to-k check-if-point-is-reachable maximize-subarray-gcd-score sorted-gcd-pair-queries count-ways-to-choose-coprime-integers-from-rows number-of-different-subsequences-gcds sum-of-beautiful-subsequences minimum-split-into-subarrays-with-gcd-greater-than-one minimum-subarrays-in-a-valid-split maximum-gcd-sum-of-a-subarray insert-greatest-common-divisors-in-linked-list",
     "problems": [
       {
         "title": "1979. 找出数组的最大公约数",
@@ -303,11 +313,6 @@
         "title": "1250. 检查「好数组」",
         "titleSlug": "check-if-it-is-a-good-array",
         "url": "https://leetcode.cn/problems/check-if-it-is-a-good-array/"
-      },
-      {
-        "title": "149. 直线上最多的点数",
-        "titleSlug": "max-points-on-a-line",
-        "url": "https://leetcode.cn/problems/max-points-on-a-line/"
       },
       {
         "title": "1625. 执行操作后字典序最小的字符串",
@@ -471,8 +476,8 @@
   },
   {
     "name": "9 数学算法 / 一、数论 / §1.11 其他",
-    "count": 7,
-    "problems_title_slugs": "binary-prefix-divisible-by-5 power-of-three super-pow smallest-integer-divisible-by-k sum-of-square-numbers perfect-squares number-of-ways-to-buy-pens-and-pencils",
+    "count": 9,
+    "problems_title_slugs": "binary-prefix-divisible-by-5 power-of-three sort-integers-by-the-power-value super-pow smallest-integer-divisible-by-k smallest-all-ones-multiple sum-of-square-numbers perfect-squares number-of-ways-to-buy-pens-and-pencils",
     "problems": [
       {
         "title": "1018. 可被 5 整除的二进制前缀",
@@ -485,6 +490,11 @@
         "url": "https://leetcode.cn/problems/power-of-three/"
       },
       {
+        "title": "1387. 将整数按权重排序",
+        "titleSlug": "sort-integers-by-the-power-value",
+        "url": "https://leetcode.cn/problems/sort-integers-by-the-power-value/"
+      },
+      {
         "title": "372. 超级次方",
         "titleSlug": "super-pow",
         "url": "https://leetcode.cn/problems/super-pow/"
@@ -493,6 +503,11 @@
         "title": "1015. 可被 K 整除的最小整数",
         "titleSlug": "smallest-integer-divisible-by-k",
         "url": "https://leetcode.cn/problems/smallest-integer-divisible-by-k/"
+      },
+      {
+        "title": "3790. 最小全 1 倍数",
+        "titleSlug": "smallest-all-ones-multiple",
+        "url": "https://leetcode.cn/problems/smallest-all-ones-multiple/"
       },
       {
         "title": "633. 平方数之和",
@@ -865,59 +880,7 @@
     ]
   },
   {
-    "name": "9 数学算法 / 二、组合数学 / §2.5 贡献法",
-    "count": 9,
-    "problems_title_slugs": "vowels-of-all-substrings sum-of-all-odd-length-subarrays power-of-heroes sum-of-subsequence-widths maximum-and-minimum-sums-of-at-most-size-k-subsequences manhattan-distances-of-all-arrangements-of-pieces sum-of-imbalance-numbers-of-all-subarrays distribute-coins-in-binary-tree minimum-fuel-cost-to-report-to-the-capital",
-    "problems": [
-      {
-        "title": "2063. 所有子字符串中的元音",
-        "titleSlug": "vowels-of-all-substrings",
-        "url": "https://leetcode.cn/problems/vowels-of-all-substrings/"
-      },
-      {
-        "title": "1588. 所有奇数长度子数组的和",
-        "titleSlug": "sum-of-all-odd-length-subarrays",
-        "url": "https://leetcode.cn/problems/sum-of-all-odd-length-subarrays/"
-      },
-      {
-        "title": "2681. 英雄的力量",
-        "titleSlug": "power-of-heroes",
-        "url": "https://leetcode.cn/problems/power-of-heroes/"
-      },
-      {
-        "title": "891. 子序列宽度之和",
-        "titleSlug": "sum-of-subsequence-widths",
-        "url": "https://leetcode.cn/problems/sum-of-subsequence-widths/"
-      },
-      {
-        "title": "3428. 最多 K 个元素的子序列的最值之和",
-        "titleSlug": "maximum-and-minimum-sums-of-at-most-size-k-subsequences",
-        "url": "https://leetcode.cn/problems/maximum-and-minimum-sums-of-at-most-size-k-subsequences/"
-      },
-      {
-        "title": "3426. 所有安放棋子方案的曼哈顿距离",
-        "titleSlug": "manhattan-distances-of-all-arrangements-of-pieces",
-        "url": "https://leetcode.cn/problems/manhattan-distances-of-all-arrangements-of-pieces/"
-      },
-      {
-        "title": "2763. 所有子数组中不平衡数字之和",
-        "titleSlug": "sum-of-imbalance-numbers-of-all-subarrays",
-        "url": "https://leetcode.cn/problems/sum-of-imbalance-numbers-of-all-subarrays/"
-      },
-      {
-        "title": "979. 在二叉树中分配硬币",
-        "titleSlug": "distribute-coins-in-binary-tree",
-        "url": "https://leetcode.cn/problems/distribute-coins-in-binary-tree/"
-      },
-      {
-        "title": "2477. 到达首都的最少油耗",
-        "titleSlug": "minimum-fuel-cost-to-report-to-the-capital",
-        "url": "https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital/"
-      }
-    ]
-  },
-  {
-    "name": "9 数学算法 / 二、组合数学 / §2.6 生成函数（母函数）",
+    "name": "9 数学算法 / 二、组合数学 / §2.5 生成函数（母函数）",
     "count": 6,
     "problems_title_slugs": "number-of-dice-rolls-with-target-sum k-inverse-pairs-array count-the-number-of-inversions find-the-sum-of-the-power-of-all-subsequences number-of-great-partitions find-the-original-typed-string-ii",
     "problems": [
@@ -1283,7 +1246,7 @@
   {
     "name": "9 数学算法 / 六、随机算法 / §6.1 随机数",
     "count": 11,
-    "problems_title_slugs": "random-pick-index linked-list-random-node shuffle-an-array implement-rand10-using-rand7 random-pick-with-weight random-pick-with-blacklist generate-random-point-in-a-circle random-point-in-non-overlapping-rectangles random-flip-matrix insert-delete-getrandom-o1 insert-delete-getrandom-o1-duplicates-allowed",
+    "problems_title_slugs": "random-pick-index linked-list-random-node shuffle-an-array insert-delete-getrandom-o1 insert-delete-getrandom-o1-duplicates-allowed random-pick-with-weight implement-rand10-using-rand7 random-pick-with-blacklist generate-random-point-in-a-circle random-point-in-non-overlapping-rectangles random-flip-matrix",
     "problems": [
       {
         "title": "398. 随机数索引",
@@ -1301,14 +1264,24 @@
         "url": "https://leetcode.cn/problems/shuffle-an-array/"
       },
       {
-        "title": "470. 用 Rand7() 实现 Rand10()",
-        "titleSlug": "implement-rand10-using-rand7",
-        "url": "https://leetcode.cn/problems/implement-rand10-using-rand7/"
+        "title": "380. O(1) 时间插入、删除和获取随机元素",
+        "titleSlug": "insert-delete-getrandom-o1",
+        "url": "https://leetcode.cn/problems/insert-delete-getrandom-o1/"
+      },
+      {
+        "title": "381. O(1) 时间插入、删除和获取随机元素 - 允许重复",
+        "titleSlug": "insert-delete-getrandom-o1-duplicates-allowed",
+        "url": "https://leetcode.cn/problems/insert-delete-getrandom-o1-duplicates-allowed/"
       },
       {
         "title": "528. 按权重随机选择",
         "titleSlug": "random-pick-with-weight",
         "url": "https://leetcode.cn/problems/random-pick-with-weight/"
+      },
+      {
+        "title": "470. 用 Rand7() 实现 Rand10()",
+        "titleSlug": "implement-rand10-using-rand7",
+        "url": "https://leetcode.cn/problems/implement-rand10-using-rand7/"
       },
       {
         "title": "710. 黑名单中的随机数",
@@ -1329,24 +1302,19 @@
         "title": "519. 随机翻转矩阵",
         "titleSlug": "random-flip-matrix",
         "url": "https://leetcode.cn/problems/random-flip-matrix/"
-      },
-      {
-        "title": "380. O(1) 时间插入、删除和获取随机元素",
-        "titleSlug": "insert-delete-getrandom-o1",
-        "url": "https://leetcode.cn/problems/insert-delete-getrandom-o1/"
-      },
-      {
-        "title": "381. O(1) 时间插入、删除和获取随机元素 - 允许重复",
-        "titleSlug": "insert-delete-getrandom-o1-duplicates-allowed",
-        "url": "https://leetcode.cn/problems/insert-delete-getrandom-o1-duplicates-allowed/"
       }
     ]
   },
   {
     "name": "9 数学算法 / 六、随机算法 / §6.2 随机化技巧",
-    "count": 4,
-    "problems_title_slugs": "convert-integer-to-the-sum-of-two-no-zero-integers array-with-elements-not-equal-to-average-of-neighbors online-majority-element-in-subarray generate-schedule",
+    "count": 5,
+    "problems_title_slugs": "n-repeated-element-in-size-2n-array convert-integer-to-the-sum-of-two-no-zero-integers array-with-elements-not-equal-to-average-of-neighbors online-majority-element-in-subarray generate-schedule",
     "problems": [
+      {
+        "title": "961. 在长度 2N 的数组中找出重复 N 次的元素",
+        "titleSlug": "n-repeated-element-in-size-2n-array",
+        "url": "https://leetcode.cn/problems/n-repeated-element-in-size-2n-array/"
+      },
       {
         "title": "1317. 将整数转换为两个无零整数的和",
         "titleSlug": "convert-integer-to-the-sum-of-two-no-zero-integers",
@@ -1371,8 +1339,8 @@
   },
   {
     "name": "9 数学算法 / 七、杂项 / §7.1 回文数",
-    "count": 13,
-    "problems_title_slugs": "palindrome-number strictly-palindromic-number find-palindrome-with-fixed-length prime-palindrome minimum-cost-to-make-array-equalindromic super-palindromes sum-of-k-mirror-numbers count-binary-palindromic-numbers find-the-largest-palindrome-divisible-by-k find-the-count-of-good-integers find-the-closest-palindrome next-special-palindrome-number largest-palindrome-product",
+    "count": 14,
+    "problems_title_slugs": "palindrome-number strictly-palindromic-number find-palindrome-with-fixed-length prime-palindrome minimum-operations-to-make-binary-palindrome find-the-closest-palindrome minimum-cost-to-make-array-equalindromic super-palindromes sum-of-k-mirror-numbers count-binary-palindromic-numbers find-the-largest-palindrome-divisible-by-k find-the-count-of-good-integers next-special-palindrome-number largest-palindrome-product",
     "problems": [
       {
         "title": "9. 回文数",
@@ -1393,6 +1361,16 @@
         "title": "866. 回文质数",
         "titleSlug": "prime-palindrome",
         "url": "https://leetcode.cn/problems/prime-palindrome/"
+      },
+      {
+        "title": "3766. 将数字变成二进制回文数的最少操作",
+        "titleSlug": "minimum-operations-to-make-binary-palindrome",
+        "url": "https://leetcode.cn/problems/minimum-operations-to-make-binary-palindrome/"
+      },
+      {
+        "title": "564. 寻找最近的回文数",
+        "titleSlug": "find-the-closest-palindrome",
+        "url": "https://leetcode.cn/problems/find-the-closest-palindrome/"
       },
       {
         "title": "2967. 使数组成为等数数组的最小代价",
@@ -1425,11 +1403,6 @@
         "url": "https://leetcode.cn/problems/find-the-count-of-good-integers/"
       },
       {
-        "title": "564. 寻找最近的回文数",
-        "titleSlug": "find-the-closest-palindrome",
-        "url": "https://leetcode.cn/problems/find-the-closest-palindrome/"
-      },
-      {
         "title": "3646. 下一个特殊回文数",
         "titleSlug": "next-special-palindrome-number",
         "url": "https://leetcode.cn/problems/next-special-palindrome-number/"
@@ -1459,10 +1432,15 @@
     ]
   },
   {
-    "name": "9 数学算法 / 七、杂项 / §7.3 曼哈顿距离",
-    "count": 7,
-    "problems_title_slugs": "maximum-manhattan-distance-after-k-changes maximum-of-absolute-value-expression minimize-manhattan-distances reverse-subarray-to-maximize-array-value maximize-the-distance-between-points-on-a-square minimum-time-for-k-virus-variants-to-spread beautiful-pairs",
+    "name": "9 数学算法 / 七、杂项 / §7.3 曼哈顿距离与切比雪夫距离",
+    "count": 8,
+    "problems_title_slugs": "minimum-time-visiting-all-points maximum-manhattan-distance-after-k-changes maximum-of-absolute-value-expression minimize-manhattan-distances reverse-subarray-to-maximize-array-value maximize-the-distance-between-points-on-a-square minimum-time-for-k-virus-variants-to-spread beautiful-pairs",
     "problems": [
+      {
+        "title": "1266. 访问所有点的最小时间",
+        "titleSlug": "minimum-time-visiting-all-points",
+        "url": "https://leetcode.cn/problems/minimum-time-visiting-all-points/"
+      },
       {
         "title": "3443. K 次修改后的最大曼哈顿距离",
         "titleSlug": "maximum-manhattan-distance-after-k-changes",
@@ -1560,9 +1538,41 @@
     ]
   },
   {
-    "name": "9 数学算法 / 七、杂项 / §7.7 其他",
-    "count": 43,
-    "problems_title_slugs": "count-odd-numbers-in-an-interval-range calculate-money-in-leetcode-bank determine-the-minimum-sum-of-a-k-avoiding-array count-total-number-of-colored-cells minimum-sensors-to-cover-grid find-the-minimum-possible-sum-of-a-beautiful-array find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k bulb-switcher check-if-number-is-a-sum-of-powers-of-three apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k find-the-number-of-copy-arrays sum-of-numbers-with-units-digit-k minimum-operations-to-make-a-special-number count-the-hidden-sequences minimum-operations-to-make-array-equal-ii can-make-arithmetic-progression-from-sequence append-k-integers-with-minimal-sum minimum-addition-to-make-integer-beautiful convert-to-base-2 number-of-perfect-pairs minimum-garden-perimeter-to-collect-enough-apples adding-two-negabinary-numbers find-the-winner-of-the-circular-game fraction-to-recurring-decimal minimize-length-of-array-using-operations smallest-good-base equal-rational-numbers best-position-for-a-service-centre sum-of-floored-pairs building-boxes sum-of-number-and-its-reverse minimum-number-of-operations-to-reinitialize-a-permutation poor-pigs permutation-sequence abbreviating-the-product-of-a-range minimum-operations-to-equalize-binary-string deep-dark-fraction SNJvJP 05ZEDJ similar-rgb-color remove-9 most-expensive-item-that-can-not-be-bought color-the-triangle-red",
+    "name": "9 数学算法 / 七、杂项 / §7.7 摩尔投票法",
+    "count": 5,
+    "problems_title_slugs": "majority-element n-repeated-element-in-size-2n-array minimum-index-of-a-valid-split majority-element-ii online-majority-element-in-subarray",
+    "problems": [
+      {
+        "title": "169. 多数元素",
+        "titleSlug": "majority-element",
+        "url": "https://leetcode.cn/problems/majority-element/"
+      },
+      {
+        "title": "961. 在长度 2N 的数组中找出重复 N 次的元素",
+        "titleSlug": "n-repeated-element-in-size-2n-array",
+        "url": "https://leetcode.cn/problems/n-repeated-element-in-size-2n-array/"
+      },
+      {
+        "title": "2780. 合法分割的最小下标",
+        "titleSlug": "minimum-index-of-a-valid-split",
+        "url": "https://leetcode.cn/problems/minimum-index-of-a-valid-split/"
+      },
+      {
+        "title": "229. 多数元素 II",
+        "titleSlug": "majority-element-ii",
+        "url": "https://leetcode.cn/problems/majority-element-ii/"
+      },
+      {
+        "title": "1157. 子数组中占绝大多数的元素",
+        "titleSlug": "online-majority-element-in-subarray",
+        "url": "https://leetcode.cn/problems/online-majority-element-in-subarray/"
+      }
+    ]
+  },
+  {
+    "name": "9 数学算法 / 七、杂项 / §7.8 其他",
+    "count": 45,
+    "problems_title_slugs": "count-odd-numbers-in-an-interval-range calculate-money-in-leetcode-bank determine-the-minimum-sum-of-a-k-avoiding-array count-total-number-of-colored-cells minimum-sensors-to-cover-grid find-the-minimum-possible-sum-of-a-beautiful-array find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k bulb-switcher check-if-number-is-a-sum-of-powers-of-three apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k find-the-number-of-copy-arrays sum-of-numbers-with-units-digit-k minimum-operations-to-make-a-special-number count-the-hidden-sequences minimum-operations-to-make-array-equal-ii can-make-arithmetic-progression-from-sequence append-k-integers-with-minimal-sum minimum-addition-to-make-integer-beautiful convert-to-base-2 number-of-perfect-pairs minimum-garden-perimeter-to-collect-enough-apples adding-two-negabinary-numbers find-the-winner-of-the-circular-game fraction-to-recurring-decimal minimize-length-of-array-using-operations smallest-good-base last-remaining-integer-after-alternating-deletion-operations elimination-game equal-rational-numbers best-position-for-a-service-centre sum-of-floored-pairs building-boxes sum-of-number-and-its-reverse minimum-number-of-operations-to-reinitialize-a-permutation poor-pigs permutation-sequence abbreviating-the-product-of-a-range minimum-operations-to-equalize-binary-string deep-dark-fraction SNJvJP 05ZEDJ similar-rgb-color remove-9 most-expensive-item-that-can-not-be-bought color-the-triangle-red",
     "problems": [
       {
         "title": "1523. 在区间范围内统计奇数数目",
@@ -1693,6 +1703,16 @@
         "title": "483. 最小好进制",
         "titleSlug": "smallest-good-base",
         "url": "https://leetcode.cn/problems/smallest-good-base/"
+      },
+      {
+        "title": "3782. 交替删除操作后最后剩下的整数",
+        "titleSlug": "last-remaining-integer-after-alternating-deletion-operations",
+        "url": "https://leetcode.cn/problems/last-remaining-integer-after-alternating-deletion-operations/"
+      },
+      {
+        "title": "390. 消除游戏",
+        "titleSlug": "elimination-game",
+        "url": "https://leetcode.cn/problems/elimination-game/"
       },
       {
         "title": "972. 相等的有理数",
