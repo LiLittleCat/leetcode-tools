@@ -133,8 +133,8 @@
   },
   {
     "name": "6 图论算法 / 一、图的遍历 / §1.2 广度优先搜索（BFS）",
-    "count": 7,
-    "problems_title_slugs": "shortest-distance-after-road-addition-queries-i get-watched-videos-by-your-friends count-the-number-of-houses-at-a-certain-distance-i shortest-path-with-alternating-colors the-time-when-the-network-becomes-idle shortest-cycle-in-a-graph bus-routes",
+    "count": 8,
+    "problems_title_slugs": "shortest-distance-after-road-addition-queries-i get-watched-videos-by-your-friends count-the-number-of-houses-at-a-certain-distance-i shortest-path-with-alternating-colors the-time-when-the-network-becomes-idle shortest-cycle-in-a-graph bus-routes minimum-cost-to-repair-edges-to-traverse-a-graph",
     "problems": [
       {
         "title": "3243. 新增道路查询后的最短距离 I",
@@ -170,6 +170,11 @@
         "title": "815. 公交路线",
         "titleSlug": "bus-routes",
         "url": "https://leetcode.cn/problems/bus-routes/"
+      },
+      {
+        "title": "3807. 修复边以遍历图的最小成本",
+        "titleSlug": "minimum-cost-to-repair-edges-to-traverse-a-graph",
+        "url": "https://leetcode.cn/problems/minimum-cost-to-repair-edges-to-traverse-a-graph/"
       }
     ]
   },
@@ -277,8 +282,8 @@
   },
   {
     "name": "6 图论算法 / 二、拓扑排序 / §2.1 拓扑排序",
-    "count": 14,
-    "problems_title_slugs": "course-schedule-ii find-all-possible-recipes-from-given-supplies build-a-matrix-with-conditions find-eventual-safe-states strange-printer-ii sort-items-by-groups-respecting-dependencies collect-coins-in-a-tree Jf1JuT sequence-reconstruction apply-substitutions alien-dictionary all-paths-from-source-lead-to-destination minimum-height-trees validate-binary-tree-nodes",
+    "count": 15,
+    "problems_title_slugs": "course-schedule-ii find-all-possible-recipes-from-given-supplies build-a-matrix-with-conditions find-eventual-safe-states strange-printer-ii sort-items-by-groups-respecting-dependencies rank-transform-of-a-matrix collect-coins-in-a-tree Jf1JuT sequence-reconstruction apply-substitutions alien-dictionary minimize-maximum-value-in-a-grid minimum-height-trees validate-binary-tree-nodes",
     "problems": [
       {
         "title": "210. 课程表 II",
@@ -311,6 +316,11 @@
         "url": "https://leetcode.cn/problems/sort-items-by-groups-respecting-dependencies/"
       },
       {
+        "title": "1632. 矩阵转换后的排名",
+        "titleSlug": "rank-transform-of-a-matrix",
+        "url": "https://leetcode.cn/problems/rank-transform-of-a-matrix/"
+      },
+      {
         "title": "2603. 收集树中金币",
         "titleSlug": "collect-coins-in-a-tree",
         "url": "https://leetcode.cn/problems/collect-coins-in-a-tree/"
@@ -336,9 +346,9 @@
         "url": "https://leetcode.cn/problems/alien-dictionary/"
       },
       {
-        "title": "1059. 从始点到终点的所有路径",
-        "titleSlug": "all-paths-from-source-lead-to-destination",
-        "url": "https://leetcode.cn/problems/all-paths-from-source-lead-to-destination/"
+        "title": "2371. 最小化网格中的最大值",
+        "titleSlug": "minimize-maximum-value-in-a-grid",
+        "url": "https://leetcode.cn/problems/minimize-maximum-value-in-a-grid/"
       },
       {
         "title": "310. 最小高度树",
@@ -443,8 +453,8 @@
   },
   {
     "name": "6 图论算法 / 三、最短路 / §3.1 单源最短路：Dijkstra 算法",
-    "count": 33,
-    "problems_title_slugs": "network-delay-time find-minimum-time-to-reach-last-room-i minimum-time-to-visit-disappearing-nodes design-graph-with-shortest-path-calculator minimum-time-to-reach-destination-in-directed-graph path-with-maximum-probability minimum-cost-path-with-edge-reversals find-minimum-time-to-reach-last-room-ii path-with-minimum-effort number-of-restricted-paths-from-first-to-last-node find-edges-in-shortest-paths number-of-ways-to-arrive-at-destination swim-in-rising-water minimum-cost-of-a-path-with-special-roads digit-operations-to-make-two-integers-equal second-minimum-time-to-reach-destination minimize-the-maximum-edge-weight-of-graph reachable-nodes-in-subdivided-graph minimum-weighted-subgraph-with-the-required-paths minimum-time-to-visit-a-cell-in-a-grid race-car minimum-cost-to-reach-destination-in-time cheapest-flights-within-k-stops modify-graph-edge-weights minimum-path-cost-in-a-hidden-grid minimum-cost-to-reach-city-with-discounts minimum-cost-to-buy-apples find-the-closest-marked-node DFPeFJ partition-array-to-minimize-xor minimum-time-to-transport-all-individuals find-shortest-path-with-k-hops minimum-time-to-complete-all-tasks",
+    "count": 34,
+    "problems_title_slugs": "network-delay-time find-minimum-time-to-reach-last-room-i minimum-time-to-visit-disappearing-nodes design-graph-with-shortest-path-calculator minimum-time-to-reach-destination-in-directed-graph path-with-maximum-probability minimum-cost-path-with-edge-reversals find-minimum-time-to-reach-last-room-ii path-with-minimum-effort number-of-restricted-paths-from-first-to-last-node find-edges-in-shortest-paths number-of-ways-to-arrive-at-destination swim-in-rising-water minimum-cost-of-a-path-with-special-roads digit-operations-to-make-two-integers-equal second-minimum-time-to-reach-destination minimize-the-maximum-edge-weight-of-graph reachable-nodes-in-subdivided-graph minimum-weighted-subgraph-with-the-required-paths minimum-time-to-visit-a-cell-in-a-grid race-car minimum-cost-to-reach-destination-in-time cheapest-flights-within-k-stops modify-graph-edge-weights minimum-path-cost-in-a-hidden-grid minimum-cost-to-reach-city-with-discounts minimum-cost-to-buy-apples find-the-closest-marked-node DFPeFJ partition-array-to-minimize-xor minimum-time-to-transport-all-individuals minimum-distance-excluding-one-maximum-weighted-edge find-shortest-path-with-k-hops minimum-time-to-complete-all-tasks",
     "problems": [
       {
         "title": "743. 网络延迟时间",
@@ -600,6 +610,11 @@
         "title": "3594. 所有人渡河所需的最短时间",
         "titleSlug": "minimum-time-to-transport-all-individuals",
         "url": "https://leetcode.cn/problems/minimum-time-to-transport-all-individuals/"
+      },
+      {
+        "title": "3778. 排除一个最大权重边的最小距离",
+        "titleSlug": "minimum-distance-excluding-one-maximum-weighted-edge",
+        "url": "https://leetcode.cn/problems/minimum-distance-excluding-one-maximum-weighted-edge/"
       },
       {
         "title": "2714. 找到 K 次跨越的最短路径",

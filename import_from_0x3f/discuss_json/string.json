@@ -140,8 +140,8 @@
   },
   {
     "name": "12 字符串 / 三、Manacher 算法（回文串）",
-    "count": 12,
-    "problems_title_slugs": "longest-palindromic-substring palindromic-substrings shortest-palindrome check-if-dfs-strings-are-palindromes palindrome-partitioning-iv maximum-product-of-the-length-of-two-palindromic-substrings longest-palindrome-after-substring-concatenation-ii longest-palindromic-substring maximum-number-of-non-overlapping-palindrome-substrings longest-palindrome-after-substring-concatenation-ii longest-palindromic-path-in-graph minimum-steps-to-convert-string-with-operations",
+    "count": 14,
+    "problems_title_slugs": "longest-palindromic-substring palindromic-substrings shortest-palindrome check-if-dfs-strings-are-palindromes palindrome-partitioning-iv maximum-product-of-the-length-of-two-palindromic-substrings longest-almost-palindromic-substring longest-palindrome-after-substring-concatenation-ii longest-palindromic-substring longest-almost-palindromic-substring maximum-number-of-non-overlapping-palindrome-substrings longest-palindrome-after-substring-concatenation-ii longest-palindromic-path-in-graph minimum-steps-to-convert-string-with-operations",
     "problems": [
       {
         "title": "5. 最长回文子串",
@@ -174,6 +174,11 @@
         "url": "https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-substrings/"
       },
       {
+        "title": "3844. 最长的准回文子字符串",
+        "titleSlug": "longest-almost-palindromic-substring",
+        "url": "https://leetcode.cn/problems/longest-almost-palindromic-substring/"
+      },
+      {
         "title": "3504. 子字符串连接后的最长回文串 II",
         "titleSlug": "longest-palindrome-after-substring-concatenation-ii",
         "url": "https://leetcode.cn/problems/longest-palindrome-after-substring-concatenation-ii/"
@@ -182,6 +187,11 @@
         "title": "5. 最长回文子串",
         "titleSlug": "longest-palindromic-substring",
         "url": "https://leetcode.cn/problems/longest-palindromic-substring/"
+      },
+      {
+        "title": "3844. 最长的准回文子字符串",
+        "titleSlug": "longest-almost-palindromic-substring",
+        "url": "https://leetcode.cn/problems/longest-almost-palindromic-substring/"
       },
       {
         "title": "2472. 不重叠回文子字符串的最大数目",
@@ -207,8 +217,8 @@
   },
   {
     "name": "12 字符串 / 四、字符串哈希",
-    "count": 15,
-    "problems_title_slugs": "find-the-index-of-the-first-occurrence-in-a-string repeated-dna-sequences distinct-echo-substrings maximum-number-of-occurrences-of-a-substring k-divisible-elements-subarrays lexicographically-smallest-string-after-reverse construct-string-with-minimum-cost linked-list-in-binary-tree longest-duplicate-substring maximum-length-of-repeated-subarray longest-common-subpath minimum-number-of-valid-strings-to-form-target-ii unique-substrings-with-equal-digit-frequency strings-differ-by-one-character longest-repeating-substring",
+    "count": 16,
+    "problems_title_slugs": "find-the-index-of-the-first-occurrence-in-a-string repeated-dna-sequences distinct-echo-substrings maximum-number-of-occurrences-of-a-substring k-divisible-elements-subarrays lexicographically-smallest-string-after-reverse construct-string-with-minimum-cost linked-list-in-binary-tree longest-duplicate-substring maximum-length-of-repeated-subarray longest-common-subpath minimum-number-of-valid-strings-to-form-target-ii longest-almost-palindromic-substring unique-substrings-with-equal-digit-frequency strings-differ-by-one-character longest-repeating-substring",
     "problems": [
       {
         "title": "28. 找出字符串中第一个匹配项的下标",
@@ -269,6 +279,11 @@
         "title": "3292. 形成目标字符串需要的最少字符串数 II",
         "titleSlug": "minimum-number-of-valid-strings-to-form-target-ii",
         "url": "https://leetcode.cn/problems/minimum-number-of-valid-strings-to-form-target-ii/"
+      },
+      {
+        "title": "3844. 最长的准回文子字符串",
+        "titleSlug": "longest-almost-palindromic-substring",
+        "url": "https://leetcode.cn/problems/longest-almost-palindromic-substring/"
       },
       {
         "title": "2168. 每个数字的频率都相同的独特子字符串的数量",
@@ -363,8 +378,8 @@
   },
   {
     "name": "12 字符串 / 八、后缀数组/后缀自动机",
-    "count": 19,
-    "problems_title_slugs": "last-substring-in-lexicographical-order largest-merge-of-two-strings shortest-and-lexicographically-smallest-beautiful-string lexicographically-smallest-string-after-reverse construct-string-with-minimum-cost longest-duplicate-substring maximum-length-of-repeated-subarray longest-common-subpath string-matching-in-an-array count-distinct-subarrays-divisible-by-k-in-sorted-array shortest-uncommon-substring-in-an-array longest-palindrome-after-substring-concatenation-ii distinct-echo-substrings count-beautiful-splits-in-an-array substring-xor-queries pattern-matching-lcci number-of-distinct-substrings-in-a-string longest-repeating-substring equalize-strings-by-adding-or-removing-characters-at-ends",
+    "count": 20,
+    "problems_title_slugs": "last-substring-in-lexicographical-order largest-merge-of-two-strings shortest-and-lexicographically-smallest-beautiful-string lexicographically-smallest-string-after-reverse construct-string-with-minimum-cost longest-duplicate-substring maximum-length-of-repeated-subarray longest-common-subpath string-matching-in-an-array count-distinct-subarrays-divisible-by-k-in-sorted-array shortest-uncommon-substring-in-an-array longest-almost-palindromic-substring longest-palindrome-after-substring-concatenation-ii distinct-echo-substrings count-beautiful-splits-in-an-array substring-xor-queries pattern-matching-lcci number-of-distinct-substrings-in-a-string longest-repeating-substring equalize-strings-by-adding-or-removing-characters-at-ends",
     "problems": [
       {
         "title": "1163. 按字典序排在最后的子串",
@@ -420,6 +435,11 @@
         "title": "3076. 数组中的最短非公共子字符串",
         "titleSlug": "shortest-uncommon-substring-in-an-array",
         "url": "https://leetcode.cn/problems/shortest-uncommon-substring-in-an-array/"
+      },
+      {
+        "title": "3844. 最长的准回文子字符串",
+        "titleSlug": "longest-almost-palindromic-substring",
+        "url": "https://leetcode.cn/problems/longest-almost-palindromic-substring/"
       },
       {
         "title": "3504. 子字符串连接后的最长回文串 II",

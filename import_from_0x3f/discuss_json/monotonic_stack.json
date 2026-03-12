@@ -37,9 +37,9 @@
     ]
   },
   {
-    "name": "3 单调栈 / 一、单调栈 / §1.2 进阶（选做）",
-    "count": 21,
-    "problems_title_slugs": "next-greater-node-in-linked-list max-chunks-to-make-sorted-ii maximum-binary-tree 132-pattern find-the-number-of-subarrays-where-boundary-elements-are-maximum beautiful-towers-ii number-of-visible-people-in-a-queue next-greater-element-iv minimum-cost-tree-from-leaf-values steps-to-make-array-non-decreasing car-fleet-ii maximum-sum-queries count-non-decreasing-subarrays-after-k-operations maximum-array-hopping-score-ii binary-searchable-numbers-in-an-unsorted-array maximal-range-that-each-element-is-maximum-in-it number-of-people-that-can-be-seen-in-a-grid smallest-subarray-to-sort-in-every-sliding-window maximum-width-ramp minimum-operations-to-convert-all-elements-to-zero longest-well-performing-interval",
+    "name": "3 单调栈 / 一、单调栈 / §1.2 进阶",
+    "count": 29,
+    "problems_title_slugs": "next-greater-node-in-linked-list maximum-binary-tree max-chunks-to-make-sorted-ii maximum-capacity-within-budget count-bowl-subarrays two-best-non-overlapping-events 132-pattern find-the-number-of-subarrays-where-boundary-elements-are-maximum beautiful-towers-ii odd-even-jump number-of-visible-people-in-a-queue next-greater-element-iv minimum-cost-tree-from-leaf-values steps-to-make-array-non-decreasing car-fleet-ii maximum-sum-queries count-non-decreasing-subarrays-after-k-operations maximum-array-hopping-score-ii binary-searchable-numbers-in-an-unsorted-array maximal-range-that-each-element-is-maximum-in-it number-of-valid-subarrays maximum-of-minimum-values-in-all-subarrays number-of-people-that-can-be-seen-in-a-grid smallest-subarray-to-sort-in-every-sliding-window maximum-number-of-books-you-can-take maximum-width-ramp minimum-operations-to-convert-all-elements-to-zero longest-well-performing-interval maximum-length-of-semi-decreasing-subarrays",
     "problems": [
       {
         "title": "1019. 链表中的下一个更大节点",
@@ -47,14 +47,29 @@
         "url": "https://leetcode.cn/problems/next-greater-node-in-linked-list/"
       },
       {
+        "title": "654. 最大二叉树",
+        "titleSlug": "maximum-binary-tree",
+        "url": "https://leetcode.cn/problems/maximum-binary-tree/"
+      },
+      {
         "title": "768. 最多能完成排序的块 II",
         "titleSlug": "max-chunks-to-make-sorted-ii",
         "url": "https://leetcode.cn/problems/max-chunks-to-make-sorted-ii/"
       },
       {
-        "title": "654. 最大二叉树",
-        "titleSlug": "maximum-binary-tree",
-        "url": "https://leetcode.cn/problems/maximum-binary-tree/"
+        "title": "3814. 预算下的最大总容量",
+        "titleSlug": "maximum-capacity-within-budget",
+        "url": "https://leetcode.cn/problems/maximum-capacity-within-budget/"
+      },
+      {
+        "title": "3676. 碗子数组的数目",
+        "titleSlug": "count-bowl-subarrays",
+        "url": "https://leetcode.cn/problems/count-bowl-subarrays/"
+      },
+      {
+        "title": "2054. 两个最好的不重叠活动",
+        "titleSlug": "two-best-non-overlapping-events",
+        "url": "https://leetcode.cn/problems/two-best-non-overlapping-events/"
       },
       {
         "title": "456. 132 模式",
@@ -70,6 +85,11 @@
         "title": "2866. 美丽塔 II",
         "titleSlug": "beautiful-towers-ii",
         "url": "https://leetcode.cn/problems/beautiful-towers-ii/"
+      },
+      {
+        "title": "975. 奇偶跳",
+        "titleSlug": "odd-even-jump",
+        "url": "https://leetcode.cn/problems/odd-even-jump/"
       },
       {
         "title": "1944. 队列中可以看到的人数",
@@ -122,6 +142,16 @@
         "url": "https://leetcode.cn/problems/maximal-range-that-each-element-is-maximum-in-it/"
       },
       {
+        "title": "1063. 有效子数组的数目",
+        "titleSlug": "number-of-valid-subarrays",
+        "url": "https://leetcode.cn/problems/number-of-valid-subarrays/"
+      },
+      {
+        "title": "1950. 所有子数组最小值中的最大值",
+        "titleSlug": "maximum-of-minimum-values-in-all-subarrays",
+        "url": "https://leetcode.cn/problems/maximum-of-minimum-values-in-all-subarrays/"
+      },
+      {
         "title": "2282. 在一个网格中可以看到的人数",
         "titleSlug": "number-of-people-that-can-be-seen-in-a-grid",
         "url": "https://leetcode.cn/problems/number-of-people-that-can-be-seen-in-a-grid/"
@@ -130,6 +160,11 @@
         "title": "3555. 排序每个滑动窗口中最小的子数组",
         "titleSlug": "smallest-subarray-to-sort-in-every-sliding-window",
         "url": "https://leetcode.cn/problems/smallest-subarray-to-sort-in-every-sliding-window/"
+      },
+      {
+        "title": "2355. 你能拿走的最大图书数量",
+        "titleSlug": "maximum-number-of-books-you-can-take",
+        "url": "https://leetcode.cn/problems/maximum-number-of-books-you-can-take/"
       },
       {
         "title": "962. 最大宽度坡",
@@ -145,6 +180,11 @@
         "title": "1124. 表现良好的最长时间段",
         "titleSlug": "longest-well-performing-interval",
         "url": "https://leetcode.cn/problems/longest-well-performing-interval/"
+      },
+      {
+        "title": "2863. 最长半递减子数组的长度",
+        "titleSlug": "maximum-length-of-semi-decreasing-subarrays",
+        "url": "https://leetcode.cn/problems/maximum-length-of-semi-decreasing-subarrays/"
       }
     ]
   },
@@ -249,8 +289,8 @@
   },
   {
     "name": "3 单调栈 / 四、最小字典序",
-    "count": 7,
-    "problems_title_slugs": "remove-k-digits find-the-most-competitive-subsequence remove-duplicate-letters ev2bru smallest-subsequence-of-distinct-characters create-maximum-number smallest-k-length-subsequence-with-occurrences-of-a-letter",
+    "count": 8,
+    "problems_title_slugs": "remove-k-digits find-the-most-competitive-subsequence remove-duplicate-letters ev2bru smallest-subsequence-of-distinct-characters lexicographically-smallest-string-after-deleting-duplicate-characters create-maximum-number smallest-k-length-subsequence-with-occurrences-of-a-letter",
     "problems": [
       {
         "title": "402. 移掉 K 位数字",
@@ -276,6 +316,11 @@
         "title": "1081. 不同字符的最小子序列",
         "titleSlug": "smallest-subsequence-of-distinct-characters",
         "url": "https://leetcode.cn/problems/smallest-subsequence-of-distinct-characters/"
+      },
+      {
+        "title": "3816. 删除重复字符后的字典序最小字符串",
+        "titleSlug": "lexicographically-smallest-string-after-deleting-duplicate-characters",
+        "url": "https://leetcode.cn/problems/lexicographically-smallest-string-after-deleting-duplicate-characters/"
       },
       {
         "title": "321. 拼接最大数",

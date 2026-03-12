@@ -140,8 +140,8 @@
   },
   {
     "name": "2 二分算法 / 二、二分答案 / §2.1 求最小 / 答疑",
-    "count": 14,
-    "problems_title_slugs": "find-the-smallest-divisor-given-a-threshold minimum-time-to-complete-trips capacity-to-ship-packages-within-d-days koko-eating-bananas minimum-number-of-seconds-to-make-mountain-height-zero minimum-time-to-activate-string heaters minimum-time-to-repair-cars minimum-number-of-days-to-make-m-bouquets earliest-second-to-mark-indices-i minimum-time-to-eat-all-grains minimum-operations-to-make-numbers-non-positive minimum-speed-to-arrive-on-time separate-squares-i",
+    "count": 16,
+    "problems_title_slugs": "find-the-smallest-divisor-given-a-threshold minimum-time-to-complete-trips minimum-k-to-reduce-array-within-limit capacity-to-ship-packages-within-d-days koko-eating-bananas minimum-number-of-seconds-to-make-mountain-height-zero minimum-time-to-activate-string heaters minimum-time-to-repair-cars minimum-number-of-days-to-make-m-bouquets earliest-second-to-mark-indices-i minimum-cost-to-repair-edges-to-traverse-a-graph minimum-time-to-eat-all-grains minimum-operations-to-make-numbers-non-positive minimum-speed-to-arrive-on-time separate-squares-i",
     "problems": [
       {
         "title": "1283. 使结果不超过阈值的最小除数",
@@ -152,6 +152,11 @@
         "title": "2187. 完成旅途的最少时间",
         "titleSlug": "minimum-time-to-complete-trips",
         "url": "https://leetcode.cn/problems/minimum-time-to-complete-trips/"
+      },
+      {
+        "title": "3824. 减小数组使其满足条件的最小 K 值",
+        "titleSlug": "minimum-k-to-reduce-array-within-limit",
+        "url": "https://leetcode.cn/problems/minimum-k-to-reduce-array-within-limit/"
       },
       {
         "title": "1011. 在 D 天内送达包裹的能力",
@@ -192,6 +197,11 @@
         "title": "3048. 标记所有下标的最早秒数 I",
         "titleSlug": "earliest-second-to-mark-indices-i",
         "url": "https://leetcode.cn/problems/earliest-second-to-mark-indices-i/"
+      },
+      {
+        "title": "3807. 修复边以遍历图的最小成本",
+        "titleSlug": "minimum-cost-to-repair-edges-to-traverse-a-graph",
+        "url": "https://leetcode.cn/problems/minimum-cost-to-repair-edges-to-traverse-a-graph/"
       },
       {
         "title": "2604. 吃掉所有谷子的最短时间",

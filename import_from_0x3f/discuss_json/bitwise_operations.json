@@ -1,13 +1,18 @@
 [
   {
     "name": "5 位运算 / 一、基础题",
-    "count": 24,
-    "problems_title_slugs": "smallest-number-with-all-set-bits number-of-bit-changes-to-make-two-integers-equal sort-integers-by-the-number-of-1-bits hamming-distance minimum-bit-flips-to-convert-number number-of-steps-to-reduce-a-number-to-zero number-complement complement-of-base-10-integer binary-gap find-the-k-or-of-an-array binary-number-with-alternating-bits find-the-prefix-common-array-of-two-arrays insert-into-bits-lcci power-of-two power-of-four number-of-1-bits counting-bits number-of-even-and-odd-bits keep-multiplying-found-values-by-two generate-binary-strings-without-adjacent-zeros split-and-merge-array-transformation reverse-bits minimum-number-of-flips-to-reverse-binary-string sort-integers-by-binary-reflection",
+    "count": 25,
+    "problems_title_slugs": "smallest-number-with-all-set-bits count-monobit-integers number-of-bit-changes-to-make-two-integers-equal sort-integers-by-the-number-of-1-bits hamming-distance minimum-bit-flips-to-convert-number number-of-steps-to-reduce-a-number-to-zero number-complement complement-of-base-10-integer binary-gap find-the-k-or-of-an-array binary-number-with-alternating-bits find-the-prefix-common-array-of-two-arrays insert-into-bits-lcci power-of-two power-of-four number-of-1-bits counting-bits number-of-even-and-odd-bits keep-multiplying-found-values-by-two generate-binary-strings-without-adjacent-zeros split-and-merge-array-transformation reverse-bits minimum-number-of-flips-to-reverse-binary-string sort-integers-by-binary-reflection",
     "problems": [
       {
         "title": "3370. 仅含置位位的最小整数",
         "titleSlug": "smallest-number-with-all-set-bits",
         "url": "https://leetcode.cn/problems/smallest-number-with-all-set-bits/"
+      },
+      {
+        "title": "3827. 统计单比特整数",
+        "titleSlug": "count-monobit-integers",
+        "url": "https://leetcode.cn/problems/count-monobit-integers/"
       },
       {
         "title": "3226. 使两个整数相等的位更改次数",
@@ -398,13 +403,18 @@
   },
   {
     "name": "5 位运算 / 五、试填法",
-    "count": 7,
-    "problems_title_slugs": "maximum-xor-of-two-numbers-in-an-array maximum-strong-pair-xor-ii maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k find-products-of-elements-of-big-array minimize-or-of-remaining-elements-using-operations find-the-maximum-sequence-value-of-array maximum-sized-array",
+    "count": 8,
+    "problems_title_slugs": "maximum-xor-of-two-numbers-in-an-array maximum-bitwise-and-after-increment-operations maximum-strong-pair-xor-ii maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k find-products-of-elements-of-big-array minimize-or-of-remaining-elements-using-operations find-the-maximum-sequence-value-of-array maximum-sized-array",
     "problems": [
       {
         "title": "421. 数组中两个数的最大异或值",
         "titleSlug": "maximum-xor-of-two-numbers-in-an-array",
         "url": "https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array/"
+      },
+      {
+        "title": "3806. 增加操作后最大按位与的结果",
+        "titleSlug": "maximum-bitwise-and-after-increment-operations",
+        "url": "https://leetcode.cn/problems/maximum-bitwise-and-after-increment-operations/"
       },
       {
         "title": "2935. 找出强数对的最大异或值 II",

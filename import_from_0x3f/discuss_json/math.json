@@ -1,8 +1,8 @@
 [
   {
     "name": "9 数学算法 / 一、数论 / §1.1 判断质数",
-    "count": 7,
-    "problems_title_slugs": "maximum-prime-difference prime-in-diagonal complete-prime-number prime-number-of-set-bits-in-binary-representation sum-of-largest-prime-substrings most-frequent-prime prime-palindrome",
+    "count": 6,
+    "problems_title_slugs": "maximum-prime-difference prime-in-diagonal complete-prime-number sum-of-largest-prime-substrings most-frequent-prime prime-palindrome",
     "problems": [
       {
         "title": "3115. 质数的最大距离",
@@ -18,11 +18,6 @@
         "title": "3765. 完全质数",
         "titleSlug": "complete-prime-number",
         "url": "https://leetcode.cn/problems/complete-prime-number/"
-      },
-      {
-        "title": "762. 二进制表示中质数个计算置位",
-        "titleSlug": "prime-number-of-set-bits-in-binary-representation",
-        "url": "https://leetcode.cn/problems/prime-number-of-set-bits-in-binary-representation/"
       },
       {
         "title": "3556. 最大质数子字符串之和",
@@ -43,8 +38,8 @@
   },
   {
     "name": "9 数学算法 / 一、数论 / §1.2 预处理质数（筛质数）",
-    "count": 8,
-    "problems_title_slugs": "count-primes split-array-by-prime-indices check-if-any-element-has-prime-frequency prime-pairs-with-target-sum find-the-count-of-numbers-which-are-not-special largest-prime-from-consecutive-prime-sum closest-prime-numbers-in-range prime-subtraction-operation",
+    "count": 9,
+    "problems_title_slugs": "count-primes split-array-by-prime-indices check-if-any-element-has-prime-frequency prime-number-of-set-bits-in-binary-representation prime-pairs-with-target-sum find-the-count-of-numbers-which-are-not-special largest-prime-from-consecutive-prime-sum closest-prime-numbers-in-range prime-subtraction-operation",
     "problems": [
       {
         "title": "204. 计数质数",
@@ -60,6 +55,11 @@
         "title": "3591. 检查元素频次是否为质数",
         "titleSlug": "check-if-any-element-has-prime-frequency",
         "url": "https://leetcode.cn/problems/check-if-any-element-has-prime-frequency/"
+      },
+      {
+        "title": "762. 二进制表示中质数个计算置位",
+        "titleSlug": "prime-number-of-set-bits-in-binary-representation",
+        "url": "https://leetcode.cn/problems/prime-number-of-set-bits-in-binary-representation/"
       },
       {
         "title": "2761. 和等于目标值的质数对",
@@ -600,8 +600,8 @@
   },
   {
     "name": "9 数学算法 / 二、组合数学 / §2.2 组合计数",
-    "count": 34,
-    "problems_title_slugs": "unique-paths count-numbers-with-unique-digits prime-arrangements find-the-n-th-value-after-k-seconds count-all-valid-pickup-and-delivery-options number-of-ways-to-reach-a-position-after-exactly-k-steps number-of-ways-to-assign-edge-weights-i count-anagrams find-number-of-ways-to-reach-the-k-th-stair kth-smallest-instructions count-k-subsequences-of-a-string-with-maximum-beauty find-triangular-sum-of-an-array check-if-digits-are-equal-in-string-after-operations-ii count-numbers-with-non-decreasing-digits number-of-ways-to-reorder-array-to-get-same-bst count-the-number-of-arrays-with-k-matching-adjacent-elements number-of-ways-to-rearrange-sticks-with-k-sticks-visible probability-of-a-two-boxes-having-the-same-number-of-distinct-balls smallest-palindromic-rearrangement-ii find-the-count-of-good-integers find-the-number-of-possible-ways-for-an-event permutations-iv count-ways-to-build-rooms-in-an-ant-colony count-number-of-balanced-permutations minimum-number-of-operations-to-make-string-sorted count-the-number-of-infection-sequences find-sum-of-array-product-of-magical-sequences subsequences-with-a-unique-middle-mode-i count-all-possible-routes find-the-count-of-monotonic-pairs-ii Uh984O count-the-number-of-good-subsequences find-the-derangement-of-an-array count-ways-to-distribute-candies",
+    "count": 36,
+    "problems_title_slugs": "unique-paths count-numbers-with-unique-digits prime-arrangements find-the-n-th-value-after-k-seconds count-all-valid-pickup-and-delivery-options number-of-ways-to-reach-a-position-after-exactly-k-steps number-of-ways-to-assign-edge-weights-i find-nth-smallest-integer-with-k-one-bits prime-number-of-set-bits-in-binary-representation count-anagrams find-number-of-ways-to-reach-the-k-th-stair kth-smallest-instructions count-k-subsequences-of-a-string-with-maximum-beauty find-triangular-sum-of-an-array check-if-digits-are-equal-in-string-after-operations-ii count-numbers-with-non-decreasing-digits number-of-ways-to-reorder-array-to-get-same-bst count-the-number-of-arrays-with-k-matching-adjacent-elements number-of-ways-to-rearrange-sticks-with-k-sticks-visible probability-of-a-two-boxes-having-the-same-number-of-distinct-balls smallest-palindromic-rearrangement-ii find-the-count-of-good-integers find-the-number-of-possible-ways-for-an-event permutations-iv count-ways-to-build-rooms-in-an-ant-colony count-number-of-balanced-permutations minimum-number-of-operations-to-make-string-sorted count-the-number-of-infection-sequences find-sum-of-array-product-of-magical-sequences subsequences-with-a-unique-middle-mode-i count-all-possible-routes find-the-count-of-monotonic-pairs-ii Uh984O count-the-number-of-good-subsequences find-the-derangement-of-an-array count-ways-to-distribute-candies",
     "problems": [
       {
         "title": "62. 不同路径",
@@ -637,6 +637,16 @@
         "title": "3558. 给边赋权值的方案数 I",
         "titleSlug": "number-of-ways-to-assign-edge-weights-i",
         "url": "https://leetcode.cn/problems/number-of-ways-to-assign-edge-weights-i/"
+      },
+      {
+        "title": "3821. 二进制中恰好K个1的第N小整数",
+        "titleSlug": "find-nth-smallest-integer-with-k-one-bits",
+        "url": "https://leetcode.cn/problems/find-nth-smallest-integer-with-k-one-bits/"
+      },
+      {
+        "title": "762. 二进制表示中质数个计算置位",
+        "titleSlug": "prime-number-of-set-bits-in-binary-representation",
+        "url": "https://leetcode.cn/problems/prime-number-of-set-bits-in-binary-representation/"
       },
       {
         "title": "2514. 统计同位异构字符串数目",
@@ -777,8 +787,8 @@
   },
   {
     "name": "9 数学算法 / 二、组合数学 / §2.3 放球问题",
-    "count": 6,
-    "problems_title_slugs": "count-sorted-vowel-strings number-of-sets-of-k-non-overlapping-line-segments number-of-music-playlists count-ways-to-make-array-with-product count-the-number-of-ideal-arrays balanced-k-factor-decomposition",
+    "count": 5,
+    "problems_title_slugs": "count-sorted-vowel-strings number-of-sets-of-k-non-overlapping-line-segments count-ways-to-make-array-with-product count-the-number-of-ideal-arrays balanced-k-factor-decomposition",
     "problems": [
       {
         "title": "1641. 统计字典序元音字符串的数目",
@@ -789,11 +799,6 @@
         "title": "1621. 大小为 K 的不重叠线段的数目",
         "titleSlug": "number-of-sets-of-k-non-overlapping-line-segments",
         "url": "https://leetcode.cn/problems/number-of-sets-of-k-non-overlapping-line-segments/"
-      },
-      {
-        "title": "920. 播放列表的数量",
-        "titleSlug": "number-of-music-playlists",
-        "url": "https://leetcode.cn/problems/number-of-music-playlists/"
       },
       {
         "title": "1735. 生成乘积数组的方案数",
@@ -814,8 +819,8 @@
   },
   {
     "name": "9 数学算法 / 二、组合数学 / §2.4 容斥原理",
-    "count": 12,
-    "problems_title_slugs": "sum-multiples nth-magical-number ugly-number-iii distribute-candies-among-children-ii number-of-strings-which-can-be-rearranged-to-contain-substring minimize-the-maximum-of-two-arrays minimum-time-to-complete-all-deliveries kth-smallest-amount-with-single-denomination-combination number-of-effective-subsequences find-all-possible-stable-binary-arrays-ii find-the-number-of-subsequences-with-equal-gcd distribute-candies-among-children-iii",
+    "count": 13,
+    "problems_title_slugs": "sum-multiples nth-magical-number ugly-number-iii distribute-candies-among-children-ii number-of-strings-which-can-be-rearranged-to-contain-substring minimize-the-maximum-of-two-arrays minimum-time-to-complete-all-deliveries kth-smallest-amount-with-single-denomination-combination number-of-effective-subsequences find-all-possible-stable-binary-arrays-ii number-of-music-playlists find-the-number-of-subsequences-with-equal-gcd distribute-candies-among-children-iii",
     "problems": [
       {
         "title": "2652. 倍数求和",
@@ -866,6 +871,11 @@
         "title": "3130. 找出所有稳定的二进制数组 II",
         "titleSlug": "find-all-possible-stable-binary-arrays-ii",
         "url": "https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii/"
+      },
+      {
+        "title": "920. 播放列表的数量",
+        "titleSlug": "number-of-music-playlists",
+        "url": "https://leetcode.cn/problems/number-of-music-playlists/"
       },
       {
         "title": "3336. 最大公约数相等的子序列数量",
@@ -975,8 +985,8 @@
   },
   {
     "name": "9 数学算法 / 四、博弈论",
-    "count": 24,
-    "problems_title_slugs": "nim-game divisor-game vowels-game-in-a-string remove-colored-pieces-if-both-neighbors-are-the-same-color stone-game stone-game-iv predict-the-winner stone-game-vii stone-game-vi sum-game stone-game-iii stone-game-ii stone-game-v can-i-win stone-game-ix chalkboard-xor-game stone-game-viii cat-and-mouse cat-and-mouse-ii fsa7oZ flip-game-ii game-of-nim subtree-removal-game-with-fibonacci-tree the-wording-game",
+    "count": 25,
+    "problems_title_slugs": "nim-game divisor-game vowels-game-in-a-string remove-colored-pieces-if-both-neighbors-are-the-same-color stone-game final-element-after-subarray-deletions stone-game-iv predict-the-winner stone-game-vii stone-game-vi sum-game stone-game-iii stone-game-ii stone-game-v can-i-win stone-game-ix chalkboard-xor-game stone-game-viii cat-and-mouse cat-and-mouse-ii fsa7oZ flip-game-ii game-of-nim subtree-removal-game-with-fibonacci-tree the-wording-game",
     "problems": [
       {
         "title": "292. Nim 游戏",
@@ -1002,6 +1012,11 @@
         "title": "877. 石子游戏",
         "titleSlug": "stone-game",
         "url": "https://leetcode.cn/problems/stone-game/"
+      },
+      {
+        "title": "3828. 删除子数组后的最终元素",
+        "titleSlug": "final-element-after-subarray-deletions",
+        "url": "https://leetcode.cn/problems/final-element-after-subarray-deletions/"
       },
       {
         "title": "1510. 石子游戏 IV",
@@ -1571,8 +1586,8 @@
   },
   {
     "name": "9 数学算法 / 七、杂项 / §7.8 其他",
-    "count": 45,
-    "problems_title_slugs": "count-odd-numbers-in-an-interval-range calculate-money-in-leetcode-bank determine-the-minimum-sum-of-a-k-avoiding-array count-total-number-of-colored-cells minimum-sensors-to-cover-grid find-the-minimum-possible-sum-of-a-beautiful-array find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k bulb-switcher check-if-number-is-a-sum-of-powers-of-three apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k find-the-number-of-copy-arrays sum-of-numbers-with-units-digit-k minimum-operations-to-make-a-special-number count-the-hidden-sequences minimum-operations-to-make-array-equal-ii can-make-arithmetic-progression-from-sequence append-k-integers-with-minimal-sum minimum-addition-to-make-integer-beautiful convert-to-base-2 number-of-perfect-pairs minimum-garden-perimeter-to-collect-enough-apples adding-two-negabinary-numbers find-the-winner-of-the-circular-game fraction-to-recurring-decimal minimize-length-of-array-using-operations smallest-good-base last-remaining-integer-after-alternating-deletion-operations elimination-game equal-rational-numbers best-position-for-a-service-centre sum-of-floored-pairs building-boxes sum-of-number-and-its-reverse minimum-number-of-operations-to-reinitialize-a-permutation poor-pigs permutation-sequence abbreviating-the-product-of-a-range minimum-operations-to-equalize-binary-string deep-dark-fraction SNJvJP 05ZEDJ similar-rgb-color remove-9 most-expensive-item-that-can-not-be-bought color-the-triangle-red",
+    "count": 44,
+    "problems_title_slugs": "count-odd-numbers-in-an-interval-range calculate-money-in-leetcode-bank determine-the-minimum-sum-of-a-k-avoiding-array count-total-number-of-colored-cells minimum-sensors-to-cover-grid find-the-minimum-possible-sum-of-a-beautiful-array find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k bulb-switcher check-if-number-is-a-sum-of-powers-of-three apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k find-the-number-of-copy-arrays sum-of-numbers-with-units-digit-k count-the-hidden-sequences minimum-operations-to-make-array-equal-ii can-make-arithmetic-progression-from-sequence append-k-integers-with-minimal-sum minimum-addition-to-make-integer-beautiful convert-to-base-2 number-of-perfect-pairs minimum-garden-perimeter-to-collect-enough-apples adding-two-negabinary-numbers find-the-winner-of-the-circular-game fraction-to-recurring-decimal minimize-length-of-array-using-operations smallest-good-base last-remaining-integer-after-alternating-deletion-operations elimination-game equal-rational-numbers best-position-for-a-service-centre sum-of-floored-pairs building-boxes sum-of-number-and-its-reverse minimum-number-of-operations-to-reinitialize-a-permutation poor-pigs permutation-sequence abbreviating-the-product-of-a-range minimum-operations-to-equalize-binary-string deep-dark-fraction SNJvJP 05ZEDJ similar-rgb-color remove-9 most-expensive-item-that-can-not-be-bought color-the-triangle-red",
     "problems": [
       {
         "title": "1523. 在区间范围内统计奇数数目",
@@ -1633,11 +1648,6 @@
         "title": "2310. 个位数字为 K 的整数之和",
         "titleSlug": "sum-of-numbers-with-units-digit-k",
         "url": "https://leetcode.cn/problems/sum-of-numbers-with-units-digit-k/"
-      },
-      {
-        "title": "2844. 生成特殊数字的最少操作",
-        "titleSlug": "minimum-operations-to-make-a-special-number",
-        "url": "https://leetcode.cn/problems/minimum-operations-to-make-a-special-number/"
       },
       {
         "title": "2145. 统计隐藏数组数目",

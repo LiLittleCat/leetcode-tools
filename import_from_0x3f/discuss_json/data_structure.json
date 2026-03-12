@@ -1,8 +1,8 @@
 [
   {
     "name": "8 常用数据结构 / 零、常用枚举技巧 / §0.1 枚举右，维护左 / §0.1.1 基础",
-    "count": 22,
-    "problems_title_slugs": "two-sum number-of-good-pairs largest-positive-integer-that-exists-with-its-negative best-time-to-buy-and-sell-stock maximum-difference-between-increasing-elements maximum-distance-in-arrays max-sum-of-a-pair-with-equal-sum-of-digits number-of-equivalent-domino-pairs max-number-of-k-sum-pairs pairs-with-sum-lcci contains-duplicate-ii minimum-consecutive-cards-to-pick-up number-of-pairs-of-interchangeable-rectangles max-pair-sum-in-an-array count-number-of-trapezoids-i count-number-of-bad-pairs identify-the-largest-outlier-in-an-array minimum-absolute-distance-between-mirror-pairs best-sightseeing-pair count-nice-pairs-in-an-array maximum-product-of-first-and-last-elements-of-a-subsequence find-indices-with-index-and-value-difference-ii",
+    "count": 23,
+    "problems_title_slugs": "two-sum number-of-good-pairs largest-positive-integer-that-exists-with-its-negative best-time-to-buy-and-sell-stock maximum-difference-between-increasing-elements maximum-distance-in-arrays max-sum-of-a-pair-with-equal-sum-of-digits number-of-equivalent-domino-pairs max-number-of-k-sum-pairs pairs-with-sum-lcci contains-duplicate-ii minimum-consecutive-cards-to-pick-up number-of-pairs-of-interchangeable-rectangles max-pair-sum-in-an-array count-number-of-trapezoids-i count-number-of-bad-pairs count-caesar-cipher-pairs identify-the-largest-outlier-in-an-array minimum-absolute-distance-between-mirror-pairs best-sightseeing-pair count-nice-pairs-in-an-array maximum-product-of-first-and-last-elements-of-a-subsequence find-indices-with-index-and-value-difference-ii",
     "problems": [
       {
         "title": "1. 两数之和",
@@ -83,6 +83,11 @@
         "title": "2364. 统计坏数对的数目",
         "titleSlug": "count-number-of-bad-pairs",
         "url": "https://leetcode.cn/problems/count-number-of-bad-pairs/"
+      },
+      {
+        "title": "3805. 统计凯撒加密对数目",
+        "titleSlug": "count-caesar-cipher-pairs",
+        "url": "https://leetcode.cn/problems/count-caesar-cipher-pairs/"
       },
       {
         "title": "3371. 识别数组中的最大异常值",
@@ -334,8 +339,8 @@
   },
   {
     "name": "8 常用数据结构 / 一、前缀和 / §1.1 基础",
-    "count": 12,
-    "problems_title_slugs": "range-sum-query-immutable sum-of-variable-length-subarrays count-vowel-strings-in-ranges xor-queries-of-a-subarray special-array-ii maximum-absolute-sum-of-any-subarray maximum-subarray best-time-to-buy-and-sell-stock-using-strategy shift-distance-between-two-strings make-a-positive-array minimum-time-to-visit-all-houses count-odd-numbers-in-an-interval-range",
+    "count": 13,
+    "problems_title_slugs": "range-sum-query-immutable sum-of-variable-length-subarrays count-vowel-strings-in-ranges xor-queries-of-a-subarray special-array-ii maximum-absolute-sum-of-any-subarray maximum-subarray best-time-to-buy-and-sell-stock-using-strategy shift-distance-between-two-strings make-a-positive-array minimum-time-to-visit-all-houses count-odd-numbers-in-an-interval-range shifting-letters",
     "problems": [
       {
         "title": "303. 区域和检索 - 数组不可变",
@@ -396,6 +401,11 @@
         "title": "1523. 在区间范围内统计奇数数目",
         "titleSlug": "count-odd-numbers-in-an-interval-range",
         "url": "https://leetcode.cn/problems/count-odd-numbers-in-an-interval-range/"
+      },
+      {
+        "title": "848. 字母移位",
+        "titleSlug": "shifting-letters",
+        "url": "https://leetcode.cn/problems/shifting-letters/"
       }
     ]
   },
@@ -1414,13 +1424,18 @@
   },
   {
     "name": "8 常用数据结构 / 四、队列 / §4.1 基础",
-    "count": 8,
-    "problems_title_slugs": "number-of-recent-calls reveal-cards-in-increasing-order dota2-senate moving-average-from-data-stream design-hit-counter design-phone-directory first-unique-number time-taken-to-cross-the-door",
+    "count": 9,
+    "problems_title_slugs": "number-of-recent-calls design-ride-sharing-system reveal-cards-in-increasing-order dota2-senate moving-average-from-data-stream design-hit-counter design-phone-directory first-unique-number time-taken-to-cross-the-door",
     "problems": [
       {
         "title": "933. 最近的请求次数",
         "titleSlug": "number-of-recent-calls",
         "url": "https://leetcode.cn/problems/number-of-recent-calls/"
+      },
+      {
+        "title": "3829. 设计共享出行系统",
+        "titleSlug": "design-ride-sharing-system",
+        "url": "https://leetcode.cn/problems/design-ride-sharing-system/"
       },
       {
         "title": "950. 按递增顺序显示卡牌",
@@ -1680,7 +1695,7 @@
   {
     "name": "8 常用数据结构 / 五、堆（优先队列） / §5.2 进阶",
     "count": 35,
-    "problems_title_slugs": "merge-k-sorted-lists maximum-spending-after-buying-items design-twitter ipo maximum-number-of-eaten-apples swim-in-rising-water path-with-minimum-effort process-tasks-using-servers construct-target-array-with-multiple-sums maximum-number-of-events-that-can-be-attended maximum-profit-in-job-scheduling smallest-range-covering-elements-from-k-lists maximum-subsequence-score maximum-performance-of-a-team meeting-rooms-iii maximum-number-of-points-from-grid-queries minimum-difference-in-sums-after-removal-of-elements minimum-cost-to-hire-k-workers find-servers-that-handled-most-number-of-requests minimum-interval-to-include-each-query trapping-rain-water-ii find-building-where-alice-and-bob-can-meet smallest-substring-with-identical-characters-ii minimum-time-to-complete-all-tasks final-array-state-after-k-multiplication-operations-ii minimize-deviation-in-array minimum-number-of-visited-cells-in-a-grid time-to-cross-a-bridge o8SXZn design-a-file-sharing-system minimum-time-to-build-blocks find-time-required-to-eliminate-bacterial-strains tweet-counts-per-frequency exam-room design-movie-rental-system",
+    "problems_title_slugs": "merge-k-sorted-lists maximum-spending-after-buying-items maximum-score-after-binary-swaps ipo maximum-number-of-eaten-apples swim-in-rising-water path-with-minimum-effort process-tasks-using-servers construct-target-array-with-multiple-sums maximum-number-of-events-that-can-be-attended maximum-profit-in-job-scheduling smallest-range-covering-elements-from-k-lists maximum-subsequence-score maximum-performance-of-a-team meeting-rooms-iii maximum-number-of-points-from-grid-queries minimum-difference-in-sums-after-removal-of-elements minimum-cost-to-hire-k-workers find-servers-that-handled-most-number-of-requests minimum-interval-to-include-each-query trapping-rain-water-ii find-building-where-alice-and-bob-can-meet smallest-substring-with-identical-characters-ii minimum-time-to-complete-all-tasks final-array-state-after-k-multiplication-operations-ii minimize-deviation-in-array minimum-number-of-visited-cells-in-a-grid time-to-cross-a-bridge o8SXZn design-a-file-sharing-system minimum-time-to-build-blocks find-time-required-to-eliminate-bacterial-strains tweet-counts-per-frequency exam-room design-movie-rental-system",
     "problems": [
       {
         "title": "23. 合并 K 个升序链表",
@@ -1693,9 +1708,9 @@
         "url": "https://leetcode.cn/problems/maximum-spending-after-buying-items/"
       },
       {
-        "title": "355. 设计推特",
-        "titleSlug": "design-twitter",
-        "url": "https://leetcode.cn/problems/design-twitter/"
+        "title": "3781. 二进制交换后的最大分数",
+        "titleSlug": "maximum-score-after-binary-swaps",
+        "url": "https://leetcode.cn/problems/maximum-score-after-binary-swaps/"
       },
       {
         "title": "502. IPO",
@@ -2002,8 +2017,8 @@
   },
   {
     "name": "8 常用数据结构 / 五、堆（优先队列） / §5.6 懒删除堆",
-    "count": 12,
-    "problems_title_slugs": "design-a-number-container-system power-grid-maintenance design-a-food-rating-system most-frequent-ids design-task-manager stock-price-fluctuation dinner-plate-stacks the-skyline-problem minimum-pair-removal-to-sort-array-ii sum-of-weighted-modes-in-subarrays design-a-3d-binary-matrix-with-efficient-layer-tracking max-stack",
+    "count": 13,
+    "problems_title_slugs": "design-a-number-container-system power-grid-maintenance design-a-food-rating-system most-frequent-ids design-task-manager stock-price-fluctuation design-auction-system dinner-plate-stacks the-skyline-problem minimum-pair-removal-to-sort-array-ii sum-of-weighted-modes-in-subarrays design-a-3d-binary-matrix-with-efficient-layer-tracking max-stack",
     "problems": [
       {
         "title": "2349. 设计数字容器系统",
@@ -2034,6 +2049,11 @@
         "title": "2034. 股票价格波动",
         "titleSlug": "stock-price-fluctuation",
         "url": "https://leetcode.cn/problems/stock-price-fluctuation/"
+      },
+      {
+        "title": "3815. 设计拍卖系统",
+        "titleSlug": "design-auction-system",
+        "url": "https://leetcode.cn/problems/design-auction-system/"
       },
       {
         "title": "1172. 餐盘栈",
@@ -2416,8 +2436,8 @@
   },
   {
     "name": "8 常用数据结构 / 七、并查集 / §7.2 进阶",
-    "count": 29,
-    "problems_title_slugs": "minimum-swaps-to-sort-by-digit-sum minimum-number-of-operations-to-sort-a-binary-tree-by-level smallest-string-with-swaps lexicographically-smallest-equivalent-string minimize-hamming-distance-after-swap-operations minimum-time-for-k-connected-components minimize-maximum-component-cost swim-in-rising-water maximize-alternating-sum-using-swaps couples-holding-hands redundant-connection-ii most-stones-removed-with-same-row-or-column similar-string-groups last-day-where-you-can-still-cross process-restricted-friend-requests remove-max-number-of-edges-to-keep-graph-fully-traversable regions-cut-by-slashes find-the-safest-path-in-a-grid maximum-number-of-points-from-grid-queries maximize-spanning-tree-stability-with-upgrades count-valid-paths-in-a-tree number-of-good-paths groups-of-strings rank-transform-of-a-matrix bricks-falling-when-hit check-if-the-rectangle-corner-is-reachable kskhHQ minimize-maximum-value-in-a-grid sort-array-by-moving-items-to-empty-space",
+    "count": 30,
+    "problems_title_slugs": "minimum-swaps-to-sort-by-digit-sum minimum-number-of-operations-to-sort-a-binary-tree-by-level smallest-string-with-swaps lexicographically-smallest-equivalent-string minimize-hamming-distance-after-swap-operations minimum-time-for-k-connected-components minimize-maximum-component-cost swim-in-rising-water maximize-alternating-sum-using-swaps couples-holding-hands find-all-people-with-secret most-stones-removed-with-same-row-or-column similar-string-groups redundant-connection-ii last-day-where-you-can-still-cross process-restricted-friend-requests remove-max-number-of-edges-to-keep-graph-fully-traversable regions-cut-by-slashes find-the-safest-path-in-a-grid maximum-number-of-points-from-grid-queries maximize-spanning-tree-stability-with-upgrades count-valid-paths-in-a-tree number-of-good-paths groups-of-strings rank-transform-of-a-matrix bricks-falling-when-hit check-if-the-rectangle-corner-is-reachable kskhHQ minimize-maximum-value-in-a-grid sort-array-by-moving-items-to-empty-space",
     "problems": [
       {
         "title": "3551. 数位和排序需要的最小交换次数",
@@ -2470,9 +2490,9 @@
         "url": "https://leetcode.cn/problems/couples-holding-hands/"
       },
       {
-        "title": "685. 冗余连接 II",
-        "titleSlug": "redundant-connection-ii",
-        "url": "https://leetcode.cn/problems/redundant-connection-ii/"
+        "title": "2092. 找出知晓秘密的所有专家",
+        "titleSlug": "find-all-people-with-secret",
+        "url": "https://leetcode.cn/problems/find-all-people-with-secret/"
       },
       {
         "title": "947. 移除最多的同行或同列石头",
@@ -2483,6 +2503,11 @@
         "title": "839. 相似字符串组",
         "titleSlug": "similar-string-groups",
         "url": "https://leetcode.cn/problems/similar-string-groups/"
+      },
+      {
+        "title": "685. 冗余连接 II",
+        "titleSlug": "redundant-connection-ii",
+        "url": "https://leetcode.cn/problems/redundant-connection-ii/"
       },
       {
         "title": "1970. 你能穿过矩阵的最后一天",
@@ -2535,7 +2560,7 @@
         "url": "https://leetcode.cn/problems/groups-of-strings/"
       },
       {
-        "title": "1632. 矩阵转换后的秩",
+        "title": "1632. 矩阵转换后的排名",
         "titleSlug": "rank-transform-of-a-matrix",
         "url": "https://leetcode.cn/problems/rank-transform-of-a-matrix/"
       },
@@ -2691,8 +2716,8 @@
   },
   {
     "name": "8 常用数据结构 / 八、树状数组和线段树 / §8.1 树状数组",
-    "count": 29,
-    "problems_title_slugs": "range-sum-query-mutable distribute-elements-into-two-arrays-ii number-of-integers-with-popcount-depth-equal-to-k-ii peaks-in-array create-sorted-array-through-instructions best-team-with-no-conflicts queries-on-a-permutation-with-key count-number-of-rectangles-containing-each-point count-good-triplets-in-an-array count-number-of-teams make-array-empty sliding-subarray-beauty shortest-path-in-a-weighted-tree coin-bonus minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits maximum-balanced-subsequence-sum maximum-sum-queries sum-of-beautiful-subsequences maximum-area-rectangle-with-point-constraints-ii kth-smallest-path-xor-sum alternating-groups-iii find-the-number-of-ways-to-place-people-ii design-most-recently-used-queue permutation-sequence find-the-index-of-permutation count-the-number-of-k-big-indices beautiful-pairs maximum-profitable-triplets-with-increasing-prices-ii range-sum-query-2d-mutable",
+    "count": 30,
+    "problems_title_slugs": "range-sum-query-mutable distribute-elements-into-two-arrays-ii number-of-integers-with-popcount-depth-equal-to-k-ii peaks-in-array minimum-deletions-to-make-alternating-substring create-sorted-array-through-instructions best-team-with-no-conflicts queries-on-a-permutation-with-key count-number-of-rectangles-containing-each-point count-good-triplets-in-an-array count-number-of-teams make-array-empty sliding-subarray-beauty shortest-path-in-a-weighted-tree coin-bonus minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits maximum-balanced-subsequence-sum maximum-sum-queries sum-of-beautiful-subsequences maximum-area-rectangle-with-point-constraints-ii kth-smallest-path-xor-sum alternating-groups-iii find-the-number-of-ways-to-place-people-ii design-most-recently-used-queue permutation-sequence find-the-index-of-permutation count-the-number-of-k-big-indices beautiful-pairs maximum-profitable-triplets-with-increasing-prices-ii range-sum-query-2d-mutable",
     "problems": [
       {
         "title": "307. 区域和检索 - 数组可修改",
@@ -2713,6 +2738,11 @@
         "title": "3187. 数组中的峰值",
         "titleSlug": "peaks-in-array",
         "url": "https://leetcode.cn/problems/peaks-in-array/"
+      },
+      {
+        "title": "3777. 使子字符串变交替的最少删除次数",
+        "titleSlug": "minimum-deletions-to-make-alternating-substring",
+        "url": "https://leetcode.cn/problems/minimum-deletions-to-make-alternating-substring/"
       },
       {
         "title": "1649. 通过指令创建有序数组",
@@ -2843,8 +2873,8 @@
   },
   {
     "name": "8 常用数据结构 / 八、树状数组和线段树 / §8.2 逆序对",
-    "count": 8,
-    "problems_title_slugs": "shu-zu-zhong-de-ni-xu-dui-lcof count-of-smaller-numbers-after-self reverse-pairs count-of-range-sum number-of-pairs-satisfying-inequality minimum-adjacent-swaps-to-reach-the-kth-smallest-number minimum-number-of-moves-to-make-palindrome count-pairs-in-two-arrays",
+    "count": 9,
+    "problems_title_slugs": "shu-zu-zhong-de-ni-xu-dui-lcof count-of-smaller-numbers-after-self reverse-pairs count-of-range-sum number-of-pairs-satisfying-inequality minimum-inversion-count-in-subarrays-of-fixed-length minimum-adjacent-swaps-to-reach-the-kth-smallest-number minimum-number-of-moves-to-make-palindrome count-pairs-in-two-arrays",
     "problems": [
       {
         "title": "LCR 170. 交易逆序对的总数",
@@ -2872,6 +2902,11 @@
         "url": "https://leetcode.cn/problems/number-of-pairs-satisfying-inequality/"
       },
       {
+        "title": "3768. 固定长度子数组中的最小逆序对数目",
+        "titleSlug": "minimum-inversion-count-in-subarrays-of-fixed-length",
+        "url": "https://leetcode.cn/problems/minimum-inversion-count-in-subarrays-of-fixed-length/"
+      },
+      {
         "title": "1850. 邻位交换的最小次数",
         "titleSlug": "minimum-adjacent-swaps-to-reach-the-kth-smallest-number",
         "url": "https://leetcode.cn/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number/"
@@ -2890,8 +2925,8 @@
   },
   {
     "name": "8 常用数据结构 / 八、树状数组和线段树 / §8.3 线段树（无区间更新）",
-    "count": 12,
-    "problems_title_slugs": "fruits-into-baskets-iii find-building-where-alice-and-bob-can-meet booking-concert-tickets-in-groups block-placement-queries longest-substring-of-one-repeating-character find-x-value-of-array-ii maximum-sum-of-subsequence-with-non-adjacent-elements maximize-subarray-sum-after-removing-all-occurrences-of-one-element maximize-active-section-with-trade-ii ryfUiz online-majority-element-in-subarray longest-increasing-subsequence-ii",
+    "count": 13,
+    "problems_title_slugs": "fruits-into-baskets-iii find-building-where-alice-and-bob-can-meet booking-concert-tickets-in-groups block-placement-queries longest-substring-of-one-repeating-character minimum-deletions-to-make-alternating-substring find-x-value-of-array-ii maximum-sum-of-subsequence-with-non-adjacent-elements maximize-subarray-sum-after-removing-all-occurrences-of-one-element maximize-active-section-with-trade-ii ryfUiz online-majority-element-in-subarray longest-increasing-subsequence-ii",
     "problems": [
       {
         "title": "3479. 水果成篮 III",
@@ -2917,6 +2952,11 @@
         "title": "2213. 由单个字符重复的最长子字符串",
         "titleSlug": "longest-substring-of-one-repeating-character",
         "url": "https://leetcode.cn/problems/longest-substring-of-one-repeating-character/"
+      },
+      {
+        "title": "3777. 使子字符串变交替的最少删除次数",
+        "titleSlug": "minimum-deletions-to-make-alternating-substring",
+        "url": "https://leetcode.cn/problems/minimum-deletions-to-make-alternating-substring/"
       },
       {
         "title": "3525. 求出数组的 X 值 II",
@@ -3239,9 +3279,78 @@
     ]
   },
   {
-    "name": "8 常用数据结构 / 专题：比较复杂的题目 / Part A",
-    "count": 13,
-    "problems_title_slugs": "find-the-minimum-area-to-cover-all-ones-ii time-to-cross-a-bridge number-of-valid-move-combinations-on-chessboard cat-and-mouse cat-and-mouse-ii the-earliest-and-latest-rounds-where-players-compete fsa7oZ Za25hA De4qBB xun-bao rMeRt2 1ybDKD cnHoX6",
+    "name": "8 常用数据结构 / 编程能力强化训练 / Part A",
+    "count": 7,
+    "problems_title_slugs": "integer-to-roman roman-to-integer integer-to-english-words text-justification strong-password-checker string-to-integer-atoi valid-number",
+    "problems": [
+      {
+        "title": "12. 整数转罗马数字",
+        "titleSlug": "integer-to-roman",
+        "url": "https://leetcode.cn/problems/integer-to-roman/"
+      },
+      {
+        "title": "13. 罗马数字转整数",
+        "titleSlug": "roman-to-integer",
+        "url": "https://leetcode.cn/problems/roman-to-integer/"
+      },
+      {
+        "title": "273. 整数转换英文表示",
+        "titleSlug": "integer-to-english-words",
+        "url": "https://leetcode.cn/problems/integer-to-english-words/"
+      },
+      {
+        "title": "68. 文本左右对齐",
+        "titleSlug": "text-justification",
+        "url": "https://leetcode.cn/problems/text-justification/"
+      },
+      {
+        "title": "420. 强密码检验器",
+        "titleSlug": "strong-password-checker",
+        "url": "https://leetcode.cn/problems/strong-password-checker/"
+      },
+      {
+        "title": "8. 字符串转换整数 (atoi)",
+        "titleSlug": "string-to-integer-atoi",
+        "url": "https://leetcode.cn/problems/string-to-integer-atoi/"
+      },
+      {
+        "title": "65. 有效数字",
+        "titleSlug": "valid-number",
+        "url": "https://leetcode.cn/problems/valid-number/"
+      }
+    ]
+  },
+  {
+    "name": "8 常用数据结构 / 编程能力强化训练 / Part B",
+    "count": 4,
+    "problems_title_slugs": "lru-cache lfu-cache all-oone-data-structure design-skiplist",
+    "problems": [
+      {
+        "title": "146. LRU 缓存",
+        "titleSlug": "lru-cache",
+        "url": "https://leetcode.cn/problems/lru-cache/"
+      },
+      {
+        "title": "460. LFU 缓存",
+        "titleSlug": "lfu-cache",
+        "url": "https://leetcode.cn/problems/lfu-cache/"
+      },
+      {
+        "title": "432. 全 O(1) 的数据结构",
+        "titleSlug": "all-oone-data-structure",
+        "url": "https://leetcode.cn/problems/all-oone-data-structure/"
+      },
+      {
+        "title": "1206. 设计跳表",
+        "titleSlug": "design-skiplist",
+        "url": "https://leetcode.cn/problems/design-skiplist/"
+      }
+    ]
+  },
+  {
+    "name": "8 常用数据结构 / 编程能力强化训练 / Part C",
+    "count": 10,
+    "problems_title_slugs": "find-the-minimum-area-to-cover-all-ones-ii time-to-cross-a-bridge number-of-valid-move-combinations-on-chessboard fsa7oZ Za25hA De4qBB xun-bao rMeRt2 1ybDKD cnHoX6",
     "problems": [
       {
         "title": "3197. 包含所有 1 的最小矩形面积 II",
@@ -3257,21 +3366,6 @@
         "title": "2056. 棋盘上有效移动组合的数目",
         "titleSlug": "number-of-valid-move-combinations-on-chessboard",
         "url": "https://leetcode.cn/problems/number-of-valid-move-combinations-on-chessboard/"
-      },
-      {
-        "title": "913. 猫和老鼠",
-        "titleSlug": "cat-and-mouse",
-        "url": "https://leetcode.cn/problems/cat-and-mouse/"
-      },
-      {
-        "title": "1728. 猫和老鼠 II",
-        "titleSlug": "cat-and-mouse-ii",
-        "url": "https://leetcode.cn/problems/cat-and-mouse-ii/"
-      },
-      {
-        "title": "1900. 最佳运动员的比拼回合",
-        "titleSlug": "the-earliest-and-latest-rounds-where-players-compete",
-        "url": "https://leetcode.cn/problems/the-earliest-and-latest-rounds-where-players-compete/"
       },
       {
         "title": "LCP 48. 无限棋局",
@@ -3307,63 +3401,6 @@
         "title": "LCP 82. 万灵之树",
         "titleSlug": "cnHoX6",
         "url": "https://leetcode.cn/problems/cnHoX6/"
-      }
-    ]
-  },
-  {
-    "name": "8 常用数据结构 / 专题：比较复杂的题目 / Part B",
-    "count": 10,
-    "problems_title_slugs": "split-message-based-on-limit text-justification roman-to-integer integer-to-roman integer-to-english-words strong-password-checker string-to-integer-atoi valid-number lru-cache lfu-cache",
-    "problems": [
-      {
-        "title": "2468. 根据限制分割消息",
-        "titleSlug": "split-message-based-on-limit",
-        "url": "https://leetcode.cn/problems/split-message-based-on-limit/"
-      },
-      {
-        "title": "68. 文本左右对齐",
-        "titleSlug": "text-justification",
-        "url": "https://leetcode.cn/problems/text-justification/"
-      },
-      {
-        "title": "13. 罗马数字转整数",
-        "titleSlug": "roman-to-integer",
-        "url": "https://leetcode.cn/problems/roman-to-integer/"
-      },
-      {
-        "title": "12. 整数转罗马数字",
-        "titleSlug": "integer-to-roman",
-        "url": "https://leetcode.cn/problems/integer-to-roman/"
-      },
-      {
-        "title": "273. 整数转换英文表示",
-        "titleSlug": "integer-to-english-words",
-        "url": "https://leetcode.cn/problems/integer-to-english-words/"
-      },
-      {
-        "title": "420. 强密码检验器",
-        "titleSlug": "strong-password-checker",
-        "url": "https://leetcode.cn/problems/strong-password-checker/"
-      },
-      {
-        "title": "8. 字符串转换整数 (atoi)",
-        "titleSlug": "string-to-integer-atoi",
-        "url": "https://leetcode.cn/problems/string-to-integer-atoi/"
-      },
-      {
-        "title": "65. 有效数字",
-        "titleSlug": "valid-number",
-        "url": "https://leetcode.cn/problems/valid-number/"
-      },
-      {
-        "title": "146. LRU 缓存",
-        "titleSlug": "lru-cache",
-        "url": "https://leetcode.cn/problems/lru-cache/"
-      },
-      {
-        "title": "460. LFU 缓存",
-        "titleSlug": "lfu-cache",
-        "url": "https://leetcode.cn/problems/lfu-cache/"
       }
     ]
   }

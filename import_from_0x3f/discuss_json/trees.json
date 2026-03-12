@@ -191,8 +191,8 @@
   },
   {
     "name": "11 链表、树与回溯 / 一、链表 / §1.6 快慢指针",
-    "count": 10,
-    "problems_title_slugs": "middle-of-the-linked-list delete-the-middle-node-of-a-linked-list palindrome-linked-list maximum-twin-sum-of-a-linked-list reorder-list linked-list-cycle linked-list-cycle-ii circular-array-loop split-a-circular-linked-list find-the-duplicate-number",
+    "count": 12,
+    "problems_title_slugs": "middle-of-the-linked-list delete-the-middle-node-of-a-linked-list palindrome-linked-list maximum-twin-sum-of-a-linked-list reorder-list linked-list-cycle linked-list-cycle-ii circular-array-loop split-a-circular-linked-list find-the-duplicate-number smallest-integer-divisible-by-k smallest-all-ones-multiple",
     "problems": [
       {
         "title": "876. 链表的中间结点",
@@ -243,6 +243,16 @@
         "title": "287. 寻找重复数",
         "titleSlug": "find-the-duplicate-number",
         "url": "https://leetcode.cn/problems/find-the-duplicate-number/"
+      },
+      {
+        "title": "1015. 可被 K 整除的最小整数",
+        "titleSlug": "smallest-integer-divisible-by-k",
+        "url": "https://leetcode.cn/problems/smallest-integer-divisible-by-k/"
+      },
+      {
+        "title": "3790. 最小全 1 倍数",
+        "titleSlug": "smallest-all-ones-multiple",
+        "url": "https://leetcode.cn/problems/smallest-all-ones-multiple/"
       }
     ]
   },
@@ -1117,8 +1127,8 @@
   },
   {
     "name": "11 链表、树与回溯 / 二、二叉树 / §2.13 二叉树 BFS",
-    "count": 24,
-    "problems_title_slugs": "binary-tree-level-order-traversal binary-tree-zigzag-level-order-traversal binary-tree-level-order-traversal-ii binary-tree-right-side-view find-bottom-left-tree-value find-largest-value-in-each-tree-row average-of-levels-in-binary-tree maximum-level-sum-of-a-binary-tree cousins-in-binary-tree kth-largest-sum-in-a-binary-tree deepest-leaves-sum reverse-odd-levels-of-binary-tree even-odd-tree add-one-row-to-tree minimum-number-of-operations-to-sort-a-binary-tree-by-level cousins-in-binary-tree-ii complete-binary-tree-inserter check-completeness-of-a-binary-tree all-nodes-distance-k-in-binary-tree maximum-width-of-binary-tree find-the-level-of-tree-with-minimum-sum find-nearest-right-node-in-binary-tree closest-leaf-in-a-binary-tree correct-a-binary-tree",
+    "count": 25,
+    "problems_title_slugs": "binary-tree-level-order-traversal binary-tree-zigzag-level-order-traversal binary-tree-level-order-traversal-ii binary-tree-right-side-view find-bottom-left-tree-value find-largest-value-in-each-tree-row average-of-levels-in-binary-tree maximum-level-sum-of-a-binary-tree cousins-in-binary-tree kth-largest-sum-in-a-binary-tree deepest-leaves-sum reverse-odd-levels-of-binary-tree even-odd-tree add-one-row-to-tree minimum-number-of-operations-to-sort-a-binary-tree-by-level cousins-in-binary-tree-ii complete-binary-tree-inserter check-completeness-of-a-binary-tree all-nodes-distance-k-in-binary-tree maximum-width-of-binary-tree find-the-level-of-tree-with-minimum-sum median-of-a-binary-search-tree-level find-nearest-right-node-in-binary-tree closest-leaf-in-a-binary-tree correct-a-binary-tree",
     "problems": [
       {
         "title": "102. 二叉树的层序遍历",
@@ -1224,6 +1234,11 @@
         "title": "3157. 找到具有最小和的树的层数",
         "titleSlug": "find-the-level-of-tree-with-minimum-sum",
         "url": "https://leetcode.cn/problems/find-the-level-of-tree-with-minimum-sum/"
+      },
+      {
+        "title": "3831. 二叉搜索树某一层的中位数",
+        "titleSlug": "median-of-a-binary-search-tree-level",
+        "url": "https://leetcode.cn/problems/median-of-a-binary-search-tree-level/"
       },
       {
         "title": "1602. 找到二叉树中最近的右侧节点",
@@ -1497,8 +1512,8 @@
   },
   {
     "name": "11 链表、树与回溯 / 三、一般树 / §3.2 自顶向下 DFS",
-    "count": 11,
-    "problems_title_slugs": "time-needed-to-inform-all-employees unit-conversion-i minimum-time-to-collect-all-apples-in-a-tree frog-position-after-t-seconds count-pairs-of-connectable-servers-in-a-weighted-tree-network maximize-the-number-of-target-nodes-after-connecting-trees-i most-profitable-path-in-a-tree maximize-the-number-of-target-nodes-after-connecting-trees-ii tree-of-coprimes count-paths-that-can-form-a-palindrome-in-a-tree unit-conversion-ii",
+    "count": 12,
+    "problems_title_slugs": "time-needed-to-inform-all-employees unit-conversion-i minimum-time-to-collect-all-apples-in-a-tree pythagorean-distance-nodes-in-a-tree frog-position-after-t-seconds count-pairs-of-connectable-servers-in-a-weighted-tree-network maximize-the-number-of-target-nodes-after-connecting-trees-i most-profitable-path-in-a-tree maximize-the-number-of-target-nodes-after-connecting-trees-ii tree-of-coprimes count-paths-that-can-form-a-palindrome-in-a-tree unit-conversion-ii",
     "problems": [
       {
         "title": "1376. 通知所有员工所需的时间",
@@ -1514,6 +1529,11 @@
         "title": "1443. 收集树上所有苹果的最少时间",
         "titleSlug": "minimum-time-to-collect-all-apples-in-a-tree",
         "url": "https://leetcode.cn/problems/minimum-time-to-collect-all-apples-in-a-tree/"
+      },
+      {
+        "title": "3820. 树上的勾股距离节点",
+        "titleSlug": "pythagorean-distance-nodes-in-a-tree",
+        "url": "https://leetcode.cn/problems/pythagorean-distance-nodes-in-a-tree/"
       },
       {
         "title": "1377. T 秒后青蛙的位置",
@@ -1559,8 +1579,8 @@
   },
   {
     "name": "11 链表、树与回溯 / 三、一般树 / §3.3 自底向上 DFS",
-    "count": 11,
-    "problems_title_slugs": "employee-importance count-the-number-of-good-nodes number-of-nodes-in-the-sub-tree-with-the-same-label number-of-ways-to-assign-edge-weights-i minimum-increments-to-equalize-leaf-paths maximum-number-of-k-divisible-components minimum-fuel-cost-to-report-to-the-capital find-number-of-coins-to-place-in-tree-nodes create-components-with-same-value delete-tree-nodes maximum-subtree-of-the-same-color",
+    "count": 12,
+    "problems_title_slugs": "employee-importance count-the-number-of-good-nodes number-of-nodes-in-the-sub-tree-with-the-same-label number-of-ways-to-assign-edge-weights-i minimum-increments-to-equalize-leaf-paths maximum-number-of-k-divisible-components minimum-fuel-cost-to-report-to-the-capital minimum-edge-toggles-on-a-tree find-number-of-coins-to-place-in-tree-nodes create-components-with-same-value delete-tree-nodes maximum-subtree-of-the-same-color",
     "problems": [
       {
         "title": "690. 员工的重要性",
@@ -1596,6 +1616,11 @@
         "title": "2477. 到达首都的最少油耗",
         "titleSlug": "minimum-fuel-cost-to-report-to-the-capital",
         "url": "https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital/"
+      },
+      {
+        "title": "3812. 翻转树上最少边",
+        "titleSlug": "minimum-edge-toggles-on-a-tree",
+        "url": "https://leetcode.cn/problems/minimum-edge-toggles-on-a-tree/"
       },
       {
         "title": "2973. 树中每个节点放置的金币数目",
@@ -1638,8 +1663,8 @@
   },
   {
     "name": "11 链表、树与回溯 / 三、一般树 / §3.5 树的直径",
-    "count": 6,
-    "problems_title_slugs": "longest-path-with-different-adjacent-characters find-minimum-diameter-after-merging-two-trees count-subtrees-with-max-distance-between-cities difference-between-maximum-and-minimum-price-sum tree-diameter find-the-last-marked-nodes-in-tree",
+    "count": 7,
+    "problems_title_slugs": "longest-path-with-different-adjacent-characters find-minimum-diameter-after-merging-two-trees count-subtrees-with-max-distance-between-cities difference-between-maximum-and-minimum-price-sum tree-diameter find-diameter-endpoints-of-a-tree find-the-last-marked-nodes-in-tree",
     "problems": [
       {
         "title": "2246. 相邻字符不同的最长路径",
@@ -1667,6 +1692,11 @@
         "url": "https://leetcode.cn/problems/tree-diameter/"
       },
       {
+        "title": "3787. 查找树的直径端点",
+        "titleSlug": "find-diameter-endpoints-of-a-tree",
+        "url": "https://leetcode.cn/problems/find-diameter-endpoints-of-a-tree/"
+      },
+      {
         "title": "3313. 查找树中最后标记的节点",
         "titleSlug": "find-the-last-marked-nodes-in-tree",
         "url": "https://leetcode.cn/problems/find-the-last-marked-nodes-in-tree/"
@@ -1675,13 +1705,18 @@
   },
   {
     "name": "11 链表、树与回溯 / 三、一般树 / §3.6 树的拓扑排序",
-    "count": 2,
-    "problems_title_slugs": "minimum-height-trees collect-coins-in-a-tree",
+    "count": 3,
+    "problems_title_slugs": "minimum-height-trees minimum-edge-toggles-on-a-tree collect-coins-in-a-tree",
     "problems": [
       {
         "title": "310. 最小高度树",
         "titleSlug": "minimum-height-trees",
         "url": "https://leetcode.cn/problems/minimum-height-trees/"
+      },
+      {
+        "title": "3812. 翻转树上最少边",
+        "titleSlug": "minimum-edge-toggles-on-a-tree",
+        "url": "https://leetcode.cn/problems/minimum-edge-toggles-on-a-tree/"
       },
       {
         "title": "2603. 收集树中金币",
@@ -1780,19 +1815,14 @@
     ]
   },
   {
-    "name": "11 链表、树与回溯 / 三、一般树 / §3.9 树上滑动窗口",
-    "count": 2,
-    "problems_title_slugs": "longest-special-path longest-special-path-ii",
+    "name": "11 链表、树与回溯 / 三、一般树 / §3.9 虚树",
+    "count": 1,
+    "problems_title_slugs": "total-sum-of-interaction-cost-in-tree-groups",
     "problems": [
       {
-        "title": "3425. 最长特殊路径",
-        "titleSlug": "longest-special-path",
-        "url": "https://leetcode.cn/problems/longest-special-path/"
-      },
-      {
-        "title": "3486. 最长特殊路径 II",
-        "titleSlug": "longest-special-path-ii",
-        "url": "https://leetcode.cn/problems/longest-special-path-ii/"
+        "title": "3786. 树组的交互代价总和",
+        "titleSlug": "total-sum-of-interaction-cost-in-tree-groups",
+        "url": "https://leetcode.cn/problems/total-sum-of-interaction-cost-in-tree-groups/"
       }
     ]
   },
@@ -1831,7 +1861,24 @@
     ]
   },
   {
-    "name": "11 链表、树与回溯 / 三、一般树 / §3.12 其他",
+    "name": "11 链表、树与回溯 / 三、一般树 / §3.12 树上滑动窗口",
+    "count": 2,
+    "problems_title_slugs": "longest-special-path longest-special-path-ii",
+    "problems": [
+      {
+        "title": "3425. 最长特殊路径",
+        "titleSlug": "longest-special-path",
+        "url": "https://leetcode.cn/problems/longest-special-path/"
+      },
+      {
+        "title": "3486. 最长特殊路径 II",
+        "titleSlug": "longest-special-path-ii",
+        "url": "https://leetcode.cn/problems/longest-special-path-ii/"
+      }
+    ]
+  },
+  {
+    "name": "11 链表、树与回溯 / 三、一般树 / §3.13 其他",
     "count": 4,
     "problems_title_slugs": "count-valid-paths-in-a-tree number-of-good-paths number-of-ways-to-reconstruct-a-tree maximum-xor-of-two-non-overlapping-subtrees",
     "problems": [
@@ -2052,13 +2099,18 @@
   },
   {
     "name": "11 链表、树与回溯 / 四、回溯 / §4.5 排列型回溯",
-    "count": 10,
-    "problems_title_slugs": "permutations minimum-time-to-break-locks-i n-queens n-queens-ii minimum-moves-to-spread-stones-over-grid construct-the-lexicographically-largest-valid-sequence verbal-arithmetic-puzzle sudoku-solver permutations-iii palindrome-permutation-ii",
+    "count": 11,
+    "problems_title_slugs": "permutations word-squares-ii minimum-time-to-break-locks-i n-queens n-queens-ii minimum-moves-to-spread-stones-over-grid construct-the-lexicographically-largest-valid-sequence verbal-arithmetic-puzzle sudoku-solver permutations-iii palindrome-permutation-ii",
     "problems": [
       {
         "title": "46. 全排列",
         "titleSlug": "permutations",
         "url": "https://leetcode.cn/problems/permutations/"
+      },
+      {
+        "title": "3799. 单词方块 II",
+        "titleSlug": "word-squares-ii",
+        "url": "https://leetcode.cn/problems/word-squares-ii/"
       },
       {
         "title": "3376. 破解锁的最少时间 I",
@@ -2151,8 +2203,8 @@
   },
   {
     "name": "11 链表、树与回溯 / 四、回溯 / §4.7 搜索",
-    "count": 30,
-    "problems_title_slugs": "generate-binary-strings-without-adjacent-zeros numbers-with-same-consecutive-differences finding-3-digit-even-numbers the-k-th-lexicographical-string-of-all-happy-strings-of-length-n path-with-maximum-gold word-search unique-paths-iii maximum-product-of-the-length-of-two-palindromic-subsequences maximum-score-words-formed-by-letters balanced-k-factor-decomposition matchsticks-to-square word-search-ii shopping-offers tiling-a-rectangle-with-the-fewest-squares 24-game expression-add-operators word-ladder-ii stickers-to-spell-word number-of-valid-move-combinations-on-chessboard find-the-k-sum-of-an-array maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k zuma-game De4qBB word-rectangle-lcci the-knights-tour sequential-grid-path-cover strobogrammatic-number-ii strobogrammatic-number-iii minimum-unique-word-abbreviation confusing-number-ii",
+    "count": 31,
+    "problems_title_slugs": "generate-binary-strings-without-adjacent-zeros numbers-with-same-consecutive-differences finding-3-digit-even-numbers the-k-th-lexicographical-string-of-all-happy-strings-of-length-n path-with-maximum-gold word-search unique-paths-iii maximum-product-of-the-length-of-two-palindromic-subsequences maximum-score-words-formed-by-letters balanced-k-factor-decomposition pyramid-transition-matrix matchsticks-to-square word-search-ii shopping-offers tiling-a-rectangle-with-the-fewest-squares 24-game expression-add-operators word-ladder-ii stickers-to-spell-word number-of-valid-move-combinations-on-chessboard find-the-k-sum-of-an-array maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k zuma-game De4qBB word-rectangle-lcci the-knights-tour sequential-grid-path-cover strobogrammatic-number-ii strobogrammatic-number-iii minimum-unique-word-abbreviation confusing-number-ii",
     "problems": [
       {
         "title": "3211. 生成不含相邻零的二进制字符串",
@@ -2203,6 +2255,11 @@
         "title": "3669. K 因数分解",
         "titleSlug": "balanced-k-factor-decomposition",
         "url": "https://leetcode.cn/problems/balanced-k-factor-decomposition/"
+      },
+      {
+        "title": "756. 金字塔转换矩阵",
+        "titleSlug": "pyramid-transition-matrix",
+        "url": "https://leetcode.cn/problems/pyramid-transition-matrix/"
       },
       {
         "title": "473. 火柴拼正方形",
@@ -2308,8 +2365,8 @@
   },
   {
     "name": "11 链表、树与回溯 / 四、回溯 / §4.8 折半枚举",
-    "count": 8,
-    "problems_title_slugs": "split-array-with-same-average target-sum partition-array-into-two-equal-product-subsets closest-subsequence-sum tallest-billboard partition-array-into-two-arrays-to-minimize-sum-difference count-almost-equal-pairs-ii cnHoX6",
+    "count": 9,
+    "problems_title_slugs": "split-array-with-same-average target-sum partition-array-into-two-equal-product-subsets closest-subsequence-sum tallest-billboard partition-array-into-two-arrays-to-minimize-sum-difference minimum-cost-to-merge-sorted-lists count-almost-equal-pairs-ii cnHoX6",
     "problems": [
       {
         "title": "805. 数组的均值分割",
@@ -2342,6 +2399,11 @@
         "url": "https://leetcode.cn/problems/partition-array-into-two-arrays-to-minimize-sum-difference/"
       },
       {
+        "title": "3801. 合并有序列表的最小成本",
+        "titleSlug": "minimum-cost-to-merge-sorted-lists",
+        "url": "https://leetcode.cn/problems/minimum-cost-to-merge-sorted-lists/"
+      },
+      {
         "title": "3267. 统计近似相等数对 II",
         "titleSlug": "count-almost-equal-pairs-ii",
         "url": "https://leetcode.cn/problems/count-almost-equal-pairs-ii/"
@@ -2355,13 +2417,18 @@
   },
   {
     "name": "11 链表、树与回溯 / 五、其他递归/分治",
-    "count": 7,
-    "problems_title_slugs": "fill-a-special-grid sort-an-array decoded-string-at-index find-the-k-th-character-in-string-game-ii find-kth-bit-in-nth-binary-string process-string-with-special-operations-ii beautiful-array",
+    "count": 8,
+    "problems_title_slugs": "fill-a-special-grid kth-largest-element-in-an-array sort-an-array decoded-string-at-index find-the-k-th-character-in-string-game-ii find-kth-bit-in-nth-binary-string process-string-with-special-operations-ii beautiful-array",
     "problems": [
       {
         "title": "3537. 填充特殊网格",
         "titleSlug": "fill-a-special-grid",
         "url": "https://leetcode.cn/problems/fill-a-special-grid/"
+      },
+      {
+        "title": "215. 数组中的第K个最大元素",
+        "titleSlug": "kth-largest-element-in-an-array",
+        "url": "https://leetcode.cn/problems/kth-largest-element-in-an-array/"
       },
       {
         "title": "912. 排序数组",

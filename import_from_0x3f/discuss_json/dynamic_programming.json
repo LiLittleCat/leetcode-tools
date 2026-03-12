@@ -133,7 +133,7 @@
   {
     "name": "7 动态规划 / 二、网格图 DP / §2.1 基础",
     "count": 13,
-    "problems_title_slugs": "minimum-path-sum unique-paths unique-paths-ii triangle count-paths-with-the-given-xor-value minimum-falling-path-sum maximum-number-of-moves-in-a-grid minimum-cost-path-with-alternating-directions-ii minimum-path-cost-in-a-grid minimum-falling-path-sum-ii maximum-amount-of-money-robot-can-earn maximum-path-score-in-a-grid minimum-sideway-jumps",
+    "problems_title_slugs": "minimum-path-sum unique-paths unique-paths-ii triangle count-paths-with-the-given-xor-value minimum-falling-path-sum minimum-cost-path-with-alternating-directions-ii minimum-path-cost-in-a-grid minimum-falling-path-sum-ii maximum-amount-of-money-robot-can-earn maximum-path-score-in-a-grid maximum-number-of-moves-in-a-grid minimum-sideway-jumps",
     "problems": [
       {
         "title": "64. 最小路径和",
@@ -166,11 +166,6 @@
         "url": "https://leetcode.cn/problems/minimum-falling-path-sum/"
       },
       {
-        "title": "2684. 矩阵中移动的最大次数",
-        "titleSlug": "maximum-number-of-moves-in-a-grid",
-        "url": "https://leetcode.cn/problems/maximum-number-of-moves-in-a-grid/"
-      },
-      {
         "title": "3603. 交替方向的最小路径代价 II",
         "titleSlug": "minimum-cost-path-with-alternating-directions-ii",
         "url": "https://leetcode.cn/problems/minimum-cost-path-with-alternating-directions-ii/"
@@ -194,6 +189,11 @@
         "title": "3742. 网格中得分最大的路径",
         "titleSlug": "maximum-path-score-in-a-grid",
         "url": "https://leetcode.cn/problems/maximum-path-score-in-a-grid/"
+      },
+      {
+        "title": "2684. 矩阵中移动的最大次数",
+        "titleSlug": "maximum-number-of-moves-in-a-grid",
+        "url": "https://leetcode.cn/problems/maximum-number-of-moves-in-a-grid/"
       },
       {
         "title": "1824. 最少侧跳次数",
@@ -595,8 +595,8 @@
   },
   {
     "name": "7 动态规划 / 四、经典线性 DP / §4.2 最长递增子序列（LIS） / §4.2.1 基础",
-    "count": 6,
-    "problems_title_slugs": "longest-increasing-subsequence increasing-triplet-subsequence sorting-three-groups minimum-number-of-removals-to-make-mountain-array find-the-longest-valid-obstacle-course-at-each-position minimum-operations-to-make-the-array-k-increasing",
+    "count": 5,
+    "problems_title_slugs": "longest-increasing-subsequence increasing-triplet-subsequence sorting-three-groups find-the-longest-valid-obstacle-course-at-each-position minimum-operations-to-make-the-array-k-increasing",
     "problems": [
       {
         "title": "300. 最长递增子序列",
@@ -614,11 +614,6 @@
         "url": "https://leetcode.cn/problems/sorting-three-groups/"
       },
       {
-        "title": "1671. 得到山形数组的最少删除次数",
-        "titleSlug": "minimum-number-of-removals-to-make-mountain-array",
-        "url": "https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/"
-      },
-      {
         "title": "1964. 找出到每个位置为止最长的有效障碍赛跑路线",
         "titleSlug": "find-the-longest-valid-obstacle-course-at-each-position",
         "url": "https://leetcode.cn/problems/find-the-longest-valid-obstacle-course-at-each-position/"
@@ -632,9 +627,19 @@
   },
   {
     "name": "7 动态规划 / 四、经典线性 DP / §4.2 最长递增子序列（LIS） / §4.2.2 进阶",
-    "count": 11,
-    "problems_title_slugs": "russian-doll-envelopes best-team-with-no-conflicts maximum-height-by-stacking-cuboids delete-columns-to-make-sorted-iii longest-increasing-subsequence-ii number-of-longest-increasing-subsequence make-array-strictly-increasing minimum-operations-to-make-a-subsequence length-of-the-longest-increasing-path largest-divisible-subset longest-unequal-adjacent-groups-subsequence-ii",
+    "count": 13,
+    "problems_title_slugs": "longest-strictly-increasing-subsequence-with-non-zero-bitwise-and minimum-number-of-removals-to-make-mountain-array russian-doll-envelopes best-team-with-no-conflicts maximum-height-by-stacking-cuboids delete-columns-to-make-sorted-iii longest-increasing-subsequence-ii number-of-longest-increasing-subsequence make-array-strictly-increasing minimum-operations-to-make-a-subsequence length-of-the-longest-increasing-path largest-divisible-subset longest-unequal-adjacent-groups-subsequence-ii",
     "problems": [
+      {
+        "title": "3825. 按位与结果非零的最长上升子序列",
+        "titleSlug": "longest-strictly-increasing-subsequence-with-non-zero-bitwise-and",
+        "url": "https://leetcode.cn/problems/longest-strictly-increasing-subsequence-with-non-zero-bitwise-and/"
+      },
+      {
+        "title": "1671. 得到山形数组的最少删除次数",
+        "titleSlug": "minimum-number-of-removals-to-make-mountain-array",
+        "url": "https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/"
+      },
       {
         "title": "354. 俄罗斯套娃信封问题",
         "titleSlug": "russian-doll-envelopes",
@@ -1009,8 +1014,8 @@
   },
   {
     "name": "7 动态规划 / 六、状态机 DP / §6.3 进阶",
-    "count": 23,
-    "problems_title_slugs": "maximum-number-of-subsequences-after-one-inserting longest-non-decreasing-subarray-from-two-arrays maximum-subarray-sum-with-one-deletion maximum-non-negative-product-in-a-matrix longest-non-decreasing-subarray-after-replacing-at-most-one-element maximize-total-cost-of-alternating-subarrays knight-dialer get-the-maximum-score minimum-increment-operations-to-make-array-beautiful minimum-swaps-to-make-sequences-increasing maximum-frequency-after-subarray-operation count-number-of-special-subsequences find-the-maximum-sum-of-node-values trionic-array-ii substring-with-largest-variance maximum-walls-destroyed-by-robots maximize-cyclic-partition-score UlBDOe paint-fence maximum-subarray-sum-after-one-operation maximum-alternating-subarray-sum minimum-costs-using-the-train-line constructing-two-increasing-arrays",
+    "count": 25,
+    "problems_title_slugs": "maximum-number-of-subsequences-after-one-inserting longest-non-decreasing-subarray-from-two-arrays maximum-subarray-sum-with-one-deletion maximum-non-negative-product-in-a-matrix longest-non-decreasing-subarray-after-replacing-at-most-one-element maximize-total-cost-of-alternating-subarrays knight-dialer get-the-maximum-score number-of-alternating-xor-partitions minimum-increment-operations-to-make-array-beautiful minimum-swaps-to-make-sequences-increasing maximum-frequency-after-subarray-operation count-number-of-special-subsequences longest-alternating-subarray-after-removing-at-most-one-element find-the-maximum-sum-of-node-values trionic-array-ii substring-with-largest-variance maximum-walls-destroyed-by-robots maximize-cyclic-partition-score UlBDOe paint-fence maximum-subarray-sum-after-one-operation maximum-alternating-subarray-sum minimum-costs-using-the-train-line constructing-two-increasing-arrays",
     "problems": [
       {
         "title": "3628. 插入一个字母的最大子序列数",
@@ -1053,6 +1058,11 @@
         "url": "https://leetcode.cn/problems/get-the-maximum-score/"
       },
       {
+        "title": "3811. 交替按位异或分割的数目",
+        "titleSlug": "number-of-alternating-xor-partitions",
+        "url": "https://leetcode.cn/problems/number-of-alternating-xor-partitions/"
+      },
+      {
         "title": "2919. 使数组变美的最小增量运算数",
         "titleSlug": "minimum-increment-operations-to-make-array-beautiful",
         "url": "https://leetcode.cn/problems/minimum-increment-operations-to-make-array-beautiful/"
@@ -1071,6 +1081,11 @@
         "title": "1955. 统计特殊子序列的数目",
         "titleSlug": "count-number-of-special-subsequences",
         "url": "https://leetcode.cn/problems/count-number-of-special-subsequences/"
+      },
+      {
+        "title": "3830. 移除至多一个元素后的最长交替子数组",
+        "titleSlug": "longest-alternating-subarray-after-removing-at-most-one-element",
+        "url": "https://leetcode.cn/problems/longest-alternating-subarray-after-removing-at-most-one-element/"
       },
       {
         "title": "3068. 最大节点价值之和",
@@ -1322,8 +1337,8 @@
   },
   {
     "name": "7 动态规划 / 七、其他线性 DP / §7.4 合法子序列 DP",
-    "count": 19,
-    "problems_title_slugs": "longest-square-streak-in-an-array longest-arithmetic-subsequence-of-given-difference sorting-three-groups longest-arithmetic-subsequence longest-ideal-subsequence length-of-longest-fibonacci-subsequence number-of-stable-subsequences find-the-maximum-length-of-valid-subsequence-ii arithmetic-slices-ii-subsequence sum-of-good-subsequences maximize-consecutive-elements-in-an-array-after-modification longest-subsequence-with-decreasing-adjacent-difference find-the-sum-of-subsequence-powers longest-unequal-adjacent-groups-subsequence-ii sum-of-consecutive-subsequences longest-string-chain distinct-subsequences-ii number-of-unique-good-subsequences count-different-palindromic-subsequences",
+    "count": 20,
+    "problems_title_slugs": "longest-square-streak-in-an-array longest-arithmetic-subsequence-of-given-difference sorting-three-groups longest-arithmetic-subsequence longest-ideal-subsequence length-of-longest-fibonacci-subsequence number-of-stable-subsequences find-the-maximum-length-of-valid-subsequence-ii arithmetic-slices-ii-subsequence number-of-alternating-xor-partitions sum-of-good-subsequences maximize-consecutive-elements-in-an-array-after-modification longest-subsequence-with-decreasing-adjacent-difference find-the-sum-of-subsequence-powers longest-unequal-adjacent-groups-subsequence-ii sum-of-consecutive-subsequences longest-string-chain distinct-subsequences-ii number-of-unique-good-subsequences count-different-palindromic-subsequences",
     "problems": [
       {
         "title": "2501. 数组中最长的方波",
@@ -1369,6 +1384,11 @@
         "title": "446. 等差数列划分 II - 子序列",
         "titleSlug": "arithmetic-slices-ii-subsequence",
         "url": "https://leetcode.cn/problems/arithmetic-slices-ii-subsequence/"
+      },
+      {
+        "title": "3811. 交替按位异或分割的数目",
+        "titleSlug": "number-of-alternating-xor-partitions",
+        "url": "https://leetcode.cn/problems/number-of-alternating-xor-partitions/"
       },
       {
         "title": "3351. 好子序列的元素之和",
@@ -1456,8 +1476,8 @@
   },
   {
     "name": "7 动态规划 / 七、其他线性 DP / §7.6 多维 DP",
-    "count": 64,
-    "problems_title_slugs": "number-of-ways-to-select-buildings sorting-three-groups number-of-ways-to-reach-a-position-after-exactly-k-steps greatest-sum-divisible-by-three maximum-points-tourist-can-earn find-the-maximum-length-of-a-good-subsequence-i number-of-ways-to-stay-in-the-same-place-after-some-steps find-the-count-of-monotonic-pairs-i minimum-cost-for-cutting-cake-i minimum-number-of-operations-to-satisfy-conditions out-of-boundary-paths frog-jump count-ways-to-choose-coprime-integers-from-rows dice-roll-simulation minimum-distance-to-type-a-word-using-two-fingers minimum-array-sum count-all-possible-routes find-number-of-ways-to-reach-the-k-th-stair number-of-distinct-roll-sequences find-minimum-cost-to-remove-array-elements decremental-string-concatenation number-of-ways-of-cutting-a-pizza count-the-number-of-winning-sequences paint-house-iv apply-operations-to-make-two-strings-equal build-array-where-you-can-find-the-maximum-exactly-k-comparisons count-the-number-of-inversions letter-tile-possibilities number-of-ways-to-rearrange-sticks-with-k-sticks-visible selling-pieces-of-wood find-the-maximum-length-of-a-good-subsequence-ii egg-drop-with-2-eggs-and-n-floors super-egg-drop number-of-music-playlists freedom-trail find-the-number-of-subsequences-with-equal-gcd pizza-with-3n-slices valid-permutations-for-di-sequence the-earliest-and-latest-rounds-where-players-compete string-compression-ii minimum-skips-to-arrive-at-meeting-on-time least-operators-to-express-number count-number-of-balanced-permutations make-the-xor-of-all-segments-equal-to-zero maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k minimum-cost-good-caption find-sum-of-array-product-of-magical-sequences check-if-an-original-string-exists-given-two-encoded-strings minimum-time-to-make-array-sum-at-most-x maximize-the-number-of-partitions-after-operations maximum-score-from-grid-operations ZbAuEH Y1VbOX 3aqs1c Up5XYM 7rLGCR paint-house paint-house-ii find-the-number-of-k-even-arrays maximum-vacation-days count-ways-to-distribute-candies choose-numbers-from-two-arrays-in-range constructing-two-increasing-arrays shopping-offers",
+    "count": 61,
+    "problems_title_slugs": "number-of-ways-to-select-buildings sorting-three-groups number-of-ways-to-reach-a-position-after-exactly-k-steps greatest-sum-divisible-by-three maximum-sum-of-three-numbers-divisible-by-three maximum-points-tourist-can-earn find-the-maximum-length-of-a-good-subsequence-i number-of-ways-to-stay-in-the-same-place-after-some-steps find-the-count-of-monotonic-pairs-i minimum-cost-for-cutting-cake-i minimum-number-of-operations-to-satisfy-conditions out-of-boundary-paths frog-jump count-ways-to-choose-coprime-integers-from-rows dice-roll-simulation minimum-distance-to-type-a-word-using-two-fingers minimum-array-sum count-all-possible-routes find-number-of-ways-to-reach-the-k-th-stair number-of-distinct-roll-sequences find-minimum-cost-to-remove-array-elements decremental-string-concatenation number-of-ways-of-cutting-a-pizza count-the-number-of-winning-sequences paint-house-iv apply-operations-to-make-two-strings-equal build-array-where-you-can-find-the-maximum-exactly-k-comparisons count-the-number-of-inversions selling-pieces-of-wood find-the-maximum-length-of-a-good-subsequence-ii egg-drop-with-2-eggs-and-n-floors super-egg-drop number-of-music-playlists freedom-trail find-the-number-of-subsequences-with-equal-gcd pizza-with-3n-slices valid-permutations-for-di-sequence the-earliest-and-latest-rounds-where-players-compete string-compression-ii minimum-skips-to-arrive-at-meeting-on-time least-operators-to-express-number make-the-xor-of-all-segments-equal-to-zero maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k minimum-cost-good-caption check-if-an-original-string-exists-given-two-encoded-strings minimum-time-to-make-array-sum-at-most-x maximize-the-number-of-partitions-after-operations maximum-score-from-grid-operations ZbAuEH Y1VbOX 3aqs1c Up5XYM 7rLGCR paint-house paint-house-ii find-the-number-of-k-even-arrays maximum-vacation-days count-ways-to-distribute-candies choose-numbers-from-two-arrays-in-range constructing-two-increasing-arrays shopping-offers",
     "problems": [
       {
         "title": "2222. 选择建筑的方案数",
@@ -1478,6 +1498,11 @@
         "title": "1262. 可被三整除的最大和",
         "titleSlug": "greatest-sum-divisible-by-three",
         "url": "https://leetcode.cn/problems/greatest-sum-divisible-by-three/"
+      },
+      {
+        "title": "3780. 能被 3 整除的三元组最大和",
+        "titleSlug": "maximum-sum-of-three-numbers-divisible-by-three",
+        "url": "https://leetcode.cn/problems/maximum-sum-of-three-numbers-divisible-by-three/"
       },
       {
         "title": "3332. 旅客可以得到的最多点数",
@@ -1595,16 +1620,6 @@
         "url": "https://leetcode.cn/problems/count-the-number-of-inversions/"
       },
       {
-        "title": "1079. 活字印刷",
-        "titleSlug": "letter-tile-possibilities",
-        "url": "https://leetcode.cn/problems/letter-tile-possibilities/"
-      },
-      {
-        "title": "1866. 恰有 K 根木棍可以看到的排列数目",
-        "titleSlug": "number-of-ways-to-rearrange-sticks-with-k-sticks-visible",
-        "url": "https://leetcode.cn/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/"
-      },
-      {
         "title": "2312. 卖木头块",
         "titleSlug": "selling-pieces-of-wood",
         "url": "https://leetcode.cn/problems/selling-pieces-of-wood/"
@@ -1670,11 +1685,6 @@
         "url": "https://leetcode.cn/problems/least-operators-to-express-number/"
       },
       {
-        "title": "3343. 统计平衡排列的数目",
-        "titleSlug": "count-number-of-balanced-permutations",
-        "url": "https://leetcode.cn/problems/count-number-of-balanced-permutations/"
-      },
-      {
         "title": "1787. 使所有区间的异或结果为零",
         "titleSlug": "make-the-xor-of-all-segments-equal-to-zero",
         "url": "https://leetcode.cn/problems/make-the-xor-of-all-segments-equal-to-zero/"
@@ -1688,11 +1698,6 @@
         "title": "3441. 变成好标题的最少代价",
         "titleSlug": "minimum-cost-good-caption",
         "url": "https://leetcode.cn/problems/minimum-cost-good-caption/"
-      },
-      {
-        "title": "3539. 魔法序列的数组乘积之和",
-        "titleSlug": "find-sum-of-array-product-of-magical-sequences",
-        "url": "https://leetcode.cn/problems/find-sum-of-array-product-of-magical-sequences/"
       },
       {
         "title": "2060. 同源字符串检测",
@@ -1782,6 +1787,38 @@
     ]
   },
   {
+    "name": "7 动态规划 / 七、其他线性 DP / §7.7 计数 DP",
+    "count": 5,
+    "problems_title_slugs": "letter-tile-possibilities number-of-ways-to-rearrange-sticks-with-k-sticks-visible find-the-number-of-possible-ways-for-an-event count-number-of-balanced-permutations find-sum-of-array-product-of-magical-sequences",
+    "problems": [
+      {
+        "title": "1079. 活字印刷",
+        "titleSlug": "letter-tile-possibilities",
+        "url": "https://leetcode.cn/problems/letter-tile-possibilities/"
+      },
+      {
+        "title": "1866. 恰有 K 根木棍可以看到的排列数目",
+        "titleSlug": "number-of-ways-to-rearrange-sticks-with-k-sticks-visible",
+        "url": "https://leetcode.cn/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/"
+      },
+      {
+        "title": "3317. 安排活动的方案数",
+        "titleSlug": "find-the-number-of-possible-ways-for-an-event",
+        "url": "https://leetcode.cn/problems/find-the-number-of-possible-ways-for-an-event/"
+      },
+      {
+        "title": "3343. 统计平衡排列的数目",
+        "titleSlug": "count-number-of-balanced-permutations",
+        "url": "https://leetcode.cn/problems/count-number-of-balanced-permutations/"
+      },
+      {
+        "title": "3539. 魔法序列的数组乘积之和",
+        "titleSlug": "find-sum-of-array-product-of-magical-sequences",
+        "url": "https://leetcode.cn/problems/find-sum-of-array-product-of-magical-sequences/"
+      }
+    ]
+  },
+  {
     "name": "7 动态规划 / 八、区间 DP / §8.1 最长回文子序列",
     "count": 8,
     "problems_title_slugs": "longest-palindromic-subsequence minimum-insertion-steps-to-make-a-string-palindrome longest-palindromic-subsequence-after-at-most-k-operations maximize-palindrome-length-from-subsequences count-different-palindromic-subsequences longest-palindromic-subsequence-ii valid-palindrome-iii palindrome-removal",
@@ -1831,7 +1868,7 @@
   {
     "name": "7 动态规划 / 八、区间 DP / §8.2 区间 DP",
     "count": 20,
-    "problems_title_slugs": "longest-palindromic-substring palindromic-substrings maximum-number-of-operations-with-the-same-score-ii guess-number-higher-or-lower-ii minimum-cost-tree-from-leaf-values unique-binary-search-trees maximum-score-from-performing-multiplication-operations minimum-cost-to-cut-a-stick minimum-score-triangulation-of-polygon minimum-cost-to-merge-stones the-score-of-students-solving-math-expression boolean-evaluation-lcci lexicographically-smallest-string-after-adjacent-removals maximum-xor-score-subarray-queries scramble-string burst-balloons strange-printer remove-boxes encode-string-with-shortest-length maximum-number-of-removal-queries-that-can-be-processed-i",
+    "problems_title_slugs": "longest-palindromic-substring palindromic-substrings maximum-number-of-operations-with-the-same-score-ii minimum-cost-tree-from-leaf-values unique-binary-search-trees guess-number-higher-or-lower-ii maximum-score-from-performing-multiplication-operations minimum-cost-to-cut-a-stick minimum-score-triangulation-of-polygon minimum-cost-to-merge-stones the-score-of-students-solving-math-expression boolean-evaluation-lcci lexicographically-smallest-string-after-adjacent-removals maximum-xor-score-subarray-queries scramble-string burst-balloons strange-printer remove-boxes encode-string-with-shortest-length maximum-number-of-removal-queries-that-can-be-processed-i",
     "problems": [
       {
         "title": "5. 最长回文子串",
@@ -1849,11 +1886,6 @@
         "url": "https://leetcode.cn/problems/maximum-number-of-operations-with-the-same-score-ii/"
       },
       {
-        "title": "375. 猜数字大小 II",
-        "titleSlug": "guess-number-higher-or-lower-ii",
-        "url": "https://leetcode.cn/problems/guess-number-higher-or-lower-ii/"
-      },
-      {
         "title": "1130. 叶值的最小代价生成树",
         "titleSlug": "minimum-cost-tree-from-leaf-values",
         "url": "https://leetcode.cn/problems/minimum-cost-tree-from-leaf-values/"
@@ -1862,6 +1894,11 @@
         "title": "96. 不同的二叉搜索树",
         "titleSlug": "unique-binary-search-trees",
         "url": "https://leetcode.cn/problems/unique-binary-search-trees/"
+      },
+      {
+        "title": "375. 猜数字大小 II",
+        "titleSlug": "guess-number-higher-or-lower-ii",
+        "url": "https://leetcode.cn/problems/guess-number-higher-or-lower-ii/"
       },
       {
         "title": "1770. 执行乘法运算的最大分数",
@@ -2083,8 +2120,8 @@
   },
   {
     "name": "7 动态规划 / 九、状态压缩 DP（状压 DP） / §9.4 子集状压 DP",
-    "count": 17,
-    "problems_title_slugs": "fair-distribution-of-cookies minimum-number-of-work-sessions-to-finish-the-tasks maximum-product-of-two-integers-with-no-common-bits find-minimum-time-to-finish-all-jobs distribute-repeating-integers minimum-increments-for-target-multiples-in-an-array maximum-good-subtree-score maximum-students-taking-exam minimum-incompatibility count-the-number-of-square-free-subsets the-number-of-good-subsets parallel-courses-ii broken-board-dominoes EJvmW4 optimal-account-balancing minimum-number-of-lines-to-cover-points minimum-time-to-transport-all-individuals",
+    "count": 18,
+    "problems_title_slugs": "fair-distribution-of-cookies minimum-number-of-work-sessions-to-finish-the-tasks maximum-product-of-two-integers-with-no-common-bits find-minimum-time-to-finish-all-jobs distribute-repeating-integers minimum-increments-for-target-multiples-in-an-array maximum-good-subtree-score maximum-students-taking-exam minimum-incompatibility minimum-cost-to-merge-sorted-lists count-the-number-of-square-free-subsets the-number-of-good-subsets parallel-courses-ii broken-board-dominoes EJvmW4 optimal-account-balancing minimum-number-of-lines-to-cover-points minimum-time-to-transport-all-individuals",
     "problems": [
       {
         "title": "2305. 公平分发饼干",
@@ -2132,6 +2169,11 @@
         "url": "https://leetcode.cn/problems/minimum-incompatibility/"
       },
       {
+        "title": "3801. 合并有序列表的最小成本",
+        "titleSlug": "minimum-cost-to-merge-sorted-lists",
+        "url": "https://leetcode.cn/problems/minimum-cost-to-merge-sorted-lists/"
+      },
+      {
         "title": "2572. 无平方子集计数",
         "titleSlug": "count-the-number-of-square-free-subsets",
         "url": "https://leetcode.cn/problems/count-the-number-of-square-free-subsets/"
@@ -2175,8 +2217,8 @@
   },
   {
     "name": "7 动态规划 / 九、状态压缩 DP（状压 DP） / §9.5 轮廓线 DP",
-    "count": 8,
-    "problems_title_slugs": "number-of-ways-to-paint-n-3-grid painting-a-grid-with-three-different-colors maximum-students-taking-exam maximize-grid-happiness unique-paths-iii broken-board-dominoes 1ybDKD number-of-ways-to-build-sturdy-brick-wall",
+    "count": 9,
+    "problems_title_slugs": "number-of-ways-to-paint-n-3-grid painting-a-grid-with-three-different-colors maximum-students-taking-exam maximize-grid-happiness unique-paths-iii broken-board-dominoes 1ybDKD number-of-ways-to-build-sturdy-brick-wall pyramid-transition-matrix",
     "problems": [
       {
         "title": "1411. 给 N x 3 网格图涂色的方案数",
@@ -2217,18 +2259,28 @@
         "title": "2184. 建造坚实的砖墙的方法数",
         "titleSlug": "number-of-ways-to-build-sturdy-brick-wall",
         "url": "https://leetcode.cn/problems/number-of-ways-to-build-sturdy-brick-wall/"
+      },
+      {
+        "title": "756. 金字塔转换矩阵",
+        "titleSlug": "pyramid-transition-matrix",
+        "url": "https://leetcode.cn/problems/pyramid-transition-matrix/"
       }
     ]
   },
   {
     "name": "7 动态规划 / 九、状态压缩 DP（状压 DP） / §9.6 SOS DP",
-    "count": 4,
-    "problems_title_slugs": "maximum-product-of-two-integers-with-no-common-bits count-number-of-maximum-bitwise-or-subsets find-a-good-subset-of-the-matrix number-of-effective-subsequences",
+    "count": 5,
+    "problems_title_slugs": "maximum-product-of-two-integers-with-no-common-bits maximum-product-of-the-length-of-two-palindromic-subsequences count-number-of-maximum-bitwise-or-subsets find-a-good-subset-of-the-matrix number-of-effective-subsequences",
     "problems": [
       {
         "title": "3670. 没有公共位的整数最大乘积",
         "titleSlug": "maximum-product-of-two-integers-with-no-common-bits",
         "url": "https://leetcode.cn/problems/maximum-product-of-two-integers-with-no-common-bits/"
+      },
+      {
+        "title": "2002. 两个回文子序列长度的最大乘积",
+        "titleSlug": "maximum-product-of-the-length-of-two-palindromic-subsequences",
+        "url": "https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/"
       },
       {
         "title": "2044. 统计按位或能得到最大值的子集数目",
@@ -2249,8 +2301,8 @@
   },
   {
     "name": "7 动态规划 / 九、状态压缩 DP（状压 DP） / §9.7 其他状压 DP",
-    "count": 13,
-    "problems_title_slugs": "matchsticks-to-square partition-to-k-equal-sum-subsets maximum-product-of-the-length-of-two-palindromic-subsequences smallest-sufficient-team number-of-ways-to-wear-different-hats-to-each-other can-i-win stickers-to-spell-word select-cells-in-grid-with-maximum-score minimum-cost-to-connect-two-groups-of-points maximum-number-of-groups-getting-fresh-donuts rMeRt2 cnHoX6 android-unlock-patterns",
+    "count": 12,
+    "problems_title_slugs": "matchsticks-to-square partition-to-k-equal-sum-subsets smallest-sufficient-team number-of-ways-to-wear-different-hats-to-each-other can-i-win stickers-to-spell-word select-cells-in-grid-with-maximum-score minimum-cost-to-connect-two-groups-of-points maximum-number-of-groups-getting-fresh-donuts rMeRt2 cnHoX6 android-unlock-patterns",
     "problems": [
       {
         "title": "473. 火柴拼正方形",
@@ -2261,11 +2313,6 @@
         "title": "698. 划分为k个相等的子集",
         "titleSlug": "partition-to-k-equal-sum-subsets",
         "url": "https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/"
-      },
-      {
-        "title": "2002. 两个回文子序列长度的最大乘积",
-        "titleSlug": "maximum-product-of-the-length-of-two-palindromic-subsequences",
-        "url": "https://leetcode.cn/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/"
       },
       {
         "title": "1125. 最小的必要团队",
@@ -2321,8 +2368,8 @@
   },
   {
     "name": "7 动态规划 / 十、数位 DP / §10.1 统计合法元素的数目",
-    "count": 23,
-    "problems_title_slugs": "count-distinct-integers-after-removing-zeros count-of-integers count-largest-group maximum-number-of-balls-in-a-box rotated-digits numbers-at-most-n-given-digit-set non-negative-integers-without-consecutive-ones count-special-integers count-numbers-with-unique-digits numbers-with-repeated-digits count-numbers-with-non-decreasing-digits number-of-beautiful-integers-in-the-range count-the-number-of-powerful-integers count-stepping-numbers-in-range count-symmetric-integers count-k-reducible-numbers-less-than-n number-of-integers-with-popcount-depth-equal-to-k-i count-beautiful-numbers find-all-good-strings stepping-numbers digit-count-in-range count-numbers-with-unique-digits-ii count-no-zero-pairs-that-sum-to-n",
+    "count": 24,
+    "problems_title_slugs": "count-distinct-integers-after-removing-zeros count-of-integers count-largest-group maximum-number-of-balls-in-a-box rotated-digits numbers-at-most-n-given-digit-set non-negative-integers-without-consecutive-ones count-special-integers count-numbers-with-unique-digits number-of-balanced-integers-in-a-range numbers-with-repeated-digits count-numbers-with-non-decreasing-digits number-of-beautiful-integers-in-the-range count-the-number-of-powerful-integers count-stepping-numbers-in-range count-symmetric-integers count-k-reducible-numbers-less-than-n number-of-integers-with-popcount-depth-equal-to-k-i count-beautiful-numbers find-all-good-strings stepping-numbers digit-count-in-range count-numbers-with-unique-digits-ii count-no-zero-pairs-that-sum-to-n",
     "problems": [
       {
         "title": "3747. 统计移除零后不同整数的数目",
@@ -2368,6 +2415,11 @@
         "title": "357. 统计各位数字都不同的数字个数",
         "titleSlug": "count-numbers-with-unique-digits",
         "url": "https://leetcode.cn/problems/count-numbers-with-unique-digits/"
+      },
+      {
+        "title": "3791. 给定范围内平衡整数的数目",
+        "titleSlug": "number-of-balanced-integers-in-a-range",
+        "url": "https://leetcode.cn/problems/number-of-balanced-integers-in-a-range/"
       },
       {
         "title": "1012. 至少有 1 位重复的数字",
@@ -2487,8 +2539,8 @@
   },
   {
     "name": "7 动态规划 / 十一、优化 DP / §11.1 前缀和优化 DP",
-    "count": 15,
-    "problems_title_slugs": "jump-game-vii number-of-people-aware-of-a-secret number-of-zigzag-arrays-i first-day-where-you-have-been-in-all-the-rooms k-inverse-pairs-array count-the-number-of-inversions sum-of-k-subarrays-with-length-at-least-m find-the-count-of-monotonic-pairs-ii number-of-beautiful-partitions new-21-game maximum-strength-of-k-disjoint-subarrays find-the-original-typed-string-ii count-of-sub-multisets-with-bounded-sum number-of-ways-to-separate-numbers find-all-possible-stable-binary-arrays-ii",
+    "count": 16,
+    "problems_title_slugs": "jump-game-vii number-of-people-aware-of-a-secret number-of-zigzag-arrays-i first-day-where-you-have-been-in-all-the-rooms k-inverse-pairs-array count-the-number-of-inversions sum-of-k-subarrays-with-length-at-least-m find-the-count-of-monotonic-pairs-ii number-of-beautiful-partitions new-21-game count-routes-to-climb-a-rectangular-grid maximum-strength-of-k-disjoint-subarrays find-the-original-typed-string-ii count-of-sub-multisets-with-bounded-sum number-of-ways-to-separate-numbers find-all-possible-stable-binary-arrays-ii",
     "problems": [
       {
         "title": "1871. 跳跃游戏 VII",
@@ -2539,6 +2591,11 @@
         "title": "837. 新 21 点",
         "titleSlug": "new-21-game",
         "url": "https://leetcode.cn/problems/new-21-game/"
+      },
+      {
+        "title": "3797. 统计在矩形格子里移动的路径数目",
+        "titleSlug": "count-routes-to-climb-a-rectangular-grid",
+        "url": "https://leetcode.cn/problems/count-routes-to-climb-a-rectangular-grid/"
       },
       {
         "title": "3077. K 个不相交子数组的最大能量值",
@@ -2799,9 +2856,14 @@
   },
   {
     "name": "7 动态规划 / 十一、优化 DP / §11.7 斜率优化 DP",
-    "count": 3,
-    "problems_title_slugs": "find-the-minimum-amount-of-time-to-brew-potions minimum-cost-to-divide-array-into-subarrays climbing-stairs-ii",
+    "count": 4,
+    "problems_title_slugs": "minimum-partition-score find-the-minimum-amount-of-time-to-brew-potions minimum-cost-to-divide-array-into-subarrays climbing-stairs-ii",
     "problems": [
+      {
+        "title": "3826. 最小分割分数",
+        "titleSlug": "minimum-partition-score",
+        "url": "https://leetcode.cn/problems/minimum-partition-score/"
+      },
       {
         "title": "3494. 酿造药水需要的最少总时间",
         "titleSlug": "find-the-minimum-amount-of-time-to-brew-potions",
@@ -2821,8 +2883,8 @@
   },
   {
     "name": "7 动态规划 / 十一、优化 DP / §11.8 WQS 二分优化 DP",
-    "count": 4,
-    "problems_title_slugs": "best-time-to-buy-and-sell-stock-iv best-time-to-buy-and-sell-stock-v minimum-white-tiles-after-covering-with-carpets maximize-cyclic-partition-score",
+    "count": 5,
+    "problems_title_slugs": "best-time-to-buy-and-sell-stock-iv best-time-to-buy-and-sell-stock-v minimum-white-tiles-after-covering-with-carpets minimum-partition-score maximize-cyclic-partition-score",
     "problems": [
       {
         "title": "188. 买卖股票的最佳时机 IV",
@@ -2838,6 +2900,11 @@
         "title": "2209. 用地毯覆盖后的最少白色砖块",
         "titleSlug": "minimum-white-tiles-after-covering-with-carpets",
         "url": "https://leetcode.cn/problems/minimum-white-tiles-after-covering-with-carpets/"
+      },
+      {
+        "title": "3826. 最小分割分数",
+        "titleSlug": "minimum-partition-score",
+        "url": "https://leetcode.cn/problems/minimum-partition-score/"
       },
       {
         "title": "3743. 循环划分的最大得分",
@@ -3388,8 +3455,8 @@
   },
   {
     "name": "7 动态规划 / 专题：前后缀分解",
-    "count": 54,
-    "problems_title_slugs": "find-pivot-index find-the-middle-index-in-array equal-score-substrings number-of-ways-to-split-array minimum-average-difference maximum-score-after-splitting-a-string product-of-array-except-self longest-subarray-of-1s-after-deleting-one-element longest-mountain-in-array sum-of-beauty-in-the-array minimum-sum-of-mountain-triplets-ii minimum-penalty-for-a-shop number-of-good-ways-to-split-a-string count-special-triplets make-array-elements-equal-to-zero unique-length-3-palindromic-subsequences maximum-value-of-an-ordered-triplet-ii ways-to-make-a-fair-array best-time-to-buy-and-sell-stock-iii split-array-with-minimum-difference longest-common-prefix-between-adjacent-strings-after-removals number-of-ways-to-select-buildings maximum-sum-of-two-non-overlapping-subarrays maximum-sum-of-3-non-overlapping-subarrays find-all-good-indices find-good-days-to-rob-the-bank flip-string-to-monotone-increasing increasing-triplet-subsequence minimum-deletions-to-make-string-balanced maximum-subarray-sum-with-one-deletion longest-non-decreasing-subarray-after-replacing-at-most-one-element trapping-rain-water difference-of-number-of-distinct-values-on-diagonals find-two-non-overlapping-sub-arrays-each-with-target-sum maximum-or minimum-number-of-removals-to-make-mountain-array construct-product-matrix find-the-maximum-factor-score-of-array minimum-time-to-remove-all-cars-containing-illegal-goods count-palindromic-subsequences minimum-difference-in-sums-after-removal-of-elements subsequence-with-the-minimum-score count-special-quadruplets count-increasing-quadruplets find-the-lexicographically-smallest-valid-sequence count-special-subsequences find-the-occurrence-of-first-almost-equal-substring find-the-maximum-sequence-value-of-array maximum-value-sum-by-placing-three-rooks-ii maximize-subarray-sum-after-removing-all-occurrences-of-one-element maximize-the-number-of-partitions-after-operations max-consecutive-ones-ii maximum-subarray-sum-after-one-operation best-time-to-buy-and-sell-stock",
+    "count": 57,
+    "problems_title_slugs": "find-pivot-index find-the-middle-index-in-array equal-score-substrings maximum-score-of-a-split number-of-ways-to-split-array minimum-average-difference maximum-score-after-splitting-a-string product-of-array-except-self longest-subarray-of-1s-after-deleting-one-element longest-mountain-in-array sum-of-beauty-in-the-array minimum-sum-of-mountain-triplets-ii minimum-penalty-for-a-shop number-of-good-ways-to-split-a-string count-special-triplets make-array-elements-equal-to-zero unique-length-3-palindromic-subsequences minimum-index-of-a-valid-split maximum-value-of-an-ordered-triplet-ii ways-to-make-a-fair-array best-time-to-buy-and-sell-stock-iii split-array-with-minimum-difference longest-common-prefix-between-adjacent-strings-after-removals number-of-ways-to-select-buildings maximum-sum-of-two-non-overlapping-subarrays maximum-sum-of-3-non-overlapping-subarrays find-all-good-indices find-good-days-to-rob-the-bank flip-string-to-monotone-increasing increasing-triplet-subsequence minimum-deletions-to-make-string-balanced maximum-subarray-sum-with-one-deletion longest-non-decreasing-subarray-after-replacing-at-most-one-element trapping-rain-water difference-of-number-of-distinct-values-on-diagonals find-two-non-overlapping-sub-arrays-each-with-target-sum maximum-or minimum-number-of-removals-to-make-mountain-array construct-product-matrix find-the-maximum-factor-score-of-array longest-alternating-subarray-after-removing-at-most-one-element minimum-time-to-remove-all-cars-containing-illegal-goods count-palindromic-subsequences minimum-difference-in-sums-after-removal-of-elements subsequence-with-the-minimum-score count-special-quadruplets count-increasing-quadruplets find-the-lexicographically-smallest-valid-sequence count-special-subsequences find-the-occurrence-of-first-almost-equal-substring find-the-maximum-sequence-value-of-array maximum-value-sum-by-placing-three-rooks-ii maximize-subarray-sum-after-removing-all-occurrences-of-one-element maximize-the-number-of-partitions-after-operations max-consecutive-ones-ii maximum-subarray-sum-after-one-operation best-time-to-buy-and-sell-stock",
     "problems": [
       {
         "title": "724. 寻找数组的中心下标",
@@ -3407,6 +3474,11 @@
         "url": "https://leetcode.cn/problems/equal-score-substrings/"
       },
       {
+        "title": "3788. 分割的最大得分",
+        "titleSlug": "maximum-score-of-a-split",
+        "url": "https://leetcode.cn/problems/maximum-score-of-a-split/"
+      },
+      {
         "title": "2270. 分割数组的方案数",
         "titleSlug": "number-of-ways-to-split-array",
         "url": "https://leetcode.cn/problems/number-of-ways-to-split-array/"
@@ -3422,7 +3494,7 @@
         "url": "https://leetcode.cn/problems/maximum-score-after-splitting-a-string/"
       },
       {
-        "title": "238. 除自身以外数组的乘积",
+        "title": "238. 除了自身以外数组的乘积",
         "titleSlug": "product-of-array-except-self",
         "url": "https://leetcode.cn/problems/product-of-array-except-self/"
       },
@@ -3470,6 +3542,11 @@
         "title": "1930. 长度为 3 的不同回文子序列",
         "titleSlug": "unique-length-3-palindromic-subsequences",
         "url": "https://leetcode.cn/problems/unique-length-3-palindromic-subsequences/"
+      },
+      {
+        "title": "2780. 合法分割的最小下标",
+        "titleSlug": "minimum-index-of-a-valid-split",
+        "url": "https://leetcode.cn/problems/minimum-index-of-a-valid-split/"
       },
       {
         "title": "2874. 有序三元组中的最大值 II",
@@ -3580,6 +3657,11 @@
         "title": "3334. 数组的最大因子得分",
         "titleSlug": "find-the-maximum-factor-score-of-array",
         "url": "https://leetcode.cn/problems/find-the-maximum-factor-score-of-array/"
+      },
+      {
+        "title": "3830. 移除至多一个元素后的最长交替子数组",
+        "titleSlug": "longest-alternating-subarray-after-removing-at-most-one-element",
+        "url": "https://leetcode.cn/problems/longest-alternating-subarray-after-removing-at-most-one-element/"
       },
       {
         "title": "2167. 移除所有载有违禁货物车厢所需的最少时间",
@@ -3769,8 +3851,8 @@
   },
   {
     "name": "7 动态规划 / 其他",
-    "count": 5,
-    "problems_title_slugs": "sort-integers-by-the-power-value binary-trees-with-factors pyramid-transition-matrix number-of-strings-which-can-be-rearranged-to-contain-substring minimum-cost-to-change-the-final-value-of-expression",
+    "count": 4,
+    "problems_title_slugs": "sort-integers-by-the-power-value binary-trees-with-factors number-of-strings-which-can-be-rearranged-to-contain-substring minimum-cost-to-change-the-final-value-of-expression",
     "problems": [
       {
         "title": "1387. 将整数按权重排序",
@@ -3781,11 +3863,6 @@
         "title": "823. 带因子的二叉树",
         "titleSlug": "binary-trees-with-factors",
         "url": "https://leetcode.cn/problems/binary-trees-with-factors/"
-      },
-      {
-        "title": "756. 金字塔转换矩阵",
-        "titleSlug": "pyramid-transition-matrix",
-        "url": "https://leetcode.cn/problems/pyramid-transition-matrix/"
       },
       {
         "title": "2930. 重新排列后包含指定子字符串的字符串数目",
