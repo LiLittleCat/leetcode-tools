@@ -847,6 +847,15 @@ class LeetCodeClient:
             print(f"复制题单失败: {str(e)}")
             return None
 
+def is_system_annual_favorite(favorite_slug: str) -> bool:
+    """
+    判断是否是系统生成的年度题单
+    :param favorite_slug: 题单的 slug
+    :return: 是否为系统年度题单
+    """
+    # 只要包含 _annual_favorite_ 就认为是系统年度题单
+    return '_annual_favorite_' in favorite_slug
+
 def parse_index_input(input_str: str) -> List[int]:
     """
     解析用户输入的索引，支持以下格式：
@@ -1490,12 +1499,18 @@ def main():
                         if get_yes_no_input("确认要删除/取消收藏所有题单吗？"):
                             success_count = 0
                             fail_count = 0
+                            skip_count = 0
                             for fav in all_favorites:
+                                # 跳过系统生成的年度题单
+                                if is_system_annual_favorite(fav.get('slug', '')):
+                                    print(f"跳过系统年度题单: {fav['name']}")
+                                    skip_count += 1
+                                    continue
                                 if delete_favorite_list(client, fav, True):
                                     success_count += 1
                                 else:
                                     fail_count += 1
-                            print(f"\n批量删除完成，成功：{success_count} 个，失败：{fail_count} 个")
+                            print(f"\n批量删除完成，成功：{success_count} 个，失败：{fail_count} 个，跳过：{skip_count} 个")
                             break
                         continue
                     
@@ -1525,13 +1540,19 @@ def main():
                     # 批量删除
                     success_count = 0
                     fail_count = 0
+                    skip_count = 0
                     for fav in selected_favorites:
+                        # 跳过系统生成的年度题单
+                        if is_system_annual_favorite(fav.get('slug', '')):
+                            print(f"跳过系统年度题单: {fav['name']}")
+                            skip_count += 1
+                            continue
                         if delete_favorite_list(client, fav, True):
                             success_count += 1
                         else:
                             fail_count += 1
                     
-                    print(f"\n批量删除完成，成功：{success_count} 个，失败：{fail_count} 个")
+                    print(f"\n批量删除完成，成功：{success_count} 个，失败：{fail_count} 个，跳过：{skip_count} 个")
                     break
                 break
 
